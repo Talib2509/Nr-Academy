@@ -1,0 +1,73 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "C:\\Users\\ikinci.el.noutbuklar\\Desktop\\NrAcademy\\NrAcademy\\NrAcademyy\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{F164F76E-77C9-4E68-AC98-372F94C790C5}|NrAcademyCORE\\NrAcademyCORE.csproj|c:\\users\\ikinci.el.noutbuklar\\desktop\\nracademy\\nracademy\\nracademyy\\nracademycore\\class1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{F164F76E-77C9-4E68-AC98-372F94C790C5}|NrAcademyCORE\\NrAcademyCORE.csproj|solutionrelative:nracademycore\\class1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{10264E89-A4B5-42B3-8F4F-87EA78166DCC}|NrAcademyDAL\\NrAcademyDAL.csproj|c:\\users\\ikinci.el.noutbuklar\\desktop\\nracademy\\nracademy\\nracademyy\\nracademydal\\class1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{10264E89-A4B5-42B3-8F4F-87EA78166DCC}|NrAcademyDAL\\NrAcademyDAL.csproj|solutionrelative:nracademydal\\class1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{937AD1DF-0ACB-4D1F-A634-AF6A6A35F878}|NrAcademyBL\\NrAcademyBL.csproj|c:\\users\\ikinci.el.noutbuklar\\desktop\\nracademy\\nracademy\\nracademyy\\nracademybl\\class1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{937AD1DF-0ACB-4D1F-A634-AF6A6A35F878}|NrAcademyBL\\NrAcademyBL.csproj|solutionrelative:nracademybl\\class1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 1,
+          "Children": [
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{1c4feeaa-4718-4aa9-859d-94ce25d182ba}"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "Class1.cs",
+              "DocumentMoniker": "C:\\Users\\ikinci.el.noutbuklar\\Desktop\\NrAcademy\\NrAcademy\\NrAcademyy\\NrAcademyCORE\\Class1.cs",
+              "RelativeDocumentMoniker": "NrAcademyCORE\\Class1.cs",
+              "ToolTip": "C:\\Users\\ikinci.el.noutbuklar\\Desktop\\NrAcademy\\NrAcademy\\NrAcademyy\\NrAcademyCORE\\Class1.cs",
+              "RelativeToolTip": "NrAcademyCORE\\Class1.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-04-20T19:32:10.807Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "Class1.cs",
+              "DocumentMoniker": "C:\\Users\\ikinci.el.noutbuklar\\Desktop\\NrAcademy\\NrAcademy\\NrAcademyy\\NrAcademyDAL\\Class1.cs",
+              "RelativeDocumentMoniker": "NrAcademyDAL\\Class1.cs",
+              "ToolTip": "C:\\Users\\ikinci.el.noutbuklar\\Desktop\\NrAcademy\\NrAcademy\\NrAcademyy\\NrAcademyDAL\\Class1.cs",
+              "RelativeToolTip": "NrAcademyDAL\\Class1.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-04-20T19:32:11.111Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "Class1.cs",
+              "DocumentMoniker": "C:\\Users\\ikinci.el.noutbuklar\\Desktop\\NrAcademy\\NrAcademy\\NrAcademyy\\NrAcademyBL\\Class1.cs",
+              "RelativeDocumentMoniker": "NrAcademyBL\\Class1.cs",
+              "ToolTip": "C:\\Users\\ikinci.el.noutbuklar\\Desktop\\NrAcademy\\NrAcademy\\NrAcademyy\\NrAcademyBL\\Class1.cs",
+              "RelativeToolTip": "NrAcademyBL\\Class1.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-04-20T19:32:11.122Z"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
