@@ -27,6 +27,11 @@ namespace NrAcademyDAL.Repositories
         {
             Table.Update(entity);
         }
+        
+        public IQueryable<T> GetAll()
+        {
+            return _context.Set<T>().AsQueryable();
+        }
 
 
 

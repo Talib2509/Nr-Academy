@@ -2,16 +2,20 @@
 using Microsoft.AspNetCore.Authentication.JwtBearer;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.EntityFrameworkCore;
+using Microsoft.Extensions.DependencyInjection;
 using Microsoft.IdentityModel.Tokens;
 using Microsoft.OpenApi.Models;
 using NrAcademyBL;
 using NrAcademyBL.Exceptions.AuthException;
-using NrAcademyCORE.Entities.Identity;
-using NrAcademyDAL.Context;
-using System.Text;
-using NrAcademyDAL;
-
 using NrAcademyBL.Extensions;
+using NrAcademyBL.Services.Abstract.BlogPostAbstract;
+using NrAcademyBL.Services.Concrete.BlogPostConcrete;
+using NrAcademyCORE.Entities.Identity;
+using NrAcademyCORE.Repositories;
+using NrAcademyDAL;
+using NrAcademyDAL.Context;
+using NrAcademyDAL.Repositories;
+using System.Text;
 using ServiceRegistrations = NrAcademyBL.ServiceRegistrations;
 namespace NrAcademyy
 {
@@ -24,13 +28,15 @@ namespace NrAcademyy
             // Add services to the container.
 
             builder.Services.AddControllers();
-            builder.Services.AddAutoMapper(typeof(ServiceRegistrations).Assembly);
-           
-
+            
+            builder.Services.AddAutoMapper(cfg =>
+            {
+                cfg.AddMaps(typeof(ServiceRegistrations).Assembly);
+            });
 
             builder.Services.AddRepositories();
             builder.Services.AddService();
-            builder.Services.AddAutoMapper();
+            //builder.Services.AddAutoMapper();
             builder.Services.AddDbContext<AppDbContext>(options =>
             {
                 options.UseSqlServer(builder.Configuration.GetConnectionString("DefaultConnection"));
@@ -92,6 +98,12 @@ namespace NrAcademyy
         }
     });
             });
+            
+
+            builder.Services.AddScoped<IBlogPostRepository, BlogPostRepository>();
+
+            
+            builder.Services.AddScoped<IBlogPostService, BlogPostService>();
 
             var app = builder.Build();
 

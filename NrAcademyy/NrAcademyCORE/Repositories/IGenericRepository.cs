@@ -16,5 +16,7 @@ namespace NrAcademyCORE.Repositories
         void Update(T entity);
         void Delete(T entity);
         Task<int> SaveAsync();
+     
+        IQueryable<T> GetAll();
     }
 }

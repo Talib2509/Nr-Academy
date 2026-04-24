@@ -15,5 +15,10 @@ namespace NrAcademyDAL.Repositories
         {
 
         }
+
+        public object GetAll(Func<object, object> value)
+        {
+            throw new NotImplementedException();
+        }
     }
 }

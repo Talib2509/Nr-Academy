@@ -8,5 +8,8 @@ using System.Threading.Tasks;
 namespace NrAcademyCORE.Repositories
 {
 
-    public interface IBlogPostRepository : IGenericRepository<BlogPost> { }
+    public interface IBlogPostRepository : IGenericRepository<BlogPost>
+    {
+        object GetAll(Func<object, object> value);
+    }
 }
