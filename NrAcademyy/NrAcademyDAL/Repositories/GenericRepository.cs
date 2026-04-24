@@ -12,20 +12,30 @@ using System.Threading.Tasks;
 namespace NrAcademyDAL.Repositories
 {
 
-    public class GenericRepository<T>(AppDbContext _context) : IGenericRepository<T> where T : BaseEntity, new()
+    public class GenericRepository<T> : IGenericRepository<T> where T : BaseEntity, new()
     {
-        protected DbSet<T> Table = _context.Set<T>();
+        protected readonly AppDbContext _context;
+
+        public GenericRepository(AppDbContext context)
+        {
+            _context = context;
+        }
+
+        public DbSet<T> Table { get => _context.Set<T>(); }
         public async Task AddAsync(T entity)
         {
             await Table.AddAsync(entity);
+            _context.SaveChanges();
         }
         public void Delete(T entity)
         {
             Table.Remove(entity);
+            _context.SaveChanges();
         }
         public void Update(T entity)
         {
             Table.Update(entity);
+            _context.SaveChanges();
         }
 
 

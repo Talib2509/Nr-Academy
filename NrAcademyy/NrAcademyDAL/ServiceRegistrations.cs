@@ -9,7 +9,7 @@ using System.Threading.Tasks;
 
 namespace NrAcademyDAL
 {
-    public static class ServiceRegistrations
+    public static class ServiceRegistration
     {
         public static IServiceCollection AddRepositories(this IServiceCollection services)
         {

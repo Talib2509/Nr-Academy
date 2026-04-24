@@ -12,12 +12,11 @@ namespace NrAcademyDAL.Repositories
 {
 
 
-    public class RefreshTokenRepository
-        : GenericRepository<RefreshToken>, IRefreshTokenRepository
+    public class RefreshTokenRepository: GenericRepository<RefreshToken>, IRefreshTokenRepository
     {
-        private readonly AppDbContext _context;
+       
 
-        public RefreshTokenRepository(AppDbContext context) : base(context)
+        public RefreshTokenRepository(AppDbContext _context) : base(_context)
         {
         }
 
