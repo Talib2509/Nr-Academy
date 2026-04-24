@@ -6,9 +6,10 @@ using System.Threading.Tasks;
 
 namespace NrAcademyBL.DTOs
 {
-    public class LoginRequestDto
+    public class EmailDto
     {
-        public string Email { get; set; } = string.Empty;
-        public string Password { get; set; } = string.Empty;
+        public string To { get; set; }
+        public string Subject { get; set; }
+        public string Body { get; set; }
     }
 }

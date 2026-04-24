@@ -11,5 +11,10 @@ namespace NrAcademyCORE.Entities.Identity
     {
         public DateTime CreatedAt { get; set; } = DateTime.Now;
         public DateTime? UpdatedAt { get; set; } = DateTime.Now;
+        public string EmailVerificationCode { get; set; }
+        public DateTime? EmailVerificationCodeExpiry { get; set; }
+        public bool IsEmailVerified { get; set; } = false;
+        public string? PasswordResetCode { get; set; }
+        public DateTime? PasswordResetCodeExpiry { get; set; }
     }
 }

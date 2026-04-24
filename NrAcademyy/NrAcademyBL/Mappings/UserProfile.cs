@@ -1,5 +1,4 @@
-﻿
-using AutoMapper;
+﻿using AutoMapper;
 using NrAcademyBL.DTOs.AuthDTO;
 using NrAcademyCORE.Entities.Identity;
 using System;
