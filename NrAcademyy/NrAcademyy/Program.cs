@@ -5,13 +5,13 @@ using Microsoft.EntityFrameworkCore;
 using Microsoft.IdentityModel.Tokens;
 using Microsoft.OpenApi.Models;
 using NrAcademyBL;
+using NrAcademyBL.Configuration;
 using NrAcademyBL.Exceptions.AuthException;
+using NrAcademyBL.Extensions;
 using NrAcademyCORE.Entities.Identity;
+using NrAcademyDAL;
 using NrAcademyDAL.Context;
 using System.Text;
-using NrAcademyDAL;
-
-using NrAcademyBL.Extensions;
 using ServiceRegistrations = NrAcademyBL.ServiceRegistrations;
 
 var builder = WebApplication.CreateBuilder(args);
@@ -23,7 +23,12 @@ builder.Services.AddControllers();
 
 
 builder.Services.AddRepositories();
-builder.Services.AddService();
+
+builder.Services.AddService(builder.Configuration);
+builder.Services.Configure<EmailSettings>(builder.Configuration.GetSection("EmailSettings"));
+builder.Services.Configure<JwtSettings>(
+    builder.Configuration.GetSection("JwtSettings"));
+
 builder.Services.AddAutoMapper();
 
 builder.Services.AddDbContext<AppDbContext>(options =>
@@ -39,10 +44,10 @@ builder.Services.AddIdentity<AppUser, AppRole>()
 builder.Services.AddAuthentication(options =>
 {
     options.DefaultAuthenticateScheme = JwtBearerDefaults.AuthenticationScheme;
-
 })
 .AddJwtBearer(options =>
 {
+    // ✅ appsettings.json'dan direkt oku
     options.TokenValidationParameters = new TokenValidationParameters
     {
         ValidateIssuer = true,
@@ -56,7 +61,6 @@ builder.Services.AddAuthentication(options =>
         )
     };
 });
-
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen(opt =>
 {

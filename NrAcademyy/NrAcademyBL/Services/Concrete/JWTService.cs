@@ -1,7 +1,10 @@
 ﻿using Microsoft.AspNetCore.Identity;
-
+using Microsoft.Extensions.Configuration;
+using Microsoft.Extensions.Options;
 using Microsoft.IdentityModel.Tokens;
+using NrAcademyBL.Configuration;
 using NrAcademyBL.DTOs;
+using NrAcademyBL.Exceptions.AuthException;
 using NrAcademyBL.Services.Abstract;
 using NrAcademyCORE.Entities;
 using NrAcademyCORE.Entities.Identity;
@@ -13,24 +16,23 @@ using System.IdentityModel.Tokens.Jwt;
 using System.Linq;
 using System.Security.Claims;
 using System.Text;
-
-using NrAcademyBL.Exceptions.AuthException;
-using Microsoft.Extensions.Configuration;
 namespace NrAcademyBL.Services.Concrete
 {
     public class JwtService : IJwtService
     {
         private readonly UserManager<AppUser> _userManager;
-        private readonly IConfiguration _config;
+        private readonly JwtSettings _jwtSettings;  // ✅ IOptions yerine
         private readonly IRefreshTokenRepository _refreshRepo;
         private readonly AppDbContext _context;
 
-        public JwtService(UserManager<AppUser> userManager,
-                          IConfiguration config,
-                          IRefreshTokenRepository refreshRepo, AppDbContext context)
+        public JwtService(
+            UserManager<AppUser> userManager,
+            IOptions<JwtSettings> jwtSettings,  // ✅ Burada inject et
+            IRefreshTokenRepository refreshRepo,
+            AppDbContext context)
         {
             _userManager = userManager;
-            _config = config;
+            _jwtSettings = jwtSettings.Value;  // ✅ Value'yi al
             _refreshRepo = refreshRepo;
             _context = context;
         }
@@ -40,28 +42,27 @@ namespace NrAcademyBL.Services.Concrete
             var roles = await _userManager.GetRolesAsync(user);
 
             var claims = new List<Claim>
-        {
-            new Claim(JwtRegisteredClaimNames.Sub, user.Id.ToString()),
-            new Claim(ClaimTypes.Name, user.UserName),
-            new Claim(ClaimTypes.Email, user.Email),
-            new Claim(JwtRegisteredClaimNames.Jti, Guid.NewGuid().ToString())
-        };
+            {
+                new Claim(JwtRegisteredClaimNames.Sub, user.Id.ToString()),
+                new Claim(ClaimTypes.Name, user.UserName),
+                new Claim(ClaimTypes.Email, user.Email),
+                new Claim(JwtRegisteredClaimNames.Jti, Guid.NewGuid().ToString())
+            };
 
             claims.AddRange(roles.Select(r => new Claim(ClaimTypes.Role, r)));
 
+            // ✅ _jwtSettings kullan
             var key = new SymmetricSecurityKey(
-                Encoding.UTF8.GetBytes(_config["Jwt:Secret"])
+                Encoding.UTF8.GetBytes(_jwtSettings.Secret)
             );
 
             var creds = new SigningCredentials(key, SecurityAlgorithms.HmacSha256);
 
             var token = new JwtSecurityToken(
-                issuer: _config["Jwt:Issuer"],
-                audience: _config["Jwt:Audience"],
+                issuer: _jwtSettings.Issuer,
+                audience: _jwtSettings.Audience,
                 claims: claims,
-                expires: DateTime.UtcNow.AddMinutes(
-                    int.Parse(_config["Jwt:AccessTokenMinutes"])
-                ),
+                expires: DateTime.UtcNow.AddMinutes(_jwtSettings.AccessTokenMinutes),
                 signingCredentials: creds
             );
 
@@ -70,9 +71,7 @@ namespace NrAcademyBL.Services.Concrete
             var refreshToken = new RefreshToken
             {
                 Token = Guid.NewGuid().ToString(),
-                Expires = DateTime.UtcNow.AddDays(
-                    int.Parse(_config["Jwt:RefreshTokenDays"])
-                ),
+                Expires = DateTime.UtcNow.AddDays(_jwtSettings.RefreshTokenDays),
                 AppUserId = user.Id,
                 CreatedByIp = ip
             };
@@ -93,9 +92,7 @@ namespace NrAcademyBL.Services.Concrete
             if (string.IsNullOrEmpty(token)) return null;
 
 
-            //return await _context.RefreshTokens
-            //    .Include(x => x.User) 
-            //    .FirstOrDefaultAsync(x => x.Token == token);
+ 
 
             if (existing == null || !existing.IsActive)
                 throw new Exception("Invalid token");
