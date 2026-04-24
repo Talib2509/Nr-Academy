@@ -10,7 +10,9 @@ using NrAcademyCORE.Entities.Identity;
 using NrAcademyDAL.Context;
 using System.Text;
 using NrAcademyDAL;
+
 using NrAcademyBL.Extensions;
+using ServiceRegistrations = NrAcademyBL.ServiceRegistrations;
 namespace NrAcademyy
 {
     public class Program
@@ -22,11 +24,13 @@ namespace NrAcademyy
             // Add services to the container.
 
             builder.Services.AddControllers();
-            builder.Services.AddAutoMapper(AppDomain.CurrentDomain.GetAssemblies());
+            builder.Services.AddAutoMapper(typeof(ServiceRegistrations).Assembly);
+           
 
 
             builder.Services.AddRepositories();
             builder.Services.AddService();
+            builder.Services.AddAutoMapper();
             builder.Services.AddDbContext<AppDbContext>(options =>
             {
                 options.UseSqlServer(builder.Configuration.GetConnectionString("DefaultConnection"));
