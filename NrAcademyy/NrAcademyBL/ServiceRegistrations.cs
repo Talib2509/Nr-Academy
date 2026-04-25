@@ -13,6 +13,10 @@ namespace NrAcademyBL
         {
             services.AddScoped<IJwtService, JwtService>();
             services.AddScoped<IAuthService, AuthService>();
+            services.AddScoped<IAnswerService, AnswerService>();
+            services.AddScoped<IQuestionService, QuestionService>();
+            services.AddScoped<ITestService, TestService>();
+            services.AddScoped<ITestResultService, TestResultService>();
             return services;
         }
         public static IServiceCollection AddAutoMapper(this IServiceCollection services)

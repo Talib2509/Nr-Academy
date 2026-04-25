@@ -9,6 +9,7 @@ namespace NrAcademyCORE.Entities.Identity
 {
     public class AppUser : IdentityUser<int>
     {
+        public string? ProfileImageUrl { get; set; }
         public DateTime CreatedAt { get; set; } = DateTime.Now;
         public DateTime? UpdatedAt { get; set; } = DateTime.Now;
     }
