@@ -1,5 +1,6 @@
 ﻿using NrAcademyBL.DTOs;
 using NrAcademyBL.DTOs.AuthDTO;
+using NrAcademyBL.DTOs.ForgotPassword;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -12,6 +13,9 @@ namespace NrAcademyBL.Services.Abstract
     {
         Task<AuthResponseDto> RegisterAsync(RegisterDTO dto);
         Task<AuthResponseDto> LoginAsync(LoginDTO dto);
+        Task ForgotPasswordAsync(ForgotPasswordDTO dto);
+        Task VerifyResetCodeAsync(VerifyResetCodeDTO dto);
+        Task ResetPasswordAsync(ResetPasswordDTO dto);
 
     }
 }
