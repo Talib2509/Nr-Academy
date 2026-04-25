@@ -64,5 +64,10 @@ namespace NrAcademyDAL.Repositories
             }
             return await query.ToListAsync();
         }
+
+        public IQueryable<T> GetAll()
+        {
+            return _context.Set<T>().AsQueryable();
+        }
     }
 }
