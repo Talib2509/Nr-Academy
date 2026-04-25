@@ -6,7 +6,9 @@ using Microsoft.Extensions.DependencyInjection;
 using NrAcademyBL.Configuration;
 using NrAcademyBL.Services.Abstract;
 using NrAcademyBL.Services.Concrete;
+using NrAcademyCORE.Repositories;
 using NrAcademyDAL;
+using NrAcademyDAL.Repositories;
 
 namespace NrAcademyBL
 {
@@ -25,6 +27,17 @@ namespace NrAcademyBL
             services.AddScoped<IEmailService, EmailService>();
             services.AddScoped<ITeacherService, TeacherService>();
             services.AddScoped<ICourseService, CourseService>();
+
+            services.AddScoped<IEnrollmentRepository, EnrollmentRepository>();
+            services.AddScoped<IEnrollmentService, EnrollmentService>();
+
+            services.AddScoped<IBlogCategoryRepository, BlogCategoryRepository>();
+
+            services.AddScoped<ICertificateRepository, CertificateRepository>();
+            services.AddScoped<ICertificateService, CertificateService>();
+
+
+            services.AddScoped<IBlogCategoryService, BlogCategoryService>();
 
 
             return services;
