@@ -8,6 +8,10 @@ using NrAcademyBL;
 using NrAcademyBL.Configuration;
 using NrAcademyBL.Exceptions.AuthException;
 using NrAcademyBL.Extensions;
+
+using NrAcademyBL.Services.Abstract;
+using NrAcademyBL.Services.Concrete;
+
 using NrAcademyCORE.Entities.Identity;
 using NrAcademyDAL;
 using NrAcademyDAL.Context;
@@ -40,6 +44,7 @@ builder.Services.AddIdentity<AppUser, AppRole>()
 .AddDefaultTokenProviders()
 .AddErrorDescriber<CustomErrorDescriber>();
 
+builder.Services.AddScoped<IUserService, UserService>();
 
 builder.Services.AddAuthentication(options =>
 {
@@ -100,6 +105,8 @@ if (app.Environment.IsDevelopment())
     app.UseSwagger();
     app.UseSwaggerUI();
 }
+app.UseHttpsRedirection();
+app.UseStaticFiles();
 
 app.UseHttpsRedirection();
 app.UseAuthentication();

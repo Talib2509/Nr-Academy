@@ -17,6 +17,11 @@ namespace NrAcademyBL
    
             services.AddScoped<IJwtService, JwtService>();
             services.AddScoped<IAuthService, AuthService>();
+
+            services.AddScoped<IAnswerService, AnswerService>();
+            services.AddScoped<IQuestionService, QuestionService>();
+            services.AddScoped<ITestService, TestService>();
+            services.AddScoped<ITestResultService, TestResultService>();
             services.AddScoped<IEmailService, EmailService>();
             services.AddScoped<ITeacherService, TeacherService>();
             services.AddScoped<ICourseService, CourseService>();
