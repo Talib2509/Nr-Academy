@@ -1,66 +1,62 @@
-﻿using Microsoft.AspNetCore.Hosting;
+﻿using AutoMapper;
+using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Identity;
 using NrAcademyBL.DTOs.AuthDTO;
 using NrAcademyBL.Services.Abstract;
 using NrAcademyCORE.Entities.Identity;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+using NrAcademyBL.Extensions;
 
 namespace NrAcademyBL.Services.Concrete
 {
     public class UserService : IUserService
     {
         private readonly UserManager<AppUser> _userManager;
-        private readonly IWebHostEnvironment _webHostEnvironment;
+        private readonly IWebHostEnvironment _env;
+        private readonly IMapper _mapper;
 
-        public UserService(UserManager<AppUser> userManager, IWebHostEnvironment webHostEnvironment)
+        public UserService(UserManager<AppUser> userManager, IWebHostEnvironment env, IMapper mapper)
         {
             _userManager = userManager;
-            _webHostEnvironment = webHostEnvironment;
+            _env = env;
+            _mapper = mapper;
         }
 
         public async Task<UserDto> GetUserByIdAsync(int id)
         {
             var user = await _userManager.FindByIdAsync(id.ToString());
+            if (user == null) throw new Exception("İstifadəçi tapılmadı.");
 
-            if (user == null) throw new System.Exception("User not found.");
-
-            return new UserDto
-            {
-                Id = user.Id,
-                UserName = user.UserName,
-                Email = user.Email,
-                ProfileImageUrl = user.ProfileImageUrl
-            };
+           
+            return _mapper.Map<UserDto>(user);
         }
 
         public async Task<string> UploadProfileImageAsync(int id, IFormFile file)
         {
             var user = await _userManager.FindByIdAsync(id.ToString());
-            if (user == null) throw new System.Exception("User not found.");
+            if (user == null) throw new Exception("İstifadəçi tapılmadı.");
 
-            if (file == null || file.Length == 0) throw new System.Exception("File is not selected or empty.");
+           
+            if (!file.IsValidType("image/")) throw new Exception("Yalnız şəkil yükləyə bilərsiniz.");
+            if (!file.IsValidSize(2048)) throw new Exception("Şəkil ölçüsü 2MB-dan çox olmamalıdır.");
 
-            string uploadFolder = Path.Combine(_webHostEnvironment.WebRootPath, "uploads", "profiles");
-            if (!Directory.Exists(uploadFolder)) Directory.CreateDirectory(uploadFolder);
-
-            string uniqueFileName = Guid.NewGuid().ToString() + "_" + file.FileName;
-            string filePath = Path.Combine(uploadFolder, uniqueFileName);
-
-            using (var fileStream = new FileStream(filePath, FileMode.Create))
+            // 2. Köhnə şəkli serverdən silmək
+            if (!string.IsNullOrEmpty(user.ProfileImageUrl))
             {
-                await file.CopyToAsync(fileStream);
+                string oldFileName = Path.GetFileName(user.ProfileImageUrl);
+                FileExtensions.DeleteFile(oldFileName, _env.WebRootPath, "uploads", "profiles");
             }
 
-            string fileUrl = $"/uploads/profiles/{uniqueFileName}";
-            user.ProfileImageUrl = fileUrl;
-            await _userManager.UpdateAsync(user);
+            // 3. Yeni şəkli yükləmək
+            string newFileName = await file.UploadAsync(_env.WebRootPath, "uploads", "profiles");
 
-            return fileUrl;
+            // 4. Verilənlər bazasını yeniləmək
+            user.ProfileImageUrl = $"/uploads/profiles/{newFileName}";
+            var result = await _userManager.UpdateAsync(user);
+
+            if (!result.Succeeded) throw new Exception("Şəkil yenilənərkən xəta baş verdi.");
+
+            return user.ProfileImageUrl;
         }
     }
 }

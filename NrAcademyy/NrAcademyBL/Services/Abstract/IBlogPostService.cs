@@ -11,9 +11,8 @@ namespace NrAcademyBL.Services.Abstract
     {
         Task<IEnumerable<BlogPostGetDTO>> GetAsync();
         Task<BlogPostGetDTO> GetByIdAsync(int id);
-
-        Task CreateAsync(BlogPostCreateDTO dto);
-        Task UpdateAsync(BlogPostUpdateDTO dto);
-        Task DeleteAsync(int id);
+        Task CreateAsync(BlogPostCreateDTO dto, string rootPath); 
+        Task UpdateAsync(BlogPostUpdateDTO dto, string rootPath); 
+        Task DeleteAsync(int id, string rootPath);
     }
 }

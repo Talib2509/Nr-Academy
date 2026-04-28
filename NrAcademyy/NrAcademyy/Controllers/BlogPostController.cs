@@ -1,49 +1,56 @@
-﻿using Microsoft.AspNetCore.Http;
+﻿using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.Mvc;
 using NrAcademyBL.DTOs.BlogPostDTO;
 using NrAcademyBL.Services.Abstract;
+using System.Threading.Tasks;
 
-namespace NrAcademyy.Controllers
+namespace NrAcademyAPI.Controllers
 {
     [Route("api/[controller]")]
     [ApiController]
-    public class BlogPostController(IBlogPostService _service) : ControllerBase
+    public class BlogPostsController : ControllerBase
     {
+        private readonly IBlogPostService _blogPostService;
+        private readonly IWebHostEnvironment _env;
+
+        public BlogPostsController(IBlogPostService blogPostService, IWebHostEnvironment env)
+        {
+            _blogPostService = blogPostService;
+            _env = env;
+        }
 
         [HttpGet]
         public async Task<IActionResult> Get()
         {
-            return Ok(await _service.GetAsync());
+            return Ok(await _blogPostService.GetAsync());
         }
 
         [HttpGet("{id}")]
         public async Task<IActionResult> GetById(int id)
         {
-            var post = await _service.GetByIdAsync(id);
-            return Ok(post);
+            return Ok(await _blogPostService.GetByIdAsync(id));
         }
 
         [HttpPost]
-        public async Task<IActionResult> Post(BlogPostCreateDTO dto)
+        public async Task<IActionResult> Create([FromForm] BlogPostCreateDTO dto)
         {
-            await _service.CreateAsync(dto);
-            return Ok();
+            await _blogPostService.CreateAsync(dto, _env.WebRootPath);
+            return StatusCode(201, "Blog post uğurla yaradıldı");
         }
 
         [HttpPut("{id}")]
-        public async Task<IActionResult> Put(BlogPostUpdateDTO dto, int id)
+        public async Task<IActionResult> Update(int id, [FromForm] BlogPostUpdateDTO dto)
         {
-
-            dto.Id = id;
-            await _service.UpdateAsync(dto);
-            return Ok();
+            dto.Id = id; // URL-dəki ID-ni DTO-ya mənimsədirik
+            await _blogPostService.UpdateAsync(dto, _env.WebRootPath);
+            return Ok("Blog post uğurla yeniləndi");
         }
 
         [HttpDelete("{id}")]
         public async Task<IActionResult> Delete(int id)
         {
-            await _service.DeleteAsync(id);
-            return Ok();
+            await _blogPostService.DeleteAsync(id, _env.WebRootPath);
+            return Ok("Blog post silindi");
         }
     }
 }

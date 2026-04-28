@@ -1,4 +1,5 @@
-﻿using NrAcademyCORE.Enums;
+﻿using Microsoft.AspNetCore.Http;
+using NrAcademyCORE.Enums;
 
 namespace NrAcademyBL.DTOs.CourseDTOs
 {
@@ -7,7 +8,7 @@ namespace NrAcademyBL.DTOs.CourseDTOs
         public string Title { get; set; }
         public string Description { get; set; }
         public int Price { get; set; }
-        public string ImageUrl { get; set; }
+        public IFormFile? ImageFile { get; set; } 
         public Levels Level { get; set; }
         public int Duration { get; set; }
         public int TeacherId { get; set; }

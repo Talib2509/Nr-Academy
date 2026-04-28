@@ -1,6 +1,8 @@
 ﻿using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using NrAcademyBL.Services.Abstract;
+using System;
+using System.Threading.Tasks;
 
 namespace NrAcademyy.Controllers
 {
@@ -15,7 +17,7 @@ namespace NrAcademyy.Controllers
             _userService = userService;
         }
 
-
+       
         [HttpGet("{id}")]
         public async Task<IActionResult> GetUser(int id)
         {
@@ -30,10 +32,14 @@ namespace NrAcademyy.Controllers
             }
         }
 
-
+        
         [HttpPost("{id}/upload-image")]
+        [Consumes("multipart/form-data")] 
         public async Task<IActionResult> UploadProfileImage(int id, IFormFile file)
         {
+            if (file == null || file.Length == 0)
+                return BadRequest("Fayl seçilməyib.");
+
             try
             {
                 var imageUrl = await _userService.UploadProfileImageAsync(id, file);
@@ -41,6 +47,7 @@ namespace NrAcademyy.Controllers
             }
             catch (Exception ex)
             {
+                
                 return BadRequest(new { message = ex.Message });
             }
         }

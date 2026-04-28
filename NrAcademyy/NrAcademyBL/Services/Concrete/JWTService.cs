@@ -21,18 +21,18 @@ namespace NrAcademyBL.Services.Concrete
     public class JwtService : IJwtService
     {
         private readonly UserManager<AppUser> _userManager;
-        private readonly JwtSettings _jwtSettings;  // ✅ IOptions yerine
+        private readonly JwtSettings _jwtSettings;  //  IOptions yerine
         private readonly IRefreshTokenRepository _refreshRepo;
         private readonly AppDbContext _context;
 
         public JwtService(
             UserManager<AppUser> userManager,
-            IOptions<JwtSettings> jwtSettings,  // ✅ Burada inject et
+            IOptions<JwtSettings> jwtSettings,  //  inject et
             IRefreshTokenRepository refreshRepo,
             AppDbContext context)
         {
             _userManager = userManager;
-            _jwtSettings = jwtSettings.Value;  // ✅ Value'yi al
+            _jwtSettings = jwtSettings.Value;  //  Value'yi al
             _refreshRepo = refreshRepo;
             _context = context;
         }
@@ -51,7 +51,7 @@ namespace NrAcademyBL.Services.Concrete
 
             claims.AddRange(roles.Select(r => new Claim(ClaimTypes.Role, r)));
 
-            // ✅ _jwtSettings kullan
+            //  _jwtSettings kullan
             var key = new SymmetricSecurityKey(
                 Encoding.UTF8.GetBytes(_jwtSettings.Secret)
             );
