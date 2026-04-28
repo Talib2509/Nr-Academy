@@ -20,4 +20,8 @@
     <ProjectReference Include="..\NrAcademyDAL\NrAcademyDAL.csproj" />
   </ItemGroup>
 
+  <ItemGroup>
+    <Folder Include="wwwroot\uploads\profiles\" />
+  </ItemGroup>
+
 </Project>

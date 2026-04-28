@@ -49,20 +49,27 @@ builder.Services.AddScoped<IUserService, UserService>();
 builder.Services.AddAuthentication(options =>
 {
     options.DefaultAuthenticateScheme = JwtBearerDefaults.AuthenticationScheme;
-})
+});
+builder.Services.AddAuthentication(JwtBearerDefaults.AuthenticationScheme)
 .AddJwtBearer(options =>
 {
-    // ✅ appsettings.json'dan direkt oku
+    var jwt = builder.Configuration.GetSection("JwtSettings");
+
+    var secret = jwt["Secret"]
+        ?? throw new Exception("JwtSettings:Secret tapılmadı");
+
     options.TokenValidationParameters = new TokenValidationParameters
     {
         ValidateIssuer = true,
         ValidateAudience = true,
         ValidateLifetime = true,
         ValidateIssuerSigningKey = true,
-        ValidIssuer = builder.Configuration["Jwt:Issuer"],
-        ValidAudience = builder.Configuration["Jwt:Audience"],
+
+        ValidIssuer = jwt["Issuer"],
+        ValidAudience = jwt["Audience"],
+
         IssuerSigningKey = new SymmetricSecurityKey(
-            Encoding.UTF8.GetBytes(builder.Configuration["Jwt:Secret"])
+            Encoding.UTF8.GetBytes(secret)
         )
     };
 });
