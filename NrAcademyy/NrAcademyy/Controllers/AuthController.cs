@@ -56,7 +56,12 @@ namespace NrAcademyy.Controllers
             await _authService.ResetPasswordAsync(dto);
             return Ok("Password changed");
         }
-
+        [HttpPost("verify-email")]
+        public async Task<IActionResult> VerifyEmail(VerifyEmailDTO dto)
+        {
+            await _authService.VerifyEmailAsync(dto);
+            return Ok("Email successfully verified");
+        }
     }
 
 }

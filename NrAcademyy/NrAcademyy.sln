@@ -1,7 +1,7 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio Version 17
-VisualStudioVersion = 17.14.37027.9 d17.14
+# Visual Studio Version 18
+VisualStudioVersion = 18.5.11716.220 stable
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "NrAcademyy", "NrAcademyy\NrAcademyy.csproj", "{703D6F1B-250D-4CDB-BB22-2C0BFE207C1D}"
 EndProject
@@ -10,6 +10,8 @@ EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "NrAcademyDAL", "NrAcademyDAL\NrAcademyDAL.csproj", "{10264E89-A4B5-42B3-8F4F-87EA78166DCC}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "NrAcademyCORE", "NrAcademyCORE\NrAcademyCORE.csproj", "{F164F76E-77C9-4E68-AC98-372F94C790C5}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "NrAcademy.Tests", "NrAcademy.Tests\NrAcademy.Tests.csproj", "{A7E1753B-3D79-4688-A271-706EF4A68EF8}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -33,6 +35,10 @@ Global
 		{F164F76E-77C9-4E68-AC98-372F94C790C5}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{F164F76E-77C9-4E68-AC98-372F94C790C5}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{F164F76E-77C9-4E68-AC98-372F94C790C5}.Release|Any CPU.Build.0 = Release|Any CPU
+		{A7E1753B-3D79-4688-A271-706EF4A68EF8}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A7E1753B-3D79-4688-A271-706EF4A68EF8}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A7E1753B-3D79-4688-A271-706EF4A68EF8}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A7E1753B-3D79-4688-A271-706EF4A68EF8}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
