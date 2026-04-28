@@ -16,6 +16,7 @@ namespace NrAcademyBL.Services.Abstract
         Task ForgotPasswordAsync(ForgotPasswordDTO dto);
         Task VerifyResetCodeAsync(VerifyResetCodeDTO dto);
         Task ResetPasswordAsync(ResetPasswordDTO dto);
+        Task VerifyEmailAsync(VerifyEmailDTO dto);
 
     }
 }

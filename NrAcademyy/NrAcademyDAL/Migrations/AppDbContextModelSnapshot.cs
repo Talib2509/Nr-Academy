@@ -344,7 +344,6 @@ namespace NrAcademyDAL.Migrations
                         .HasColumnType("bit");
 
                     b.Property<string>("EmailVerificationCode")
-                        .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
                     b.Property<DateTime?>("EmailVerificationCodeExpiry")

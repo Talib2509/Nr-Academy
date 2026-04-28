@@ -11,7 +11,6 @@ namespace NrAcademyBL.Services.Concrete
     {
         private readonly EmailSettings _emailSettings;
 
-        // ✅ IOptions ile inject et
         public EmailService(IOptions<EmailSettings> emailSettings)
         {
             _emailSettings = emailSettings.Value;
@@ -31,7 +30,11 @@ namespace NrAcademyBL.Services.Concrete
 
                 using (var client = new SmtpClient())
                 {
-                    await client.ConnectAsync(_emailSettings.Host, _emailSettings.Port, _emailSettings.EnableSSL);
+                    await client.ConnectAsync(
+     _emailSettings.Host,
+     _emailSettings.Port,
+     MailKit.Security.SecureSocketOptions.StartTls
+ );
                     await client.AuthenticateAsync(_emailSettings.Username, _emailSettings.Password);
                     await client.SendAsync(message);
                     await client.DisconnectAsync(true);
@@ -41,7 +44,8 @@ namespace NrAcademyBL.Services.Concrete
             }
             catch (Exception ex)
             {
-                return false;
+                Console.WriteLine(ex.Message);
+                throw;
             }
         }
 

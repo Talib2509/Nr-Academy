@@ -43,6 +43,10 @@ namespace NrAcademyBL.Services.Concrete
 
         public async Task<AuthResponseDto> RegisterAsync(RegisterDTO dto)
         {
+
+            if (dto.Role != Roles.Teacher && dto.Role != Roles.Student)
+                throw new Exception("Yalniz Teacher ve ya Student secile biler");
+
             var isExistEmail = await _userManager.Users
                 .AnyAsync(x => x.Email.ToLower() == dto.Email.ToLower());
 
@@ -52,7 +56,7 @@ namespace NrAcademyBL.Services.Concrete
             var appUser = _mapper.Map<AppUser>(dto);
             appUser.UserName = dto.Email;
 
-            // ✅ əvvəlcədən doldur
+        
             var verificationCode = GenerateVerificationCode();
             appUser.EmailVerificationCode = verificationCode;
             appUser.EmailVerificationCodeExpiry = DateTime.UtcNow.AddMinutes(15);
@@ -68,15 +72,53 @@ namespace NrAcademyBL.Services.Concrete
 
             var user = await _userManager.FindByEmailAsync(dto.Email);
 
-            if (dto.Role != Roles.Teacher && dto.Role != Roles.Student)
-                throw new Exception("Yalniz Teacher ve ya Student secile biler");
-
             await _userManager.AddToRoleAsync(user, dto.Role.GetRole());
 
-            // ✅ Email göndər
-            await _emailService.SendVerificationEmailAsync(user.Email, verificationCode);
+            var isSent = await _emailService.SendVerificationEmailAsync(user.Email, verificationCode);
+
+            if (!isSent)
+            {
+                throw new Exception("Email gonderile bilmedi");
+            }
 
             return new();
+        }
+        public async Task VerifyEmailAsync(VerifyEmailDTO dto)
+        {
+            // Email-ə görə istifadəçini tapırıq
+            var user = await _userManager.FindByEmailAsync(dto.Email);
+
+            if (user == null)
+                throw new Exception("İstifadəçi tapılmadı");
+
+            // Əgər istifadəçi artıq təsdiqlənibsə, boşuna update etməyək
+            if (user.IsEmailVerified)
+                throw new Exception("Bu hesab artıq təsdiqlənib");
+
+            // Kodun null olub-olmadığını yoxlayaq (məsələn, kimsə kod göndərmədən doğrulamağa çalışarsa)
+            if (string.IsNullOrEmpty(user.EmailVerificationCode))
+                throw new Exception("Aktiv təsdiqləmə kodu tapılmadı");
+
+            // Kodun doğruluğunu yoxlayırıq
+            if (user.EmailVerificationCode != dto.Code)
+                throw new Exception("Kod yanlışdır");
+
+            // Vaxtın bitib-bitmədiyini yoxlayırıq
+            if (user.EmailVerificationCodeExpiry.HasValue && user.EmailVerificationCodeExpiry.Value < DateTime.UtcNow)
+                throw new Exception("Kodun vaxtı bitmişdir");
+
+            // Məntiqi olaraq məlumatları yeniləyirik
+            user.IsEmailVerified = true;
+            user.EmailVerificationCode = null;        // Artıq AppUser-də string? olduğu üçün xəta verməyəcək
+            user.EmailVerificationCodeExpiry = null;
+
+            var result = await _userManager.UpdateAsync(user);
+
+            if (!result.Succeeded)
+            {
+                var errors = string.Join(", ", result.Errors.Select(e => e.Description));
+                throw new Exception($"Update error: {errors}");
+            }
         }
         public async Task ForgotPasswordAsync(ForgotPasswordDTO dto)
         {

@@ -1,0 +1,1282 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "C:\\NrAcademy\\NrAcademyy\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{A7E1753B-3D79-4688-A271-706EF4A68EF8}|NrAcademy.Tests\\NrAcademy.Tests.csproj|c:\\nracademy\\nracademyy\\nracademy.tests\\integrationtests\\services\\authservicetests.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A7E1753B-3D79-4688-A271-706EF4A68EF8}|NrAcademy.Tests\\NrAcademy.Tests.csproj|solutionrelative:nracademy.tests\\integrationtests\\services\\authservicetests.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A7E1753B-3D79-4688-A271-706EF4A68EF8}|NrAcademy.Tests\\NrAcademy.Tests.csproj|c:\\nracademy\\nracademyy\\nracademy.tests\\integrationtests\\services\\jwtservicetests.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A7E1753B-3D79-4688-A271-706EF4A68EF8}|NrAcademy.Tests\\NrAcademy.Tests.csproj|solutionrelative:nracademy.tests\\integrationtests\\services\\jwtservicetests.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A7E1753B-3D79-4688-A271-706EF4A68EF8}|NrAcademy.Tests\\NrAcademy.Tests.csproj|c:\\nracademy\\nracademyy\\nracademy.tests\\integrationtests\\services\\baseintegrationtest.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A7E1753B-3D79-4688-A271-706EF4A68EF8}|NrAcademy.Tests\\NrAcademy.Tests.csproj|solutionrelative:nracademy.tests\\integrationtests\\services\\baseintegrationtest.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A7E1753B-3D79-4688-A271-706EF4A68EF8}|NrAcademy.Tests\\NrAcademy.Tests.csproj|c:\\nracademy\\nracademyy\\nracademy.tests\\integrationtests\\services\\questionservicetests.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A7E1753B-3D79-4688-A271-706EF4A68EF8}|NrAcademy.Tests\\NrAcademy.Tests.csproj|solutionrelative:nracademy.tests\\integrationtests\\services\\questionservicetests.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A7E1753B-3D79-4688-A271-706EF4A68EF8}|NrAcademy.Tests\\NrAcademy.Tests.csproj|c:\\nracademy\\nracademyy\\nracademy.tests\\integrationtests\\services\\courseservicetests.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A7E1753B-3D79-4688-A271-706EF4A68EF8}|NrAcademy.Tests\\NrAcademy.Tests.csproj|solutionrelative:nracademy.tests\\integrationtests\\services\\courseservicetests.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A7E1753B-3D79-4688-A271-706EF4A68EF8}|NrAcademy.Tests\\NrAcademy.Tests.csproj|c:\\nracademy\\nracademyy\\nracademy.tests\\integrationtests\\services\\testdbcontextfactory.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A7E1753B-3D79-4688-A271-706EF4A68EF8}|NrAcademy.Tests\\NrAcademy.Tests.csproj|solutionrelative:nracademy.tests\\integrationtests\\services\\testdbcontextfactory.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A7E1753B-3D79-4688-A271-706EF4A68EF8}|NrAcademy.Tests\\NrAcademy.Tests.csproj|c:\\nracademy\\nracademyy\\nracademy.tests\\integrationtests\\services\\userservicetests.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A7E1753B-3D79-4688-A271-706EF4A68EF8}|NrAcademy.Tests\\NrAcademy.Tests.csproj|solutionrelative:nracademy.tests\\integrationtests\\services\\userservicetests.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{937AD1DF-0ACB-4D1F-A634-AF6A6A35F878}|NrAcademyBL\\NrAcademyBL.csproj|c:\\nracademy\\nracademyy\\nracademybl\\services\\concrete\\userservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{937AD1DF-0ACB-4D1F-A634-AF6A6A35F878}|NrAcademyBL\\NrAcademyBL.csproj|solutionrelative:nracademybl\\services\\concrete\\userservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A7E1753B-3D79-4688-A271-706EF4A68EF8}|NrAcademy.Tests\\NrAcademy.Tests.csproj|c:\\nracademy\\nracademyy\\nracademy.tests\\integrationtests\\services\\emailservicetests.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A7E1753B-3D79-4688-A271-706EF4A68EF8}|NrAcademy.Tests\\NrAcademy.Tests.csproj|solutionrelative:nracademy.tests\\integrationtests\\services\\emailservicetests.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{937AD1DF-0ACB-4D1F-A634-AF6A6A35F878}|NrAcademyBL\\NrAcademyBL.csproj|c:\\nracademy\\nracademyy\\nracademybl\\services\\concrete\\emailservice .cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{937AD1DF-0ACB-4D1F-A634-AF6A6A35F878}|NrAcademyBL\\NrAcademyBL.csproj|solutionrelative:nracademybl\\services\\concrete\\emailservice .cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{937AD1DF-0ACB-4D1F-A634-AF6A6A35F878}|NrAcademyBL\\NrAcademyBL.csproj|c:\\nracademy\\nracademyy\\nracademybl\\services\\concrete\\jwtservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{937AD1DF-0ACB-4D1F-A634-AF6A6A35F878}|NrAcademyBL\\NrAcademyBL.csproj|solutionrelative:nracademybl\\services\\concrete\\jwtservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A7E1753B-3D79-4688-A271-706EF4A68EF8}|NrAcademy.Tests\\NrAcademy.Tests.csproj|c:\\nracademy\\nracademyy\\nracademy.tests\\integrationtests\\services\\testresultservicetests.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A7E1753B-3D79-4688-A271-706EF4A68EF8}|NrAcademy.Tests\\NrAcademy.Tests.csproj|solutionrelative:nracademy.tests\\integrationtests\\services\\testresultservicetests.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{937AD1DF-0ACB-4D1F-A634-AF6A6A35F878}|NrAcademyBL\\NrAcademyBL.csproj|c:\\nracademy\\nracademyy\\nracademybl\\services\\concrete\\testresultservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{937AD1DF-0ACB-4D1F-A634-AF6A6A35F878}|NrAcademyBL\\NrAcademyBL.csproj|solutionrelative:nracademybl\\services\\concrete\\testresultservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{F164F76E-77C9-4E68-AC98-372F94C790C5}|NrAcademyCORE\\NrAcademyCORE.csproj|c:\\nracademy\\nracademyy\\nracademycore\\entities\\testresult.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{F164F76E-77C9-4E68-AC98-372F94C790C5}|NrAcademyCORE\\NrAcademyCORE.csproj|solutionrelative:nracademycore\\entities\\testresult.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A7E1753B-3D79-4688-A271-706EF4A68EF8}|NrAcademy.Tests\\NrAcademy.Tests.csproj|c:\\nracademy\\nracademyy\\nracademy.tests\\integrationtests\\services\\testservicetests.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A7E1753B-3D79-4688-A271-706EF4A68EF8}|NrAcademy.Tests\\NrAcademy.Tests.csproj|solutionrelative:nracademy.tests\\integrationtests\\services\\testservicetests.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{F164F76E-77C9-4E68-AC98-372F94C790C5}|NrAcademyCORE\\NrAcademyCORE.csproj|c:\\nracademy\\nracademyy\\nracademycore\\entities\\test.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{F164F76E-77C9-4E68-AC98-372F94C790C5}|NrAcademyCORE\\NrAcademyCORE.csproj|solutionrelative:nracademycore\\entities\\test.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{937AD1DF-0ACB-4D1F-A634-AF6A6A35F878}|NrAcademyBL\\NrAcademyBL.csproj|c:\\nracademy\\nracademyy\\nracademybl\\services\\concrete\\testservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{937AD1DF-0ACB-4D1F-A634-AF6A6A35F878}|NrAcademyBL\\NrAcademyBL.csproj|solutionrelative:nracademybl\\services\\concrete\\testservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{937AD1DF-0ACB-4D1F-A634-AF6A6A35F878}|NrAcademyBL\\NrAcademyBL.csproj|c:\\nracademy\\nracademyy\\nracademybl\\services\\concrete\\teacherservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{937AD1DF-0ACB-4D1F-A634-AF6A6A35F878}|NrAcademyBL\\NrAcademyBL.csproj|solutionrelative:nracademybl\\services\\concrete\\teacherservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A7E1753B-3D79-4688-A271-706EF4A68EF8}|NrAcademy.Tests\\NrAcademy.Tests.csproj|c:\\nracademy\\nracademyy\\nracademy.tests\\integrationtests\\services\\teacherservicetests.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A7E1753B-3D79-4688-A271-706EF4A68EF8}|NrAcademy.Tests\\NrAcademy.Tests.csproj|solutionrelative:nracademy.tests\\integrationtests\\services\\teacherservicetests.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{937AD1DF-0ACB-4D1F-A634-AF6A6A35F878}|NrAcademyBL\\NrAcademyBL.csproj|c:\\nracademy\\nracademyy\\nracademybl\\dtos\\authdto\\questiondto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{937AD1DF-0ACB-4D1F-A634-AF6A6A35F878}|NrAcademyBL\\NrAcademyBL.csproj|solutionrelative:nracademybl\\dtos\\authdto\\questiondto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{F164F76E-77C9-4E68-AC98-372F94C790C5}|NrAcademyCORE\\NrAcademyCORE.csproj|c:\\nracademy\\nracademyy\\nracademycore\\entities\\question.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{F164F76E-77C9-4E68-AC98-372F94C790C5}|NrAcademyCORE\\NrAcademyCORE.csproj|solutionrelative:nracademycore\\entities\\question.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{F164F76E-77C9-4E68-AC98-372F94C790C5}|NrAcademyCORE\\NrAcademyCORE.csproj|c:\\nracademy\\nracademyy\\nracademycore\\entities\\teacher.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{F164F76E-77C9-4E68-AC98-372F94C790C5}|NrAcademyCORE\\NrAcademyCORE.csproj|solutionrelative:nracademycore\\entities\\teacher.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{F164F76E-77C9-4E68-AC98-372F94C790C5}|NrAcademyCORE\\NrAcademyCORE.csproj|c:\\nracademy\\nracademyy\\nracademycore\\entities\\course.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{F164F76E-77C9-4E68-AC98-372F94C790C5}|NrAcademyCORE\\NrAcademyCORE.csproj|solutionrelative:nracademycore\\entities\\course.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A7E1753B-3D79-4688-A271-706EF4A68EF8}|NrAcademy.Tests\\NrAcademy.Tests.csproj|c:\\nracademy\\nracademyy\\nracademy.tests\\integrationtests\\services\\answerservicetests.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A7E1753B-3D79-4688-A271-706EF4A68EF8}|NrAcademy.Tests\\NrAcademy.Tests.csproj|solutionrelative:nracademy.tests\\integrationtests\\services\\answerservicetests.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{F164F76E-77C9-4E68-AC98-372F94C790C5}|NrAcademyCORE\\NrAcademyCORE.csproj|c:\\nracademy\\nracademyy\\nracademycore\\entities\\answer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{F164F76E-77C9-4E68-AC98-372F94C790C5}|NrAcademyCORE\\NrAcademyCORE.csproj|solutionrelative:nracademycore\\entities\\answer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{F164F76E-77C9-4E68-AC98-372F94C790C5}|NrAcademyCORE\\NrAcademyCORE.csproj|c:\\nracademy\\nracademyy\\nracademycore\\entities\\identity\\appuser.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{F164F76E-77C9-4E68-AC98-372F94C790C5}|NrAcademyCORE\\NrAcademyCORE.csproj|solutionrelative:nracademycore\\entities\\identity\\appuser.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{937AD1DF-0ACB-4D1F-A634-AF6A6A35F878}|NrAcademyBL\\NrAcademyBL.csproj|c:\\nracademy\\nracademyy\\nracademybl\\dtos\\authresponsedto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{937AD1DF-0ACB-4D1F-A634-AF6A6A35F878}|NrAcademyBL\\NrAcademyBL.csproj|solutionrelative:nracademybl\\dtos\\authresponsedto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{703D6F1B-250D-4CDB-BB22-2C0BFE207C1D}|NrAcademyy\\NrAcademyy.csproj|c:\\nracademy\\nracademyy\\nracademyy\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
+      "RelativeMoniker": "D:0:0:{703D6F1B-250D-4CDB-BB22-2C0BFE207C1D}|NrAcademyy\\NrAcademyy.csproj|solutionrelative:nracademyy\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{10264E89-A4B5-42B3-8F4F-87EA78166DCC}|NrAcademyDAL\\NrAcademyDAL.csproj|c:\\nracademy\\nracademyy\\nracademydal\\context\\appdbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{10264E89-A4B5-42B3-8F4F-87EA78166DCC}|NrAcademyDAL\\NrAcademyDAL.csproj|solutionrelative:nracademydal\\context\\appdbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{937AD1DF-0ACB-4D1F-A634-AF6A6A35F878}|NrAcademyBL\\NrAcademyBL.csproj|c:\\nracademy\\nracademyy\\nracademybl\\services\\concrete\\authservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{937AD1DF-0ACB-4D1F-A634-AF6A6A35F878}|NrAcademyBL\\NrAcademyBL.csproj|solutionrelative:nracademybl\\services\\concrete\\authservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{937AD1DF-0ACB-4D1F-A634-AF6A6A35F878}|NrAcademyBL\\NrAcademyBL.csproj|c:\\nracademy\\nracademyy\\nracademybl\\mappings\\coursemappingprofile.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{937AD1DF-0ACB-4D1F-A634-AF6A6A35F878}|NrAcademyBL\\NrAcademyBL.csproj|solutionrelative:nracademybl\\mappings\\coursemappingprofile.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{937AD1DF-0ACB-4D1F-A634-AF6A6A35F878}|NrAcademyBL\\NrAcademyBL.csproj|c:\\nracademy\\nracademyy\\nracademybl\\dtos\\course\\coursecreatedto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{937AD1DF-0ACB-4D1F-A634-AF6A6A35F878}|NrAcademyBL\\NrAcademyBL.csproj|solutionrelative:nracademybl\\dtos\\course\\coursecreatedto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{937AD1DF-0ACB-4D1F-A634-AF6A6A35F878}|NrAcademyBL\\NrAcademyBL.csproj|c:\\nracademy\\nracademyy\\nracademybl\\dtos\\authdto\\testresultdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{937AD1DF-0ACB-4D1F-A634-AF6A6A35F878}|NrAcademyBL\\NrAcademyBL.csproj|solutionrelative:nracademybl\\dtos\\authdto\\testresultdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{937AD1DF-0ACB-4D1F-A634-AF6A6A35F878}|NrAcademyBL\\NrAcademyBL.csproj|c:\\nracademy\\nracademyy\\nracademybl\\mappings\\teachermappingprofile.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{937AD1DF-0ACB-4D1F-A634-AF6A6A35F878}|NrAcademyBL\\NrAcademyBL.csproj|solutionrelative:nracademybl\\mappings\\teachermappingprofile.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{937AD1DF-0ACB-4D1F-A634-AF6A6A35F878}|NrAcademyBL\\NrAcademyBL.csproj|c:\\nracademy\\nracademyy\\nracademybl\\services\\abstract\\iquestionservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{937AD1DF-0ACB-4D1F-A634-AF6A6A35F878}|NrAcademyBL\\NrAcademyBL.csproj|solutionrelative:nracademybl\\services\\abstract\\iquestionservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{937AD1DF-0ACB-4D1F-A634-AF6A6A35F878}|NrAcademyBL\\NrAcademyBL.csproj|c:\\nracademy\\nracademyy\\nracademybl\\services\\abstract\\ianswerservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{937AD1DF-0ACB-4D1F-A634-AF6A6A35F878}|NrAcademyBL\\NrAcademyBL.csproj|solutionrelative:nracademybl\\services\\abstract\\ianswerservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{703D6F1B-250D-4CDB-BB22-2C0BFE207C1D}|NrAcademyy\\NrAcademyy.csproj|c:\\nracademy\\nracademyy\\nracademyy\\controllers\\authcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{703D6F1B-250D-4CDB-BB22-2C0BFE207C1D}|NrAcademyy\\NrAcademyy.csproj|solutionrelative:nracademyy\\controllers\\authcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{937AD1DF-0ACB-4D1F-A634-AF6A6A35F878}|NrAcademyBL\\NrAcademyBL.csproj|c:\\nracademy\\nracademyy\\nracademybl\\dtos\\authdto\\verifyemaildto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{937AD1DF-0ACB-4D1F-A634-AF6A6A35F878}|NrAcademyBL\\NrAcademyBL.csproj|solutionrelative:nracademybl\\dtos\\authdto\\verifyemaildto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{937AD1DF-0ACB-4D1F-A634-AF6A6A35F878}|NrAcademyBL\\NrAcademyBL.csproj|c:\\nracademy\\nracademyy\\nracademybl\\services\\abstract\\iauthservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{937AD1DF-0ACB-4D1F-A634-AF6A6A35F878}|NrAcademyBL\\NrAcademyBL.csproj|solutionrelative:nracademybl\\services\\abstract\\iauthservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{937AD1DF-0ACB-4D1F-A634-AF6A6A35F878}|NrAcademyBL\\NrAcademyBL.csproj|c:\\nracademy\\nracademyy\\nracademybl\\dtos\\forgotpassword\\verifyresetcodedto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{937AD1DF-0ACB-4D1F-A634-AF6A6A35F878}|NrAcademyBL\\NrAcademyBL.csproj|solutionrelative:nracademybl\\dtos\\forgotpassword\\verifyresetcodedto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{703D6F1B-250D-4CDB-BB22-2C0BFE207C1D}|NrAcademyy\\NrAcademyy.csproj|c:\\nracademy\\nracademyy\\nracademyy\\appsettings.development.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
+      "RelativeMoniker": "D:0:0:{703D6F1B-250D-4CDB-BB22-2C0BFE207C1D}|NrAcademyy\\NrAcademyy.csproj|solutionrelative:nracademyy\\appsettings.development.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{937AD1DF-0ACB-4D1F-A634-AF6A6A35F878}|NrAcademyBL\\NrAcademyBL.csproj|c:\\nracademy\\nracademyy\\nracademybl\\dtos\\forgotpassword\\resetpassworddto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{937AD1DF-0ACB-4D1F-A634-AF6A6A35F878}|NrAcademyBL\\NrAcademyBL.csproj|solutionrelative:nracademybl\\dtos\\forgotpassword\\resetpassworddto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{937AD1DF-0ACB-4D1F-A634-AF6A6A35F878}|NrAcademyBL\\NrAcademyBL.csproj|c:\\nracademy\\nracademyy\\nracademybl\\dtos\\forgotpassword\\forgotpassworddto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{937AD1DF-0ACB-4D1F-A634-AF6A6A35F878}|NrAcademyBL\\NrAcademyBL.csproj|solutionrelative:nracademybl\\dtos\\forgotpassword\\forgotpassworddto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{703D6F1B-250D-4CDB-BB22-2C0BFE207C1D}|NrAcademyy\\NrAcademyy.csproj|c:\\nracademy\\nracademyy\\nracademyy\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{703D6F1B-250D-4CDB-BB22-2C0BFE207C1D}|NrAcademyy\\NrAcademyy.csproj|solutionrelative:nracademyy\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{10264E89-A4B5-42B3-8F4F-87EA78166DCC}|NrAcademyDAL\\NrAcademyDAL.csproj|c:\\nracademy\\nracademyy\\nracademydal\\migrations\\20260424214902_addemailverificationfields.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{10264E89-A4B5-42B3-8F4F-87EA78166DCC}|NrAcademyDAL\\NrAcademyDAL.csproj|solutionrelative:nracademydal\\migrations\\20260424214902_addemailverificationfields.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{703D6F1B-250D-4CDB-BB22-2C0BFE207C1D}|NrAcademyy\\NrAcademyy.csproj|c:\\nracademy\\nracademyy\\nracademyy\\controllers\\teachercontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{703D6F1B-250D-4CDB-BB22-2C0BFE207C1D}|NrAcademyy\\NrAcademyy.csproj|solutionrelative:nracademyy\\controllers\\teachercontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{937AD1DF-0ACB-4D1F-A634-AF6A6A35F878}|NrAcademyBL\\NrAcademyBL.csproj|c:\\nracademy\\nracademyy\\nracademybl\\serviceregistrations.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{937AD1DF-0ACB-4D1F-A634-AF6A6A35F878}|NrAcademyBL\\NrAcademyBL.csproj|solutionrelative:nracademybl\\serviceregistrations.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{937AD1DF-0ACB-4D1F-A634-AF6A6A35F878}|NrAcademyBL\\NrAcademyBL.csproj|c:\\nracademy\\nracademyy\\nracademybl\\services\\abstract\\iteacherservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{937AD1DF-0ACB-4D1F-A634-AF6A6A35F878}|NrAcademyBL\\NrAcademyBL.csproj|solutionrelative:nracademybl\\services\\abstract\\iteacherservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{937AD1DF-0ACB-4D1F-A634-AF6A6A35F878}|NrAcademyBL\\NrAcademyBL.csproj|c:\\nracademy\\nracademyy\\nracademybl\\dtos\\teacherdtos\\teachergetdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{937AD1DF-0ACB-4D1F-A634-AF6A6A35F878}|NrAcademyBL\\NrAcademyBL.csproj|solutionrelative:nracademybl\\dtos\\teacherdtos\\teachergetdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{937AD1DF-0ACB-4D1F-A634-AF6A6A35F878}|NrAcademyBL\\NrAcademyBL.csproj|c:\\nracademy\\nracademyy\\nracademybl\\dtos\\teacherdtos\\teacherupdatedto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{937AD1DF-0ACB-4D1F-A634-AF6A6A35F878}|NrAcademyBL\\NrAcademyBL.csproj|solutionrelative:nracademybl\\dtos\\teacherdtos\\teacherupdatedto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{937AD1DF-0ACB-4D1F-A634-AF6A6A35F878}|NrAcademyBL\\NrAcademyBL.csproj|c:\\nracademy\\nracademyy\\nracademybl\\dtos\\teacherdtos\\teachercreatedto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{937AD1DF-0ACB-4D1F-A634-AF6A6A35F878}|NrAcademyBL\\NrAcademyBL.csproj|solutionrelative:nracademybl\\dtos\\teacherdtos\\teachercreatedto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{10264E89-A4B5-42B3-8F4F-87EA78166DCC}|NrAcademyDAL\\NrAcademyDAL.csproj|c:\\nracademy\\nracademyy\\nracademydal\\repositories\\teacherrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{10264E89-A4B5-42B3-8F4F-87EA78166DCC}|NrAcademyDAL\\NrAcademyDAL.csproj|solutionrelative:nracademydal\\repositories\\teacherrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{703D6F1B-250D-4CDB-BB22-2C0BFE207C1D}|NrAcademyy\\NrAcademyy.csproj|c:\\nracademy\\nracademyy\\nracademyy\\controllers\\coursecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{703D6F1B-250D-4CDB-BB22-2C0BFE207C1D}|NrAcademyy\\NrAcademyy.csproj|solutionrelative:nracademyy\\controllers\\coursecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{937AD1DF-0ACB-4D1F-A634-AF6A6A35F878}|NrAcademyBL\\NrAcademyBL.csproj|c:\\nracademy\\nracademyy\\nracademybl\\dtos\\course\\teacherincoursedto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{937AD1DF-0ACB-4D1F-A634-AF6A6A35F878}|NrAcademyBL\\NrAcademyBL.csproj|solutionrelative:nracademybl\\dtos\\course\\teacherincoursedto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{937AD1DF-0ACB-4D1F-A634-AF6A6A35F878}|NrAcademyBL\\NrAcademyBL.csproj|c:\\nracademy\\nracademyy\\nracademybl\\dtos\\course\\coursegetdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{937AD1DF-0ACB-4D1F-A634-AF6A6A35F878}|NrAcademyBL\\NrAcademyBL.csproj|solutionrelative:nracademybl\\dtos\\course\\coursegetdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{F164F76E-77C9-4E68-AC98-372F94C790C5}|NrAcademyCORE\\NrAcademyCORE.csproj|c:\\nracademy\\nracademyy\\nracademycore\\repositories\\icourserepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{F164F76E-77C9-4E68-AC98-372F94C790C5}|NrAcademyCORE\\NrAcademyCORE.csproj|solutionrelative:nracademycore\\repositories\\icourserepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{10264E89-A4B5-42B3-8F4F-87EA78166DCC}|NrAcademyDAL\\NrAcademyDAL.csproj|c:\\nracademy\\nracademyy\\nracademydal\\repositories\\courserepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{10264E89-A4B5-42B3-8F4F-87EA78166DCC}|NrAcademyDAL\\NrAcademyDAL.csproj|solutionrelative:nracademydal\\repositories\\courserepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{10264E89-A4B5-42B3-8F4F-87EA78166DCC}|NrAcademyDAL\\NrAcademyDAL.csproj|c:\\nracademy\\nracademyy\\nracademydal\\repositories\\genericrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{10264E89-A4B5-42B3-8F4F-87EA78166DCC}|NrAcademyDAL\\NrAcademyDAL.csproj|solutionrelative:nracademydal\\repositories\\genericrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{937AD1DF-0ACB-4D1F-A634-AF6A6A35F878}|NrAcademyBL\\NrAcademyBL.csproj|c:\\nracademy\\nracademyy\\nracademybl\\services\\abstract\\icourseservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{937AD1DF-0ACB-4D1F-A634-AF6A6A35F878}|NrAcademyBL\\NrAcademyBL.csproj|solutionrelative:nracademybl\\services\\abstract\\icourseservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{937AD1DF-0ACB-4D1F-A634-AF6A6A35F878}|NrAcademyBL\\NrAcademyBL.csproj|c:\\nracademy\\nracademyy\\nracademybl\\dtos\\authdto\\logindto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{937AD1DF-0ACB-4D1F-A634-AF6A6A35F878}|NrAcademyBL\\NrAcademyBL.csproj|solutionrelative:nracademybl\\dtos\\authdto\\logindto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{937AD1DF-0ACB-4D1F-A634-AF6A6A35F878}|NrAcademyBL\\NrAcademyBL.csproj|c:\\nracademy\\nracademyy\\nracademybl\\dtos\\course\\courseupdatedto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{937AD1DF-0ACB-4D1F-A634-AF6A6A35F878}|NrAcademyBL\\NrAcademyBL.csproj|solutionrelative:nracademybl\\dtos\\course\\courseupdatedto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{937AD1DF-0ACB-4D1F-A634-AF6A6A35F878}|NrAcademyBL\\NrAcademyBL.csproj|c:\\nracademy\\nracademyy\\nracademybl\\services\\abstract\\ijwtservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{937AD1DF-0ACB-4D1F-A634-AF6A6A35F878}|NrAcademyBL\\NrAcademyBL.csproj|solutionrelative:nracademybl\\services\\abstract\\ijwtservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{F164F76E-77C9-4E68-AC98-372F94C790C5}|NrAcademyCORE\\NrAcademyCORE.csproj|c:\\nracademy\\nracademyy\\nracademycore\\enums\\levels.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{F164F76E-77C9-4E68-AC98-372F94C790C5}|NrAcademyCORE\\NrAcademyCORE.csproj|solutionrelative:nracademycore\\enums\\levels.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{937AD1DF-0ACB-4D1F-A634-AF6A6A35F878}|NrAcademyBL\\NrAcademyBL.csproj|c:\\nracademy\\nracademyy\\nracademybl\\services\\abstract\\iemailservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{937AD1DF-0ACB-4D1F-A634-AF6A6A35F878}|NrAcademyBL\\NrAcademyBL.csproj|solutionrelative:nracademybl\\services\\abstract\\iemailservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{937AD1DF-0ACB-4D1F-A634-AF6A6A35F878}|NrAcademyBL\\NrAcademyBL.csproj|c:\\nracademy\\nracademyy\\nracademybl\\configuration\\jwtsettings.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{937AD1DF-0ACB-4D1F-A634-AF6A6A35F878}|NrAcademyBL\\NrAcademyBL.csproj|solutionrelative:nracademybl\\configuration\\jwtsettings.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{937AD1DF-0ACB-4D1F-A634-AF6A6A35F878}|NrAcademyBL\\NrAcademyBL.csproj|c:\\nracademy\\nracademyy\\nracademybl\\configuration\\emailsettings.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{937AD1DF-0ACB-4D1F-A634-AF6A6A35F878}|NrAcademyBL\\NrAcademyBL.csproj|solutionrelative:nracademybl\\configuration\\emailsettings.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{F164F76E-77C9-4E68-AC98-372F94C790C5}|NrAcademyCORE\\NrAcademyCORE.csproj|c:\\nracademy\\nracademyy\\nracademycore\\entities\\certificate.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{F164F76E-77C9-4E68-AC98-372F94C790C5}|NrAcademyCORE\\NrAcademyCORE.csproj|solutionrelative:nracademycore\\entities\\certificate.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{937AD1DF-0ACB-4D1F-A634-AF6A6A35F878}|NrAcademyBL\\NrAcademyBL.csproj|c:\\nracademy\\nracademyy\\nracademybl\\dtos\\emaildto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{937AD1DF-0ACB-4D1F-A634-AF6A6A35F878}|NrAcademyBL\\NrAcademyBL.csproj|solutionrelative:nracademybl\\dtos\\emaildto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{937AD1DF-0ACB-4D1F-A634-AF6A6A35F878}|NrAcademyBL\\NrAcademyBL.csproj|c:\\nracademy\\nracademyy\\nracademybl\\mappings\\userprofile.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{937AD1DF-0ACB-4D1F-A634-AF6A6A35F878}|NrAcademyBL\\NrAcademyBL.csproj|solutionrelative:nracademybl\\mappings\\userprofile.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{703D6F1B-250D-4CDB-BB22-2C0BFE207C1D}|NrAcademyy\\NrAcademyy.csproj|c:\\nracademy\\nracademyy\\nracademyy\\nracademyy.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|",
+      "RelativeMoniker": "D:0:0:{703D6F1B-250D-4CDB-BB22-2C0BFE207C1D}|NrAcademyy\\NrAcademyy.csproj|solutionrelative:nracademyy\\nracademyy.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{10264E89-A4B5-42B3-8F4F-87EA78166DCC}|NrAcademyDAL\\NrAcademyDAL.csproj|c:\\nracademy\\nracademyy\\nracademydal\\repositories\\questionrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{10264E89-A4B5-42B3-8F4F-87EA78166DCC}|NrAcademyDAL\\NrAcademyDAL.csproj|solutionrelative:nracademydal\\repositories\\questionrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{10264E89-A4B5-42B3-8F4F-87EA78166DCC}|NrAcademyDAL\\NrAcademyDAL.csproj|c:\\nracademy\\nracademyy\\nracademydal\\repositories\\refreshtokenrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{10264E89-A4B5-42B3-8F4F-87EA78166DCC}|NrAcademyDAL\\NrAcademyDAL.csproj|solutionrelative:nracademydal\\repositories\\refreshtokenrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{10264E89-A4B5-42B3-8F4F-87EA78166DCC}|NrAcademyDAL\\NrAcademyDAL.csproj|c:\\nracademy\\nracademyy\\nracademydal\\migrations\\20260425135731_update1234443.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{10264E89-A4B5-42B3-8F4F-87EA78166DCC}|NrAcademyDAL\\NrAcademyDAL.csproj|solutionrelative:nracademydal\\migrations\\20260425135731_update1234443.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{10264E89-A4B5-42B3-8F4F-87EA78166DCC}|NrAcademyDAL\\NrAcademyDAL.csproj|c:\\nracademy\\nracademyy\\nracademydal\\migrations\\20260427092648_makeverificationcodenullable.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{10264E89-A4B5-42B3-8F4F-87EA78166DCC}|NrAcademyDAL\\NrAcademyDAL.csproj|solutionrelative:nracademydal\\migrations\\20260427092648_makeverificationcodenullable.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 1,
+          "Children": [
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{1c4feeaa-4718-4aa9-859d-94ce25d182ba}"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "AuthServiceTests.cs",
+              "DocumentMoniker": "C:\\NrAcademy\\NrAcademyy\\NrAcademy.Tests\\IntegrationTests\\Services\\AuthServiceTests.cs",
+              "RelativeDocumentMoniker": "NrAcademy.Tests\\IntegrationTests\\Services\\AuthServiceTests.cs",
+              "ToolTip": "C:\\NrAcademy\\NrAcademyy\\NrAcademy.Tests\\IntegrationTests\\Services\\AuthServiceTests.cs",
+              "RelativeToolTip": "NrAcademy.Tests\\IntegrationTests\\Services\\AuthServiceTests.cs",
+              "ViewState": "AgIAAC8AAAAAAAAAAAAEwG0AAAAFAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-04-28T15:20:24.606Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "TestDbContextFactory.cs",
+              "DocumentMoniker": "C:\\NrAcademy\\NrAcademyy\\NrAcademy.Tests\\IntegrationTests\\Services\\TestDbContextFactory.cs",
+              "RelativeDocumentMoniker": "NrAcademy.Tests\\IntegrationTests\\Services\\TestDbContextFactory.cs",
+              "ToolTip": "C:\\NrAcademy\\NrAcademyy\\NrAcademy.Tests\\IntegrationTests\\Services\\TestDbContextFactory.cs",
+              "RelativeToolTip": "NrAcademy.Tests\\IntegrationTests\\Services\\TestDbContextFactory.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABYAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-04-28T15:02:54.11Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "BaseIntegrationTest.cs",
+              "DocumentMoniker": "C:\\NrAcademy\\NrAcademyy\\NrAcademy.Tests\\IntegrationTests\\Services\\BaseIntegrationTest.cs",
+              "RelativeDocumentMoniker": "NrAcademy.Tests\\IntegrationTests\\Services\\BaseIntegrationTest.cs",
+              "ToolTip": "C:\\NrAcademy\\NrAcademyy\\NrAcademy.Tests\\IntegrationTests\\Services\\BaseIntegrationTest.cs",
+              "RelativeToolTip": "NrAcademy.Tests\\IntegrationTests\\Services\\BaseIntegrationTest.cs",
+              "ViewState": "AgIAAAEAAAAAAAAAAAAqwCMAAAAFAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-04-28T15:18:58.952Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "CourseServiceTests.cs",
+              "DocumentMoniker": "C:\\NrAcademy\\NrAcademyy\\NrAcademy.Tests\\IntegrationTests\\Services\\CourseServiceTests.cs",
+              "RelativeDocumentMoniker": "NrAcademy.Tests\\IntegrationTests\\Services\\CourseServiceTests.cs",
+              "ToolTip": "C:\\NrAcademy\\NrAcademyy\\NrAcademy.Tests\\IntegrationTests\\Services\\CourseServiceTests.cs",
+              "RelativeToolTip": "NrAcademy.Tests\\IntegrationTests\\Services\\CourseServiceTests.cs",
+              "ViewState": "AgIAAB8AAAAAAAAAAAAQwCUAAAA1AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-04-28T16:00:11.218Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "QuestionServiceTests.cs",
+              "DocumentMoniker": "C:\\NrAcademy\\NrAcademyy\\NrAcademy.Tests\\IntegrationTests\\Services\\QuestionServiceTests.cs",
+              "RelativeDocumentMoniker": "NrAcademy.Tests\\IntegrationTests\\Services\\QuestionServiceTests.cs",
+              "ToolTip": "C:\\NrAcademy\\NrAcademyy\\NrAcademy.Tests\\IntegrationTests\\Services\\QuestionServiceTests.cs",
+              "RelativeToolTip": "NrAcademy.Tests\\IntegrationTests\\Services\\QuestionServiceTests.cs",
+              "ViewState": "AgIAACIAAAAAAAAAAAAmwGIAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-04-28T16:03:09.603Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "JwtServiceTests.cs",
+              "DocumentMoniker": "C:\\NrAcademy\\NrAcademyy\\NrAcademy.Tests\\IntegrationTests\\Services\\JwtServiceTests.cs",
+              "RelativeDocumentMoniker": "NrAcademy.Tests\\IntegrationTests\\Services\\JwtServiceTests.cs",
+              "ToolTip": "C:\\NrAcademy\\NrAcademyy\\NrAcademy.Tests\\IntegrationTests\\Services\\JwtServiceTests.cs",
+              "RelativeToolTip": "NrAcademy.Tests\\IntegrationTests\\Services\\JwtServiceTests.cs",
+              "ViewState": "AgIAABQAAAAAAAAAAAAiwCUAAAA2AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-04-28T16:24:12.276Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "UserServiceTests.cs",
+              "DocumentMoniker": "C:\\NrAcademy\\NrAcademyy\\NrAcademy.Tests\\IntegrationTests\\Services\\UserServiceTests.cs",
+              "RelativeDocumentMoniker": "NrAcademy.Tests\\IntegrationTests\\Services\\UserServiceTests.cs",
+              "ToolTip": "C:\\NrAcademy\\NrAcademyy\\NrAcademy.Tests\\IntegrationTests\\Services\\UserServiceTests.cs",
+              "RelativeToolTip": "NrAcademy.Tests\\IntegrationTests\\Services\\UserServiceTests.cs",
+              "ViewState": "AgIAAAwAAAAAAAAAAAAAAFoAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-04-28T16:28:07.928Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
+              "Title": "EmailServiceTests.cs",
+              "DocumentMoniker": "C:\\NrAcademy\\NrAcademyy\\NrAcademy.Tests\\IntegrationTests\\Services\\EmailServiceTests.cs",
+              "RelativeDocumentMoniker": "NrAcademy.Tests\\IntegrationTests\\Services\\EmailServiceTests.cs",
+              "ToolTip": "C:\\NrAcademy\\NrAcademyy\\NrAcademy.Tests\\IntegrationTests\\Services\\EmailServiceTests.cs",
+              "RelativeToolTip": "NrAcademy.Tests\\IntegrationTests\\Services\\EmailServiceTests.cs",
+              "ViewState": "AgIAAB0AAAAAAAAAAAAAACMAAAAIAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-04-28T16:25:47.357Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 11,
+              "Title": "TestResultServiceTests.cs",
+              "DocumentMoniker": "C:\\NrAcademy\\NrAcademyy\\NrAcademy.Tests\\IntegrationTests\\Services\\TestResultServiceTests.cs",
+              "RelativeDocumentMoniker": "NrAcademy.Tests\\IntegrationTests\\Services\\TestResultServiceTests.cs",
+              "ToolTip": "C:\\NrAcademy\\NrAcademyy\\NrAcademy.Tests\\IntegrationTests\\Services\\TestResultServiceTests.cs",
+              "RelativeToolTip": "NrAcademy.Tests\\IntegrationTests\\Services\\TestResultServiceTests.cs",
+              "ViewState": "AgIAAFAAAAAAAAAAAAAlwF0AAABEAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-04-28T16:19:47.153Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 12,
+              "Title": "TestResultService.cs",
+              "DocumentMoniker": "C:\\NrAcademy\\NrAcademyy\\NrAcademyBL\\Services\\Concrete\\TestResultService.cs",
+              "RelativeDocumentMoniker": "NrAcademyBL\\Services\\Concrete\\TestResultService.cs",
+              "ToolTip": "C:\\NrAcademy\\NrAcademyy\\NrAcademyBL\\Services\\Concrete\\TestResultService.cs",
+              "RelativeToolTip": "NrAcademyBL\\Services\\Concrete\\TestResultService.cs",
+              "ViewState": "AgIAABkAAAAAAAAAAAAmwDEAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-04-28T16:18:47.274Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 13,
+              "Title": "TestResult.cs",
+              "DocumentMoniker": "C:\\NrAcademy\\NrAcademyy\\NrAcademyCORE\\Entities\\TestResult.cs",
+              "RelativeDocumentMoniker": "NrAcademyCORE\\Entities\\TestResult.cs",
+              "ToolTip": "C:\\NrAcademy\\NrAcademyy\\NrAcademyCORE\\Entities\\TestResult.cs",
+              "RelativeToolTip": "NrAcademyCORE\\Entities\\TestResult.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-04-28T16:20:11.21Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "UserService.cs",
+              "DocumentMoniker": "C:\\NrAcademy\\NrAcademyy\\NrAcademyBL\\Services\\Concrete\\UserService.cs",
+              "RelativeDocumentMoniker": "NrAcademyBL\\Services\\Concrete\\UserService.cs",
+              "ToolTip": "C:\\NrAcademy\\NrAcademyy\\NrAcademyBL\\Services\\Concrete\\UserService.cs",
+              "RelativeToolTip": "NrAcademyBL\\Services\\Concrete\\UserService.cs",
+              "ViewState": "AgIAAB8AAAAAAAAAAAAuwEIAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-04-28T16:10:21.203Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 16,
+              "Title": "TestService.cs",
+              "DocumentMoniker": "C:\\NrAcademy\\NrAcademyy\\NrAcademyBL\\Services\\Concrete\\TestService.cs",
+              "RelativeDocumentMoniker": "NrAcademyBL\\Services\\Concrete\\TestService.cs",
+              "ToolTip": "C:\\NrAcademy\\NrAcademyy\\NrAcademyBL\\Services\\Concrete\\TestService.cs",
+              "RelativeToolTip": "NrAcademyBL\\Services\\Concrete\\TestService.cs",
+              "ViewState": "AgIAACIAAAAAAAAAAAAmwDoAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-04-28T16:10:17.07Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 9,
+              "Title": "EmailService .cs",
+              "DocumentMoniker": "C:\\NrAcademy\\NrAcademyy\\NrAcademyBL\\Services\\Concrete\\EmailService .cs",
+              "RelativeDocumentMoniker": "NrAcademyBL\\Services\\Concrete\\EmailService .cs",
+              "ToolTip": "C:\\NrAcademy\\NrAcademyy\\NrAcademyBL\\Services\\Concrete\\EmailService .cs",
+              "RelativeToolTip": "NrAcademyBL\\Services\\Concrete\\EmailService .cs",
+              "ViewState": "AgIAADIAAAAAAAAAAAAuwEwAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-04-24T18:42:20.969Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 14,
+              "Title": "TestServiceTests.cs",
+              "DocumentMoniker": "C:\\NrAcademy\\NrAcademyy\\NrAcademy.Tests\\IntegrationTests\\Services\\TestServiceTests.cs",
+              "RelativeDocumentMoniker": "NrAcademy.Tests\\IntegrationTests\\Services\\TestServiceTests.cs",
+              "ToolTip": "C:\\NrAcademy\\NrAcademyy\\NrAcademy.Tests\\IntegrationTests\\Services\\TestServiceTests.cs",
+              "RelativeToolTip": "NrAcademy.Tests\\IntegrationTests\\Services\\TestServiceTests.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAACsAAAAHAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-04-28T16:16:27.923Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 10,
+              "Title": "JWTService.cs",
+              "DocumentMoniker": "C:\\NrAcademy\\NrAcademyy\\NrAcademyBL\\Services\\Concrete\\JWTService.cs",
+              "RelativeDocumentMoniker": "NrAcademyBL\\Services\\Concrete\\JWTService.cs",
+              "ToolTip": "C:\\NrAcademy\\NrAcademyy\\NrAcademyBL\\Services\\Concrete\\JWTService.cs",
+              "RelativeToolTip": "NrAcademyBL\\Services\\Concrete\\JWTService.cs",
+              "ViewState": "AgIAAGYAAAAAAAAAAAAuwIAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-04-24T18:30:32.824Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 15,
+              "Title": "Test.cs",
+              "DocumentMoniker": "C:\\NrAcademy\\NrAcademyy\\NrAcademyCORE\\Entities\\Test.cs",
+              "RelativeDocumentMoniker": "NrAcademyCORE\\Entities\\Test.cs",
+              "ToolTip": "C:\\NrAcademy\\NrAcademyy\\NrAcademyCORE\\Entities\\Test.cs",
+              "RelativeToolTip": "NrAcademyCORE\\Entities\\Test.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-04-28T16:16:59.688Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 18,
+              "Title": "TeacherServiceTests.cs",
+              "DocumentMoniker": "C:\\NrAcademy\\NrAcademyy\\NrAcademy.Tests\\IntegrationTests\\Services\\TeacherServiceTests.cs",
+              "RelativeDocumentMoniker": "NrAcademy.Tests\\IntegrationTests\\Services\\TeacherServiceTests.cs",
+              "ToolTip": "C:\\NrAcademy\\NrAcademyy\\NrAcademy.Tests\\IntegrationTests\\Services\\TeacherServiceTests.cs",
+              "RelativeToolTip": "NrAcademy.Tests\\IntegrationTests\\Services\\TeacherServiceTests.cs",
+              "ViewState": "AgIAAC0AAAAAAAAAAAAYwDIAAAAIAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-04-28T16:08:51.476Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 19,
+              "Title": "QuestionDTO.cs",
+              "DocumentMoniker": "C:\\NrAcademy\\NrAcademyy\\NrAcademyBL\\DTOs\\AuthDTO\\QuestionDTO.cs",
+              "RelativeDocumentMoniker": "NrAcademyBL\\DTOs\\AuthDTO\\QuestionDTO.cs",
+              "ToolTip": "C:\\NrAcademy\\NrAcademyy\\NrAcademyBL\\DTOs\\AuthDTO\\QuestionDTO.cs",
+              "RelativeToolTip": "NrAcademyBL\\DTOs\\AuthDTO\\QuestionDTO.cs",
+              "ViewState": "AgIAABIAAAAAAAAAAAAowAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-04-28T16:07:21.532Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 20,
+              "Title": "Question.cs",
+              "DocumentMoniker": "C:\\NrAcademy\\NrAcademyy\\NrAcademyCORE\\Entities\\Question.cs",
+              "RelativeDocumentMoniker": "NrAcademyCORE\\Entities\\Question.cs",
+              "ToolTip": "C:\\NrAcademy\\NrAcademyy\\NrAcademyCORE\\Entities\\Question.cs",
+              "RelativeToolTip": "NrAcademyCORE\\Entities\\Question.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-04-28T16:03:41.398Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 17,
+              "Title": "TeacherService.cs",
+              "DocumentMoniker": "C:\\NrAcademy\\NrAcademyy\\NrAcademyBL\\Services\\Concrete\\TeacherService.cs",
+              "RelativeDocumentMoniker": "NrAcademyBL\\Services\\Concrete\\TeacherService.cs",
+              "ToolTip": "C:\\NrAcademy\\NrAcademyy\\NrAcademyBL\\Services\\Concrete\\TeacherService.cs",
+              "RelativeToolTip": "NrAcademyBL\\Services\\Concrete\\TeacherService.cs",
+              "ViewState": "AgIAACYAAAAAAAAAAAAqwD8AAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-04-24T18:34:34.057Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 23,
+              "Title": "AnswerServiceTests.cs",
+              "DocumentMoniker": "C:\\NrAcademy\\NrAcademyy\\NrAcademy.Tests\\IntegrationTests\\Services\\AnswerServiceTests.cs",
+              "RelativeDocumentMoniker": "NrAcademy.Tests\\IntegrationTests\\Services\\AnswerServiceTests.cs",
+              "ToolTip": "C:\\NrAcademy\\NrAcademyy\\NrAcademy.Tests\\IntegrationTests\\Services\\AnswerServiceTests.cs",
+              "RelativeToolTip": "NrAcademy.Tests\\IntegrationTests\\Services\\AnswerServiceTests.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAACsAAABPAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-04-28T15:56:07.524Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 22,
+              "Title": "Course.cs",
+              "DocumentMoniker": "C:\\NrAcademy\\NrAcademyy\\NrAcademyCORE\\Entities\\Course.cs",
+              "RelativeDocumentMoniker": "NrAcademyCORE\\Entities\\Course.cs",
+              "ToolTip": "C:\\NrAcademy\\NrAcademyy\\NrAcademyCORE\\Entities\\Course.cs",
+              "RelativeToolTip": "NrAcademyCORE\\Entities\\Course.cs",
+              "ViewState": "AgIAAAkAAAAAAAAAAAAAAA4AAAAmAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-04-24T20:33:40.381Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 21,
+              "Title": "Teacher.cs",
+              "DocumentMoniker": "C:\\NrAcademy\\NrAcademyy\\NrAcademyCORE\\Entities\\Teacher.cs",
+              "RelativeDocumentMoniker": "NrAcademyCORE\\Entities\\Teacher.cs",
+              "ToolTip": "C:\\NrAcademy\\NrAcademyy\\NrAcademyCORE\\Entities\\Teacher.cs",
+              "RelativeToolTip": "NrAcademyCORE\\Entities\\Teacher.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABIAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-04-24T21:17:38.309Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 25,
+              "Title": "AppUser.cs",
+              "DocumentMoniker": "C:\\NrAcademy\\NrAcademyy\\NrAcademyCORE\\Entities\\Identity\\AppUser.cs",
+              "RelativeDocumentMoniker": "NrAcademyCORE\\Entities\\Identity\\AppUser.cs",
+              "ToolTip": "C:\\NrAcademy\\NrAcademyy\\NrAcademyCORE\\Entities\\Identity\\AppUser.cs",
+              "RelativeToolTip": "NrAcademyCORE\\Entities\\Identity\\AppUser.cs",
+              "ViewState": "AgIAAAIAAAAAAAAAAAAwwBUAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-04-24T19:24:23.309Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 24,
+              "Title": "Answer.cs",
+              "DocumentMoniker": "C:\\NrAcademy\\NrAcademyy\\NrAcademyCORE\\Entities\\Answer.cs",
+              "RelativeDocumentMoniker": "NrAcademyCORE\\Entities\\Answer.cs",
+              "ToolTip": "C:\\NrAcademy\\NrAcademyy\\NrAcademyCORE\\Entities\\Answer.cs",
+              "RelativeToolTip": "NrAcademyCORE\\Entities\\Answer.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-04-25T13:15:22.261Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 28,
+              "Title": "AppDbContext.cs",
+              "DocumentMoniker": "C:\\NrAcademy\\NrAcademyy\\NrAcademyDAL\\Context\\AppDbContext.cs",
+              "RelativeDocumentMoniker": "NrAcademyDAL\\Context\\AppDbContext.cs",
+              "ToolTip": "C:\\NrAcademy\\NrAcademyy\\NrAcademyDAL\\Context\\AppDbContext.cs",
+              "RelativeToolTip": "NrAcademyDAL\\Context\\AppDbContext.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAYwCkAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-04-28T15:09:05.918Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 26,
+              "Title": "AuthResponseDto.cs",
+              "DocumentMoniker": "C:\\NrAcademy\\NrAcademyy\\NrAcademyBL\\DTOs\\AuthResponseDto.cs",
+              "RelativeDocumentMoniker": "NrAcademyBL\\DTOs\\AuthResponseDto.cs",
+              "ToolTip": "C:\\NrAcademy\\NrAcademyy\\NrAcademyBL\\DTOs\\AuthResponseDto.cs",
+              "RelativeToolTip": "NrAcademyBL\\DTOs\\AuthResponseDto.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAoAAAAWAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-04-24T20:49:15.136Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 29,
+              "Title": "AuthService.cs",
+              "DocumentMoniker": "C:\\NrAcademy\\NrAcademyy\\NrAcademyBL\\Services\\Concrete\\AuthService.cs",
+              "RelativeDocumentMoniker": "NrAcademyBL\\Services\\Concrete\\AuthService.cs",
+              "ToolTip": "C:\\NrAcademy\\NrAcademyy\\NrAcademyBL\\Services\\Concrete\\AuthService.cs",
+              "RelativeToolTip": "NrAcademyBL\\Services\\Concrete\\AuthService.cs",
+              "ViewState": "AgIAAKEAAAAAAAAAAAAuwLsAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-04-24T19:25:18.329Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 30,
+              "Title": "CourseMappingProfile.cs",
+              "DocumentMoniker": "C:\\NrAcademy\\NrAcademyy\\NrAcademyBL\\Mappings\\CourseMappingProfile.cs",
+              "RelativeDocumentMoniker": "NrAcademyBL\\Mappings\\CourseMappingProfile.cs",
+              "ToolTip": "C:\\NrAcademy\\NrAcademyy\\NrAcademyBL\\Mappings\\CourseMappingProfile.cs",
+              "RelativeToolTip": "NrAcademyBL\\Mappings\\CourseMappingProfile.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAYAAAARAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-04-24T20:50:27.527Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 27,
+              "Title": "appsettings.json",
+              "DocumentMoniker": "C:\\NrAcademy\\NrAcademyy\\NrAcademyy\\appsettings.json",
+              "RelativeDocumentMoniker": "NrAcademyy\\appsettings.json",
+              "ToolTip": "C:\\NrAcademy\\NrAcademyy\\NrAcademyy\\appsettings.json",
+              "RelativeToolTip": "NrAcademyy\\appsettings.json",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAgAAABCAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
+              "WhenOpened": "2026-04-27T07:45:24.535Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 31,
+              "Title": "CourseCreateDTO.cs",
+              "DocumentMoniker": "C:\\NrAcademy\\NrAcademyy\\NrAcademyBL\\DTOs\\Course\\CourseCreateDTO.cs",
+              "RelativeDocumentMoniker": "NrAcademyBL\\DTOs\\Course\\CourseCreateDTO.cs",
+              "ToolTip": "C:\\NrAcademy\\NrAcademyy\\NrAcademyBL\\DTOs\\Course\\CourseCreateDTO.cs",
+              "RelativeToolTip": "NrAcademyBL\\DTOs\\Course\\CourseCreateDTO.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAQAAAASAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-04-24T20:46:35.92Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 32,
+              "Title": "TestResultDTO.cs",
+              "DocumentMoniker": "C:\\NrAcademy\\NrAcademyy\\NrAcademyBL\\DTOs\\AuthDTO\\TestResultDTO.cs",
+              "RelativeDocumentMoniker": "NrAcademyBL\\DTOs\\AuthDTO\\TestResultDTO.cs",
+              "ToolTip": "C:\\NrAcademy\\NrAcademyy\\NrAcademyBL\\DTOs\\AuthDTO\\TestResultDTO.cs",
+              "RelativeToolTip": "NrAcademyBL\\DTOs\\AuthDTO\\TestResultDTO.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-04-27T11:12:28.425Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 73,
+              "Title": "20260427092648_MakeVerificationCodeNullable.cs",
+              "DocumentMoniker": "C:\\NrAcademy\\NrAcademyy\\NrAcademyDAL\\Migrations\\20260427092648_MakeVerificationCodeNullable.cs",
+              "RelativeDocumentMoniker": "NrAcademyDAL\\Migrations\\20260427092648_MakeVerificationCodeNullable.cs",
+              "ToolTip": "C:\\NrAcademy\\NrAcademyy\\NrAcademyDAL\\Migrations\\20260427092648_MakeVerificationCodeNullable.cs",
+              "RelativeToolTip": "NrAcademyDAL\\Migrations\\20260427092648_MakeVerificationCodeNullable.cs",
+              "ViewState": "AgIAAA0AAAAAAAAAAAAQwAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-04-27T09:26:48.377Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 34,
+              "Title": "IQuestionService.cs",
+              "DocumentMoniker": "C:\\NrAcademy\\NrAcademyy\\NrAcademyBL\\Services\\Abstract\\IQuestionService.cs",
+              "RelativeDocumentMoniker": "NrAcademyBL\\Services\\Abstract\\IQuestionService.cs",
+              "ToolTip": "C:\\NrAcademy\\NrAcademyy\\NrAcademyBL\\Services\\Abstract\\IQuestionService.cs",
+              "RelativeToolTip": "NrAcademyBL\\Services\\Abstract\\IQuestionService.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-04-27T11:10:55.117Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 35,
+              "Title": "IAnswerService.cs",
+              "DocumentMoniker": "C:\\NrAcademy\\NrAcademyy\\NrAcademyBL\\Services\\Abstract\\IAnswerService.cs",
+              "RelativeDocumentMoniker": "NrAcademyBL\\Services\\Abstract\\IAnswerService.cs",
+              "ToolTip": "C:\\NrAcademy\\NrAcademyy\\NrAcademyBL\\Services\\Abstract\\IAnswerService.cs",
+              "RelativeToolTip": "NrAcademyBL\\Services\\Abstract\\IAnswerService.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-04-25T13:15:04.685Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 33,
+              "Title": "TeacherMappingProfile.cs",
+              "DocumentMoniker": "C:\\NrAcademy\\NrAcademyy\\NrAcademyBL\\Mappings\\TeacherMappingProfile.cs",
+              "RelativeDocumentMoniker": "NrAcademyBL\\Mappings\\TeacherMappingProfile.cs",
+              "ToolTip": "C:\\NrAcademy\\NrAcademyy\\NrAcademyBL\\Mappings\\TeacherMappingProfile.cs",
+              "RelativeToolTip": "NrAcademyBL\\Mappings\\TeacherMappingProfile.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAEAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-04-24T21:20:34.071Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 36,
+              "Title": "AuthController.cs",
+              "DocumentMoniker": "C:\\NrAcademy\\NrAcademyy\\NrAcademyy\\Controllers\\AuthController.cs",
+              "RelativeDocumentMoniker": "NrAcademyy\\Controllers\\AuthController.cs",
+              "ToolTip": "C:\\NrAcademy\\NrAcademyy\\NrAcademyy\\Controllers\\AuthController.cs",
+              "RelativeToolTip": "NrAcademyy\\Controllers\\AuthController.cs",
+              "ViewState": "AgIAACcAAAAAAAAAAAAmwD8AAAAJAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-04-27T08:13:41.96Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 37,
+              "Title": "VerifyEmailDTO.cs",
+              "DocumentMoniker": "C:\\NrAcademy\\NrAcademyy\\NrAcademyBL\\DTOs\\AuthDTO\\VerifyEmailDTO.cs",
+              "RelativeDocumentMoniker": "NrAcademyBL\\DTOs\\AuthDTO\\VerifyEmailDTO.cs",
+              "ToolTip": "C:\\NrAcademy\\NrAcademyy\\NrAcademyBL\\DTOs\\AuthDTO\\VerifyEmailDTO.cs",
+              "RelativeToolTip": "NrAcademyBL\\DTOs\\AuthDTO\\VerifyEmailDTO.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAwAAAAFAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-04-27T08:49:28.51Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 40,
+              "Title": "appsettings.Development.json",
+              "DocumentMoniker": "C:\\NrAcademy\\NrAcademyy\\NrAcademyy\\appsettings.Development.json",
+              "RelativeDocumentMoniker": "NrAcademyy\\appsettings.Development.json",
+              "ToolTip": "C:\\NrAcademy\\NrAcademyy\\NrAcademyy\\appsettings.Development.json",
+              "RelativeToolTip": "NrAcademyy\\appsettings.Development.json",
+              "ViewState": "AgIAAAIAAAAAAAAAAABRwBoAAAAiAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
+              "WhenOpened": "2026-04-27T07:41:11.421Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 39,
+              "Title": "VerifyResetCodeDTO.cs",
+              "DocumentMoniker": "C:\\NrAcademy\\NrAcademyy\\NrAcademyBL\\DTOs\\ForgotPassword\\VerifyResetCodeDTO.cs",
+              "RelativeDocumentMoniker": "NrAcademyBL\\DTOs\\ForgotPassword\\VerifyResetCodeDTO.cs",
+              "ToolTip": "C:\\NrAcademy\\NrAcademyy\\NrAcademyBL\\DTOs\\ForgotPassword\\VerifyResetCodeDTO.cs",
+              "RelativeToolTip": "NrAcademyBL\\DTOs\\ForgotPassword\\VerifyResetCodeDTO.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAwAAAAFAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-04-24T22:20:51.18Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 38,
+              "Title": "IAuthService.cs",
+              "DocumentMoniker": "C:\\NrAcademy\\NrAcademyy\\NrAcademyBL\\Services\\Abstract\\IAuthService.cs",
+              "RelativeDocumentMoniker": "NrAcademyBL\\Services\\Abstract\\IAuthService.cs",
+              "ToolTip": "C:\\NrAcademy\\NrAcademyy\\NrAcademyBL\\Services\\Abstract\\IAuthService.cs",
+              "RelativeToolTip": "NrAcademyBL\\Services\\Abstract\\IAuthService.cs",
+              "ViewState": "AgIAAAUAAAAAAAAAAAAEwBIAAAAeAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-04-24T20:38:04.585Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 72,
+              "Title": "20260425135731_update1234443.cs",
+              "DocumentMoniker": "C:\\NrAcademy\\NrAcademyy\\NrAcademyDAL\\Migrations\\20260425135731_update1234443.cs",
+              "RelativeDocumentMoniker": "NrAcademyDAL\\Migrations\\20260425135731_update1234443.cs",
+              "ToolTip": "C:\\NrAcademy\\NrAcademyy\\NrAcademyDAL\\Migrations\\20260425135731_update1234443.cs",
+              "RelativeToolTip": "NrAcademyDAL\\Migrations\\20260425135731_update1234443.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-04-25T13:57:32.181Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 42,
+              "Title": "ForgotPasswordDTO.cs",
+              "DocumentMoniker": "C:\\NrAcademy\\NrAcademyy\\NrAcademyBL\\DTOs\\ForgotPassword\\ForgotPasswordDTO.cs",
+              "RelativeDocumentMoniker": "NrAcademyBL\\DTOs\\ForgotPassword\\ForgotPasswordDTO.cs",
+              "ToolTip": "C:\\NrAcademy\\NrAcademyy\\NrAcademyBL\\DTOs\\ForgotPassword\\ForgotPasswordDTO.cs",
+              "RelativeToolTip": "NrAcademyBL\\DTOs\\ForgotPassword\\ForgotPasswordDTO.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAsAAAAFAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-04-24T22:20:34.718Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 41,
+              "Title": "ResetPasswordDTO.cs",
+              "DocumentMoniker": "C:\\NrAcademy\\NrAcademyy\\NrAcademyBL\\DTOs\\ForgotPassword\\ResetPasswordDTO.cs",
+              "RelativeDocumentMoniker": "NrAcademyBL\\DTOs\\ForgotPassword\\ResetPasswordDTO.cs",
+              "ToolTip": "C:\\NrAcademy\\NrAcademyy\\NrAcademyBL\\DTOs\\ForgotPassword\\ResetPasswordDTO.cs",
+              "RelativeToolTip": "NrAcademyBL\\DTOs\\ForgotPassword\\ResetPasswordDTO.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA0AAAAFAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-04-24T22:21:09.621Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 43,
+              "Title": "Program.cs",
+              "DocumentMoniker": "C:\\NrAcademy\\NrAcademyy\\NrAcademyy\\Program.cs",
+              "RelativeDocumentMoniker": "NrAcademyy\\Program.cs",
+              "ToolTip": "C:\\NrAcademy\\NrAcademyy\\NrAcademyy\\Program.cs",
+              "RelativeToolTip": "NrAcademyy\\Program.cs",
+              "ViewState": "AgIAADYAAAAAAAAAAAAQwB0AAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-04-24T17:06:21.69Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 44,
+              "Title": "20260424214902_AddEmailVerificationFields.cs",
+              "DocumentMoniker": "C:\\NrAcademy\\NrAcademyy\\NrAcademyDAL\\Migrations\\20260424214902_AddEmailVerificationFields.cs",
+              "RelativeDocumentMoniker": "NrAcademyDAL\\Migrations\\20260424214902_AddEmailVerificationFields.cs",
+              "ToolTip": "C:\\NrAcademy\\NrAcademyy\\NrAcademyDAL\\Migrations\\20260424214902_AddEmailVerificationFields.cs",
+              "RelativeToolTip": "NrAcademyDAL\\Migrations\\20260424214902_AddEmailVerificationFields.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-04-24T21:49:03.12Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 45,
+              "Title": "TeacherController.cs",
+              "DocumentMoniker": "C:\\NrAcademy\\NrAcademyy\\NrAcademyy\\Controllers\\TeacherController.cs",
+              "RelativeDocumentMoniker": "NrAcademyy\\Controllers\\TeacherController.cs",
+              "ToolTip": "C:\\NrAcademy\\NrAcademyy\\NrAcademyy\\Controllers\\TeacherController.cs",
+              "RelativeToolTip": "NrAcademyy\\Controllers\\TeacherController.cs",
+              "ViewState": "AgIAABsAAAAAAAAAAAA1wD4AAAAcAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-04-24T21:24:35.804Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 46,
+              "Title": "ServiceRegistrations.cs",
+              "DocumentMoniker": "C:\\NrAcademy\\NrAcademyy\\NrAcademyBL\\ServiceRegistrations.cs",
+              "RelativeDocumentMoniker": "NrAcademyBL\\ServiceRegistrations.cs",
+              "ToolTip": "C:\\NrAcademy\\NrAcademyy\\NrAcademyBL\\ServiceRegistrations.cs",
+              "RelativeToolTip": "NrAcademyBL\\ServiceRegistrations.cs",
+              "ViewState": "AgIAAAgAAAAAAAAAAAAawBQAAAAVAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-04-24T16:38:23.389Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 47,
+              "Title": "ITeacherService.cs",
+              "DocumentMoniker": "C:\\NrAcademy\\NrAcademyy\\NrAcademyBL\\Services\\Abstract\\ITeacherService.cs",
+              "RelativeDocumentMoniker": "NrAcademyBL\\Services\\Abstract\\ITeacherService.cs",
+              "ToolTip": "C:\\NrAcademy\\NrAcademyy\\NrAcademyBL\\Services\\Abstract\\ITeacherService.cs",
+              "RelativeToolTip": "NrAcademyBL\\Services\\Abstract\\ITeacherService.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAwAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-04-24T18:29:40.308Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 48,
+              "Title": "TeacherGetDTO.cs",
+              "DocumentMoniker": "C:\\NrAcademy\\NrAcademyy\\NrAcademyBL\\DTOs\\TeacherDTOs\\TeacherGetDTO.cs",
+              "RelativeDocumentMoniker": "NrAcademyBL\\DTOs\\TeacherDTOs\\TeacherGetDTO.cs",
+              "ToolTip": "C:\\NrAcademy\\NrAcademyy\\NrAcademyBL\\DTOs\\TeacherDTOs\\TeacherGetDTO.cs",
+              "RelativeToolTip": "NrAcademyBL\\DTOs\\TeacherDTOs\\TeacherGetDTO.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAoAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-04-24T21:20:15.535Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 49,
+              "Title": "TeacherUpdateDTO.cs",
+              "DocumentMoniker": "C:\\NrAcademy\\NrAcademyy\\NrAcademyBL\\DTOs\\TeacherDTOs\\TeacherUpdateDTO.cs",
+              "RelativeDocumentMoniker": "NrAcademyBL\\DTOs\\TeacherDTOs\\TeacherUpdateDTO.cs",
+              "ToolTip": "C:\\NrAcademy\\NrAcademyy\\NrAcademyBL\\DTOs\\TeacherDTOs\\TeacherUpdateDTO.cs",
+              "RelativeToolTip": "NrAcademyBL\\DTOs\\TeacherDTOs\\TeacherUpdateDTO.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAkAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-04-24T21:20:01.391Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 50,
+              "Title": "TeacherCreateDTO.cs",
+              "DocumentMoniker": "C:\\NrAcademy\\NrAcademyy\\NrAcademyBL\\DTOs\\TeacherDTOs\\TeacherCreateDTO.cs",
+              "RelativeDocumentMoniker": "NrAcademyBL\\DTOs\\TeacherDTOs\\TeacherCreateDTO.cs",
+              "ToolTip": "C:\\NrAcademy\\NrAcademyy\\NrAcademyBL\\DTOs\\TeacherDTOs\\TeacherCreateDTO.cs",
+              "RelativeToolTip": "NrAcademyBL\\DTOs\\TeacherDTOs\\TeacherCreateDTO.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAkAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-04-24T21:19:44.284Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 51,
+              "Title": "TeacherRepository.cs",
+              "DocumentMoniker": "C:\\NrAcademy\\NrAcademyy\\NrAcademyDAL\\Repositories\\TeacherRepository.cs",
+              "RelativeDocumentMoniker": "NrAcademyDAL\\Repositories\\TeacherRepository.cs",
+              "ToolTip": "C:\\NrAcademy\\NrAcademyy\\NrAcademyDAL\\Repositories\\TeacherRepository.cs",
+              "RelativeToolTip": "NrAcademyDAL\\Repositories\\TeacherRepository.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABMAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-04-24T21:17:55.837Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 53,
+              "Title": "TeacherInCourseDTO.cs",
+              "DocumentMoniker": "C:\\NrAcademy\\NrAcademyy\\NrAcademyBL\\DTOs\\Course\\TeacherInCourseDTO.cs",
+              "RelativeDocumentMoniker": "NrAcademyBL\\DTOs\\Course\\TeacherInCourseDTO.cs",
+              "ToolTip": "C:\\NrAcademy\\NrAcademyy\\NrAcademyBL\\DTOs\\Course\\TeacherInCourseDTO.cs",
+              "RelativeToolTip": "NrAcademyBL\\DTOs\\Course\\TeacherInCourseDTO.cs",
+              "ViewState": "AgIAAAMAAAAAAAAAAAASwA4AAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-04-24T21:05:10.102Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 52,
+              "Title": "CourseController.cs",
+              "DocumentMoniker": "C:\\NrAcademy\\NrAcademyy\\NrAcademyy\\Controllers\\CourseController.cs",
+              "RelativeDocumentMoniker": "NrAcademyy\\Controllers\\CourseController.cs",
+              "ToolTip": "C:\\NrAcademy\\NrAcademyy\\NrAcademyy\\Controllers\\CourseController.cs",
+              "RelativeToolTip": "NrAcademyy\\Controllers\\CourseController.cs",
+              "ViewState": "AgIAACYAAAAAAAAAAIBJwEEAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-04-24T20:59:42.931Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 54,
+              "Title": "CourseGetDTO.cs",
+              "DocumentMoniker": "C:\\NrAcademy\\NrAcademyy\\NrAcademyBL\\DTOs\\Course\\CourseGetDTO.cs",
+              "RelativeDocumentMoniker": "NrAcademyBL\\DTOs\\Course\\CourseGetDTO.cs",
+              "ToolTip": "C:\\NrAcademy\\NrAcademyy\\NrAcademyBL\\DTOs\\Course\\CourseGetDTO.cs",
+              "RelativeToolTip": "NrAcademyBL\\DTOs\\Course\\CourseGetDTO.cs",
+              "ViewState": "AgIAAAYAAAAAAAAAAAAIwBEAAAA3AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-04-24T20:49:55.785Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 56,
+              "Title": "CourseRepository.cs",
+              "DocumentMoniker": "C:\\NrAcademy\\NrAcademyy\\NrAcademyDAL\\Repositories\\CourseRepository.cs",
+              "RelativeDocumentMoniker": "NrAcademyDAL\\Repositories\\CourseRepository.cs",
+              "ToolTip": "C:\\NrAcademy\\NrAcademyy\\NrAcademyDAL\\Repositories\\CourseRepository.cs",
+              "RelativeToolTip": "NrAcademyDAL\\Repositories\\CourseRepository.cs",
+              "ViewState": "AgIAAAIAAAAAAAAAAIBJwB0AAAAJAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-04-24T20:34:14.528Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 57,
+              "Title": "GenericRepository.cs",
+              "DocumentMoniker": "C:\\NrAcademy\\NrAcademyy\\NrAcademyDAL\\Repositories\\GenericRepository.cs",
+              "RelativeDocumentMoniker": "NrAcademyDAL\\Repositories\\GenericRepository.cs",
+              "ToolTip": "C:\\NrAcademy\\NrAcademyy\\NrAcademyDAL\\Repositories\\GenericRepository.cs",
+              "RelativeToolTip": "NrAcademyDAL\\Repositories\\GenericRepository.cs",
+              "ViewState": "AgIAACwAAAAAAAAAAAA+wEQAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-04-24T08:28:43.042Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 55,
+              "Title": "ICourseRepository.cs",
+              "DocumentMoniker": "C:\\NrAcademy\\NrAcademyy\\NrAcademyCORE\\Repositories\\ICourseRepository.cs",
+              "RelativeDocumentMoniker": "NrAcademyCORE\\Repositories\\ICourseRepository.cs",
+              "ToolTip": "C:\\NrAcademy\\NrAcademyy\\NrAcademyCORE\\Repositories\\ICourseRepository.cs",
+              "RelativeToolTip": "NrAcademyCORE\\Repositories\\ICourseRepository.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAwAAAA1AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-04-24T20:34:24.377Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 59,
+              "Title": "LoginDTO.cs",
+              "DocumentMoniker": "C:\\NrAcademy\\NrAcademyy\\NrAcademyBL\\DTOs\\AuthDTO\\LoginDTO.cs",
+              "RelativeDocumentMoniker": "NrAcademyBL\\DTOs\\AuthDTO\\LoginDTO.cs",
+              "ToolTip": "C:\\NrAcademy\\NrAcademyy\\NrAcademyBL\\DTOs\\AuthDTO\\LoginDTO.cs",
+              "RelativeToolTip": "NrAcademyBL\\DTOs\\AuthDTO\\LoginDTO.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-04-24T20:48:56.736Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 58,
+              "Title": "ICourseService.cs",
+              "DocumentMoniker": "C:\\NrAcademy\\NrAcademyy\\NrAcademyBL\\Services\\Abstract\\ICourseService.cs",
+              "RelativeDocumentMoniker": "NrAcademyBL\\Services\\Abstract\\ICourseService.cs",
+              "ToolTip": "C:\\NrAcademy\\NrAcademyy\\NrAcademyBL\\Services\\Abstract\\ICourseService.cs",
+              "RelativeToolTip": "NrAcademyBL\\Services\\Abstract\\ICourseService.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAwAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-04-24T18:28:26.302Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 60,
+              "Title": "CourseUpdateDTO.cs",
+              "DocumentMoniker": "C:\\NrAcademy\\NrAcademyy\\NrAcademyBL\\DTOs\\Course\\CourseUpdateDTO.cs",
+              "RelativeDocumentMoniker": "NrAcademyBL\\DTOs\\Course\\CourseUpdateDTO.cs",
+              "ToolTip": "C:\\NrAcademy\\NrAcademyy\\NrAcademyBL\\DTOs\\Course\\CourseUpdateDTO.cs",
+              "RelativeToolTip": "NrAcademyBL\\DTOs\\Course\\CourseUpdateDTO.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA4AAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-04-24T20:47:52.543Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 62,
+              "Title": "Levels.cs",
+              "DocumentMoniker": "C:\\NrAcademy\\NrAcademyy\\NrAcademyCORE\\Enums\\Levels.cs",
+              "RelativeDocumentMoniker": "NrAcademyCORE\\Enums\\Levels.cs",
+              "ToolTip": "C:\\NrAcademy\\NrAcademyy\\NrAcademyCORE\\Enums\\Levels.cs",
+              "RelativeToolTip": "NrAcademyCORE\\Enums\\Levels.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA8AAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-04-24T20:34:02.264Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 61,
+              "Title": "IJWTService.cs",
+              "DocumentMoniker": "C:\\NrAcademy\\NrAcademyy\\NrAcademyBL\\Services\\Abstract\\IJWTService.cs",
+              "RelativeDocumentMoniker": "NrAcademyBL\\Services\\Abstract\\IJWTService.cs",
+              "ToolTip": "C:\\NrAcademy\\NrAcademyy\\NrAcademyBL\\Services\\Abstract\\IJWTService.cs",
+              "RelativeToolTip": "NrAcademyBL\\Services\\Abstract\\IJWTService.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-04-24T20:25:45.549Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 64,
+              "Title": "JwtSettings.cs",
+              "DocumentMoniker": "C:\\NrAcademy\\NrAcademyy\\NrAcademyBL\\Configuration\\JwtSettings.cs",
+              "RelativeDocumentMoniker": "NrAcademyBL\\Configuration\\JwtSettings.cs",
+              "ToolTip": "C:\\NrAcademy\\NrAcademyy\\NrAcademyBL\\Configuration\\JwtSettings.cs",
+              "RelativeToolTip": "NrAcademyBL\\Configuration\\JwtSettings.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABAAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-04-24T20:16:59.747Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 63,
+              "Title": "IEmailService.cs",
+              "DocumentMoniker": "C:\\NrAcademy\\NrAcademyy\\NrAcademyBL\\Services\\Abstract\\IEmailService.cs",
+              "RelativeDocumentMoniker": "NrAcademyBL\\Services\\Abstract\\IEmailService.cs",
+              "ToolTip": "C:\\NrAcademy\\NrAcademyy\\NrAcademyBL\\Services\\Abstract\\IEmailService.cs",
+              "RelativeToolTip": "NrAcademyBL\\Services\\Abstract\\IEmailService.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA0AAAAFAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-04-24T18:41:47.602Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 66,
+              "Title": "Certificate.cs",
+              "DocumentMoniker": "C:\\NrAcademy\\NrAcademyy\\NrAcademyCORE\\Entities\\Certificate.cs",
+              "RelativeDocumentMoniker": "NrAcademyCORE\\Entities\\Certificate.cs",
+              "ToolTip": "C:\\NrAcademy\\NrAcademyy\\NrAcademyCORE\\Entities\\Certificate.cs",
+              "RelativeToolTip": "NrAcademyCORE\\Entities\\Certificate.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-04-24T20:09:09.87Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 65,
+              "Title": "EmailSettings.cs",
+              "DocumentMoniker": "C:\\NrAcademy\\NrAcademyy\\NrAcademyBL\\Configuration\\EmailSettings.cs",
+              "RelativeDocumentMoniker": "NrAcademyBL\\Configuration\\EmailSettings.cs",
+              "ToolTip": "C:\\NrAcademy\\NrAcademyy\\NrAcademyBL\\Configuration\\EmailSettings.cs",
+              "RelativeToolTip": "NrAcademyBL\\Configuration\\EmailSettings.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABIAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-04-24T18:38:53.644Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 67,
+              "Title": "EmailDto.cs",
+              "DocumentMoniker": "C:\\NrAcademy\\NrAcademyy\\NrAcademyBL\\DTOs\\EmailDto.cs",
+              "RelativeDocumentMoniker": "NrAcademyBL\\DTOs\\EmailDto.cs",
+              "ToolTip": "C:\\NrAcademy\\NrAcademyy\\NrAcademyBL\\DTOs\\EmailDto.cs",
+              "RelativeToolTip": "NrAcademyBL\\DTOs\\EmailDto.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA0AAAAFAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-04-24T18:41:12.414Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 68,
+              "Title": "UserProfile.cs",
+              "DocumentMoniker": "C:\\NrAcademy\\NrAcademyy\\NrAcademyBL\\Mappings\\UserProfile.cs",
+              "RelativeDocumentMoniker": "NrAcademyBL\\Mappings\\UserProfile.cs",
+              "ToolTip": "C:\\NrAcademy\\NrAcademyy\\NrAcademyBL\\Mappings\\UserProfile.cs",
+              "RelativeToolTip": "NrAcademyBL\\Mappings\\UserProfile.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-04-24T18:05:37.81Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 69,
+              "Title": "NrAcademyy.csproj",
+              "DocumentMoniker": "C:\\NrAcademy\\NrAcademyy\\NrAcademyy\\NrAcademyy.csproj",
+              "RelativeDocumentMoniker": "NrAcademyy\\NrAcademyy.csproj",
+              "ToolTip": "C:\\NrAcademy\\NrAcademyy\\NrAcademyy\\NrAcademyy.csproj",
+              "RelativeToolTip": "NrAcademyy\\NrAcademyy.csproj",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000758|",
+              "WhenOpened": "2026-04-24T16:32:12.587Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 70,
+              "Title": "QuestionRepository.cs",
+              "DocumentMoniker": "C:\\NrAcademy\\NrAcademyy\\NrAcademyDAL\\Repositories\\QuestionRepository.cs",
+              "RelativeDocumentMoniker": "NrAcademyDAL\\Repositories\\QuestionRepository.cs",
+              "ToolTip": "C:\\NrAcademy\\NrAcademyy\\NrAcademyDAL\\Repositories\\QuestionRepository.cs",
+              "RelativeToolTip": "NrAcademyDAL\\Repositories\\QuestionRepository.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAuwA0AAAA7AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-04-24T08:23:51.657Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 71,
+              "Title": "RefreshTokenRepository.cs",
+              "DocumentMoniker": "C:\\NrAcademy\\NrAcademyy\\NrAcademyDAL\\Repositories\\RefreshTokenRepository.cs",
+              "RelativeDocumentMoniker": "NrAcademyDAL\\Repositories\\RefreshTokenRepository.cs",
+              "ToolTip": "C:\\NrAcademy\\NrAcademyy\\NrAcademyDAL\\Repositories\\RefreshTokenRepository.cs",
+              "RelativeToolTip": "NrAcademyDAL\\Repositories\\RefreshTokenRepository.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAIBZwBcAAAAJAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-04-24T08:23:34.374Z",
+              "EditorCaption": ""
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
