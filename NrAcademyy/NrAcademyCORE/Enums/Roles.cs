@@ -1,16 +1,10 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace NrAcademyCORE.Enums
+﻿namespace NrAcademyCORE.Enums
 {
     public enum Roles
     {
         Admin = 1,
-        Teacher = 2,
-        Student = 3,
-
+        Moderator = 2, // Yeni əlavə olundu
+        Teacher = 3,
+        Student = 4
     }
 }

@@ -19,20 +19,27 @@ public abstract class BaseIntegrationTest : IDisposable
     }
     protected async Task SeedRolesAsync()
     {
-        // IdentityRole<int> əvəzinə AppRole istifadə edirik
+        // Rolları siyahı halında müəyyən edirik
         var roles = new[] { "Admin", "Student", "Teacher" };
+
         foreach (var roleName in roles)
         {
-            if (!await _dbContext.Roles.AnyAsync(r => r.Name == roleName))
+            var normalized = roleName.ToUpperInvariant();
+            // Artıq mövcud olub-olmadığını yoxlayırıq
+            if (!await _dbContext.Roles.AnyAsync(r => r.NormalizedName == normalized))
             {
                 await _dbContext.Roles.AddAsync(new AppRole
                 {
                     Name = roleName,
-                    NormalizedName = roleName.ToUpper()
+                    NormalizedName = normalized,
+                    ConcurrencyStamp = Guid.NewGuid().ToString()
                 });
             }
         }
+
         await _dbContext.SaveChangesAsync();
+        // InMemory bazada bəzən mütləq lazımdır ki, Context yenilənsin
+        _dbContext.ChangeTracker.Clear();
     }
     public void Dispose()
     {

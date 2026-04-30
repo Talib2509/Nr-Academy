@@ -25,25 +25,40 @@ public class AuthServiceTests : BaseIntegrationTest, IClassFixture<TestDbContext
 
     public AuthServiceTests(TestDbContextFactory factory) : base(factory)
     {
+        // 1. Mock obyektlərin yaradılması
         _jwtServiceMock = new Mock<IJwtService>();
         _emailServiceMock = new Mock<IEmailService>();
 
-        // PasswordHasher əlavə etmək Login testlərindəki null xətalarını aradan qaldıracaq
-        var passwordHasher = new PasswordHasher<AppUser>();
-        var userStore = new UserStore<AppUser, IdentityRole<int>, DbContext, int>(_dbContext);
+        // 2. Identity üçün lazım olan infrastrukturun (Normalizer, Describer və s.) qurulması
+        var lookupNormalizer = new UpperInvariantLookupNormalizer();
+        var errorDescriber = new IdentityErrorDescriber();
 
+        // 3. UserManager və RoleManager-in yaradılması
+        var userStore = new UserStore<AppUser, AppRole, DbContext, int>(_dbContext);
         _userManager = new UserManager<AppUser>(
-        new UserStore<AppUser, AppRole, DbContext, int>(_dbContext),
-        null,
-        new PasswordHasher<AppUser>(), // Parol yoxlanışı üçün lazımdır
-        null, null, null, null, null, null);
+            userStore,
+            null, // Options
+            new PasswordHasher<AppUser>(),
+            new IUserValidator<AppUser>[0],
+            new IPasswordValidator<AppUser>[0],
+            lookupNormalizer,
+            errorDescriber,
+            null, // IServiceProvider
+            null  // ILogger
+        );
 
+        // 4. BaseIntegrationTest-dən gələn rolları bazaya dolduran metodu çağırırıq
+        // Qeyd: Konstruktor daxilində async metodu sinxron gözləmək üçün GetResult() istifadə olunur
+        SeedRolesAsync().GetAwaiter().GetResult();
+
+        // 5. AutoMapper konfiqurasiyası
         var mapperConfig = new MapperConfiguration(cfg =>
         {
             cfg.AddMaps(typeof(AuthService).Assembly);
         });
         _mapper = mapperConfig.CreateMapper();
 
+        // 6. AuthService-in (SUT - System Under Test) yaradılması
         _authService = new AuthService(
             _userManager,
             _mapper,
@@ -51,6 +66,7 @@ public class AuthServiceTests : BaseIntegrationTest, IClassFixture<TestDbContext
             _emailServiceMock.Object
         );
 
+        // Default olaraq Email Service-i uğurlu "Setup" edirik
         _emailServiceMock.Setup(x => x.SendVerificationEmailAsync(It.IsAny<string>(), It.IsAny<string>()))
                          .ReturnsAsync(true);
     }

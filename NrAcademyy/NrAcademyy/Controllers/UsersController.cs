@@ -1,6 +1,7 @@
 ﻿using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using NrAcademyBL.Services.Abstract;
+using Microsoft.AspNetCore.Authorization; // Vacibdir
 
 namespace NrAcademyy.Controllers
 {
@@ -15,8 +16,10 @@ namespace NrAcademyy.Controllers
             _userService = userService;
         }
 
-
         [HttpGet("{id}")]
+        // "İstifadəçilərin fəaliyyətinə nəzarət etmək" - Admin və Moderator baxa bilsin.
+        // Həmçinin hər bir istifadəçi öz profilinə baxa bilməsi üçün "Student, Teacher" əlavə oluna bilər.
+        [Authorize(Roles = "Admin, Moderator")]
         public async Task<IActionResult> GetUser(int id)
         {
             try
@@ -30,8 +33,9 @@ namespace NrAcademyy.Controllers
             }
         }
 
-
         [HttpPost("{id}/upload-image")]
+    
+        [Authorize] // Giriş edən hər kəs (özü üçün) və ya idarəçilər
         public async Task<IActionResult> UploadProfileImage(int id, IFormFile file)
         {
             try

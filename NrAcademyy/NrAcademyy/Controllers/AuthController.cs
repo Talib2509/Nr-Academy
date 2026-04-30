@@ -5,6 +5,7 @@ using NrAcademyBL.DTOs.AuthDTO;
 using NrAcademyBL.DTOs.ForgotPassword;
 using NrAcademyBL.Services.Abstract;
 using NrAcademyCORE.Entities.Identity;
+using Microsoft.AspNetCore.Authorization; // Əlavə olundu
 
 namespace NrAcademyy.Controllers
 {
@@ -12,10 +13,10 @@ namespace NrAcademyy.Controllers
     [ApiController]
     public class AuthController : ControllerBase
     {
-
         private readonly UserManager<AppUser> _userManager;
         private readonly IJwtService _jwtService;
         private readonly IAuthService _authService;
+
         public AuthController(UserManager<AppUser> userManager,
                               IJwtService jwtService, IAuthService authService)
         {
@@ -23,45 +24,56 @@ namespace NrAcademyy.Controllers
             _jwtService = jwtService;
             _authService = authService;
         }
+
         [HttpPost("Register")]
+        [AllowAnonymous] // Hər kəs qeydiyyatdan keçə bilsin (Tələbələr üçün)
         public async Task<IActionResult> Register(RegisterDTO dto)
         {
             var result = await _authService.RegisterAsync(dto);
-
             return Ok(result);
         }
 
+        // QEYD: Əgər xüsusi bir "Admin müəllim yaratsın" metodu olacaqsa, 
+        // ona [Authorize(Roles = "Admin")] əlavə edəcəyik.
+
         [HttpPost("login")]
+        [AllowAnonymous] // Giriş hər kəs üçün açıq olmalıdır
         public async Task<IActionResult> Login([FromBody] LoginDTO dto)
         {
-         
             var token = await _authService.LoginAsync(dto);
             return Ok(new { Token = token });
         }
+
         [HttpPost("forgot-password")]
+        [AllowAnonymous]
         public async Task<IActionResult> ForgotPassword(ForgotPasswordDTO dto)
         {
             await _authService.ForgotPasswordAsync(dto);
             return Ok("Check email");
         }
+
         [HttpPost("verify-reset-code")]
+        [AllowAnonymous]
         public async Task<IActionResult> VerifyCode(VerifyResetCodeDTO dto)
         {
             await _authService.VerifyResetCodeAsync(dto);
             return Ok("Code valid");
         }
+
         [HttpPost("reset-password")]
+        [AllowAnonymous]
         public async Task<IActionResult> ResetPassword(ResetPasswordDTO dto)
         {
             await _authService.ResetPasswordAsync(dto);
             return Ok("Password changed");
         }
+
         [HttpPost("verify-email")]
+        [AllowAnonymous]
         public async Task<IActionResult> VerifyEmail(VerifyEmailDTO dto)
         {
             await _authService.VerifyEmailAsync(dto);
             return Ok("Email successfully verified");
         }
     }
-
 }

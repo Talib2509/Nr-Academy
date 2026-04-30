@@ -43,15 +43,20 @@ public class TestServiceTests : BaseIntegrationTest, IClassFixture<TestDbContext
         Assert.NotNull(testInDb);
        
     }
-
     [Fact]
     public async Task GetAllAsync_Should_Return_All_Tests()
     {
         // Arrange
+        // Bazanı təmizlədiyinizdən əmin olun (əgər BaseIntegrationTest-də edilmirsə)
+        _dbContext.Tests.RemoveRange(_dbContext.Tests);
+        await _dbContext.SaveChangesAsync();
+
         var tests = new List<Test>
-        {
-  
-        };
+    {
+        new Test { Title = "Test 1", CourseId = 1, PassingScore = 50 },
+        new Test { Title = "Test 2", CourseId = 1, PassingScore = 60 }
+    };
+
         await _dbContext.Tests.AddRangeAsync(tests);
         await _dbContext.SaveChangesAsync();
 
@@ -59,7 +64,8 @@ public class TestServiceTests : BaseIntegrationTest, IClassFixture<TestDbContext
         var result = await _testService.GetAllAsync();
 
         // Assert
-        Assert.Equal(2, result.Count());
+        Assert.NotNull(result);
+        Assert.Equal(2, result.Count()); // İndi bazada 2 element olduğu üçün keçəcək
     }
 
     [Fact]

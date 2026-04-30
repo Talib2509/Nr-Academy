@@ -38,28 +38,27 @@ public class TeacherServiceTests : BaseIntegrationTest, IClassFixture<TestDbCont
         var dto = new TeacherCreateDTO
         {
             Name = "Mirtalib",
-            Bio = "Senior .NET Developer"
+            Bio = "Senior .NET Developer",
+            ImageUrl = "test-image.jpg" // ƏLAVƏ EDİLDİ
         };
 
         // Act
         await _teacherService.CreateAsync(dto);
-        await _dbContext.SaveChangesAsync(); // Repository içində yoxdursa, bura mütləqdir
+        await _dbContext.SaveChangesAsync();
 
         // Assert
         var teacher = await _dbContext.Teachers.FirstOrDefaultAsync(t => t.Name == "Mirtalib");
         Assert.NotNull(teacher);
-        
     }
 
-    [Fact]
     public async Task GetAllAsync_Should_Return_List_Of_Teachers()
     {
         // Arrange
         var teachers = new List<Teacher>
-        {
-            new Teacher { Name = "Alizamin" },
-            new Teacher { Name = "Admin" }
-        };
+    {
+        new Teacher { Name = "Alizamin", Bio = "Bio 1", ImageUrl = "img1.jpg" }, // DƏYƏRLƏR VERİLDİ
+        new Teacher { Name = "Admin", Bio = "Bio 2", ImageUrl = "img2.jpg" }     // DƏYƏRLƏR VERİLDİ
+    };
         await _dbContext.Teachers.AddRangeAsync(teachers);
         await _dbContext.SaveChangesAsync();
 
@@ -99,11 +98,12 @@ public class TeacherServiceTests : BaseIntegrationTest, IClassFixture<TestDbCont
     public async Task UpdateAsync_Should_Change_Teacher_Information()
     {
         // Arrange
-        var teacher = new Teacher { Name = "Köhnə Ad" };
+        var teacher = new Teacher { Name = "Köhnə Ad", Bio = "Köhnə Bio", ImageUrl = "old.jpg" };
         await _dbContext.Teachers.AddAsync(teacher);
         await _dbContext.SaveChangesAsync();
 
-        var updateDto = new TeacherUpdateDTO { Name = "Yeni Ad"};
+        // DTO-da da bu sahələr varsa, onları da doldurun
+        var updateDto = new TeacherUpdateDTO { Name = "Yeni Ad", Bio = "Yeni Bio", ImageUrl = "new.jpg" };
 
         // Act
         await _teacherService.UpdateAsync(teacher.Id, updateDto);
@@ -112,14 +112,13 @@ public class TeacherServiceTests : BaseIntegrationTest, IClassFixture<TestDbCont
         // Assert
         var updated = await _dbContext.Teachers.FindAsync(teacher.Id);
         Assert.Equal("Yeni Ad", updated!.Name);
-       
     }
 
     [Fact]
     public async Task DeleteAsync_Should_Remove_Teacher_From_Db()
     {
         // Arrange
-        var teacher = new Teacher { Name = "Silinəcək"};
+        var teacher = new Teacher { Name = "Silinəcək", Bio = "Temp Bio", ImageUrl = "temp.jpg" };
         await _dbContext.Teachers.AddAsync(teacher);
         await _dbContext.SaveChangesAsync();
 
