@@ -1,9 +1,14 @@
-﻿using AutoMapper;
+﻿
+using AutoMapper;
 using NrAcademyBL.DTOs.AuthDTO;
+using NrAcademyBL.Exceptions.TestResult;
 using NrAcademyBL.Extensions.Caching;
 using NrAcademyBL.Services.Abstract;
 using NrAcademyCORE.Entities;
 using NrAcademyCORE.Repositories;
+using System;
+using System.Collections.Generic;
+using System.Threading.Tasks;
 
 namespace NrAcademyBL.Services.Concrete;
 
@@ -50,7 +55,7 @@ public class TestResultService : ITestResultService
         var data = await _repository.GetByIdAsync(id);
 
         if (data == null)
-            throw new Exception("Nəticə tapılmadı");
+            throw TestResultException.NotFound(id);
 
         var mapped = _mapper.Map<TestResultItemDto>(data);
 
@@ -72,7 +77,7 @@ public class TestResultService : ITestResultService
         var entity = await _repository.GetByIdAsync(id);
 
         if (entity == null)
-            throw new Exception("Nəticə tapılmadı");
+            throw TestResultException.NotFound(id);
 
         _repository.Delete(entity);
 

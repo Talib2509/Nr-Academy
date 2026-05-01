@@ -1,25 +1,37 @@
-﻿using Microsoft.AspNetCore.Http;
+﻿// NrAcademyy/Controllers/BlogPostController.cs
+using Microsoft.AspNetCore.Authorization;
+using Microsoft.AspNetCore.Hosting;
+using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using NrAcademyBL.DTOs.BlogPostDTO;
 using NrAcademyBL.Services.Abstract;
-using Microsoft.AspNetCore.Authorization; // Vacibdir
+using System.Threading.Tasks;
 
 namespace NrAcademyy.Controllers
 {
     [Route("api/[controller]")]
     [ApiController]
-    public class BlogPostController(IBlogPostService _service) : ControllerBase
+    public class BlogPostController : ControllerBase
     {
+        private readonly IBlogPostService _service;
+        private readonly IWebHostEnvironment _webHostEnvironment;
+
+        public BlogPostController(IBlogPostService service, IWebHostEnvironment webHostEnvironment)
+        {
+            _service = service;
+            _webHostEnvironment = webHostEnvironment;
+        }
 
         [HttpGet]
-        [AllowAnonymous] // Bloq yazıları hər kəs tərəfindən oxuna bilsin
+        [AllowAnonymous]
         public async Task<IActionResult> Get()
         {
-            return Ok(await _service.GetAsync());
+            var result = await _service.GetAsync();
+            return Ok(result);
         }
 
         [HttpGet("{id}")]
-        [AllowAnonymous] // Yazının detalı hər kəs üçün açıq olsun
+        [AllowAnonymous]
         public async Task<IActionResult> GetById(int id)
         {
             var post = await _service.GetByIdAsync(id);
@@ -27,31 +39,34 @@ namespace NrAcademyy.Controllers
         }
 
         [HttpPost]
-        // "Yeni məqalələr yazmaq" - Moderator və Admin üçün
         [Authorize(Roles = "Admin, Moderator")]
-        public async Task<IActionResult> Post(BlogPostCreateDTO dto)
+        public async Task<IActionResult> Post([FromForm] BlogPostCreateDTO dto)
         {
-            await _service.CreateAsync(dto);
-            return Ok();
+            if (!ModelState.IsValid)
+                return BadRequest(ModelState);
+
+            await _service.CreateAsync(dto, _webHostEnvironment.WebRootPath);
+            return StatusCode(201, "Blog post created successfully");
         }
 
         [HttpPut("{id}")]
-        // "SEO üçün linkləri tənzimləmək və məzmunu yeniləmək" - Moderator və Admin üçün
         [Authorize(Roles = "Admin, Moderator")]
-        public async Task<IActionResult> Put(BlogPostUpdateDTO dto, int id)
+        public async Task<IActionResult> Put([FromForm] BlogPostUpdateDTO dto, int id)
         {
+            if (!ModelState.IsValid)
+                return BadRequest(ModelState);
+
             dto.Id = id;
-            await _service.UpdateAsync(dto);
-            return Ok();
+            await _service.UpdateAsync(dto, _webHostEnvironment.WebRootPath);
+            return Ok("Blog post updated successfully");
         }
 
         [HttpDelete("{id}")]
-        // "Sistemdən mühüm məlumatların tam silinməsi" - YALNIZ Admin
         [Authorize(Roles = "Admin")]
         public async Task<IActionResult> Delete(int id)
         {
-            await _service.DeleteAsync(id);
-            return Ok();
+            await _service.DeleteAsync(id, _webHostEnvironment.WebRootPath);
+            return Ok("Blog post deleted successfully");
         }
     }
 }

@@ -1,4 +1,5 @@
-﻿using NrAcademyBL.DTOs.TeacherDTOs;
+﻿
+using NrAcademyBL.DTOs.TeacherDTOs;
 
 namespace NrAcademyBL.Services.Abstract
 {
@@ -6,8 +7,8 @@ namespace NrAcademyBL.Services.Abstract
     {
         Task<List<TeacherGetDTO>> GetAllAsync();
         Task<TeacherGetDTO> GetByIdAsync(int id);
-        Task CreateAsync(TeacherCreateDTO dto);
-        Task UpdateAsync(int id, TeacherUpdateDTO dto);
-        Task DeleteAsync(int id);
+        Task CreateAsync(TeacherCreateDTO dto, string rootPath);
+        Task UpdateAsync(int id, TeacherUpdateDTO dto, string rootPath);
+        Task DeleteAsync(int id, string rootPath);
     }
 }
