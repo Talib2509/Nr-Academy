@@ -3,6 +3,7 @@ using Microsoft.Extensions.Options;
 using MimeKit;
 using NrAcademyBL.Configuration;
 using NrAcademyBL.DTOs;
+using NrAcademyBL.Exceptions.Email; // Exception-ları əlavə etdik
 using NrAcademyBL.Services.Abstract;
 
 namespace NrAcademyBL.Services.Concrete
@@ -18,6 +19,12 @@ namespace NrAcademyBL.Services.Concrete
 
         public async Task<bool> SendEmailAsync(EmailDto email)
         {
+            // Sadə validasiya: Email formatı düzgün deyilsə dərhal exception fırlat
+            if (string.IsNullOrEmpty(email.To) || !email.To.Contains("@"))
+            {
+                throw EmailException.InvalidEmailAddress(email.To);
+            }
+
             try
             {
                 var message = new MimeMessage();
@@ -31,10 +38,11 @@ namespace NrAcademyBL.Services.Concrete
                 using (var client = new SmtpClient())
                 {
                     await client.ConnectAsync(
-     _emailSettings.Host,
-     _emailSettings.Port,
-     MailKit.Security.SecureSocketOptions.StartTls
- );
+                        _emailSettings.Host,
+                        _emailSettings.Port,
+                        MailKit.Security.SecureSocketOptions.StartTls
+                    );
+
                     await client.AuthenticateAsync(_emailSettings.Username, _emailSettings.Password);
                     await client.SendAsync(message);
                     await client.DisconnectAsync(true);
@@ -44,34 +52,49 @@ namespace NrAcademyBL.Services.Concrete
             }
             catch (Exception ex)
             {
-                Console.WriteLine(ex.Message);
-                throw;
+                // Loglama bura yazıla bilər: _logger.LogError(ex, "Email xətası");
+                
+                // Generic exception əvəzinə öz yazdığımız factory metodu çağırırıq
+                throw EmailException.SendingFailed(ex.Message);
             }
         }
 
         public async Task<bool> SendVerificationEmailAsync(string email, string verificationCode)
         {
-            var htmlBody = $@"
-                <html>
-                    <body style='font-family: Arial, sans-serif;'>
-                        <h2>Email Doğrulama</h2>
-                        <p>Salam,</p>
-                        <p>Emailinizi doğrulamak üçün kodu istifadə edin:</p>
-                        <h3 style='color: #007bff;'>{verificationCode}</h3>
-                        <p>Bu kod 15 dəqiqə müddətinə etibarlı olacaq.</p>
-                        <br>
-                        <p>NR Academy Team</p>
-                    </body>
-                </html>";
-
-            var emailDto = new EmailDto
+            try 
             {
-                To = email,
-                Subject = "Email Doğrulama Kodu",
-                Body = htmlBody
-            };
+                var htmlBody = $@"
+                    <html>
+                        <body style='font-family: Arial, sans-serif;'>
+                            <h2>Email Doğrulama</h2>
+                            <p>Salam,</p>
+                            <p>Emailinizi doğrulamak üçün kodu istifadə edin:</p>
+                            <h3 style='color: #007bff;'>{verificationCode}</h3>
+                            <p>Bu kod 15 dəqiqə müddətinə etibarlı olacaq.</p>
+                            <br>
+                            <p>NR Academy Team</p>
+                        </body>
+                    </html>";
 
-            return await SendEmailAsync(emailDto);
+                var emailDto = new EmailDto
+                {
+                    To = email,
+                    Subject = "Email Doğrulama Kodu",
+                    Body = htmlBody
+                };
+
+                return await SendEmailAsync(emailDto);
+            }
+            catch (EmailException)
+            {
+                // Əgər SendEmailAsync artıq bir EmailException fırladıbsa, onu olduğu kimi ötür
+                throw;
+            }
+            catch (Exception)
+            {
+                // Digər gözlənilməz xətalar üçün xüsusi doğrulama xətası fırlat
+                throw EmailException.VerificationFailed();
+            }
         }
     }
 }

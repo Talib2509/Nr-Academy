@@ -6,6 +6,7 @@ using Microsoft.IdentityModel.Tokens;
 using Microsoft.OpenApi.Models;
 using NrAcademyBL;
 using NrAcademyBL.Configuration;
+using NrAcademyBL.Exceptions;
 using NrAcademyBL.Exceptions.AuthException;
 using NrAcademyBL.Extensions;
 
@@ -43,9 +44,7 @@ builder.Services.AddIdentity<AppUser, AppRole>()
 .AddEntityFrameworkStores<AppDbContext>()
 .AddDefaultTokenProviders()
 .AddErrorDescriber<CustomErrorDescriber>();
-
-builder.Services.AddScoped<IUserService, UserService>();
-
+builder.Services.AddMemoryCache();
 builder.Services.AddAuthentication(options =>
 {
     options.DefaultAuthenticateScheme = JwtBearerDefaults.AuthenticationScheme;
@@ -114,7 +113,7 @@ if (app.Environment.IsDevelopment())
 }
 app.UseHttpsRedirection();
 app.UseStaticFiles();
-
+app.UseMiddleware<GlobalExceptionHandlerMiddleware>();
 app.UseHttpsRedirection();
 app.UseAuthentication();
 app.UseAuthorization();

@@ -3,6 +3,7 @@ using Microsoft.EntityFrameworkCore;
 using Moq;
 using NrAcademy.Tests.IntegrationTests;
 using NrAcademyBL.DTOs.CourseDTOs;
+using NrAcademyBL.Extensions.Caching;
 using NrAcademyBL.Services.Concrete;
 using NrAcademyCORE.Entities;
 using NrAcademyCORE.Enums;
@@ -16,21 +17,34 @@ public class CourseServiceTests : BaseIntegrationTest, IClassFixture<TestDbConte
     private readonly CourseService _courseService;
     private readonly IMapper _mapper;
     private readonly CourseRepository _courseRepo;
-
+    private readonly Mock<ICacheService> _cacheMock;
     public CourseServiceTests(TestDbContextFactory factory) : base(factory)
     {
-        // 1. AutoMapper quraşdırılması
         var mapperConfig = new MapperConfiguration(cfg =>
         {
             cfg.AddMaps(typeof(CourseService).Assembly);
         });
         _mapper = mapperConfig.CreateMapper();
 
-        // 2. Real Repository (çünki inteqrasiya testi edirik)
         _courseRepo = new CourseRepository(_dbContext);
 
-        // 3. Servisin yaradılması
-        _courseService = new CourseService(_courseRepo, _mapper);
+        // CACHE MOCK
+        _cacheMock = new Mock<ICacheService>();
+
+        // cache metodlarını "no-op" edirik
+        _cacheMock.Setup(x => x.GetAsync<CourseGetDTO>(It.IsAny<string>()))
+                  .ReturnsAsync((CourseGetDTO)null);
+
+        _cacheMock.Setup(x => x.GetAsync<List<CourseGetDTO>>(It.IsAny<string>()))
+                  .ReturnsAsync((List<CourseGetDTO>)null);
+
+        _cacheMock.Setup(x => x.SetAsync(It.IsAny<string>(), It.IsAny<object>(), It.IsAny<TimeSpan>()))
+                  .Returns(Task.CompletedTask);
+
+        _cacheMock.Setup(x => x.RemoveAsync(It.IsAny<string>()))
+                  .Returns(Task.CompletedTask);
+
+        _courseService = new CourseService(_courseRepo, _mapper, _cacheMock.Object);
     }
 
     [Fact]

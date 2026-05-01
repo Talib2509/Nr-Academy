@@ -9,7 +9,7 @@ namespace NrAcademyBL.Services.Abstract
 {
     public interface IEnrollmentService
     {
-        Task<IEnumerable<EnrollmentGetDTO>> GetAllAsync();
+        Task<List<EnrollmentGetDTO>> GetAllAsync();
         Task<EnrollmentGetDTO> GetByIdAsync(int id);
         Task CreateAsync(EnrollmentCreateDTO dto);
         Task UpdateAsync(EnrollmentUpdateDTO dto);

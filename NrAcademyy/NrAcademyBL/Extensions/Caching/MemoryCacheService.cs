@@ -1,0 +1,44 @@
+﻿using Microsoft.Extensions.Caching.Memory;
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace NrAcademyBL.Extensions.Caching
+{
+  
+
+    public class MemoryCacheService : ICacheService
+    {
+        private readonly IMemoryCache _cache;
+
+        public MemoryCacheService(IMemoryCache cache)
+        {
+            _cache = cache;
+        }
+
+        public Task<T?> GetAsync<T>(string key)
+        {
+            _cache.TryGetValue(key, out T? value);
+            return Task.FromResult(value);
+        }
+
+        public Task SetAsync<T>(string key, T value, TimeSpan? expiry = null)
+        {
+            var options = new MemoryCacheEntryOptions
+            {
+                AbsoluteExpirationRelativeToNow = expiry ?? TimeSpan.FromMinutes(5)
+            };
+
+            _cache.Set(key, value, options);
+            return Task.CompletedTask;
+        }
+
+        public Task RemoveAsync(string key)
+        {
+            _cache.Remove(key);
+            return Task.CompletedTask;
+        }
+    }
+}

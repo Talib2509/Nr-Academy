@@ -2,12 +2,11 @@
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Identity;
 using NrAcademyBL.DTOs.AuthDTO;
+using NrAcademyBL.Exceptions.User;
 using NrAcademyBL.Services.Abstract;
 using NrAcademyCORE.Entities.Identity;
 using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
+using System.IO;
 using System.Threading.Tasks;
 
 namespace NrAcademyBL.Services.Concrete
@@ -25,9 +24,13 @@ namespace NrAcademyBL.Services.Concrete
 
         public async Task<UserDto> GetUserByIdAsync(int id)
         {
+            if (id <= 0)
+                throw new ArgumentException("İstifadəçi ID-si 0 və ya mənfi ola bilməz.", nameof(id));
+
             var user = await _userManager.FindByIdAsync(id.ToString());
 
-            if (user == null) throw new System.Exception("User not found.");
+            if (user == null)
+                throw UserException.NotFound(id);
 
             return new UserDto
             {
@@ -40,27 +43,72 @@ namespace NrAcademyBL.Services.Concrete
 
         public async Task<string> UploadProfileImageAsync(int id, IFormFile file)
         {
+            if (id <= 0)
+                throw new ArgumentException("İstifadəçi ID-si 0 və ya mənfi ola bilməz.", nameof(id));
+
+            // İstifadəçinin mövcudluğunu yoxlayırıq
             var user = await _userManager.FindByIdAsync(id.ToString());
-            if (user == null) throw new System.Exception("User not found.");
+            if (user == null)
+                throw UserException.NotFound(id);
 
-            if (file == null || file.Length == 0) throw new System.Exception("File is not selected or empty.");
+            // Fayl yoxlaması
+            if (file == null || file.Length == 0)
+                throw UserException.ProfileImageUploadFailed("Şəkil seçilməyib və ya boşdur.");
 
-            string uploadFolder = Path.Combine(_webHostEnvironment.WebRootPath, "uploads", "profiles");
-            if (!Directory.Exists(uploadFolder)) Directory.CreateDirectory(uploadFolder);
+            // Fayl ölçüsü yoxlaması (default 5MB)
+            const long maxFileSize = 5 * 1024 * 1024; // 5 MB
+            if (file.Length > maxFileSize)
+                throw UserException.FileTooLarge(maxFileSize);
 
-            string uniqueFileName = Guid.NewGuid().ToString() + "_" + file.FileName;
-            string filePath = Path.Combine(uploadFolder, uniqueFileName);
+            // Fayl tipi yoxlaması
+            var allowedExtensions = new[] { ".jpg", ".jpeg", ".png" };
+            var fileExtension = Path.GetExtension(file.FileName).ToLowerInvariant();
 
-            using (var fileStream = new FileStream(filePath, FileMode.Create))
+            if (string.IsNullOrEmpty(fileExtension) || !allowedExtensions.Contains(fileExtension))
+                throw UserException.InvalidFileType();
+
+            try
             {
-                await file.CopyToAsync(fileStream);
+                // Upload qovluğunu yaradırıq
+                string uploadFolder = Path.Combine(_webHostEnvironment.WebRootPath, "uploads", "profiles");
+
+                if (!Directory.Exists(uploadFolder))
+                    Directory.CreateDirectory(uploadFolder);
+
+                // Unikal fayl adı yaradırıq
+                string uniqueFileName = $"{Guid.NewGuid()}_{file.FileName}";
+                string filePath = Path.Combine(uploadFolder, uniqueFileName);
+
+                // Faylı serverə yazırıq
+                using (var fileStream = new FileStream(filePath, FileMode.Create))
+                {
+                    await file.CopyToAsync(fileStream);
+                }
+
+                // Fayl URL-ni yaradırıq
+                string fileUrl = $"/uploads/profiles/{uniqueFileName}";
+
+                // İstifadəçinin profil şəklini yeniləyirik
+                user.ProfileImageUrl = fileUrl;
+                var updateResult = await _userManager.UpdateAsync(user);
+
+                if (!updateResult.Succeeded)
+                {
+                    // Əgər Identity update uğursuz olarsa, faylı silmək yaxşı olar (optional)
+                    try { File.Delete(filePath); } catch { }
+                    throw UserException.ProfileImageUploadFailed("İstifadəçi məlumatları yenilənərkən xəta baş verdi.");
+                }
+
+                return fileUrl;
             }
-
-            string fileUrl = $"/uploads/profiles/{uniqueFileName}";
-            user.ProfileImageUrl = fileUrl;
-            await _userManager.UpdateAsync(user);
-
-            return fileUrl;
+            catch (IOException ioEx)
+            {
+                throw UserException.ProfileImageUploadFailed($"Fayl sistemi xətası: {ioEx.Message}");
+            }
+            catch (Exception ex) when (ex is not UserException)
+            {
+                throw UserException.ProfileImageUploadFailed(ex.Message);
+            }
         }
     }
 }

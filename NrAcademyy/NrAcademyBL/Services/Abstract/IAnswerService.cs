@@ -10,7 +10,7 @@ namespace NrAcademyBL.Services.Abstract
 {
     public interface IAnswerService
     {
-        Task<IEnumerable<AnswerItemDto>> GetAllAsync();
+        Task<List<AnswerItemDto>> GetAllAsync();
         Task<AnswerItemDto> GetByIdAsync(int id);
         Task CreateAsync(AnswerCreateDto dto);
         Task UpdateAsync(AnswerUpdateDto dto);

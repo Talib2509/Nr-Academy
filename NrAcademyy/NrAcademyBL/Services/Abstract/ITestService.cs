@@ -9,7 +9,7 @@ namespace NrAcademyBL.Services.Abstract
 {
     public interface ITestService
     {
-        Task<IEnumerable<TestItemDto>> GetAllAsync();
+        Task<List<TestItemDto>> GetAllAsync();
         Task<TestItemDto> GetByIdAsync(int id);
         Task CreateAsync(TestCreateDto dto);
         Task UpdateAsync(TestUpdateDto dto);

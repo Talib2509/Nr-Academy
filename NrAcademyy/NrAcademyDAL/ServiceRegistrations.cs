@@ -23,6 +23,7 @@ namespace NrAcademyDAL
             services.AddScoped<IRefreshTokenRepository, RefreshTokenRepository>();
             services.AddScoped<ITeacherRepository, TeacherRepository>();
             services.AddScoped<ITestRepository, TestRepository>();
+            services.AddScoped<IEnrollmentRepository, EnrollmentRepository>();
             services.AddScoped<ITestResultRepository, TestResultRepository>();
 
 

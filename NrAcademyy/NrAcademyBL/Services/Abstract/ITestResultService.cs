@@ -10,7 +10,7 @@ namespace NrAcademyBL.Services.Abstract
 {
     public interface ITestResultService
     {
-        Task<IEnumerable<TestResultItemDto>> GetAllAsync();
+        Task<List<TestResultItemDto>> GetAllAsync();
         Task<TestResultItemDto> GetByIdAsync(int id);
         Task CreateAsync(TestResultCreateDto dto);
         Task DeleteAsync(int id);

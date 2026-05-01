@@ -9,7 +9,7 @@ namespace NrAcademyBL.Services.Abstract
 {
     public interface ICertificateService
     {
-        Task<IEnumerable<CertificateGetDTO>> GetAllAsync();
+        Task<List<CertificateGetDTO>> GetAllAsync();
         Task<CertificateGetDTO> GetByIdAsync(int id);
         Task CreateAsync(CertificateCreateDTO dto);
         Task UpdateAsync(CertificateUpdateDTO dto);

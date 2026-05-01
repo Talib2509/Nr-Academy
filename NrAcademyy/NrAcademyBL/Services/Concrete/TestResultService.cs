@@ -1,50 +1,82 @@
 ﻿using AutoMapper;
-using Microsoft.EntityFrameworkCore;
 using NrAcademyBL.DTOs.AuthDTO;
+using NrAcademyBL.Extensions.Caching;
 using NrAcademyBL.Services.Abstract;
 using NrAcademyCORE.Entities;
-using NrAcademyDAL.Context;
-
+using NrAcademyCORE.Repositories;
 
 namespace NrAcademyBL.Services.Concrete;
 
 public class TestResultService : ITestResultService
 {
-    private readonly AppDbContext _context;
+    private readonly ITestResultRepository _repository;
     private readonly IMapper _mapper;
+    private readonly ICacheService _cache;
 
-    public TestResultService(AppDbContext context, IMapper mapper)
+    public TestResultService(
+        ITestResultRepository repository,
+        IMapper mapper,
+        ICacheService cache)
     {
-        _context = context;
+        _repository = repository;
         _mapper = mapper;
+        _cache = cache;
     }
 
-    public async Task<IEnumerable<TestResultItemDto>> GetAllAsync()
+    public async Task<List<TestResultItemDto>> GetAllAsync()
     {
-        var data = await _context.TestResults.ToListAsync();
-        return _mapper.Map<IEnumerable<TestResultItemDto>>(data);
+        var key = "testresults_all";
+
+        var cached = await _cache.GetAsync<List<TestResultItemDto>>(key);
+        if (cached != null)
+            return cached;
+
+        var data = await _repository.GetAllAsync();
+        var mapped = _mapper.Map<List<TestResultItemDto>>(data);
+
+        await _cache.SetAsync(key, mapped, TimeSpan.FromMinutes(30));
+
+        return mapped;
     }
 
     public async Task<TestResultItemDto> GetByIdAsync(int id)
     {
-        var data = await _context.TestResults.FindAsync(id);
-        if (data == null) throw new Exception("Nəticə tapılmadı");
-        return _mapper.Map<TestResultItemDto>(data);
+        var key = $"testresult_{id}";
+
+        var cached = await _cache.GetAsync<TestResultItemDto>(key);
+        if (cached != null)
+            return cached;
+
+        var data = await _repository.GetByIdAsync(id);
+
+        if (data == null)
+            throw new Exception("Nəticə tapılmadı");
+
+        var mapped = _mapper.Map<TestResultItemDto>(data);
+
+        await _cache.SetAsync(key, mapped, TimeSpan.FromMinutes(30));
+
+        return mapped;
     }
 
     public async Task CreateAsync(TestResultCreateDto dto)
     {
         var entity = _mapper.Map<TestResult>(dto);
-        await _context.TestResults.AddAsync(entity);
-        await _context.SaveChangesAsync();
+        await _repository.AddAsync(entity);
+
+        await _cache.RemoveAsync("testresults_all");
     }
 
     public async Task DeleteAsync(int id)
     {
-        var entity = await _context.TestResults.FindAsync(id);
-        if (entity == null) throw new Exception("Nəticə tapılmadı");
+        var entity = await _repository.GetByIdAsync(id);
 
-        _context.TestResults.Remove(entity);
-        await _context.SaveChangesAsync();
+        if (entity == null)
+            throw new Exception("Nəticə tapılmadı");
+
+        _repository.Delete(entity);
+
+        await _cache.RemoveAsync("testresults_all");
+        await _cache.RemoveAsync($"testresult_{id}");
     }
 }

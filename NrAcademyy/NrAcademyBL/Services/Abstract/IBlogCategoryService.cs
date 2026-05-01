@@ -9,7 +9,7 @@ namespace NrAcademyBL.Services.Abstract
 {
     public interface IBlogCategoryService
     {
-        Task<IEnumerable<BlogCategoryGetDTO>> GetAllAsync();
+        Task<List<BlogCategoryGetDTO>> GetAllAsync();
         Task<BlogCategoryGetDTO> GetByIdAsync(int id);
         Task CreateAsync(BlogCategoryCreateDTO dto);
         Task UpdateAsync(int id, BlogCategoryUpdateDTO dto);

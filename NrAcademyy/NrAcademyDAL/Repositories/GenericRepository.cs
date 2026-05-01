@@ -38,10 +38,6 @@ namespace NrAcademyDAL.Repositories
             _context.SaveChanges();
         }
 
-
-
-
-
         public async Task<T> GetByIdAsync(int id)
             => await Table.FindAsync(id);
         public async Task<int> SaveAsync()
