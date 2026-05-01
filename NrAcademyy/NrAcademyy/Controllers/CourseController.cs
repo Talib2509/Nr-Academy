@@ -1,7 +1,10 @@
-﻿using Microsoft.AspNetCore.Mvc;
+﻿
+using Microsoft.AspNetCore.Authorization;
+using Microsoft.AspNetCore.Hosting;
+using Microsoft.AspNetCore.Mvc;
 using NrAcademyBL.DTOs.CourseDTOs;
 using NrAcademyBL.Services.Abstract;
-using Microsoft.AspNetCore.Authorization; // Vacibdir
+using System.Threading.Tasks;
 
 namespace NrAcademyAPI.Controllers
 {
@@ -10,15 +13,16 @@ namespace NrAcademyAPI.Controllers
     public class CourseController : ControllerBase
     {
         private readonly ICourseService _courseService;
+        private readonly IWebHostEnvironment _webHostEnvironment;
 
-        public CourseController(ICourseService courseService)
+        public CourseController(ICourseService courseService, IWebHostEnvironment webHostEnvironment)
         {
             _courseService = courseService;
+            _webHostEnvironment = webHostEnvironment;
         }
 
-        // ✅ GET: api/course
         [HttpGet]
-        [AllowAnonymous] // Kursları hər kəs görə bilsin və süzgəcləyə bilsin
+        [AllowAnonymous]
         public async Task<IActionResult> GetAll()
         {
             var result = await _courseService.GetAllAsync();
@@ -26,48 +30,42 @@ namespace NrAcademyAPI.Controllers
         }
 
         [HttpGet("{id}")]
-        [AllowAnonymous] // Kursun detallarına hamı baxa bilsin
+        [AllowAnonymous]
         public async Task<IActionResult> GetById(int id)
         {
             var result = await _courseService.GetByIdAsync(id);
             return Ok(result);
         }
 
-        // ✅ POST: api/course
         [HttpPost]
-        // Sənin qaydana görə Admin kursları əlavə edir
         [Authorize(Roles = "Admin")]
-        public async Task<IActionResult> Create([FromBody] CourseCreateDTO dto)
+        public async Task<IActionResult> Create([FromForm] CourseCreateDTO dto)
         {
             if (!ModelState.IsValid)
                 return BadRequest(ModelState);
 
-            await _courseService.CreateAsync(dto);
+            await _courseService.CreateAsync(dto, _webHostEnvironment.WebRootPath);
 
-            return Ok("Course created successfully");
+            return StatusCode(201, "Course created successfully");
         }
 
-        // ✅ PUT: api/course/{id}
         [HttpPut("{id}")]
-        // Moderator kurs detallarını (ad, təsvir, qiymət, səviyyə) yeniləyə bilər
         [Authorize(Roles = "Admin, Moderator")]
-        public async Task<IActionResult> Update(int id, [FromBody] CourseUpdateDTO dto)
+        public async Task<IActionResult> Update(int id, [FromForm] CourseUpdateDTO dto)
         {
             if (!ModelState.IsValid)
                 return BadRequest(ModelState);
 
-            await _courseService.UpdateAsync(id, dto);
+            await _courseService.UpdateAsync(id, dto, _webHostEnvironment.WebRootPath);
 
             return Ok("Course updated successfully");
         }
 
-        // ✅ DELETE: api/course/{id}
         [HttpDelete("{id}")]
-        // "Sistemdən mühüm məlumatların tamamilə silinməsi" - YALNIZ Admin
         [Authorize(Roles = "Admin")]
         public async Task<IActionResult> Delete(int id)
         {
-            await _courseService.DeleteAsync(id);
+            await _courseService.DeleteAsync(id, _webHostEnvironment.WebRootPath);
 
             return Ok("Course deleted successfully");
         }

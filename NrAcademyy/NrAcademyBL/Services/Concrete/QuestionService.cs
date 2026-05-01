@@ -1,13 +1,16 @@
 ﻿using Abp.Runtime.Caching;
 using AutoMapper;
-using Microsoft.EntityFrameworkCore;
 using NrAcademyBL.DTOs.AuthDTO;
+using NrAcademyBL.Exceptions.Question;
 using NrAcademyBL.Extensions.Caching;
 using NrAcademyBL.Services.Abstract;
 using NrAcademyCORE.Entities;
 using NrAcademyCORE.Repositories;
 using NrAcademyDAL.Context;
 using NrAcademyDAL.Repositories;
+using System;
+using System.Collections.Generic;
+using System.Threading.Tasks;
 using static NrAcademyBL.DTOs.AuthDTO.QuestionDTO;
 
 namespace NrAcademyBL.Services.Concrete;
@@ -51,7 +54,7 @@ public class QuestionService : IQuestionService
 
         var data = await _questionRepository.GetByIdAsync(id);
         if (data == null)
-            throw new Exception("Sual tapılmadı");
+            throw QuestionException.NotFound(id);
 
         var mapped = _mapper.Map<QuestionItemDto>(data);
 
@@ -72,7 +75,7 @@ public class QuestionService : IQuestionService
     {
         var entity = await _questionRepository.GetByIdAsync(dto.Id);
         if (entity == null)
-            throw new Exception("Sual tapılmadı");
+            throw QuestionException.NotFound(dto.Id);
 
         _mapper.Map(dto, entity);
         _questionRepository.Update(entity);
@@ -85,7 +88,7 @@ public class QuestionService : IQuestionService
     {
         var entity = await _questionRepository.GetByIdAsync(id);
         if (entity == null)
-            throw new Exception("Sual tapılmadı");
+            throw QuestionException.NotFound(id);
 
         _questionRepository.Delete(entity);
 
