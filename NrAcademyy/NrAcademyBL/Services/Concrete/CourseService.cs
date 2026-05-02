@@ -1,9 +1,16 @@
-﻿using AutoMapper;
+﻿
+using AutoMapper;
+using Microsoft.AspNetCore.Http;
 using NrAcademyBL.DTOs.CourseDTOs;
+using NrAcademyBL.Extensions;
 using NrAcademyBL.Extensions.Caching;
 using NrAcademyBL.Services.Abstract;
 using NrAcademyCORE.Entities;
 using NrAcademyCORE.Repositories;
+using System;
+using System.Collections.Generic;
+using System.IO;
+using System.Threading.Tasks;
 
 namespace NrAcademyBL.Services.Concrete
 {
@@ -56,21 +63,50 @@ namespace NrAcademyBL.Services.Concrete
             return mapped;
         }
 
-
-        public async Task CreateAsync(CourseCreateDTO dto)
+        public async Task CreateAsync(CourseCreateDTO dto, string rootPath)
         {
             var entity = _mapper.Map<Course>(dto);
-            await _repo.AddAsync(entity);
 
+            if (dto.ImageFile != null)
+            {
+                if (!dto.ImageFile.IsValidType("image"))
+                    throw new Exception("Yalnız şəkil formatı yüklənə bilər.");
+
+                if (!dto.ImageFile.IsValidSize(5000)) // ~5MB
+                    throw new Exception("Şəkil həcmi 5MB-dan çox ola bilməz.");
+
+                string uploadsFolder = Path.Combine(rootPath, "uploads", "courses");
+                entity.ImageUrl = await dto.ImageFile.UploadAsync(uploadsFolder);
+            }
+
+            await _repo.AddAsync(entity);
             await _cache.RemoveAsync("courses_all");
         }
 
-        public async Task UpdateAsync(int id, CourseUpdateDTO dto)
+        public async Task UpdateAsync(int id, CourseUpdateDTO dto, string rootPath)
         {
             var course = await _repo.GetByIdAsync(id);
 
             if (course == null)
                 throw new Exception("Course not found");
+
+            if (dto.ImageFile != null)
+            {
+                if (!dto.ImageFile.IsValidType("image"))
+                    throw new Exception("Yalnız şəkil formatı yüklənə bilər.");
+
+                if (!dto.ImageFile.IsValidSize(5000))
+                    throw new Exception("Şəkil həcmi 5MB-dan çox ola bilməz.");
+
+                // Köhnə şəkili silirik
+                if (!string.IsNullOrEmpty(course.ImageUrl))
+                {
+                    FileExtensions.DeleteFile(Path.GetFileName(course.ImageUrl), rootPath, "uploads", "courses");
+                }
+
+                string uploadsFolder = Path.Combine(rootPath, "uploads", "courses");
+                course.ImageUrl = await dto.ImageFile.UploadAsync(uploadsFolder);
+            }
 
             _mapper.Map(dto, course);
             _repo.Update(course);
@@ -79,15 +115,19 @@ namespace NrAcademyBL.Services.Concrete
             await _cache.RemoveAsync($"course_{id}");
         }
 
-        public async Task DeleteAsync(int id)
+        public async Task DeleteAsync(int id, string rootPath)
         {
             var course = await _repo.GetByIdAsync(id);
 
             if (course == null)
                 throw new Exception("Course not found");
 
-            _repo.Delete(course);
+            if (!string.IsNullOrEmpty(course.ImageUrl))
+            {
+                FileExtensions.DeleteFile(Path.GetFileName(course.ImageUrl), rootPath, "uploads", "courses");
+            }
 
+            _repo.Delete(course);
             await _cache.RemoveAsync("courses_all");
             await _cache.RemoveAsync($"course_{id}");
         }

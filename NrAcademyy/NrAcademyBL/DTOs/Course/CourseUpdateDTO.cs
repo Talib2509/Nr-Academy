@@ -1,5 +1,9 @@
-﻿using NrAcademyCORE.Enums;
+
+using NrAcademyCORE.Enums;
 using System.ComponentModel.DataAnnotations;
+
+using Microsoft.AspNetCore.Http;
+using NrAcademyCORE.Enums;
 
 namespace NrAcademyBL.DTOs.CourseDTOs
 {
@@ -12,9 +16,13 @@ namespace NrAcademyBL.DTOs.CourseDTOs
         public string Description { get; set; }= string.Empty;
         [Required,Range(0,10000)]
         public int Price { get; set; }
+
         [Required,Url]
         public string ImageUrl { get; set; } = string.Empty;
         [Required]
+
+        public IFormFile? ImageFile { get; set; }
+
         public Levels Level { get; set; }
         [Required,Range(0,1000)]
         public int Duration { get; set; }

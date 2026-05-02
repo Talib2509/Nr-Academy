@@ -1,9 +1,16 @@
-﻿using AutoMapper;
+﻿// NrAcademyBL/Services/Concrete/TeacherService.cs
+using AutoMapper;
+using Microsoft.AspNetCore.Http;
 using NrAcademyBL.DTOs.TeacherDTOs;
+using NrAcademyBL.Extensions;
 using NrAcademyBL.Extensions.Caching;
 using NrAcademyBL.Services.Abstract;
 using NrAcademyCORE.Entities;
 using NrAcademyCORE.Repositories;
+using System;
+using System.Collections.Generic;
+using System.IO;
+using System.Threading.Tasks;
 
 namespace NrAcademyBL.Services.Concrete
 {
@@ -55,19 +62,41 @@ namespace NrAcademyBL.Services.Concrete
 
             return mapped;
         }
-        public async Task CreateAsync(TeacherCreateDTO dto)
+
+        public async Task CreateAsync(TeacherCreateDTO dto, string rootPath)
         {
             var teacher = _mapper.Map<Teacher>(dto);
-            await _repo.AddAsync(teacher);
 
+            if (dto.ImageFile != null)
+            {
+                // FileExtensions vasitəsilə faylı yükləyirik
+                string uploadsFolder = Path.Combine(rootPath, "uploads", "teachers");
+                teacher.ImageUrl = await dto.ImageFile.UploadAsync(uploadsFolder);
+            }
+
+            await _repo.AddAsync(teacher);
             await _cache.RemoveAsync("teachers_all");
         }
-        public async Task UpdateAsync(int id, TeacherUpdateDTO dto)
+
+        public async Task UpdateAsync(int id, TeacherUpdateDTO dto, string rootPath)
         {
             var teacher = await _repo.GetByIdAsync(id);
 
             if (teacher == null)
                 throw new Exception("Teacher not found");
+
+            if (dto.ImageFile != null)
+            {
+                // Köhnə şəkili sil
+                if (!string.IsNullOrEmpty(teacher.ImageUrl))
+                {
+                    FileExtensions.DeleteFile(Path.GetFileName(teacher.ImageUrl), rootPath, "uploads", "teachers");
+                }
+
+                // Yeni şəkili yüklə
+                string uploadsFolder = Path.Combine(rootPath, "uploads", "teachers");
+                teacher.ImageUrl = await dto.ImageFile.UploadAsync(uploadsFolder);
+            }
 
             _mapper.Map(dto, teacher);
             _repo.Update(teacher);
@@ -76,15 +105,20 @@ namespace NrAcademyBL.Services.Concrete
             await _cache.RemoveAsync($"teacher_{id}");
         }
 
-        public async Task DeleteAsync(int id)
+        public async Task DeleteAsync(int id, string rootPath)
         {
             var teacher = await _repo.GetByIdAsync(id);
 
             if (teacher == null)
                 throw new Exception("Teacher not found");
 
-            _repo.Delete(teacher);
+            // Şəkili sil
+            if (!string.IsNullOrEmpty(teacher.ImageUrl))
+            {
+                FileExtensions.DeleteFile(Path.GetFileName(teacher.ImageUrl), rootPath, "uploads", "teachers");
+            }
 
+            _repo.Delete(teacher);
             await _cache.RemoveAsync("teachers_all");
             await _cache.RemoveAsync($"teacher_{id}");
         }

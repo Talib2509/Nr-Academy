@@ -1,4 +1,7 @@
+
 ﻿using System.ComponentModel.DataAnnotations;
+﻿using Microsoft.AspNetCore.Http;
+
 
 namespace NrAcademyBL.DTOs.BlogPostDTO;
 
@@ -12,5 +15,5 @@ public class BlogPostUpdateDTO
 
     [Required]
     public int CategoryId { get; set; }
-
+    public IFormFile? ImageFile { get; set; }
 }

@@ -1,12 +1,18 @@
 ﻿using AutoMapper;
-using Microsoft.EntityFrameworkCore;
+using NrAcademyBL.DTOs.AuthDTO;
+using NrAcademyBL.Exceptions.Answer;
 using NrAcademyBL.Extensions.Caching;
 using NrAcademyBL.Services.Abstract;
 using NrAcademyCORE.Entities;
 using NrAcademyCORE.Repositories;
 using NrAcademyDAL.Context;
 using NrAcademyDAL.Repositories;
+
 using static NrAcademyBL.DTOs.AnswerDTO.AnswerDTO;
+using System;
+using System.Collections.Generic;
+using System.Threading.Tasks;
+using static NrAcademyBL.DTOs.AuthDTO.AnswerDTO;
 
 namespace NrAcademyBL.Services.Concrete;
 
@@ -14,7 +20,6 @@ public class AnswerService : IAnswerService
 {
     private readonly IAnswerRepository _context;
     private readonly IMapper _mapper;
-
     private readonly ICacheService _cache;
 
     public AnswerService(IAnswerRepository context, IMapper mapper, ICacheService cache)
@@ -49,7 +54,8 @@ public class AnswerService : IAnswerService
             return cached;
 
         var data = await _context.GetByIdAsync(id);
-        if (data == null) throw new Exception("Tapılmadı");
+        if (data == null)
+            throw AnswerException.NotFound(id);
 
         var mapped = _mapper.Map<AnswerItemDto>(data);
 
@@ -69,7 +75,8 @@ public class AnswerService : IAnswerService
     public async Task UpdateAsync(AnswerUpdateDto dto)
     {
         var entity = await _context.GetByIdAsync(dto.Id);
-        if (entity == null) throw new Exception("Tapılmadı");
+        if (entity == null)
+            throw AnswerException.NotFound(dto.Id);
 
         _mapper.Map(dto, entity);
         _context.Update(entity);
@@ -77,10 +84,12 @@ public class AnswerService : IAnswerService
         await _cache.RemoveAsync("answers_all");
         await _cache.RemoveAsync($"answer_{dto.Id}");
     }
+
     public async Task DeleteAsync(int id)
     {
         var entity = await _context.GetByIdAsync(id);
-        if (entity == null) throw new Exception("Tapılmadı");
+        if (entity == null)
+            throw AnswerException.NotFound(id);
 
         _context.Delete(entity);
 

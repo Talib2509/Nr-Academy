@@ -1,49 +1,65 @@
-﻿using Abp.Domain.Repositories;
+﻿
 using AutoMapper;
 using Microsoft.EntityFrameworkCore;
 using NrAcademyBL.DTOs.BlogPostDTO;
+using NrAcademyBL.Extensions;
 using NrAcademyBL.Extensions.Caching;
 using NrAcademyBL.Services.Abstract;
 using NrAcademyCORE.Entities;
 using NrAcademyCORE.Repositories;
 using System;
 using System.Collections.Generic;
-using System.Linq;
-using System.Text;
+using System.IO;
 using System.Threading.Tasks;
 
 namespace NrAcademyBL.Services.Concrete;
-public class BlogPostService: IBlogPostService
+
+public class BlogPostService : IBlogPostService
 {
     private readonly IBlogPostRepository _repository;
     private readonly IMapper _mapper;
-
     private readonly ICacheService _cache;
-    public BlogPostService(IBlogPostRepository _repository, IMapper _mapper, ICacheService cache)
+
+    public BlogPostService(IBlogPostRepository repository, IMapper mapper, ICacheService cache)
     {
-        _repository = _repository;
-        _mapper = _mapper;
+        _repository = repository;
+        _mapper = mapper;
         _cache = cache;
     }
-    public async Task CreateAsync(BlogPostCreateDTO dto)
+
+    public async Task CreateAsync(BlogPostCreateDTO dto, string rootPath)
     {
         var newBlogPost = _mapper.Map<BlogPost>(dto);
 
-        await _repository.AddAsync(newBlogPost);
-        
+        if (dto.ImageFile != null)
+        {
+            if (!dto.ImageFile.IsValidType("image"))
+                throw new Exception("Yalnız şəkil formatı yüklənə bilər.");
 
+            if (!dto.ImageFile.IsValidSize(5000)) // ~5MB
+                throw new Exception("Şəkil həcmi 5MB-dan çox ola bilməz.");
+
+            string uploadsFolder = Path.Combine(rootPath, "uploads", "blogposts");
+            newBlogPost.ImageUrl = await dto.ImageFile.UploadAsync(uploadsFolder);
+        }
+
+        await _repository.AddAsync(newBlogPost);
         await _cache.RemoveAsync("blogposts_all");
     }
 
-    public async Task DeleteAsync(int id)
+    public async Task DeleteAsync(int id, string rootPath)
     {
-        var blogPosts = await _repository.GetByIdAsync(id);
+        var blogPost = await _repository.GetByIdAsync(id);
 
-        if (blogPosts == null)
-            throw new Exception("Silmek istediyiniz Post Tapilmadi");
+        if (blogPost == null)
+            throw new Exception("Silmək istədiyiniz post tapılmadı");
 
-        _repository.Delete(blogPosts);
-    
+        if (!string.IsNullOrEmpty(blogPost.ImageUrl))
+        {
+            FileExtensions.DeleteFile(Path.GetFileName(blogPost.ImageUrl), rootPath, "uploads", "blogposts");
+        }
+
+        _repository.Delete(blogPost);
 
         await _cache.RemoveAsync("blogposts_all");
         await _cache.RemoveAsync($"blogpost_{id}");
@@ -79,7 +95,7 @@ public class BlogPostService: IBlogPostService
         var blogPost = await _repository.GetByIdAsync(id);
 
         if (blogPost == null)
-            throw new Exception("Bele bir post tapılmadı");
+            throw new Exception("Belə bir post tapılmadı");
 
         var mapped = _mapper.Map<BlogPostGetDTO>(blogPost);
 
@@ -88,19 +104,34 @@ public class BlogPostService: IBlogPostService
         return mapped;
     }
 
-    public async Task UpdateAsync(BlogPostUpdateDTO dto)
+    public async Task UpdateAsync(BlogPostUpdateDTO dto, string rootPath)
     {
         var existingPost = await _repository.GetByIdAsync(dto.Id);
 
         if (existingPost == null)
-            throw new Exception("Yenilemek istediyiniz post tapılmadı");
+            throw new Exception("Yeniləmək istədiyiniz post tapılmadı");
+
+        if (dto.ImageFile != null)
+        {
+            if (!dto.ImageFile.IsValidType("image"))
+                throw new Exception("Yalnız şəkil formatı yüklənə bilər.");
+
+            if (!dto.ImageFile.IsValidSize(5000))
+                throw new Exception("Şəkil həcmi 5MB-dan çox ola bilməz.");
+
+            if (!string.IsNullOrEmpty(existingPost.ImageUrl))
+            {
+                FileExtensions.DeleteFile(Path.GetFileName(existingPost.ImageUrl), rootPath, "uploads", "blogposts");
+            }
+
+            string uploadsFolder = Path.Combine(rootPath, "uploads", "blogposts");
+            existingPost.ImageUrl = await dto.ImageFile.UploadAsync(uploadsFolder);
+        }
 
         _mapper.Map(dto, existingPost);
-
         _repository.Update(existingPost);
-       
 
         await _cache.RemoveAsync("blogposts_all");
         await _cache.RemoveAsync($"blogpost_{dto.Id}");
     }
-} 
+}

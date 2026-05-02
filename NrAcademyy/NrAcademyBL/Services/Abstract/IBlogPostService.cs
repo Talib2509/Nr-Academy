@@ -1,8 +1,6 @@
-﻿using NrAcademyBL.DTOs.BlogPostDTO;
-using System;
+﻿
+using NrAcademyBL.DTOs.BlogPostDTO;
 using System.Collections.Generic;
-using System.Linq;
-using System.Text;
 using System.Threading.Tasks;
 
 namespace NrAcademyBL.Services.Abstract
@@ -11,9 +9,8 @@ namespace NrAcademyBL.Services.Abstract
     {
         Task<List<BlogPostGetDTO>> GetAsync();
         Task<BlogPostGetDTO> GetByIdAsync(int id);
-
-        Task CreateAsync(BlogPostCreateDTO dto);
-        Task UpdateAsync(BlogPostUpdateDTO dto);
-        Task DeleteAsync(int id);
+        Task CreateAsync(BlogPostCreateDTO dto, string rootPath);
+        Task UpdateAsync(BlogPostUpdateDTO dto, string rootPath);
+        Task DeleteAsync(int id, string rootPath);
     }
 }
