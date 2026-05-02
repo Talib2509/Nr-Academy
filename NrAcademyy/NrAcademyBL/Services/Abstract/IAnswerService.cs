@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-using static NrAcademyBL.DTOs.AuthDTO.AnswerDTO;
+using static NrAcademyBL.DTOs.AnswerDTO.AnswerDTO;
 
 namespace NrAcademyBL.Services.Abstract
 {

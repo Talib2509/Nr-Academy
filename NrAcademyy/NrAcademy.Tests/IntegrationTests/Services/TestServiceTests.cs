@@ -4,7 +4,7 @@ using NrAcademy.Tests.IntegrationTests;
 using NrAcademyBL.Services.Concrete;
 using NrAcademyCORE.Entities;
 using Xunit;
-using static NrAcademyBL.DTOs.AuthDTO.TestDTO;
+using static NrAcademyBL.DTOs.TestDTO.TestDTO;
 
 namespace NrAcademy.Tests.IntegrationTests.Services;
 

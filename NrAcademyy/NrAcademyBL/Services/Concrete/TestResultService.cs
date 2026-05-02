@@ -1,5 +1,5 @@
 ﻿using AutoMapper;
-using NrAcademyBL.DTOs.AuthDTO;
+using NrAcademyBL.DTOs.TestResultDTO;
 using NrAcademyBL.Extensions.Caching;
 using NrAcademyBL.Services.Abstract;
 using NrAcademyCORE.Entities;

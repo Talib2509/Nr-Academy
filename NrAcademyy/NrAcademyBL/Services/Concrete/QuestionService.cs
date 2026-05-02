@@ -1,14 +1,13 @@
 ﻿using Abp.Runtime.Caching;
 using AutoMapper;
 using Microsoft.EntityFrameworkCore;
-using NrAcademyBL.DTOs.AuthDTO;
 using NrAcademyBL.Extensions.Caching;
 using NrAcademyBL.Services.Abstract;
 using NrAcademyCORE.Entities;
 using NrAcademyCORE.Repositories;
 using NrAcademyDAL.Context;
 using NrAcademyDAL.Repositories;
-using static NrAcademyBL.DTOs.AuthDTO.QuestionDTO;
+using static NrAcademyBL.DTOs.QuestionDTO.QuestionDTO;
 
 namespace NrAcademyBL.Services.Concrete;
 

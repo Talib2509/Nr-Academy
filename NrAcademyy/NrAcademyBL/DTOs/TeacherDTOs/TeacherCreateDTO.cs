@@ -1,10 +1,16 @@
-﻿namespace NrAcademyBL.DTOs.TeacherDTOs
+﻿using System.ComponentModel.DataAnnotations;
+
+namespace NrAcademyBL.DTOs.TeacherDTOs
 {
     public class TeacherCreateDTO
     {
-        public string Name { get; set; }
-        public string Bio { get; set; }
-        public string ImageUrl { get; set; }
+        [Required,MinLength(6),MaxLength(100)]
+        public string Name { get; set; }=string.Empty;
+        [Required,MinLength(10),MaxLength(100)]
+        public string Bio { get; set; } = string.Empty;
+        [Required,Url]
+        public string ImageUrl { get; set; } = string.Empty;
+        [Required,Range(0,50)]
         public int Experience { get; set; }
     }
 }

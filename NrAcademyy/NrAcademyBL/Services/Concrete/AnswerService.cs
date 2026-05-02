@@ -6,7 +6,7 @@ using NrAcademyCORE.Entities;
 using NrAcademyCORE.Repositories;
 using NrAcademyDAL.Context;
 using NrAcademyDAL.Repositories;
-using static NrAcademyBL.DTOs.AuthDTO.AnswerDTO;
+using static NrAcademyBL.DTOs.AnswerDTO.AnswerDTO;
 
 namespace NrAcademyBL.Services.Concrete;
 

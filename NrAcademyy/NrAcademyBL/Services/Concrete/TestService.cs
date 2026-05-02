@@ -1,10 +1,9 @@
 ﻿using AutoMapper;
-using NrAcademyBL.DTOs.AuthDTO;
 using NrAcademyBL.Extensions.Caching;
 using NrAcademyBL.Services.Abstract;
 using NrAcademyCORE.Entities;
 using NrAcademyCORE.Repositories;
-using static NrAcademyBL.DTOs.AuthDTO.TestDTO;
+using static NrAcademyBL.DTOs.TestDTO.TestDTO;
 
 namespace NrAcademyBL.Services.Concrete;
 
