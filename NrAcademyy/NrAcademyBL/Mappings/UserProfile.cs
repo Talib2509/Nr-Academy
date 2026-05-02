@@ -1,5 +1,6 @@
 ﻿using AutoMapper;
 using NrAcademyBL.DTOs.AuthDTO;
+using NrAcademyBL.DTOs.TestResultDTO;
 using NrAcademyCORE.Entities;
 using NrAcademyCORE.Entities.Identity;
 using System;
@@ -7,9 +8,9 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-using static NrAcademyBL.DTOs.AuthDTO.AnswerDTO;
-using static NrAcademyBL.DTOs.AuthDTO.QuestionDTO;
-using static NrAcademyBL.DTOs.AuthDTO.TestDTO;
+using static NrAcademyBL.DTOs.AnswerDTO.AnswerDTO;
+using static NrAcademyBL.DTOs.QuestionDTO.QuestionDTO;
+using static NrAcademyBL.DTOs.TestDTO.TestDTO;
 
 
 namespace NrAcademyBL.Mappings

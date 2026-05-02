@@ -1,4 +1,4 @@
-﻿using NrAcademyBL.DTOs.AuthDTO;
+﻿using NrAcademyBL.DTOs.TestResultDTO;
 using System;
 using System.Collections.Generic;
 using System.Linq;

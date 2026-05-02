@@ -1,7 +1,11 @@
+
+﻿using AutoMapper;
+using NrAcademyBL.DTOs.TestResultDTO
 ﻿
 using AutoMapper;
 using NrAcademyBL.DTOs.AuthDTO;
 using NrAcademyBL.Exceptions.TestResult;
+
 using NrAcademyBL.Extensions.Caching;
 using NrAcademyBL.Services.Abstract;
 using NrAcademyCORE.Entities;

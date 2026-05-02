@@ -1,11 +1,18 @@
-﻿
+
+using AutoMapper;
+
+
 using AutoMapper;
 using NrAcademyBL.DTOs.AuthDTO;
 using NrAcademyBL.Exceptions.Test;
+
 using NrAcademyBL.Extensions.Caching;
 using NrAcademyBL.Services.Abstract;
 using NrAcademyCORE.Entities;
 using NrAcademyCORE.Repositories;
+
+using static NrAcademyBL.DTOs.TestDTO.TestDTO;
+
 using System;
 using System.Collections.Generic;
 using System.Threading.Tasks;

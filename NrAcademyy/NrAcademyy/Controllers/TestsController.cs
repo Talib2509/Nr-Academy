@@ -1,8 +1,7 @@
 ﻿using Microsoft.AspNetCore.Mvc;
-using NrAcademyBL.DTOs.AuthDTO;
 using NrAcademyBL.Services.Abstract;
 using Microsoft.AspNetCore.Authorization; // Vacibdir
-using static NrAcademyBL.DTOs.AuthDTO.TestDTO;
+using static NrAcademyBL.DTOs.TestDTO.TestDTO;
 
 namespace NrAcademyy.Controllers;
 

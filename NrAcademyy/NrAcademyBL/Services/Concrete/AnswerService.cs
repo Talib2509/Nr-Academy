@@ -7,6 +7,8 @@ using NrAcademyCORE.Entities;
 using NrAcademyCORE.Repositories;
 using NrAcademyDAL.Context;
 using NrAcademyDAL.Repositories;
+
+using static NrAcademyBL.DTOs.AnswerDTO.AnswerDTO;
 using System;
 using System.Collections.Generic;
 using System.Threading.Tasks;

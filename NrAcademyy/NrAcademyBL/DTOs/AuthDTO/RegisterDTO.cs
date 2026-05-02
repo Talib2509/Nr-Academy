@@ -25,6 +25,6 @@ namespace NrAcademyBL.DTOs.AuthDTO
         [Required, Compare("Password")]
         public string ConfirmPassword { get; set; } = string.Empty;
         [Required]
-        public Roles Role { get; set; }   // Teacher və ya Student
+        public Roles Role { get; set; }   // Teacher ve ya Student
     }
 }
