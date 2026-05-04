@@ -7,8 +7,7 @@ using System.Threading.Tasks;
 
 namespace NrAcademyBL.DTOs.AnswerDTO
 {
-    public partial class AnswerDTO
-    {
+  
         public class AnswerCreateDto
         {
             [Required,MinLength(3),MaxLength(256)]
@@ -18,4 +17,4 @@ namespace NrAcademyBL.DTOs.AnswerDTO
             public int QuestionId { get; set; }
         }
     }
-}
+

@@ -7,7 +7,7 @@ namespace NrAcademy.Tests.IntegrationTests;
 
 public abstract class BaseIntegrationTest : IDisposable
 {
-    protected readonly AppDbContext _dbContext;
+    protected readonly AppDbContext _context;
 
     protected BaseIntegrationTest(TestDbContextFactory factory)
     {
@@ -15,7 +15,7 @@ public abstract class BaseIntegrationTest : IDisposable
         if (factory == null) throw new ArgumentNullException(nameof(factory));
 
         // DbContext-i yarat və protected field-ə mənimsət
-        _dbContext = factory.CreateContext();
+        _context = factory.CreateContext();
     }
     protected async Task SeedRolesAsync()
     {
@@ -26,9 +26,9 @@ public abstract class BaseIntegrationTest : IDisposable
         {
             var normalized = roleName.ToUpperInvariant();
             // Artıq mövcud olub-olmadığını yoxlayırıq
-            if (!await _dbContext.Roles.AnyAsync(r => r.NormalizedName == normalized))
+            if (!await _context.Roles.AnyAsync(r => r.NormalizedName == normalized))
             {
-                await _dbContext.Roles.AddAsync(new AppRole
+                await _context.Roles.AddAsync(new AppRole
                 {
                     Name = roleName,
                     NormalizedName = normalized,
@@ -37,13 +37,13 @@ public abstract class BaseIntegrationTest : IDisposable
             }
         }
 
-        await _dbContext.SaveChangesAsync();
+        await _context.SaveChangesAsync();
         // InMemory bazada bəzən mütləq lazımdır ki, Context yenilənsin
-        _dbContext.ChangeTracker.Clear();
+        _context.ChangeTracker.Clear();
     }
     public void Dispose()
     {
-        _dbContext.Database.EnsureDeleted();
-        _dbContext.Dispose();
+        _context.Database.EnsureDeleted();
+        _context.Dispose();
     }
 }

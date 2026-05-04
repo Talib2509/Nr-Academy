@@ -1,9 +1,9 @@
-﻿using System;
+﻿using NrAcademyBL.DTOs.QuestionDTO;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-using static NrAcademyBL.DTOs.QuestionDTO.QuestionDTO;
 
 namespace NrAcademyBL.Services.Abstract
 {

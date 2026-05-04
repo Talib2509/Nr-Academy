@@ -1,5 +1,8 @@
 ﻿using AutoMapper;
+using NrAcademyBL.DTOs.AnswerDTO;
 using NrAcademyBL.DTOs.AuthDTO;
+using NrAcademyBL.DTOs.QuestionDTO;
+using NrAcademyBL.DTOs.TestDTO;
 using NrAcademyBL.DTOs.TestResultDTO;
 using NrAcademyCORE.Entities;
 using NrAcademyCORE.Entities.Identity;
@@ -8,8 +11,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-using static NrAcademyBL.DTOs.AnswerDTO.AnswerDTO;
-using static NrAcademyBL.DTOs.QuestionDTO.QuestionDTO;
+
 using static NrAcademyBL.DTOs.TestDTO.TestDTO;
 
 

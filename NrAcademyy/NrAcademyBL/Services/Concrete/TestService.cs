@@ -13,10 +13,7 @@ using NrAcademyCORE.Repositories;
 
 using static NrAcademyBL.DTOs.TestDTO.TestDTO;
 
-using System;
-using System.Collections.Generic;
-using System.Threading.Tasks;
-using static NrAcademyBL.DTOs.AuthDTO.TestDTO;
+using NrAcademyBL.DTOs.TestDTO;
 
 namespace NrAcademyBL.Services.Concrete;
 

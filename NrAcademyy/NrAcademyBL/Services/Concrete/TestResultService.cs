@@ -1,6 +1,6 @@
 
 ﻿using AutoMapper;
-using NrAcademyBL.DTOs.TestResultDTO
+using NrAcademyBL.DTOs.TestResultDTO;
 ﻿
 using AutoMapper;
 using NrAcademyBL.DTOs.AuthDTO;

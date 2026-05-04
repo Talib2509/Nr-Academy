@@ -13,94 +13,91 @@ using NrAcademyCORE.Repositories;
 using NrAcademyDAL.Context;
 using NrAcademyDAL.Repositories;
 
-using static NrAcademyBL.DTOs.QuestionDTO.QuestionDTO;
-
-using System;
-using System.Collections.Generic;
-using System.Threading.Tasks;
-using static NrAcademyBL.DTOs.AuthDTO.QuestionDTO;
+using NrAcademyBL.DTOs.QuestionDTO;
 
 
-namespace NrAcademyBL.Services.Concrete;
-
-public class QuestionService : IQuestionService
+namespace NrAcademyBL.Services.Concrete
 {
-    private readonly IQuestionRepository _questionRepository;
-    private readonly IMapper _mapper;
-    private readonly ICacheService _cache;
 
-    public QuestionService(IQuestionRepository questionRepository, IMapper mapper, ICacheService cache)
+    public class QuestionService : IQuestionService
     {
-        _questionRepository = questionRepository;
-        _mapper = mapper;
-        _cache = cache;
-    }
+        private readonly IQuestionRepository _questionRepository;
+        private readonly IMapper _mapper;
+        private readonly ICacheService _cache;
 
-    public async Task<List<QuestionItemDto>> GetAllAsync()
-    {
-        var key = "questions_all";
+        public QuestionService(IQuestionRepository questionRepository, IMapper mapper, ICacheService cache)
+        {
+            _questionRepository = questionRepository;
+            _mapper = mapper;
+            _cache = cache;
+        }
 
-        var cached = await _cache.GetAsync<List<QuestionItemDto>>(key);
-        if (cached != null)
-            return cached;
+        public async Task<List<QuestionItemDto>> GetAllAsync()
+        {
+            var key = "questions_all";
 
-        var data = await _questionRepository.GetAllAsync();
-        var mapped = _mapper.Map<List<QuestionItemDto>>(data);
+            var cached = await _cache.GetAsync<List<QuestionItemDto>>(key);
+            if (cached != null)
+                return cached;
 
-        await _cache.SetAsync(key, mapped, TimeSpan.FromMinutes(5));
+            var data = await _questionRepository.GetAllAsync();
+            var mapped = _mapper.Map<List<QuestionItemDto>>(data);
 
-        return mapped;
-    }
+            await _cache.SetAsync(key, mapped, TimeSpan.FromMinutes(5));
 
-    public async Task<QuestionItemDto> GetByIdAsync(int id)
-    {
-        var key = $"question_{id}";
+            return mapped;
+        }
 
-        var cached = await _cache.GetAsync<QuestionItemDto>(key);
-        if (cached != null)
-            return cached;
+        public async Task<QuestionItemDto> GetByIdAsync(int id)
+        {
+            var key = $"question_{id}";
 
-        var data = await _questionRepository.GetByIdAsync(id);
-        if (data == null)
-            throw QuestionException.NotFound(id);
+            var cached = await _cache.GetAsync<QuestionItemDto>(key);
+            if (cached != null)
+                return cached;
 
-        var mapped = _mapper.Map<QuestionItemDto>(data);
+            var data = await _questionRepository.GetByIdAsync(id);
+            if (data == null)
+                throw QuestionException.NotFound(id);
 
-        await _cache.SetAsync(key, mapped, TimeSpan.FromMinutes(5));
+            var mapped = _mapper.Map<QuestionItemDto>(data);
 
-        return mapped;
-    }
+            await _cache.SetAsync(key, mapped, TimeSpan.FromMinutes(5));
 
-    public async Task CreateAsync(QuestionCreateDto dto)
-    {
-        var entity = _mapper.Map<Question>(dto);
-        await _questionRepository.AddAsync(entity);
+            return mapped;
+        }
 
-        await _cache.RemoveAsync("questions_all");
-    }
+        public async Task CreateAsync(QuestionCreateDto dto)
+        {
+            var entity = _mapper.Map<Question>(dto);
+            await _questionRepository.AddAsync(entity);
 
-    public async Task UpdateAsync(QuestionUpdateDto dto)
-    {
-        var entity = await _questionRepository.GetByIdAsync(dto.Id);
-        if (entity == null)
-            throw QuestionException.NotFound(dto.Id);
+            await _cache.RemoveAsync("questions_all");
+        }
 
-        _mapper.Map(dto, entity);
-        _questionRepository.Update(entity);
+        public async Task UpdateAsync(QuestionUpdateDto dto)
+        {
+            var entity = await _questionRepository.GetByIdAsync(dto.Id);
+            if (entity == null)
+                throw QuestionException.NotFound(dto.Id);
 
-        await _cache.RemoveAsync("questions_all");
-        await _cache.RemoveAsync($"question_{dto.Id}");
-    }
+            _mapper.Map(dto, entity);
+            _questionRepository.Update(entity);
 
-    public async Task DeleteAsync(int id)
-    {
-        var entity = await _questionRepository.GetByIdAsync(id);
-        if (entity == null)
-            throw QuestionException.NotFound(id);
+            await _cache.RemoveAsync("questions_all");
+            await _cache.RemoveAsync($"question_{dto.Id}");
+        }
 
-        _questionRepository.Delete(entity);
+        public async Task DeleteAsync(int id)
+        {
+            var entity = await _questionRepository.GetByIdAsync(id);
+            if (entity == null)
+                throw QuestionException.NotFound(id);
 
-        await _cache.RemoveAsync("questions_all");
-        await _cache.RemoveAsync($"question_{id}");
+            _questionRepository.Delete(entity);
+
+            await _cache.RemoveAsync("questions_all");
+            await _cache.RemoveAsync($"question_{id}");
+        }
     }
 }

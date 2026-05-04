@@ -11,19 +11,17 @@ using System.Threading.Tasks;
 namespace NrAcademyBL.DTOs.BlogPostDTO
 {
 
-    [Required,MaxLength(500),MinLength(3)]
-    public string Title { get; set; } = string.Empty;
-    [Required,MaxLength(500),MinLength(3)]
-    public string Content { get; set; } = string.Empty;
-    [Required]
-    public int CategoryId { get; set; }
-}
 
     public class BlogPostCreateDTO
     {
+
+        [Required, MaxLength(500), MinLength(3)]
         public string Title { get; set; } = string.Empty;
+        [Required, MaxLength(500), MinLength(3)]
         public string Content { get; set; } = string.Empty;
+        [Required]
         public int CategoryId { get; set; }
+
         public IFormFile ImageFile { get; set; }
     }
 

@@ -26,7 +26,7 @@ public class CourseServiceTests : BaseIntegrationTest, IClassFixture<TestDbConte
         });
         _mapper = mapperConfig.CreateMapper();
 
-        _courseRepo = new CourseRepository(_dbContext);
+        _courseRepo = new CourseRepository(_context);
 
         // CACHE MOCK
         _cacheMock = new Mock<ICacheService>();
@@ -52,8 +52,8 @@ public class CourseServiceTests : BaseIntegrationTest, IClassFixture<TestDbConte
     {
         // Arrange: Müəllim mütləq lazımdır, çünki Course TeacherId tələb edir
         var teacher = new Teacher { Name = "Mirtalib", Bio = "Senior Dev", ImageUrl = "m.jpg" };
-        await _dbContext.Teachers.AddAsync(teacher);
-        await _dbContext.SaveChangesAsync();
+        await _context.Teachers.AddAsync(teacher);
+        await _context.SaveChangesAsync();
 
         var dto = new CourseCreateDTO
         {
@@ -67,11 +67,11 @@ public class CourseServiceTests : BaseIntegrationTest, IClassFixture<TestDbConte
         };
 
         // Act
-        await _courseService.CreateAsync(dto);
-        await _dbContext.SaveChangesAsync();
+        await _courseService.CreateAsync(dto, "wwwroot");
+
 
         // Assert
-        var course = await _dbContext.Courses.FirstOrDefaultAsync(c => c.Title == dto.Title);
+        var course = await _context.Courses.FirstOrDefaultAsync(c => c.Title == dto.Title);
         Assert.NotNull(course);
         Assert.Equal(teacher.Id, course.TeacherId);
     }
@@ -92,8 +92,8 @@ public class CourseServiceTests : BaseIntegrationTest, IClassFixture<TestDbConte
             Price = 1000
         };
 
-        await _dbContext.Courses.AddAsync(course);
-        await _dbContext.SaveChangesAsync();
+        await _context.Courses.AddAsync(course);
+        await _context.SaveChangesAsync();
 
         // Act
         var result = await _courseService.GetAllAsync();
@@ -120,8 +120,8 @@ public class CourseServiceTests : BaseIntegrationTest, IClassFixture<TestDbConte
             Duration = 5,
             Teacher = teacher
         };
-        await _dbContext.Courses.AddAsync(course);
-        await _dbContext.SaveChangesAsync();
+        await _context.Courses.AddAsync(course);
+        await _context.SaveChangesAsync();
 
         // Act
         var result = await _courseService.GetByIdAsync(course.Id);
@@ -146,8 +146,8 @@ public class CourseServiceTests : BaseIntegrationTest, IClassFixture<TestDbConte
             Duration = 1,
             Teacher = teacher
         };
-        await _dbContext.Courses.AddAsync(course);
-        await _dbContext.SaveChangesAsync();
+        await _context.Courses.AddAsync(course);
+        await _context.SaveChangesAsync();
 
         var updateDto = new CourseUpdateDTO
         {
@@ -158,11 +158,11 @@ public class CourseServiceTests : BaseIntegrationTest, IClassFixture<TestDbConte
         };
 
         // Act
-        await _courseService.UpdateAsync(course.Id, updateDto);
-        await _dbContext.SaveChangesAsync();
+        await _courseService.UpdateAsync(course.Id, updateDto, "wwwroot");
+        await _context.SaveChangesAsync();
 
         // Assert
-        var updatedCourse = await _dbContext.Courses.FindAsync(course.Id);
+        var updatedCourse = await _context.Courses.FindAsync(course.Id);
         Assert.Equal("New Updated Title", updatedCourse!.Title);
         Assert.Equal(150, updatedCourse.Price);
     }
@@ -184,9 +184,9 @@ public class CourseServiceTests : BaseIntegrationTest, IClassFixture<TestDbConte
     {
         // Arrange
         var teacher = new Teacher { Name = "T", Bio = "B", ImageUrl = "i.jpg" };
-        await _dbContext.Teachers.AddAsync(teacher);
+        await _context.Teachers.AddAsync(teacher);
         // Müəllimi yadda saxlayırıq ki, Id-si yaransın
-        await _dbContext.SaveChangesAsync();
+        await _context.SaveChangesAsync();
 
         var course = new Course
         {
@@ -199,15 +199,15 @@ public class CourseServiceTests : BaseIntegrationTest, IClassFixture<TestDbConte
             TeacherId = teacher.Id                  // VACİB
         };
 
-        await _dbContext.Courses.AddAsync(course);
-        await _dbContext.SaveChangesAsync(); // Burada xəta alırdınız, indi keçəcək
+        await _context.Courses.AddAsync(course);
+        await _context.SaveChangesAsync(); // Burada xəta alırdınız, indi keçəcək
 
         // Act
-        await _courseService.DeleteAsync(course.Id);
-        await _dbContext.SaveChangesAsync();
+        await _courseService.DeleteAsync(course.Id, "wwwroot");
+        await _context.SaveChangesAsync();
 
         // Assert
-        var deletedCourse = await _dbContext.Courses.FindAsync(course.Id);
+        var deletedCourse = await _context.Courses.FindAsync(course.Id);
         Assert.Null(deletedCourse);
     }
 }

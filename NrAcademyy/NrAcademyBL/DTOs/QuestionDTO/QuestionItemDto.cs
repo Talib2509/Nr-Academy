@@ -1,7 +1,6 @@
 ﻿namespace NrAcademyBL.DTOs.QuestionDTO
 {
-    public partial class QuestionDTO
-    {
+    
         public class QuestionItemDto
         {
             public int Id { get; set; }
@@ -11,4 +10,4 @@
         }
 
     }
-}
+

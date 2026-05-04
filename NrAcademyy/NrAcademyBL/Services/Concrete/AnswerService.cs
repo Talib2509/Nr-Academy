@@ -1,4 +1,5 @@
 ﻿using AutoMapper;
+using NrAcademyBL.DTOs.AnswerDTO;
 using NrAcademyBL.DTOs.AuthDTO;
 using NrAcademyBL.Exceptions.Answer;
 using NrAcademyBL.Extensions.Caching;
@@ -8,11 +9,6 @@ using NrAcademyCORE.Repositories;
 using NrAcademyDAL.Context;
 using NrAcademyDAL.Repositories;
 
-using static NrAcademyBL.DTOs.AnswerDTO.AnswerDTO;
-using System;
-using System.Collections.Generic;
-using System.Threading.Tasks;
-using static NrAcademyBL.DTOs.AuthDTO.AnswerDTO;
 
 namespace NrAcademyBL.Services.Concrete;
 

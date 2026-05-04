@@ -2,8 +2,7 @@
 
 namespace NrAcademyBL.DTOs.QuestionDTO
 {
-    public partial class QuestionDTO
-    {
+   
         public class QuestionUpdateDto
         {
             public int Id { get; set; }
@@ -16,4 +15,4 @@ namespace NrAcademyBL.DTOs.QuestionDTO
         }
 
     }
-}
+

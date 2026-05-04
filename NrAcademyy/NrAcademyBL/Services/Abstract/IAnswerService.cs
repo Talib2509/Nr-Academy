@@ -1,10 +1,11 @@
-﻿using System;
+﻿using NrAcademyBL.DTOs.AnswerDTO;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-using static NrAcademyBL.DTOs.AnswerDTO.AnswerDTO;
+
 
 namespace NrAcademyBL.Services.Abstract
 {

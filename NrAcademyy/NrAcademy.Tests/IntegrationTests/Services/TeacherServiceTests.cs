@@ -1,7 +1,9 @@
 ﻿using AutoMapper;
 using Microsoft.EntityFrameworkCore;
+using Moq;
 using NrAcademy.Tests.IntegrationTests;
 using NrAcademyBL.DTOs.TeacherDTOs;
+using NrAcademyBL.Extensions.Caching;
 using NrAcademyBL.Services.Concrete;
 using NrAcademyCORE.Entities;
 using NrAcademyDAL.Repositories; // Real repository class
@@ -14,6 +16,7 @@ public class TeacherServiceTests : BaseIntegrationTest, IClassFixture<TestDbCont
     private readonly TeacherService _teacherService;
     private readonly IMapper _mapper;
     private readonly TeacherRepository _teacherRepo;
+    private readonly Mock<ICacheService> _cacheMock;
 
     public TeacherServiceTests(TestDbContextFactory factory) : base(factory)
     {
@@ -25,10 +28,13 @@ public class TeacherServiceTests : BaseIntegrationTest, IClassFixture<TestDbCont
         _mapper = mapperConfig.CreateMapper();
 
         // 2. Real Repository (İnteqrasiya testi üçün)
-        _teacherRepo = new TeacherRepository(_dbContext);
+        _teacherRepo = new TeacherRepository(_context);
+        _cacheMock = new Mock<ICacheService>();
+        // 2. Cache Mock-u yaradın (BU VACİBDİR)
+        _cacheMock = new Mock<ICacheService>();
 
         // 3. Servisin inisializasiyası
-        _teacherService = new TeacherService(_teacherRepo, _mapper);
+        _teacherService = new TeacherService(_teacherRepo, _mapper, _cacheMock.Object);
     }
 
     [Fact]
@@ -43,11 +49,11 @@ public class TeacherServiceTests : BaseIntegrationTest, IClassFixture<TestDbCont
         };
 
         // Act
-        await _teacherService.CreateAsync(dto);
-        await _dbContext.SaveChangesAsync();
+        await _teacherService.CreateAsync(dto, "wwwroot");
+        await _context.SaveChangesAsync();
 
         // Assert
-        var teacher = await _dbContext.Teachers.FirstOrDefaultAsync(t => t.Name == "Mirtalib");
+        var teacher = await _context.Teachers.FirstOrDefaultAsync(t => t.Name == "Mirtalib");
         Assert.NotNull(teacher);
     }
 
@@ -59,8 +65,8 @@ public class TeacherServiceTests : BaseIntegrationTest, IClassFixture<TestDbCont
         new Teacher { Name = "Alizamin", Bio = "Bio 1", ImageUrl = "img1.jpg" }, // DƏYƏRLƏR VERİLDİ
         new Teacher { Name = "Admin", Bio = "Bio 2", ImageUrl = "img2.jpg" }     // DƏYƏRLƏR VERİLDİ
     };
-        await _dbContext.Teachers.AddRangeAsync(teachers);
-        await _dbContext.SaveChangesAsync();
+        await _context.Teachers.AddRangeAsync(teachers);
+        await _context.SaveChangesAsync();
 
         // Act
         var result = await _teacherService.GetAllAsync();
@@ -74,16 +80,22 @@ public class TeacherServiceTests : BaseIntegrationTest, IClassFixture<TestDbCont
     public async Task GetByIdAsync_When_Teacher_Exists_Should_Return_Dto()
     {
         // Arrange
-        var teacher = new Teacher { Name = "Test" };
-        await _dbContext.Teachers.AddAsync(teacher);
-        await _dbContext.SaveChangesAsync();
+        var teacher = new Teacher
+        {
+            Name = "Test Müəllim",
+            Bio = "Bu sahə məcburidir, ona görə doldurulmalıdır.", // Xətanın həlli buradadır
+            ImageUrl = "test.jpg" // Əgər bu da Required-dirsə, bunu da əlavə edin
+        };
+
+        await _context.Teachers.AddAsync(teacher);
+        await _context.SaveChangesAsync(); // Xəta burada baş verirdi
 
         // Act
         var result = await _teacherService.GetByIdAsync(teacher.Id);
 
         // Assert
         Assert.NotNull(result);
-        Assert.Equal("Test", result.Name);
+        Assert.Equal("Test Müəllim", result.Name);
     }
 
     [Fact]
@@ -99,18 +111,18 @@ public class TeacherServiceTests : BaseIntegrationTest, IClassFixture<TestDbCont
     {
         // Arrange
         var teacher = new Teacher { Name = "Köhnə Ad", Bio = "Köhnə Bio", ImageUrl = "old.jpg" };
-        await _dbContext.Teachers.AddAsync(teacher);
-        await _dbContext.SaveChangesAsync();
+        await _context.Teachers.AddAsync(teacher);
+        await _context.SaveChangesAsync();
 
         // DTO-da da bu sahələr varsa, onları da doldurun
         var updateDto = new TeacherUpdateDTO { Name = "Yeni Ad", Bio = "Yeni Bio", ImageUrl = "new.jpg" };
 
         // Act
-        await _teacherService.UpdateAsync(teacher.Id, updateDto);
-        await _dbContext.SaveChangesAsync();
+        await _teacherService.UpdateAsync(teacher.Id, updateDto, "wwwroot");
+        await _context.SaveChangesAsync();
 
         // Assert
-        var updated = await _dbContext.Teachers.FindAsync(teacher.Id);
+        var updated = await _context.Teachers.FindAsync(teacher.Id);
         Assert.Equal("Yeni Ad", updated!.Name);
     }
 
@@ -119,15 +131,15 @@ public class TeacherServiceTests : BaseIntegrationTest, IClassFixture<TestDbCont
     {
         // Arrange
         var teacher = new Teacher { Name = "Silinəcək", Bio = "Temp Bio", ImageUrl = "temp.jpg" };
-        await _dbContext.Teachers.AddAsync(teacher);
-        await _dbContext.SaveChangesAsync();
+        await _context.Teachers.AddAsync(teacher);
+        await _context.SaveChangesAsync();
 
         // Act
-        await _teacherService.DeleteAsync(teacher.Id);
-        await _dbContext.SaveChangesAsync();
+        await _teacherService.DeleteAsync(teacher.Id, "wwwroot");
+        await _context.SaveChangesAsync();
 
         // Assert
-        var result = await _dbContext.Teachers.FindAsync(teacher.Id);
+        var result = await _context.Teachers.FindAsync(teacher.Id);
         Assert.Null(result);
     }
 }

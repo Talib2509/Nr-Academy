@@ -34,7 +34,7 @@ public class AuthServiceTests : BaseIntegrationTest, IClassFixture<TestDbContext
         var errorDescriber = new IdentityErrorDescriber();
 
         // 3. UserManager və RoleManager-in yaradılması
-        var userStore = new UserStore<AppUser, AppRole, DbContext, int>(_dbContext);
+        var userStore = new UserStore<AppUser, AppRole, DbContext, int>(_context);
         _userManager = new UserManager<AppUser>(
             userStore,
             null, // Options
@@ -88,7 +88,7 @@ public class AuthServiceTests : BaseIntegrationTest, IClassFixture<TestDbContext
         await _authService.RegisterAsync(dto);
 
         // Assert
-        var user = await _dbContext.Users.FirstOrDefaultAsync(u => u.Email == dto.Email);
+        var user = await _context.Users.FirstOrDefaultAsync(u => u.Email == dto.Email);
 
         Assert.NotNull(user);
         Assert.False(user.IsEmailVerified);

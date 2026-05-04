@@ -38,13 +38,13 @@ public class JwtServiceTests : BaseIntegrationTest, IClassFixture<TestDbContextF
         var options = Options.Create(jwtSettings);
 
         // 3. Repository və UserManager quraşdırılması
-        _refreshRepo = new RefreshTokenRepository(_dbContext);
+        _refreshRepo = new RefreshTokenRepository(_context);
 
-        var userStore = new UserStore<AppUser, AppRole, DbContext, int>(_dbContext);
+        var userStore = new UserStore<AppUser, AppRole, DbContext, int>(_context);
         _userManager = new UserManager<AppUser>(userStore, null, new PasswordHasher<AppUser>(),
             null, null, new UpperInvariantLookupNormalizer(), new IdentityErrorDescriber(), null, null);
 
-        _jwtService = new JwtService(_userManager, options, _refreshRepo, _dbContext);
+        _jwtService = new JwtService(_userManager, options, _refreshRepo, _context);
     }
 
     [Fact]
@@ -76,7 +76,7 @@ public class JwtServiceTests : BaseIntegrationTest, IClassFixture<TestDbContextF
         Assert.Equal(userName, nameClaim.Value);
 
         // Refresh token bazaya yazılıbmı?
-        var dbToken = await _dbContext.RefreshTokens.FirstOrDefaultAsync(t => t.Token == result.RefreshToken);
+        var dbToken = await _context.RefreshTokens.FirstOrDefaultAsync(t => t.Token == result.RefreshToken);
         Assert.NotNull(dbToken);
         Assert.Equal(user.Id, dbToken.AppUserId);
     }
@@ -98,7 +98,7 @@ public class JwtServiceTests : BaseIntegrationTest, IClassFixture<TestDbContextF
         Assert.NotEqual(oldTokenResponse.RefreshToken, result.RefreshToken);
 
         // Köhnə token ləğv edilibmi?
-        var revokedToken = await _dbContext.RefreshTokens.FirstOrDefaultAsync(t => t.Token == oldTokenResponse.RefreshToken);
+        var revokedToken = await _context.RefreshTokens.FirstOrDefaultAsync(t => t.Token == oldTokenResponse.RefreshToken);
         Assert.True(revokedToken!.IsRevoked);
         Assert.Equal(result.RefreshToken, revokedToken.ReplacedByToken);
     }
@@ -115,7 +115,7 @@ public class JwtServiceTests : BaseIntegrationTest, IClassFixture<TestDbContextF
         await _jwtService.RevokeTokenAsync(tokenRes.RefreshToken, "127.0.0.1");
 
         // Assert
-        var dbToken = await _dbContext.RefreshTokens.FirstOrDefaultAsync(t => t.Token == tokenRes.RefreshToken);
+        var dbToken = await _context.RefreshTokens.FirstOrDefaultAsync(t => t.Token == tokenRes.RefreshToken);
         Assert.True(dbToken!.IsRevoked);
         Assert.NotNull(dbToken.RevokedAt);
     }

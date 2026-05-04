@@ -1,9 +1,15 @@
 ﻿using AutoMapper;
 using Microsoft.EntityFrameworkCore;
+using Moq;
 using NrAcademy.Tests.IntegrationTests;
 using NrAcademyBL.DTOs.AuthDTO;
+using NrAcademyBL.DTOs.TestResultDTO;
+using NrAcademyBL.Exceptions.TestResult;
+using NrAcademyBL.Extensions.Caching;
 using NrAcademyBL.Services.Concrete;
 using NrAcademyCORE.Entities;
+using NrAcademyCORE.Repositories;
+using NrAcademyDAL.Repositories;
 using Xunit;
 
 namespace NrAcademy.Tests.IntegrationTests.Services;
@@ -12,16 +18,30 @@ public class TestResultServiceTests : BaseIntegrationTest, IClassFixture<TestDbC
 {
     private readonly TestResultService _testResultService;
     private readonly IMapper _mapper;
+    private readonly Mock<ICacheService> _cacheMock;
+    private readonly ITestResultRepository _testResultRepository;
 
     public TestResultServiceTests(TestDbContextFactory factory) : base(factory)
     {
+        // 1. AutoMapper
         var mapperConfig = new MapperConfiguration(cfg =>
         {
             cfg.AddMaps(typeof(TestResultService).Assembly);
         });
         _mapper = mapperConfig.CreateMapper();
 
-        _testResultService = new TestResultService(_dbContext, _mapper);
+        // 2. Cache Mock (VACİB)
+        _cacheMock = new Mock<ICacheService>();
+
+        // Testlərdə keşin hər zaman boş qayıtmasını təmin edirik ki, bazaya müraciət etsin
+        _cacheMock.Setup(x => x.GetAsync<List<TestResultItemDto>>(It.IsAny<string>()))
+                  .ReturnsAsync((List<TestResultItemDto>)null);
+
+        // 3. Repository-ni başlat
+        _testResultRepository = new TestResultRepository(_context);
+
+        // 4. Servisi 3 parametr ilə başlat
+        _testResultService = new TestResultService(_testResultRepository, _mapper, _cacheMock.Object);
     }
 
     [Fact]
@@ -39,7 +59,7 @@ public class TestResultServiceTests : BaseIntegrationTest, IClassFixture<TestDbC
         await _testResultService.CreateAsync(dto);
 
         // Assert
-        var result = await _dbContext.TestResults.FirstOrDefaultAsync(r => r.Score == 85);
+        var result = await _context.TestResults.FirstOrDefaultAsync(r => r.Score == 85);
         Assert.NotNull(result);
         Assert.Equal(1, result.TestId);
     }
@@ -53,8 +73,8 @@ public class TestResultServiceTests : BaseIntegrationTest, IClassFixture<TestDbC
             new TestResult { Score = 50, TestId = 1, UserId = 1 },
             new TestResult { Score = 90, TestId = 2, UserId = 1 }
         };
-        await _dbContext.TestResults.AddRangeAsync(results);
-        await _dbContext.SaveChangesAsync();
+        await _context.TestResults.AddRangeAsync(results);
+        await _context.SaveChangesAsync();
 
         // Act
         var data = await _testResultService.GetAllAsync();
@@ -68,8 +88,8 @@ public class TestResultServiceTests : BaseIntegrationTest, IClassFixture<TestDbC
     {
         // Arrange
         var resultEntity = new TestResult { Score = 100, TestId = 1, UserId = 1 };
-        await _dbContext.TestResults.AddAsync(resultEntity);
-        await _dbContext.SaveChangesAsync();
+        await _context.TestResults.AddAsync(resultEntity);
+        await _context.SaveChangesAsync();
 
         // Act
         var result = await _testResultService.GetByIdAsync(resultEntity.Id);
@@ -83,8 +103,8 @@ public class TestResultServiceTests : BaseIntegrationTest, IClassFixture<TestDbC
     public async Task GetByIdAsync_When_Not_Found_Should_Throw_Exception()
     {
         // Act & Assert
-        var ex = await Assert.ThrowsAsync<Exception>(() => _testResultService.GetByIdAsync(999));
-        Assert.Equal("Nəticə tapılmadı", ex.Message);
+        // Tip olaraq Exception yox, öz yazdığınız TestResultException-ı gözləyin
+        await Assert.ThrowsAsync<TestResultException>(() => _testResultService.GetByIdAsync(999));
     }
 
     [Fact]
@@ -92,14 +112,14 @@ public class TestResultServiceTests : BaseIntegrationTest, IClassFixture<TestDbC
     {
         // Arrange
         var resultEntity = new TestResult { Score = 10, TestId = 1, UserId = 1 };
-        await _dbContext.TestResults.AddAsync(resultEntity);
-        await _dbContext.SaveChangesAsync();
+        await _context.TestResults.AddAsync(resultEntity);
+        await _context.SaveChangesAsync();
 
         // Act
         await _testResultService.DeleteAsync(resultEntity.Id);
 
         // Assert
-        var exists = await _dbContext.TestResults.AnyAsync(r => r.Id == resultEntity.Id);
+        var exists = await _context.TestResults.AnyAsync(r => r.Id == resultEntity.Id);
         Assert.False(exists);
     }
 }

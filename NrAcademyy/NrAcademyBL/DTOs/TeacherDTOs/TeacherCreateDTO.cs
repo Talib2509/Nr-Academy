@@ -17,8 +17,7 @@ namespace NrAcademyBL.DTOs.TeacherDTOs
         public string ImageUrl { get; set; } = string.Empty;
         [Required,Range(0,50)]
 
-        public string Name { get; set; }
-        public string Bio { get; set; }
+    
         public IFormFile ImageFile { get; set; }
 
         public int Experience { get; set; }

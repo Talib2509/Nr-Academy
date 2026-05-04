@@ -7,8 +7,7 @@ using System.Threading.Tasks;
 
 namespace NrAcademyBL.DTOs.TestDTO
 {
-    public partial class TestDTO
-    {
+  
         public class TestCreateDto
         {
             [Required, MinLength(3), MaxLength(256)]
@@ -19,4 +18,4 @@ namespace NrAcademyBL.DTOs.TestDTO
             public int CourseId { get; set; }
         }
     }
-}
+
