@@ -193,12 +193,7 @@
     DocProject/Help/*.hhp
     DocProject/Help/Html2
     DocProject/Help/html
-    # appsettings files - ignore production settings
-appsettings.json
-appsettings.*.json
-    # But track the development configuration
-    !appsettings.development.json
-    # Click-Once directory
+
     publish/
 
     # Publish Web Output
@@ -213,7 +208,7 @@ appsettings.*.json
     # checkin your Azure Web App publish settings, but sensitive information contained
     # in these scripts will be unencrypted
     PublishScripts/
-
+.env
     # NuGet Packages
     *.nupkg
     # NuGet Symbol Packages
