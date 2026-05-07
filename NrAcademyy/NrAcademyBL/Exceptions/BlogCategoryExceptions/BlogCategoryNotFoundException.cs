@@ -1,19 +1,18 @@
-﻿using NrAcademyBL.Abstractions;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿using Microsoft.AspNetCore.Http; 
+using NrAcademyBL.Exceptions.Base;
 
 namespace NrAcademyBL.Exceptions.BlogCategoryExceptions;
 
-public class BlogCategoryNotFoundException:BaseException
+public class BlogCategoryNotFoundException : BaseException
 {
-    public BlogCategoryNotFoundException(string message = "Kateqoriya tapılmadı!") : base(404, message)
+   
+    public BlogCategoryNotFoundException(string message = "Kateqoriya tapılmadı!")
+        : base(message, StatusCodes.Status404NotFound, "BLOG_CATEGORY_NOT_FOUND")
     {
     }
 
-    public BlogCategoryNotFoundException(int id) : base(404, $"ID-si {id} olan kateqoriya tapılmadı.")
+    public BlogCategoryNotFoundException(int id)
+        : base($"ID-si {id} olan kateqoriya tapılmadı.", StatusCodes.Status404NotFound, "BLOG_CATEGORY_NOT_FOUND")
     {
     }
 }

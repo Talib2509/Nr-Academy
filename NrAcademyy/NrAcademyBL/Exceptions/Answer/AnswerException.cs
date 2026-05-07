@@ -4,7 +4,7 @@ using NrAcademyBL.Exceptions.Base;
 
 namespace NrAcademyBL.Exceptions.Answer
 {
-    public class AnswerException : NrAcademyException
+    public class AnswerException : BaseException
     {
         public AnswerException(string message, string errorCode = "ANSWER_ERROR", int statusCode = StatusCodes.Status400BadRequest)
             : base(message, statusCode, errorCode)

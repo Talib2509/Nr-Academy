@@ -6,7 +6,8 @@ using System.Threading.Tasks;
 
 namespace NrAcademyBL.Abstractions;
 
-public class BaseException(int statusCode, string message) : Exception(message)
+public interface IBaseException
 {
-    public int StatusCode { get; set; } = statusCode;
+    int StatusCode { get; }
+    string ErrorCode { get; }
 }

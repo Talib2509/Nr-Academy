@@ -4,7 +4,7 @@ using NrAcademyBL.Exceptions.Base;
 
 namespace NrAcademyBL.Exceptions.Email
 {
-    public class EmailException : NrAcademyException
+    public class EmailException : BaseException
     {
         public EmailException(string message, string errorCode = "EMAIL_ERROR")
             : base(message, StatusCodes.Status502BadGateway, errorCode)

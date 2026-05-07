@@ -1,19 +1,18 @@
-﻿using NrAcademyBL.Abstractions;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿using Microsoft.AspNetCore.Http; 
+using NrAcademyBL.Exceptions.Base;
 
 namespace NrAcademyBL.Exceptions.CertificateException;
 
-public class CertificateNotFoundException:BaseException
+public class CertificateNotFoundException : BaseException
 {
-    public CertificateNotFoundException(string message = "Sertifikat tapılmadı!") : base(404, message)
+    // Ardıcıllıq: base(message, statusCode, errorCode)
+    public CertificateNotFoundException(string message = "Sertifikat tapılmadı!")
+        : base(message, StatusCodes.Status404NotFound, "CERTIFICATE_NOT_FOUND")
     {
     }
 
-    public CertificateNotFoundException(int id) : base(404, $"ID-si {id} olan sertifikat tapılmadı.")
+    public CertificateNotFoundException(int id)
+        : base($"ID-si {id} olan sertifikat tapılmadı.", StatusCodes.Status404NotFound, "CERTIFICATE_NOT_FOUND")
     {
     }
 }

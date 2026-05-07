@@ -1,8 +1,6 @@
-﻿// NrAcademyBL/Exceptions/GlobalExceptionHandlerMiddleware.cs
-using Abp.Domain.Entities;
-using Microsoft.AspNetCore.Http;
+﻿using Microsoft.AspNetCore.Http;
 using Newtonsoft.Json;
-using NrAcademyBL.Exceptions.Base;
+using NrAcademyBL.Abstractions; // IBaseException və BaseException üçün
 
 namespace NrAcademyBL.Exceptions
 {
@@ -29,16 +27,19 @@ namespace NrAcademyBL.Exceptions
 
         private static Task HandleExceptionAsync(HttpContext context, Exception ex)
         {
+            // Default dəyərlər (Gözlənilməz sistem xətaları üçün)
             var statusCode = StatusCodes.Status500InternalServerError;
             var errorCode = "INTERNAL_SERVER_ERROR";
             var message = ex.Message;
 
-            if (ex is NrAcademyException nrEx)
+            // Bizim xüsusi xətalarımızı (BaseException-dan törəyənləri) tutur
+            if (ex is IBaseException customEx)
             {
-                statusCode = nrEx.StatusCode;
-                errorCode = nrEx.ErrorCode;
+                statusCode = customEx.StatusCode;
+                errorCode = customEx.ErrorCode;
             }
-            else if (ex is EntityNotFoundException)
+            // Əgər framework-ün daxili EntityNotFoundException xətasını da tutmaq istəyirsənsə
+            else if (ex.GetType().Name == "EntityNotFoundException")
             {
                 statusCode = StatusCodes.Status404NotFound;
                 errorCode = "ENTITY_NOT_FOUND";
@@ -48,8 +49,7 @@ namespace NrAcademyBL.Exceptions
             {
                 success = false,
                 errorCode,
-                message,
-                // statusCode = statusCode   // frontend istəsə əlavə edə bilərsən
+                message
             });
 
             context.Response.ContentType = "application/json";

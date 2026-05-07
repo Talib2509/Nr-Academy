@@ -1,4 +1,4 @@
-using AutoMapper;
+using DotNetEnv;
 using Microsoft.AspNetCore.Authentication.JwtBearer;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.EntityFrameworkCore;
@@ -9,116 +9,153 @@ using NrAcademyBL.Configuration;
 using NrAcademyBL.Exceptions;
 using NrAcademyBL.Exceptions.AuthException;
 using NrAcademyBL.Extensions;
-
-using NrAcademyBL.Services.Abstract;
-using NrAcademyBL.Services.Concrete;
-
 using NrAcademyCORE.Entities.Identity;
-using NrAcademyDAL;
 using NrAcademyDAL.Context;
+using Serilog;
 using System.Text;
-using ServiceRegistrations = NrAcademyBL.ServiceRegistrations;
+using NrAcademyDAL; // Və ya metod hansı namespace daxilindədirsə o
+// 1. .env faylını yükləyirik
+Env.Load();
 
-var builder = WebApplication.CreateBuilder(args);
+Log.Logger = new LoggerConfiguration()
+    .MinimumLevel.Information()
+    .WriteTo.Console()
+    .WriteTo.File("Logs/nracademy-.txt", rollingInterval: RollingInterval.Day)
+    .CreateLogger();
 
-// Add services to the container.
-
-builder.Services.AddControllers();
-
-
-
-builder.Services.AddRepositories();
-
-builder.Services.AddService(builder.Configuration);
-builder.Services.Configure<EmailSettings>(builder.Configuration.GetSection("EmailSettings"));
-builder.Services.Configure<JwtSettings>(
-    builder.Configuration.GetSection("JwtSettings"));
-
-builder.Services.AddAutoMapper();
-
-builder.Services.AddDbContext<AppDbContext>(options =>
-            {
-                options.UseSqlServer(builder.Configuration.GetConnectionString("DefaultConnection"));
-            });
-builder.Services.AddIdentity<AppUser, AppRole>()
-.AddEntityFrameworkStores<AppDbContext>()
-.AddDefaultTokenProviders()
-.AddErrorDescriber<CustomErrorDescriber>();
-builder.Services.AddMemoryCache();
-builder.Services.AddAuthentication(options =>
+try
 {
-    options.DefaultAuthenticateScheme = JwtBearerDefaults.AuthenticationScheme;
-});
-builder.Services.AddAuthentication(JwtBearerDefaults.AuthenticationScheme)
-.AddJwtBearer(options =>
-{
-    var jwt = builder.Configuration.GetSection("JwtSettings");
+    Log.Information("NrAcademy tətbiqi başladılır...");
 
-    var secret = jwt["Secret"]
-        ?? throw new Exception("JwtSettings:Secret tapılmadı");
+    var builder = WebApplication.CreateBuilder(args);
+    builder.Host.UseSerilog();
+    builder.Configuration.AddEnvironmentVariables();
+    builder.Services.AddMemoryCache();
+    // Add services to the container.
+    builder.Services.AddControllers();
+    builder.Services.AddRepositories();
+    builder.Services.AddService(builder.Configuration);
 
-    options.TokenValidationParameters = new TokenValidationParameters
-    {
-        ValidateIssuer = true,
-        ValidateAudience = true,
-        ValidateLifetime = true,
-        ValidateIssuerSigningKey = true,
-
-        ValidIssuer = jwt["Issuer"],
-        ValidAudience = jwt["Audience"],
-
-        IssuerSigningKey = new SymmetricSecurityKey(
-            Encoding.UTF8.GetBytes(secret)
-        )
-    };
-});
-builder.Services.AddEndpointsApiExplorer();
-builder.Services.AddSwaggerGen(opt =>
-{
-    opt.SwaggerDoc("v1", new OpenApiInfo { Title = "NrAcademyApi", Version = "v1" });
-
-    opt.AddSecurityDefinition("Bearer", new OpenApiSecurityScheme
-    {
-        In = ParameterLocation.Header,
-        Description = "Tokeni daxil edin",
-        Name = "Authorization",
-        Type = SecuritySchemeType.ApiKey,
-        BearerFormat = "JWT",
-        Scheme = "Bearer"
+    // Email Settings konfiqurasiyası
+    builder.Services.Configure<EmailSettings>(options => {
+        // Əgər .env-dən oxuya bilməsə, appsettings-dəki stringi istifadə etməsin deyə default dəyərlər qoyuruq
+        options.Host = builder.Configuration[builder.Configuration["EmailSettings:Host"] ?? ""] ?? "smtp.gmail.com";
+        options.Port = int.Parse(builder.Configuration["EmailSettings:Port"] ?? "587");
+        options.FromEmail = builder.Configuration[builder.Configuration["EmailSettings:FromEmail"] ?? ""] ?? "huseynovmirtalib28@gmail.com";
+        options.FromName = builder.Configuration["EmailSettings:FromName"] ?? "NR Academy";
+        options.Username = builder.Configuration[builder.Configuration["EmailSettings:Username"] ?? ""] ?? "huseynovmirtalib28@gmail.com";
+        options.Password = builder.Configuration[builder.Configuration["EmailSettings:Password"] ?? ""] ?? "";
     });
 
-    opt.AddSecurityRequirement(new OpenApiSecurityRequirement
-{
+    // JWT Settings konfiqurasiyası
+    builder.Services.Configure<JwtSettings>(options => {
+        options.Secret = builder.Configuration[builder.Configuration["JwtSettings:Secret"]];
+        options.Issuer = builder.Configuration[builder.Configuration["JwtSettings:Issuer"]];
+        options.Audience = builder.Configuration[builder.Configuration["JwtSettings:Audience"]];
+        options.AccessTokenMinutes = int.Parse(builder.Configuration["JwtSettings:AccessTokenMinutes"] ?? "15");
+        options.RefreshTokenDays = int.Parse(builder.Configuration["JwtSettings:RefreshTokenDays"] ?? "7");
+    });
+
+    builder.Services.AddAutoMapper();
+
+    builder.Services.AddDbContext<AppDbContext>(options =>
+    {
+        var connectionKey = builder.Configuration.GetConnectionString("DefaultConnection");
+        var realConnectionString = builder.Configuration[connectionKey] ?? connectionKey;
+        options.UseSqlServer(realConnectionString);
+    });
+
+    builder.Services.AddIdentity<AppUser, AppRole>()
+        .AddEntityFrameworkStores<AppDbContext>()
+        .AddDefaultTokenProviders()
+        .AddErrorDescriber<CustomErrorDescriber>();
+
+    builder.Services.AddAuthentication(options =>
+    {
+        options.DefaultAuthenticateScheme = JwtBearerDefaults.AuthenticationScheme;
+        options.DefaultChallengeScheme = JwtBearerDefaults.AuthenticationScheme;
+    })
+    .AddJwtBearer(options =>
+    {
+        var secretKey = builder.Configuration["JwtSettings:Secret"];
+        var realSecret = builder.Configuration[secretKey] ?? secretKey;
+
+        var issuerKey = builder.Configuration["JwtSettings:Issuer"];
+        var realIssuer = builder.Configuration[issuerKey] ?? issuerKey;
+
+        var audienceKey = builder.Configuration["JwtSettings:Audience"];
+        var realAudience = builder.Configuration[audienceKey] ?? audienceKey;
+
+        options.TokenValidationParameters = new TokenValidationParameters
         {
-            new OpenApiSecurityScheme
+            ValidateIssuer = true,
+            ValidateAudience = true,
+            ValidateLifetime = true,
+            ValidateIssuerSigningKey = true,
+            ValidIssuer = realIssuer,
+            ValidAudience = realAudience,
+            IssuerSigningKey = new SymmetricSecurityKey(Encoding.UTF8.GetBytes(realSecret))
+        };
+    });
+
+    builder.Services.AddEndpointsApiExplorer();
+    builder.Services.AddSwaggerGen(opt =>
+    {
+        opt.SwaggerDoc("v1", new OpenApiInfo { Title = "NrAcademyApi", Version = "v1" });
+
+        opt.AddSecurityDefinition("Bearer", new OpenApiSecurityScheme
+        {
+            In = ParameterLocation.Header,
+            Description = "Tokeni daxil edin",
+            Name = "Authorization",
+            Type = SecuritySchemeType.ApiKey,
+            BearerFormat = "JWT",
+            Scheme = "Bearer"
+        });
+
+        opt.AddSecurityRequirement(new OpenApiSecurityRequirement
+        {
             {
-                Reference = new OpenApiReference
+                new OpenApiSecurityScheme
                 {
-                    Type = ReferenceType.SecurityScheme,
-                    Id = "Bearer"
-                }
-            },
-            new string[]{}
-        }
-});
-});
+                    Reference = new OpenApiReference { Type = ReferenceType.SecurityScheme, Id = "Bearer" }
+                },
+                new string[]{}
+            }
+        });
+    });
 
-var app = builder.Build();
+    // 2. Build əmri burada olmalıdır
+    var app = builder.Build();
 
-// Configure the HTTP request pipeline.
-if (app.Environment.IsDevelopment())
-{
-    app.UseSwagger();
-    app.UseSwaggerUI();
+    // Configure the HTTP request pipeline.
+    app.UseSerilogRequestLogging();
+
+    if (app.Environment.IsDevelopment())
+    {
+        app.UseSwagger();
+        app.UseSwaggerUI();
+    }
+
+    app.UseHttpsRedirection();
+    app.UseStaticFiles();
+
+    app.UseMiddleware<GlobalExceptionHandlerMiddleware>();
+
+    app.UseAuthentication();
+    app.UseAuthorization();
+
+    app.UseUserSeedAsync();
+
+    app.MapControllers();
+
+    app.Run();
 }
-app.UseHttpsRedirection();
-app.UseStaticFiles();
-app.UseMiddleware<GlobalExceptionHandlerMiddleware>();
-app.UseHttpsRedirection();
-app.UseAuthentication();
-app.UseAuthorization();
-app.UseUserSeedAsync();
-
-app.MapControllers();
-
-app.Run();
+catch (Exception ex)
+{
+    Log.Fatal(ex, "Tətbiq xəta verdi");
+}
+finally
+{
+    Log.CloseAndFlush();
+}

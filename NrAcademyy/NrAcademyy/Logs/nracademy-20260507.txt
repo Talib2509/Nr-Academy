@@ -1,0 +1,1193 @@
+2026-05-07 14:01:37.997 +04:00 [INF] NrAcademy tətbiqi başladılır...
+2026-05-07 14:01:38.969 +04:00 [INF] User profile is available. Using 'C:\Users\ikinci.el.noutbuklar\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2026-05-07 14:01:40.063 +04:00 [INF] Now listening on: https://localhost:7036
+2026-05-07 14:01:40.067 +04:00 [INF] Now listening on: http://localhost:5287
+2026-05-07 14:01:40.127 +04:00 [INF] Application started. Press Ctrl+C to shut down.
+2026-05-07 14:01:40.161 +04:00 [INF] Hosting environment: Development
+2026-05-07 14:01:40.170 +04:00 [INF] Content root path: C:\NrAcademy\NrAcademyy\NrAcademyy
+2026-05-07 14:01:40.861 +04:00 [INF] Request starting HTTP/2 GET https://localhost:7036/swagger/index.html - null null
+2026-05-07 14:01:41.353 +04:00 [INF] HTTP GET /swagger/index.html responded 200 in 167.1629 ms
+2026-05-07 14:01:41.371 +04:00 [INF] Request finished HTTP/2 GET https://localhost:7036/swagger/index.html - 200 null text/html;charset=utf-8 512.6459ms
+2026-05-07 14:01:41.379 +04:00 [INF] Request starting HTTP/2 GET https://localhost:7036/swagger/swagger-ui.css - null null
+2026-05-07 14:01:41.387 +04:00 [INF] Request starting HTTP/2 GET https://localhost:7036/swagger/swagger-ui-bundle.js - null null
+2026-05-07 14:01:41.387 +04:00 [INF] Request starting HTTP/2 GET https://localhost:7036/swagger/swagger-ui-standalone-preset.js - null null
+2026-05-07 14:01:41.387 +04:00 [INF] Request starting HTTP/2 GET https://localhost:7036/_vs/browserLink - null null
+2026-05-07 14:01:41.389 +04:00 [INF] Request starting HTTP/2 GET https://localhost:7036/_framework/aspnetcore-browser-refresh.js - null null
+2026-05-07 14:01:41.421 +04:00 [INF] Sending file. Request path: '/swagger-ui.css'. Physical path: 'N/A'
+2026-05-07 14:01:41.424 +04:00 [INF] Sending file. Request path: '/swagger-ui-standalone-preset.js'. Physical path: 'N/A'
+2026-05-07 14:01:41.450 +04:00 [INF] Request finished HTTP/2 GET https://localhost:7036/_framework/aspnetcore-browser-refresh.js - 200 14925 application/javascript; charset=utf-8 60.9556ms
+2026-05-07 14:01:41.457 +04:00 [INF] HTTP GET /swagger/swagger-ui.css responded 200 in 65.3894 ms
+2026-05-07 14:01:41.458 +04:00 [INF] Sending file. Request path: '/swagger-ui-bundle.js'. Physical path: 'N/A'
+2026-05-07 14:01:41.463 +04:00 [INF] HTTP GET /swagger/swagger-ui-standalone-preset.js responded 200 in 49.6443 ms
+2026-05-07 14:01:41.482 +04:00 [INF] Request finished HTTP/2 GET https://localhost:7036/swagger/swagger-ui.css - 200 152034 text/css 102.9865ms
+2026-05-07 14:01:41.485 +04:00 [INF] HTTP GET /swagger/swagger-ui-bundle.js responded 200 in 85.6733 ms
+2026-05-07 14:01:41.491 +04:00 [INF] Request finished HTTP/2 GET https://localhost:7036/swagger/swagger-ui-standalone-preset.js - 200 230280 text/javascript 103.2894ms
+2026-05-07 14:01:41.505 +04:00 [INF] Request finished HTTP/2 GET https://localhost:7036/swagger/swagger-ui-bundle.js - 200 1456926 text/javascript 117.7579ms
+2026-05-07 14:01:41.581 +04:00 [INF] Request finished HTTP/2 GET https://localhost:7036/_vs/browserLink - 200 null text/javascript; charset=UTF-8 193.4016ms
+2026-05-07 14:01:41.840 +04:00 [INF] Request starting HTTP/2 GET https://localhost:7036/swagger/v1/swagger.json - null null
+2026-05-07 14:01:41.951 +04:00 [INF] HTTP GET /swagger/v1/swagger.json responded 200 in 89.4246 ms
+2026-05-07 14:01:41.961 +04:00 [INF] Request finished HTTP/2 GET https://localhost:7036/swagger/v1/swagger.json - 200 null application/json;charset=utf-8 121.1611ms
+2026-05-07 14:02:06.688 +04:00 [INF] Request starting HTTP/2 POST https://localhost:7036/api/Auth/login - application/json 57
+2026-05-07 14:02:06.755 +04:00 [INF] Executing endpoint 'NrAcademyy.Controllers.AuthController.Login (NrAcademyy)'
+2026-05-07 14:02:06.800 +04:00 [INF] Route matched with {action = "Login", controller = "Auth"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Login(NrAcademyBL.DTOs.AuthDTO.LoginDTO) on controller NrAcademyy.Controllers.AuthController (NrAcademyy).
+2026-05-07 14:02:07.158 +04:00 [INF] Executed action NrAcademyy.Controllers.AuthController.Login (NrAcademyy) in 340.9916ms
+2026-05-07 14:02:07.166 +04:00 [INF] Executed endpoint 'NrAcademyy.Controllers.AuthController.Login (NrAcademyy)'
+2026-05-07 14:02:07.929 +04:00 [ERR] HTTP POST /api/Auth/login responded 500 in 1228.4188 ms
+2026-05-07 14:02:07.946 +04:00 [INF] Request finished HTTP/2 POST https://localhost:7036/api/Auth/login - 500 null application/json 1258.5058ms
+2026-05-07 14:03:14.837 +04:00 [INF] Request starting HTTP/2 POST https://localhost:7036/api/Auth/Register - application/json 190
+2026-05-07 14:03:14.851 +04:00 [INF] Executing endpoint 'NrAcademyy.Controllers.AuthController.Register (NrAcademyy)'
+2026-05-07 14:03:14.865 +04:00 [INF] Route matched with {action = "Register", controller = "Auth"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Register(NrAcademyBL.DTOs.AuthDTO.RegisterDTO) on controller NrAcademyy.Controllers.AuthController (NrAcademyy).
+2026-05-07 14:03:14.908 +04:00 [INF] Executed action NrAcademyy.Controllers.AuthController.Register (NrAcademyy) in 33.636ms
+2026-05-07 14:03:14.918 +04:00 [INF] Executed endpoint 'NrAcademyy.Controllers.AuthController.Register (NrAcademyy)'
+2026-05-07 14:03:14.925 +04:00 [ERR] HTTP POST /api/Auth/Register responded 500 in 75.8527 ms
+2026-05-07 14:03:14.937 +04:00 [INF] Request finished HTTP/2 POST https://localhost:7036/api/Auth/Register - 500 null application/json 99.9394ms
+2026-05-07 14:03:34.675 +04:00 [INF] Request starting HTTP/2 POST https://localhost:7036/api/Auth/Register - application/json 190
+2026-05-07 14:03:34.694 +04:00 [INF] Executing endpoint 'NrAcademyy.Controllers.AuthController.Register (NrAcademyy)'
+2026-05-07 14:03:34.701 +04:00 [INF] Route matched with {action = "Register", controller = "Auth"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Register(NrAcademyBL.DTOs.AuthDTO.RegisterDTO) on controller NrAcademyy.Controllers.AuthController (NrAcademyy).
+2026-05-07 14:03:34.755 +04:00 [INF] Executed action NrAcademyy.Controllers.AuthController.Register (NrAcademyy) in 42.1746ms
+2026-05-07 14:03:34.764 +04:00 [INF] Executed endpoint 'NrAcademyy.Controllers.AuthController.Register (NrAcademyy)'
+2026-05-07 14:03:34.770 +04:00 [ERR] HTTP POST /api/Auth/Register responded 500 in 85.5138 ms
+2026-05-07 14:03:34.782 +04:00 [INF] Request finished HTTP/2 POST https://localhost:7036/api/Auth/Register - 500 null application/json 106.5743ms
+2026-05-07 14:42:59.829 +04:00 [INF] NrAcademy tətbiqi başladılır...
+2026-05-07 14:43:00.053 +04:00 [INF] User profile is available. Using 'C:\Users\ikinci.el.noutbuklar\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2026-05-07 14:43:00.523 +04:00 [INF] Now listening on: https://localhost:7036
+2026-05-07 14:43:00.524 +04:00 [INF] Now listening on: http://localhost:5287
+2026-05-07 14:43:00.550 +04:00 [INF] Application started. Press Ctrl+C to shut down.
+2026-05-07 14:43:00.551 +04:00 [INF] Hosting environment: Development
+2026-05-07 14:43:00.552 +04:00 [INF] Content root path: C:\NrAcademy\NrAcademyy\NrAcademyy
+2026-05-07 14:43:00.951 +04:00 [INF] Request starting HTTP/2 GET https://localhost:7036/swagger/index.html - null null
+2026-05-07 14:43:01.071 +04:00 [INF] HTTP GET /swagger/index.html responded 200 in 46.2095 ms
+2026-05-07 14:43:01.081 +04:00 [INF] Request starting HTTP/2 GET https://localhost:7036/_framework/aspnetcore-browser-refresh.js - null null
+2026-05-07 14:43:01.081 +04:00 [INF] Request starting HTTP/2 GET https://localhost:7036/_vs/browserLink - null null
+2026-05-07 14:43:01.084 +04:00 [INF] Request finished HTTP/2 GET https://localhost:7036/swagger/index.html - 200 null text/html;charset=utf-8 133.1765ms
+2026-05-07 14:43:01.092 +04:00 [INF] Request finished HTTP/2 GET https://localhost:7036/_framework/aspnetcore-browser-refresh.js - 200 14925 application/javascript; charset=utf-8 11.4972ms
+2026-05-07 14:43:01.113 +04:00 [INF] Request finished HTTP/2 GET https://localhost:7036/_vs/browserLink - 200 null text/javascript; charset=UTF-8 32.695ms
+2026-05-07 14:43:01.264 +04:00 [INF] Request starting HTTP/2 GET https://localhost:7036/swagger/v1/swagger.json - null null
+2026-05-07 14:43:01.286 +04:00 [INF] HTTP GET /swagger/v1/swagger.json responded 200 in 20.1044 ms
+2026-05-07 14:43:01.289 +04:00 [INF] Request finished HTTP/2 GET https://localhost:7036/swagger/v1/swagger.json - 200 null application/json;charset=utf-8 25.2848ms
+2026-05-07 14:43:35.775 +04:00 [INF] Request starting HTTP/2 POST https://localhost:7036/api/Auth/Register - application/json 190
+2026-05-07 14:43:35.832 +04:00 [INF] Executing endpoint 'NrAcademyy.Controllers.AuthController.Register (NrAcademyy)'
+2026-05-07 14:43:35.872 +04:00 [INF] Route matched with {action = "Register", controller = "Auth"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Register(NrAcademyBL.DTOs.AuthDTO.RegisterDTO) on controller NrAcademyy.Controllers.AuthController (NrAcademyy).
+2026-05-07 14:43:36.251 +04:00 [INF] Executed action NrAcademyy.Controllers.AuthController.Register (NrAcademyy) in 361.6451ms
+2026-05-07 14:43:36.262 +04:00 [INF] Executed endpoint 'NrAcademyy.Controllers.AuthController.Register (NrAcademyy)'
+2026-05-07 14:43:36.401 +04:00 [ERR] HTTP POST /api/Auth/Register responded 500 in 611.8323 ms
+2026-05-07 14:43:36.413 +04:00 [INF] Request finished HTTP/2 POST https://localhost:7036/api/Auth/Register - 500 null application/json 637.9132ms
+2026-05-07 14:50:32.121 +04:00 [INF] NrAcademy tətbiqi başladılır...
+2026-05-07 14:50:32.463 +04:00 [INF] User profile is available. Using 'C:\Users\ikinci.el.noutbuklar\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2026-05-07 14:50:33.407 +04:00 [ERR] An error occurred using the connection to database '' on server ''.
+2026-05-07 14:50:33.433 +04:00 [ERR] An exception occurred while iterating over the results of a query for context type 'NrAcademyDAL.Context.AppDbContext'.
+System.InvalidOperationException: The ConnectionString property has not been initialized.
+   at Microsoft.Data.SqlClient.SqlConnection.PermissionDemand()
+   at Microsoft.Data.SqlClient.SqlConnectionFactory.PermissionDemand(DbConnection outerConnection)
+   at Microsoft.Data.ProviderBase.DbConnectionInternal.TryOpenConnectionInternal(DbConnection outerConnection, DbConnectionFactory connectionFactory, TaskCompletionSource`1 retry, DbConnectionOptions userOptions)
+   at Microsoft.Data.ProviderBase.DbConnectionClosed.TryOpenConnection(DbConnection outerConnection, DbConnectionFactory connectionFactory, TaskCompletionSource`1 retry, DbConnectionOptions userOptions)
+   at Microsoft.Data.SqlClient.SqlConnection.TryOpen(TaskCompletionSource`1 retry, SqlConnectionOverrides overrides)
+   at Microsoft.Data.SqlClient.SqlConnection.InternalOpenAsync(CancellationToken cancellationToken)
+--- End of stack trace from previous location ---
+   at Microsoft.EntityFrameworkCore.Storage.RelationalConnection.OpenInternalAsync(Boolean errorsExpected, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalConnection.OpenInternalAsync(Boolean errorsExpected, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalConnection.OpenAsync(CancellationToken cancellationToken, Boolean errorsExpected)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalCommand.ExecuteReaderAsync(RelationalCommandParameterObject parameterObject, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Query.Internal.SingleQueryingEnumerable`1.AsyncEnumerator.InitializeReaderAsync(AsyncEnumerator enumerator, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.SqlServer.Storage.Internal.SqlServerExecutionStrategy.ExecuteAsync[TState,TResult](TState state, Func`4 operation, Func`4 verifySucceeded, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Query.Internal.SingleQueryingEnumerable`1.AsyncEnumerator.MoveNextAsync()
+System.InvalidOperationException: The ConnectionString property has not been initialized.
+   at Microsoft.Data.SqlClient.SqlConnection.PermissionDemand()
+   at Microsoft.Data.SqlClient.SqlConnectionFactory.PermissionDemand(DbConnection outerConnection)
+   at Microsoft.Data.ProviderBase.DbConnectionInternal.TryOpenConnectionInternal(DbConnection outerConnection, DbConnectionFactory connectionFactory, TaskCompletionSource`1 retry, DbConnectionOptions userOptions)
+   at Microsoft.Data.ProviderBase.DbConnectionClosed.TryOpenConnection(DbConnection outerConnection, DbConnectionFactory connectionFactory, TaskCompletionSource`1 retry, DbConnectionOptions userOptions)
+   at Microsoft.Data.SqlClient.SqlConnection.TryOpen(TaskCompletionSource`1 retry, SqlConnectionOverrides overrides)
+   at Microsoft.Data.SqlClient.SqlConnection.InternalOpenAsync(CancellationToken cancellationToken)
+--- End of stack trace from previous location ---
+   at Microsoft.EntityFrameworkCore.Storage.RelationalConnection.OpenInternalAsync(Boolean errorsExpected, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalConnection.OpenInternalAsync(Boolean errorsExpected, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalConnection.OpenAsync(CancellationToken cancellationToken, Boolean errorsExpected)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalCommand.ExecuteReaderAsync(RelationalCommandParameterObject parameterObject, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Query.Internal.SingleQueryingEnumerable`1.AsyncEnumerator.InitializeReaderAsync(AsyncEnumerator enumerator, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.SqlServer.Storage.Internal.SqlServerExecutionStrategy.ExecuteAsync[TState,TResult](TState state, Func`4 operation, Func`4 verifySucceeded, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Query.Internal.SingleQueryingEnumerable`1.AsyncEnumerator.MoveNextAsync()
+2026-05-07 14:50:33.661 +04:00 [INF] Now listening on: https://localhost:7036
+2026-05-07 14:50:33.666 +04:00 [INF] Now listening on: http://localhost:5287
+2026-05-07 14:50:33.714 +04:00 [INF] Application started. Press Ctrl+C to shut down.
+2026-05-07 14:50:33.751 +04:00 [INF] Hosting environment: Development
+2026-05-07 14:50:33.759 +04:00 [INF] Content root path: C:\NrAcademy\NrAcademyy\NrAcademyy
+2026-05-07 14:50:34.422 +04:00 [INF] Request starting HTTP/2 GET https://localhost:7036/swagger/index.html - null null
+2026-05-07 14:50:34.626 +04:00 [INF] HTTP GET /swagger/index.html responded 200 in 93.3811 ms
+2026-05-07 14:50:34.628 +04:00 [INF] Request starting HTTP/2 GET https://localhost:7036/_framework/aspnetcore-browser-refresh.js - null null
+2026-05-07 14:50:34.628 +04:00 [INF] Request starting HTTP/2 GET https://localhost:7036/_vs/browserLink - null null
+2026-05-07 14:50:34.642 +04:00 [INF] Request finished HTTP/2 GET https://localhost:7036/swagger/index.html - 200 null text/html;charset=utf-8 221.869ms
+2026-05-07 14:50:34.644 +04:00 [INF] Request finished HTTP/2 GET https://localhost:7036/_framework/aspnetcore-browser-refresh.js - 200 14925 application/javascript; charset=utf-8 15.6871ms
+2026-05-07 14:50:34.698 +04:00 [INF] Request finished HTTP/2 GET https://localhost:7036/_vs/browserLink - 200 null text/javascript; charset=UTF-8 69.1491ms
+2026-05-07 14:50:34.827 +04:00 [INF] Request starting HTTP/2 GET https://localhost:7036/swagger/v1/swagger.json - null null
+2026-05-07 14:50:34.870 +04:00 [INF] HTTP GET /swagger/v1/swagger.json responded 200 in 37.5822 ms
+2026-05-07 14:50:34.874 +04:00 [INF] Request finished HTTP/2 GET https://localhost:7036/swagger/v1/swagger.json - 200 null application/json;charset=utf-8 46.6624ms
+2026-05-07 15:02:32.135 +04:00 [FTL] Tətbiq xəta verdi
+System.AggregateException: Some services are not able to be constructed (Error while validating the service descriptor 'ServiceType: NrAcademyBL.Services.Abstract.IAnswerService Lifetime: Scoped ImplementationType: NrAcademyBL.Services.Concrete.AnswerService': Unable to resolve service for type 'Microsoft.Extensions.Caching.Memory.IMemoryCache' while attempting to activate 'NrAcademyBL.Extensions.Caching.MemoryCacheService'.) (Error while validating the service descriptor 'ServiceType: NrAcademyBL.Services.Abstract.IQuestionService Lifetime: Scoped ImplementationType: NrAcademyBL.Services.Concrete.QuestionService': Unable to resolve service for type 'Microsoft.Extensions.Caching.Memory.IMemoryCache' while attempting to activate 'NrAcademyBL.Extensions.Caching.MemoryCacheService'.) (Error while validating the service descriptor 'ServiceType: NrAcademyBL.Services.Abstract.ITestService Lifetime: Scoped ImplementationType: NrAcademyBL.Services.Concrete.TestService': Unable to resolve service for type 'Microsoft.Extensions.Caching.Memory.IMemoryCache' while attempting to activate 'NrAcademyBL.Extensions.Caching.MemoryCacheService'.) (Error while validating the service descriptor 'ServiceType: NrAcademyBL.Services.Abstract.ITestResultService Lifetime: Scoped ImplementationType: NrAcademyBL.Services.Concrete.TestResultService': Unable to resolve service for type 'Microsoft.Extensions.Caching.Memory.IMemoryCache' while attempting to activate 'NrAcademyBL.Extensions.Caching.MemoryCacheService'.) (Error while validating the service descriptor 'ServiceType: NrAcademyBL.Services.Abstract.ITeacherService Lifetime: Scoped ImplementationType: NrAcademyBL.Services.Concrete.TeacherService': Unable to resolve service for type 'Microsoft.Extensions.Caching.Memory.IMemoryCache' while attempting to activate 'NrAcademyBL.Extensions.Caching.MemoryCacheService'.) (Error while validating the service descriptor 'ServiceType: NrAcademyBL.Services.Abstract.ICourseService Lifetime: Scoped ImplementationType: NrAcademyBL.Services.Concrete.CourseService': Unable to resolve service for type 'Microsoft.Extensions.Caching.Memory.IMemoryCache' while attempting to activate 'NrAcademyBL.Extensions.Caching.MemoryCacheService'.) (Error while validating the service descriptor 'ServiceType: NrAcademyBL.Extensions.Caching.ICacheService Lifetime: Scoped ImplementationType: NrAcademyBL.Extensions.Caching.MemoryCacheService': Unable to resolve service for type 'Microsoft.Extensions.Caching.Memory.IMemoryCache' while attempting to activate 'NrAcademyBL.Extensions.Caching.MemoryCacheService'.) (Error while validating the service descriptor 'ServiceType: NrAcademyBL.Services.Abstract.IEnrollmentService Lifetime: Scoped ImplementationType: NrAcademyBL.Services.Concrete.EnrollmentService': Unable to resolve service for type 'Microsoft.Extensions.Caching.Memory.IMemoryCache' while attempting to activate 'NrAcademyBL.Extensions.Caching.MemoryCacheService'.) (Error while validating the service descriptor 'ServiceType: NrAcademyBL.Services.Abstract.ICertificateService Lifetime: Scoped ImplementationType: NrAcademyBL.Services.Concrete.CertificateService': Unable to resolve service for type 'Microsoft.Extensions.Caching.Memory.IMemoryCache' while attempting to activate 'NrAcademyBL.Extensions.Caching.MemoryCacheService'.) (Error while validating the service descriptor 'ServiceType: NrAcademyBL.Services.Abstract.IBlogCategoryService Lifetime: Scoped ImplementationType: NrAcademyBL.Services.Concrete.BlogCategoryService': Unable to resolve service for type 'Microsoft.Extensions.Caching.Memory.IMemoryCache' while attempting to activate 'NrAcademyBL.Extensions.Caching.MemoryCacheService'.)
+ ---> System.InvalidOperationException: Error while validating the service descriptor 'ServiceType: NrAcademyBL.Services.Abstract.IAnswerService Lifetime: Scoped ImplementationType: NrAcademyBL.Services.Concrete.AnswerService': Unable to resolve service for type 'Microsoft.Extensions.Caching.Memory.IMemoryCache' while attempting to activate 'NrAcademyBL.Extensions.Caching.MemoryCacheService'.
+ ---> System.InvalidOperationException: Unable to resolve service for type 'Microsoft.Extensions.Caching.Memory.IMemoryCache' while attempting to activate 'NrAcademyBL.Extensions.Caching.MemoryCacheService'.
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteFactory.CreateArgumentCallSites(ServiceIdentifier serviceIdentifier, Type implementationType, CallSiteChain callSiteChain, ParameterInfo[] parameters, Boolean throwIfCallSiteNotFound)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteFactory.CreateConstructorCallSite(ResultCache lifetime, ServiceIdentifier serviceIdentifier, Type implementationType, CallSiteChain callSiteChain)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteFactory.TryCreateExact(ServiceDescriptor descriptor, ServiceIdentifier serviceIdentifier, CallSiteChain callSiteChain, Int32 slot)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteFactory.TryCreateExact(ServiceIdentifier serviceIdentifier, CallSiteChain callSiteChain)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteFactory.CreateCallSite(ServiceIdentifier serviceIdentifier, CallSiteChain callSiteChain)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteFactory.CreateArgumentCallSites(ServiceIdentifier serviceIdentifier, Type implementationType, CallSiteChain callSiteChain, ParameterInfo[] parameters, Boolean throwIfCallSiteNotFound)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteFactory.CreateConstructorCallSite(ResultCache lifetime, ServiceIdentifier serviceIdentifier, Type implementationType, CallSiteChain callSiteChain)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteFactory.TryCreateExact(ServiceDescriptor descriptor, ServiceIdentifier serviceIdentifier, CallSiteChain callSiteChain, Int32 slot)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteFactory.GetCallSite(ServiceDescriptor serviceDescriptor, CallSiteChain callSiteChain)
+   at Microsoft.Extensions.DependencyInjection.ServiceProvider.ValidateService(ServiceDescriptor descriptor)
+   --- End of inner exception stack trace ---
+   at Microsoft.Extensions.DependencyInjection.ServiceProvider.ValidateService(ServiceDescriptor descriptor)
+   at Microsoft.Extensions.DependencyInjection.ServiceProvider..ctor(ICollection`1 serviceDescriptors, ServiceProviderOptions options)
+   --- End of inner exception stack trace ---
+   at Microsoft.Extensions.DependencyInjection.ServiceProvider..ctor(ICollection`1 serviceDescriptors, ServiceProviderOptions options)
+   at Microsoft.Extensions.DependencyInjection.ServiceCollectionContainerBuilderExtensions.BuildServiceProvider(IServiceCollection services, ServiceProviderOptions options)
+   at Microsoft.Extensions.Hosting.HostApplicationBuilder.Build()
+   at Microsoft.AspNetCore.Builder.WebApplicationBuilder.Build()
+   at Program.<Main>$(String[] args) in C:\NrAcademy\NrAcademyy\NrAcademyy\Program.cs:line 107
+ ---> (Inner Exception #1) System.InvalidOperationException: Error while validating the service descriptor 'ServiceType: NrAcademyBL.Services.Abstract.IQuestionService Lifetime: Scoped ImplementationType: NrAcademyBL.Services.Concrete.QuestionService': Unable to resolve service for type 'Microsoft.Extensions.Caching.Memory.IMemoryCache' while attempting to activate 'NrAcademyBL.Extensions.Caching.MemoryCacheService'.
+ ---> System.InvalidOperationException: Unable to resolve service for type 'Microsoft.Extensions.Caching.Memory.IMemoryCache' while attempting to activate 'NrAcademyBL.Extensions.Caching.MemoryCacheService'.
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteFactory.CreateArgumentCallSites(ServiceIdentifier serviceIdentifier, Type implementationType, CallSiteChain callSiteChain, ParameterInfo[] parameters, Boolean throwIfCallSiteNotFound)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteFactory.CreateConstructorCallSite(ResultCache lifetime, ServiceIdentifier serviceIdentifier, Type implementationType, CallSiteChain callSiteChain)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteFactory.TryCreateExact(ServiceDescriptor descriptor, ServiceIdentifier serviceIdentifier, CallSiteChain callSiteChain, Int32 slot)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteFactory.TryCreateExact(ServiceIdentifier serviceIdentifier, CallSiteChain callSiteChain)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteFactory.CreateCallSite(ServiceIdentifier serviceIdentifier, CallSiteChain callSiteChain)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteFactory.CreateArgumentCallSites(ServiceIdentifier serviceIdentifier, Type implementationType, CallSiteChain callSiteChain, ParameterInfo[] parameters, Boolean throwIfCallSiteNotFound)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteFactory.CreateConstructorCallSite(ResultCache lifetime, ServiceIdentifier serviceIdentifier, Type implementationType, CallSiteChain callSiteChain)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteFactory.TryCreateExact(ServiceDescriptor descriptor, ServiceIdentifier serviceIdentifier, CallSiteChain callSiteChain, Int32 slot)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteFactory.GetCallSite(ServiceDescriptor serviceDescriptor, CallSiteChain callSiteChain)
+   at Microsoft.Extensions.DependencyInjection.ServiceProvider.ValidateService(ServiceDescriptor descriptor)
+   --- End of inner exception stack trace ---
+   at Microsoft.Extensions.DependencyInjection.ServiceProvider.ValidateService(ServiceDescriptor descriptor)
+   at Microsoft.Extensions.DependencyInjection.ServiceProvider..ctor(ICollection`1 serviceDescriptors, ServiceProviderOptions options)<---
+
+ ---> (Inner Exception #2) System.InvalidOperationException: Error while validating the service descriptor 'ServiceType: NrAcademyBL.Services.Abstract.ITestService Lifetime: Scoped ImplementationType: NrAcademyBL.Services.Concrete.TestService': Unable to resolve service for type 'Microsoft.Extensions.Caching.Memory.IMemoryCache' while attempting to activate 'NrAcademyBL.Extensions.Caching.MemoryCacheService'.
+ ---> System.InvalidOperationException: Unable to resolve service for type 'Microsoft.Extensions.Caching.Memory.IMemoryCache' while attempting to activate 'NrAcademyBL.Extensions.Caching.MemoryCacheService'.
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteFactory.CreateArgumentCallSites(ServiceIdentifier serviceIdentifier, Type implementationType, CallSiteChain callSiteChain, ParameterInfo[] parameters, Boolean throwIfCallSiteNotFound)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteFactory.CreateConstructorCallSite(ResultCache lifetime, ServiceIdentifier serviceIdentifier, Type implementationType, CallSiteChain callSiteChain)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteFactory.TryCreateExact(ServiceDescriptor descriptor, ServiceIdentifier serviceIdentifier, CallSiteChain callSiteChain, Int32 slot)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteFactory.TryCreateExact(ServiceIdentifier serviceIdentifier, CallSiteChain callSiteChain)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteFactory.CreateCallSite(ServiceIdentifier serviceIdentifier, CallSiteChain callSiteChain)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteFactory.CreateArgumentCallSites(ServiceIdentifier serviceIdentifier, Type implementationType, CallSiteChain callSiteChain, ParameterInfo[] parameters, Boolean throwIfCallSiteNotFound)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteFactory.CreateConstructorCallSite(ResultCache lifetime, ServiceIdentifier serviceIdentifier, Type implementationType, CallSiteChain callSiteChain)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteFactory.TryCreateExact(ServiceDescriptor descriptor, ServiceIdentifier serviceIdentifier, CallSiteChain callSiteChain, Int32 slot)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteFactory.GetCallSite(ServiceDescriptor serviceDescriptor, CallSiteChain callSiteChain)
+   at Microsoft.Extensions.DependencyInjection.ServiceProvider.ValidateService(ServiceDescriptor descriptor)
+   --- End of inner exception stack trace ---
+   at Microsoft.Extensions.DependencyInjection.ServiceProvider.ValidateService(ServiceDescriptor descriptor)
+   at Microsoft.Extensions.DependencyInjection.ServiceProvider..ctor(ICollection`1 serviceDescriptors, ServiceProviderOptions options)<---
+
+ ---> (Inner Exception #3) System.InvalidOperationException: Error while validating the service descriptor 'ServiceType: NrAcademyBL.Services.Abstract.ITestResultService Lifetime: Scoped ImplementationType: NrAcademyBL.Services.Concrete.TestResultService': Unable to resolve service for type 'Microsoft.Extensions.Caching.Memory.IMemoryCache' while attempting to activate 'NrAcademyBL.Extensions.Caching.MemoryCacheService'.
+ ---> System.InvalidOperationException: Unable to resolve service for type 'Microsoft.Extensions.Caching.Memory.IMemoryCache' while attempting to activate 'NrAcademyBL.Extensions.Caching.MemoryCacheService'.
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteFactory.CreateArgumentCallSites(ServiceIdentifier serviceIdentifier, Type implementationType, CallSiteChain callSiteChain, ParameterInfo[] parameters, Boolean throwIfCallSiteNotFound)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteFactory.CreateConstructorCallSite(ResultCache lifetime, ServiceIdentifier serviceIdentifier, Type implementationType, CallSiteChain callSiteChain)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteFactory.TryCreateExact(ServiceDescriptor descriptor, ServiceIdentifier serviceIdentifier, CallSiteChain callSiteChain, Int32 slot)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteFactory.TryCreateExact(ServiceIdentifier serviceIdentifier, CallSiteChain callSiteChain)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteFactory.CreateCallSite(ServiceIdentifier serviceIdentifier, CallSiteChain callSiteChain)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteFactory.CreateArgumentCallSites(ServiceIdentifier serviceIdentifier, Type implementationType, CallSiteChain callSiteChain, ParameterInfo[] parameters, Boolean throwIfCallSiteNotFound)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteFactory.CreateConstructorCallSite(ResultCache lifetime, ServiceIdentifier serviceIdentifier, Type implementationType, CallSiteChain callSiteChain)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteFactory.TryCreateExact(ServiceDescriptor descriptor, ServiceIdentifier serviceIdentifier, CallSiteChain callSiteChain, Int32 slot)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteFactory.GetCallSite(ServiceDescriptor serviceDescriptor, CallSiteChain callSiteChain)
+   at Microsoft.Extensions.DependencyInjection.ServiceProvider.ValidateService(ServiceDescriptor descriptor)
+   --- End of inner exception stack trace ---
+   at Microsoft.Extensions.DependencyInjection.ServiceProvider.ValidateService(ServiceDescriptor descriptor)
+   at Microsoft.Extensions.DependencyInjection.ServiceProvider..ctor(ICollection`1 serviceDescriptors, ServiceProviderOptions options)<---
+
+ ---> (Inner Exception #4) System.InvalidOperationException: Error while validating the service descriptor 'ServiceType: NrAcademyBL.Services.Abstract.ITeacherService Lifetime: Scoped ImplementationType: NrAcademyBL.Services.Concrete.TeacherService': Unable to resolve service for type 'Microsoft.Extensions.Caching.Memory.IMemoryCache' while attempting to activate 'NrAcademyBL.Extensions.Caching.MemoryCacheService'.
+ ---> System.InvalidOperationException: Unable to resolve service for type 'Microsoft.Extensions.Caching.Memory.IMemoryCache' while attempting to activate 'NrAcademyBL.Extensions.Caching.MemoryCacheService'.
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteFactory.CreateArgumentCallSites(ServiceIdentifier serviceIdentifier, Type implementationType, CallSiteChain callSiteChain, ParameterInfo[] parameters, Boolean throwIfCallSiteNotFound)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteFactory.CreateConstructorCallSite(ResultCache lifetime, ServiceIdentifier serviceIdentifier, Type implementationType, CallSiteChain callSiteChain)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteFactory.TryCreateExact(ServiceDescriptor descriptor, ServiceIdentifier serviceIdentifier, CallSiteChain callSiteChain, Int32 slot)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteFactory.TryCreateExact(ServiceIdentifier serviceIdentifier, CallSiteChain callSiteChain)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteFactory.CreateCallSite(ServiceIdentifier serviceIdentifier, CallSiteChain callSiteChain)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteFactory.CreateArgumentCallSites(ServiceIdentifier serviceIdentifier, Type implementationType, CallSiteChain callSiteChain, ParameterInfo[] parameters, Boolean throwIfCallSiteNotFound)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteFactory.CreateConstructorCallSite(ResultCache lifetime, ServiceIdentifier serviceIdentifier, Type implementationType, CallSiteChain callSiteChain)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteFactory.TryCreateExact(ServiceDescriptor descriptor, ServiceIdentifier serviceIdentifier, CallSiteChain callSiteChain, Int32 slot)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteFactory.GetCallSite(ServiceDescriptor serviceDescriptor, CallSiteChain callSiteChain)
+   at Microsoft.Extensions.DependencyInjection.ServiceProvider.ValidateService(ServiceDescriptor descriptor)
+   --- End of inner exception stack trace ---
+   at Microsoft.Extensions.DependencyInjection.ServiceProvider.ValidateService(ServiceDescriptor descriptor)
+   at Microsoft.Extensions.DependencyInjection.ServiceProvider..ctor(ICollection`1 serviceDescriptors, ServiceProviderOptions options)<---
+
+ ---> (Inner Exception #5) System.InvalidOperationException: Error while validating the service descriptor 'ServiceType: NrAcademyBL.Services.Abstract.ICourseService Lifetime: Scoped ImplementationType: NrAcademyBL.Services.Concrete.CourseService': Unable to resolve service for type 'Microsoft.Extensions.Caching.Memory.IMemoryCache' while attempting to activate 'NrAcademyBL.Extensions.Caching.MemoryCacheService'.
+ ---> System.InvalidOperationException: Unable to resolve service for type 'Microsoft.Extensions.Caching.Memory.IMemoryCache' while attempting to activate 'NrAcademyBL.Extensions.Caching.MemoryCacheService'.
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteFactory.CreateArgumentCallSites(ServiceIdentifier serviceIdentifier, Type implementationType, CallSiteChain callSiteChain, ParameterInfo[] parameters, Boolean throwIfCallSiteNotFound)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteFactory.CreateConstructorCallSite(ResultCache lifetime, ServiceIdentifier serviceIdentifier, Type implementationType, CallSiteChain callSiteChain)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteFactory.TryCreateExact(ServiceDescriptor descriptor, ServiceIdentifier serviceIdentifier, CallSiteChain callSiteChain, Int32 slot)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteFactory.TryCreateExact(ServiceIdentifier serviceIdentifier, CallSiteChain callSiteChain)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteFactory.CreateCallSite(ServiceIdentifier serviceIdentifier, CallSiteChain callSiteChain)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteFactory.CreateArgumentCallSites(ServiceIdentifier serviceIdentifier, Type implementationType, CallSiteChain callSiteChain, ParameterInfo[] parameters, Boolean throwIfCallSiteNotFound)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteFactory.CreateConstructorCallSite(ResultCache lifetime, ServiceIdentifier serviceIdentifier, Type implementationType, CallSiteChain callSiteChain)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteFactory.TryCreateExact(ServiceDescriptor descriptor, ServiceIdentifier serviceIdentifier, CallSiteChain callSiteChain, Int32 slot)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteFactory.GetCallSite(ServiceDescriptor serviceDescriptor, CallSiteChain callSiteChain)
+   at Microsoft.Extensions.DependencyInjection.ServiceProvider.ValidateService(ServiceDescriptor descriptor)
+   --- End of inner exception stack trace ---
+   at Microsoft.Extensions.DependencyInjection.ServiceProvider.ValidateService(ServiceDescriptor descriptor)
+   at Microsoft.Extensions.DependencyInjection.ServiceProvider..ctor(ICollection`1 serviceDescriptors, ServiceProviderOptions options)<---
+
+ ---> (Inner Exception #6) System.InvalidOperationException: Error while validating the service descriptor 'ServiceType: NrAcademyBL.Extensions.Caching.ICacheService Lifetime: Scoped ImplementationType: NrAcademyBL.Extensions.Caching.MemoryCacheService': Unable to resolve service for type 'Microsoft.Extensions.Caching.Memory.IMemoryCache' while attempting to activate 'NrAcademyBL.Extensions.Caching.MemoryCacheService'.
+ ---> System.InvalidOperationException: Unable to resolve service for type 'Microsoft.Extensions.Caching.Memory.IMemoryCache' while attempting to activate 'NrAcademyBL.Extensions.Caching.MemoryCacheService'.
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteFactory.CreateArgumentCallSites(ServiceIdentifier serviceIdentifier, Type implementationType, CallSiteChain callSiteChain, ParameterInfo[] parameters, Boolean throwIfCallSiteNotFound)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteFactory.CreateConstructorCallSite(ResultCache lifetime, ServiceIdentifier serviceIdentifier, Type implementationType, CallSiteChain callSiteChain)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteFactory.TryCreateExact(ServiceDescriptor descriptor, ServiceIdentifier serviceIdentifier, CallSiteChain callSiteChain, Int32 slot)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteFactory.GetCallSite(ServiceDescriptor serviceDescriptor, CallSiteChain callSiteChain)
+   at Microsoft.Extensions.DependencyInjection.ServiceProvider.ValidateService(ServiceDescriptor descriptor)
+   --- End of inner exception stack trace ---
+   at Microsoft.Extensions.DependencyInjection.ServiceProvider.ValidateService(ServiceDescriptor descriptor)
+   at Microsoft.Extensions.DependencyInjection.ServiceProvider..ctor(ICollection`1 serviceDescriptors, ServiceProviderOptions options)<---
+
+ ---> (Inner Exception #7) System.InvalidOperationException: Error while validating the service descriptor 'ServiceType: NrAcademyBL.Services.Abstract.IEnrollmentService Lifetime: Scoped ImplementationType: NrAcademyBL.Services.Concrete.EnrollmentService': Unable to resolve service for type 'Microsoft.Extensions.Caching.Memory.IMemoryCache' while attempting to activate 'NrAcademyBL.Extensions.Caching.MemoryCacheService'.
+ ---> System.InvalidOperationException: Unable to resolve service for type 'Microsoft.Extensions.Caching.Memory.IMemoryCache' while attempting to activate 'NrAcademyBL.Extensions.Caching.MemoryCacheService'.
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteFactory.CreateArgumentCallSites(ServiceIdentifier serviceIdentifier, Type implementationType, CallSiteChain callSiteChain, ParameterInfo[] parameters, Boolean throwIfCallSiteNotFound)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteFactory.CreateConstructorCallSite(ResultCache lifetime, ServiceIdentifier serviceIdentifier, Type implementationType, CallSiteChain callSiteChain)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteFactory.TryCreateExact(ServiceDescriptor descriptor, ServiceIdentifier serviceIdentifier, CallSiteChain callSiteChain, Int32 slot)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteFactory.TryCreateExact(ServiceIdentifier serviceIdentifier, CallSiteChain callSiteChain)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteFactory.CreateCallSite(ServiceIdentifier serviceIdentifier, CallSiteChain callSiteChain)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteFactory.CreateArgumentCallSites(ServiceIdentifier serviceIdentifier, Type implementationType, CallSiteChain callSiteChain, ParameterInfo[] parameters, Boolean throwIfCallSiteNotFound)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteFactory.CreateConstructorCallSite(ResultCache lifetime, ServiceIdentifier serviceIdentifier, Type implementationType, CallSiteChain callSiteChain)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteFactory.TryCreateExact(ServiceDescriptor descriptor, ServiceIdentifier serviceIdentifier, CallSiteChain callSiteChain, Int32 slot)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteFactory.GetCallSite(ServiceDescriptor serviceDescriptor, CallSiteChain callSiteChain)
+   at Microsoft.Extensions.DependencyInjection.ServiceProvider.ValidateService(ServiceDescriptor descriptor)
+   --- End of inner exception stack trace ---
+   at Microsoft.Extensions.DependencyInjection.ServiceProvider.ValidateService(ServiceDescriptor descriptor)
+   at Microsoft.Extensions.DependencyInjection.ServiceProvider..ctor(ICollection`1 serviceDescriptors, ServiceProviderOptions options)<---
+
+ ---> (Inner Exception #8) System.InvalidOperationException: Error while validating the service descriptor 'ServiceType: NrAcademyBL.Services.Abstract.ICertificateService Lifetime: Scoped ImplementationType: NrAcademyBL.Services.Concrete.CertificateService': Unable to resolve service for type 'Microsoft.Extensions.Caching.Memory.IMemoryCache' while attempting to activate 'NrAcademyBL.Extensions.Caching.MemoryCacheService'.
+ ---> System.InvalidOperationException: Unable to resolve service for type 'Microsoft.Extensions.Caching.Memory.IMemoryCache' while attempting to activate 'NrAcademyBL.Extensions.Caching.MemoryCacheService'.
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteFactory.CreateArgumentCallSites(ServiceIdentifier serviceIdentifier, Type implementationType, CallSiteChain callSiteChain, ParameterInfo[] parameters, Boolean throwIfCallSiteNotFound)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteFactory.CreateConstructorCallSite(ResultCache lifetime, ServiceIdentifier serviceIdentifier, Type implementationType, CallSiteChain callSiteChain)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteFactory.TryCreateExact(ServiceDescriptor descriptor, ServiceIdentifier serviceIdentifier, CallSiteChain callSiteChain, Int32 slot)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteFactory.TryCreateExact(ServiceIdentifier serviceIdentifier, CallSiteChain callSiteChain)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteFactory.CreateCallSite(ServiceIdentifier serviceIdentifier, CallSiteChain callSiteChain)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteFactory.CreateArgumentCallSites(ServiceIdentifier serviceIdentifier, Type implementationType, CallSiteChain callSiteChain, ParameterInfo[] parameters, Boolean throwIfCallSiteNotFound)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteFactory.CreateConstructorCallSite(ResultCache lifetime, ServiceIdentifier serviceIdentifier, Type implementationType, CallSiteChain callSiteChain)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteFactory.TryCreateExact(ServiceDescriptor descriptor, ServiceIdentifier serviceIdentifier, CallSiteChain callSiteChain, Int32 slot)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteFactory.GetCallSite(ServiceDescriptor serviceDescriptor, CallSiteChain callSiteChain)
+   at Microsoft.Extensions.DependencyInjection.ServiceProvider.ValidateService(ServiceDescriptor descriptor)
+   --- End of inner exception stack trace ---
+   at Microsoft.Extensions.DependencyInjection.ServiceProvider.ValidateService(ServiceDescriptor descriptor)
+   at Microsoft.Extensions.DependencyInjection.ServiceProvider..ctor(ICollection`1 serviceDescriptors, ServiceProviderOptions options)<---
+
+ ---> (Inner Exception #9) System.InvalidOperationException: Error while validating the service descriptor 'ServiceType: NrAcademyBL.Services.Abstract.IBlogCategoryService Lifetime: Scoped ImplementationType: NrAcademyBL.Services.Concrete.BlogCategoryService': Unable to resolve service for type 'Microsoft.Extensions.Caching.Memory.IMemoryCache' while attempting to activate 'NrAcademyBL.Extensions.Caching.MemoryCacheService'.
+ ---> System.InvalidOperationException: Unable to resolve service for type 'Microsoft.Extensions.Caching.Memory.IMemoryCache' while attempting to activate 'NrAcademyBL.Extensions.Caching.MemoryCacheService'.
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteFactory.CreateArgumentCallSites(ServiceIdentifier serviceIdentifier, Type implementationType, CallSiteChain callSiteChain, ParameterInfo[] parameters, Boolean throwIfCallSiteNotFound)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteFactory.CreateConstructorCallSite(ResultCache lifetime, ServiceIdentifier serviceIdentifier, Type implementationType, CallSiteChain callSiteChain)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteFactory.TryCreateExact(ServiceDescriptor descriptor, ServiceIdentifier serviceIdentifier, CallSiteChain callSiteChain, Int32 slot)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteFactory.TryCreateExact(ServiceIdentifier serviceIdentifier, CallSiteChain callSiteChain)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteFactory.CreateCallSite(ServiceIdentifier serviceIdentifier, CallSiteChain callSiteChain)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteFactory.CreateArgumentCallSites(ServiceIdentifier serviceIdentifier, Type implementationType, CallSiteChain callSiteChain, ParameterInfo[] parameters, Boolean throwIfCallSiteNotFound)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteFactory.CreateConstructorCallSite(ResultCache lifetime, ServiceIdentifier serviceIdentifier, Type implementationType, CallSiteChain callSiteChain)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteFactory.TryCreateExact(ServiceDescriptor descriptor, ServiceIdentifier serviceIdentifier, CallSiteChain callSiteChain, Int32 slot)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteFactory.GetCallSite(ServiceDescriptor serviceDescriptor, CallSiteChain callSiteChain)
+   at Microsoft.Extensions.DependencyInjection.ServiceProvider.ValidateService(ServiceDescriptor descriptor)
+   --- End of inner exception stack trace ---
+   at Microsoft.Extensions.DependencyInjection.ServiceProvider.ValidateService(ServiceDescriptor descriptor)
+   at Microsoft.Extensions.DependencyInjection.ServiceProvider..ctor(ICollection`1 serviceDescriptors, ServiceProviderOptions options)<---
+
+2026-05-07 15:08:31.318 +04:00 [INF] NrAcademy tətbiqi başladılır...
+2026-05-07 15:08:31.529 +04:00 [FTL] Tətbiq xəta verdi
+System.AggregateException: Some services are not able to be constructed (Error while validating the service descriptor 'ServiceType: NrAcademyBL.Services.Abstract.IAnswerService Lifetime: Scoped ImplementationType: NrAcademyBL.Services.Concrete.AnswerService': Unable to resolve service for type 'Microsoft.Extensions.Caching.Memory.IMemoryCache' while attempting to activate 'NrAcademyBL.Extensions.Caching.MemoryCacheService'.) (Error while validating the service descriptor 'ServiceType: NrAcademyBL.Services.Abstract.IQuestionService Lifetime: Scoped ImplementationType: NrAcademyBL.Services.Concrete.QuestionService': Unable to resolve service for type 'Microsoft.Extensions.Caching.Memory.IMemoryCache' while attempting to activate 'NrAcademyBL.Extensions.Caching.MemoryCacheService'.) (Error while validating the service descriptor 'ServiceType: NrAcademyBL.Services.Abstract.ITestService Lifetime: Scoped ImplementationType: NrAcademyBL.Services.Concrete.TestService': Unable to resolve service for type 'Microsoft.Extensions.Caching.Memory.IMemoryCache' while attempting to activate 'NrAcademyBL.Extensions.Caching.MemoryCacheService'.) (Error while validating the service descriptor 'ServiceType: NrAcademyBL.Services.Abstract.ITestResultService Lifetime: Scoped ImplementationType: NrAcademyBL.Services.Concrete.TestResultService': Unable to resolve service for type 'Microsoft.Extensions.Caching.Memory.IMemoryCache' while attempting to activate 'NrAcademyBL.Extensions.Caching.MemoryCacheService'.) (Error while validating the service descriptor 'ServiceType: NrAcademyBL.Services.Abstract.ITeacherService Lifetime: Scoped ImplementationType: NrAcademyBL.Services.Concrete.TeacherService': Unable to resolve service for type 'Microsoft.Extensions.Caching.Memory.IMemoryCache' while attempting to activate 'NrAcademyBL.Extensions.Caching.MemoryCacheService'.) (Error while validating the service descriptor 'ServiceType: NrAcademyBL.Services.Abstract.ICourseService Lifetime: Scoped ImplementationType: NrAcademyBL.Services.Concrete.CourseService': Unable to resolve service for type 'Microsoft.Extensions.Caching.Memory.IMemoryCache' while attempting to activate 'NrAcademyBL.Extensions.Caching.MemoryCacheService'.) (Error while validating the service descriptor 'ServiceType: NrAcademyBL.Extensions.Caching.ICacheService Lifetime: Scoped ImplementationType: NrAcademyBL.Extensions.Caching.MemoryCacheService': Unable to resolve service for type 'Microsoft.Extensions.Caching.Memory.IMemoryCache' while attempting to activate 'NrAcademyBL.Extensions.Caching.MemoryCacheService'.) (Error while validating the service descriptor 'ServiceType: NrAcademyBL.Services.Abstract.IEnrollmentService Lifetime: Scoped ImplementationType: NrAcademyBL.Services.Concrete.EnrollmentService': Unable to resolve service for type 'Microsoft.Extensions.Caching.Memory.IMemoryCache' while attempting to activate 'NrAcademyBL.Extensions.Caching.MemoryCacheService'.) (Error while validating the service descriptor 'ServiceType: NrAcademyBL.Services.Abstract.ICertificateService Lifetime: Scoped ImplementationType: NrAcademyBL.Services.Concrete.CertificateService': Unable to resolve service for type 'Microsoft.Extensions.Caching.Memory.IMemoryCache' while attempting to activate 'NrAcademyBL.Extensions.Caching.MemoryCacheService'.) (Error while validating the service descriptor 'ServiceType: NrAcademyBL.Services.Abstract.IBlogCategoryService Lifetime: Scoped ImplementationType: NrAcademyBL.Services.Concrete.BlogCategoryService': Unable to resolve service for type 'Microsoft.Extensions.Caching.Memory.IMemoryCache' while attempting to activate 'NrAcademyBL.Extensions.Caching.MemoryCacheService'.)
+ ---> System.InvalidOperationException: Error while validating the service descriptor 'ServiceType: NrAcademyBL.Services.Abstract.IAnswerService Lifetime: Scoped ImplementationType: NrAcademyBL.Services.Concrete.AnswerService': Unable to resolve service for type 'Microsoft.Extensions.Caching.Memory.IMemoryCache' while attempting to activate 'NrAcademyBL.Extensions.Caching.MemoryCacheService'.
+ ---> System.InvalidOperationException: Unable to resolve service for type 'Microsoft.Extensions.Caching.Memory.IMemoryCache' while attempting to activate 'NrAcademyBL.Extensions.Caching.MemoryCacheService'.
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteFactory.CreateArgumentCallSites(ServiceIdentifier serviceIdentifier, Type implementationType, CallSiteChain callSiteChain, ParameterInfo[] parameters, Boolean throwIfCallSiteNotFound)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteFactory.CreateConstructorCallSite(ResultCache lifetime, ServiceIdentifier serviceIdentifier, Type implementationType, CallSiteChain callSiteChain)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteFactory.TryCreateExact(ServiceDescriptor descriptor, ServiceIdentifier serviceIdentifier, CallSiteChain callSiteChain, Int32 slot)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteFactory.TryCreateExact(ServiceIdentifier serviceIdentifier, CallSiteChain callSiteChain)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteFactory.CreateCallSite(ServiceIdentifier serviceIdentifier, CallSiteChain callSiteChain)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteFactory.CreateArgumentCallSites(ServiceIdentifier serviceIdentifier, Type implementationType, CallSiteChain callSiteChain, ParameterInfo[] parameters, Boolean throwIfCallSiteNotFound)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteFactory.CreateConstructorCallSite(ResultCache lifetime, ServiceIdentifier serviceIdentifier, Type implementationType, CallSiteChain callSiteChain)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteFactory.TryCreateExact(ServiceDescriptor descriptor, ServiceIdentifier serviceIdentifier, CallSiteChain callSiteChain, Int32 slot)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteFactory.GetCallSite(ServiceDescriptor serviceDescriptor, CallSiteChain callSiteChain)
+   at Microsoft.Extensions.DependencyInjection.ServiceProvider.ValidateService(ServiceDescriptor descriptor)
+   --- End of inner exception stack trace ---
+   at Microsoft.Extensions.DependencyInjection.ServiceProvider.ValidateService(ServiceDescriptor descriptor)
+   at Microsoft.Extensions.DependencyInjection.ServiceProvider..ctor(ICollection`1 serviceDescriptors, ServiceProviderOptions options)
+   --- End of inner exception stack trace ---
+   at Microsoft.Extensions.DependencyInjection.ServiceProvider..ctor(ICollection`1 serviceDescriptors, ServiceProviderOptions options)
+   at Microsoft.Extensions.DependencyInjection.ServiceCollectionContainerBuilderExtensions.BuildServiceProvider(IServiceCollection services, ServiceProviderOptions options)
+   at Microsoft.Extensions.Hosting.HostApplicationBuilder.Build()
+   at Microsoft.AspNetCore.Builder.WebApplicationBuilder.Build()
+   at Program.<Main>$(String[] args) in C:\NrAcademy\NrAcademyy\NrAcademyy\Program.cs:line 128
+ ---> (Inner Exception #1) System.InvalidOperationException: Error while validating the service descriptor 'ServiceType: NrAcademyBL.Services.Abstract.IQuestionService Lifetime: Scoped ImplementationType: NrAcademyBL.Services.Concrete.QuestionService': Unable to resolve service for type 'Microsoft.Extensions.Caching.Memory.IMemoryCache' while attempting to activate 'NrAcademyBL.Extensions.Caching.MemoryCacheService'.
+ ---> System.InvalidOperationException: Unable to resolve service for type 'Microsoft.Extensions.Caching.Memory.IMemoryCache' while attempting to activate 'NrAcademyBL.Extensions.Caching.MemoryCacheService'.
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteFactory.CreateArgumentCallSites(ServiceIdentifier serviceIdentifier, Type implementationType, CallSiteChain callSiteChain, ParameterInfo[] parameters, Boolean throwIfCallSiteNotFound)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteFactory.CreateConstructorCallSite(ResultCache lifetime, ServiceIdentifier serviceIdentifier, Type implementationType, CallSiteChain callSiteChain)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteFactory.TryCreateExact(ServiceDescriptor descriptor, ServiceIdentifier serviceIdentifier, CallSiteChain callSiteChain, Int32 slot)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteFactory.TryCreateExact(ServiceIdentifier serviceIdentifier, CallSiteChain callSiteChain)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteFactory.CreateCallSite(ServiceIdentifier serviceIdentifier, CallSiteChain callSiteChain)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteFactory.CreateArgumentCallSites(ServiceIdentifier serviceIdentifier, Type implementationType, CallSiteChain callSiteChain, ParameterInfo[] parameters, Boolean throwIfCallSiteNotFound)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteFactory.CreateConstructorCallSite(ResultCache lifetime, ServiceIdentifier serviceIdentifier, Type implementationType, CallSiteChain callSiteChain)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteFactory.TryCreateExact(ServiceDescriptor descriptor, ServiceIdentifier serviceIdentifier, CallSiteChain callSiteChain, Int32 slot)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteFactory.GetCallSite(ServiceDescriptor serviceDescriptor, CallSiteChain callSiteChain)
+   at Microsoft.Extensions.DependencyInjection.ServiceProvider.ValidateService(ServiceDescriptor descriptor)
+   --- End of inner exception stack trace ---
+   at Microsoft.Extensions.DependencyInjection.ServiceProvider.ValidateService(ServiceDescriptor descriptor)
+   at Microsoft.Extensions.DependencyInjection.ServiceProvider..ctor(ICollection`1 serviceDescriptors, ServiceProviderOptions options)<---
+
+ ---> (Inner Exception #2) System.InvalidOperationException: Error while validating the service descriptor 'ServiceType: NrAcademyBL.Services.Abstract.ITestService Lifetime: Scoped ImplementationType: NrAcademyBL.Services.Concrete.TestService': Unable to resolve service for type 'Microsoft.Extensions.Caching.Memory.IMemoryCache' while attempting to activate 'NrAcademyBL.Extensions.Caching.MemoryCacheService'.
+ ---> System.InvalidOperationException: Unable to resolve service for type 'Microsoft.Extensions.Caching.Memory.IMemoryCache' while attempting to activate 'NrAcademyBL.Extensions.Caching.MemoryCacheService'.
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteFactory.CreateArgumentCallSites(ServiceIdentifier serviceIdentifier, Type implementationType, CallSiteChain callSiteChain, ParameterInfo[] parameters, Boolean throwIfCallSiteNotFound)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteFactory.CreateConstructorCallSite(ResultCache lifetime, ServiceIdentifier serviceIdentifier, Type implementationType, CallSiteChain callSiteChain)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteFactory.TryCreateExact(ServiceDescriptor descriptor, ServiceIdentifier serviceIdentifier, CallSiteChain callSiteChain, Int32 slot)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteFactory.TryCreateExact(ServiceIdentifier serviceIdentifier, CallSiteChain callSiteChain)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteFactory.CreateCallSite(ServiceIdentifier serviceIdentifier, CallSiteChain callSiteChain)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteFactory.CreateArgumentCallSites(ServiceIdentifier serviceIdentifier, Type implementationType, CallSiteChain callSiteChain, ParameterInfo[] parameters, Boolean throwIfCallSiteNotFound)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteFactory.CreateConstructorCallSite(ResultCache lifetime, ServiceIdentifier serviceIdentifier, Type implementationType, CallSiteChain callSiteChain)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteFactory.TryCreateExact(ServiceDescriptor descriptor, ServiceIdentifier serviceIdentifier, CallSiteChain callSiteChain, Int32 slot)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteFactory.GetCallSite(ServiceDescriptor serviceDescriptor, CallSiteChain callSiteChain)
+   at Microsoft.Extensions.DependencyInjection.ServiceProvider.ValidateService(ServiceDescriptor descriptor)
+   --- End of inner exception stack trace ---
+   at Microsoft.Extensions.DependencyInjection.ServiceProvider.ValidateService(ServiceDescriptor descriptor)
+   at Microsoft.Extensions.DependencyInjection.ServiceProvider..ctor(ICollection`1 serviceDescriptors, ServiceProviderOptions options)<---
+
+ ---> (Inner Exception #3) System.InvalidOperationException: Error while validating the service descriptor 'ServiceType: NrAcademyBL.Services.Abstract.ITestResultService Lifetime: Scoped ImplementationType: NrAcademyBL.Services.Concrete.TestResultService': Unable to resolve service for type 'Microsoft.Extensions.Caching.Memory.IMemoryCache' while attempting to activate 'NrAcademyBL.Extensions.Caching.MemoryCacheService'.
+ ---> System.InvalidOperationException: Unable to resolve service for type 'Microsoft.Extensions.Caching.Memory.IMemoryCache' while attempting to activate 'NrAcademyBL.Extensions.Caching.MemoryCacheService'.
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteFactory.CreateArgumentCallSites(ServiceIdentifier serviceIdentifier, Type implementationType, CallSiteChain callSiteChain, ParameterInfo[] parameters, Boolean throwIfCallSiteNotFound)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteFactory.CreateConstructorCallSite(ResultCache lifetime, ServiceIdentifier serviceIdentifier, Type implementationType, CallSiteChain callSiteChain)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteFactory.TryCreateExact(ServiceDescriptor descriptor, ServiceIdentifier serviceIdentifier, CallSiteChain callSiteChain, Int32 slot)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteFactory.TryCreateExact(ServiceIdentifier serviceIdentifier, CallSiteChain callSiteChain)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteFactory.CreateCallSite(ServiceIdentifier serviceIdentifier, CallSiteChain callSiteChain)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteFactory.CreateArgumentCallSites(ServiceIdentifier serviceIdentifier, Type implementationType, CallSiteChain callSiteChain, ParameterInfo[] parameters, Boolean throwIfCallSiteNotFound)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteFactory.CreateConstructorCallSite(ResultCache lifetime, ServiceIdentifier serviceIdentifier, Type implementationType, CallSiteChain callSiteChain)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteFactory.TryCreateExact(ServiceDescriptor descriptor, ServiceIdentifier serviceIdentifier, CallSiteChain callSiteChain, Int32 slot)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteFactory.GetCallSite(ServiceDescriptor serviceDescriptor, CallSiteChain callSiteChain)
+   at Microsoft.Extensions.DependencyInjection.ServiceProvider.ValidateService(ServiceDescriptor descriptor)
+   --- End of inner exception stack trace ---
+   at Microsoft.Extensions.DependencyInjection.ServiceProvider.ValidateService(ServiceDescriptor descriptor)
+   at Microsoft.Extensions.DependencyInjection.ServiceProvider..ctor(ICollection`1 serviceDescriptors, ServiceProviderOptions options)<---
+
+ ---> (Inner Exception #4) System.InvalidOperationException: Error while validating the service descriptor 'ServiceType: NrAcademyBL.Services.Abstract.ITeacherService Lifetime: Scoped ImplementationType: NrAcademyBL.Services.Concrete.TeacherService': Unable to resolve service for type 'Microsoft.Extensions.Caching.Memory.IMemoryCache' while attempting to activate 'NrAcademyBL.Extensions.Caching.MemoryCacheService'.
+ ---> System.InvalidOperationException: Unable to resolve service for type 'Microsoft.Extensions.Caching.Memory.IMemoryCache' while attempting to activate 'NrAcademyBL.Extensions.Caching.MemoryCacheService'.
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteFactory.CreateArgumentCallSites(ServiceIdentifier serviceIdentifier, Type implementationType, CallSiteChain callSiteChain, ParameterInfo[] parameters, Boolean throwIfCallSiteNotFound)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteFactory.CreateConstructorCallSite(ResultCache lifetime, ServiceIdentifier serviceIdentifier, Type implementationType, CallSiteChain callSiteChain)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteFactory.TryCreateExact(ServiceDescriptor descriptor, ServiceIdentifier serviceIdentifier, CallSiteChain callSiteChain, Int32 slot)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteFactory.TryCreateExact(ServiceIdentifier serviceIdentifier, CallSiteChain callSiteChain)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteFactory.CreateCallSite(ServiceIdentifier serviceIdentifier, CallSiteChain callSiteChain)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteFactory.CreateArgumentCallSites(ServiceIdentifier serviceIdentifier, Type implementationType, CallSiteChain callSiteChain, ParameterInfo[] parameters, Boolean throwIfCallSiteNotFound)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteFactory.CreateConstructorCallSite(ResultCache lifetime, ServiceIdentifier serviceIdentifier, Type implementationType, CallSiteChain callSiteChain)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteFactory.TryCreateExact(ServiceDescriptor descriptor, ServiceIdentifier serviceIdentifier, CallSiteChain callSiteChain, Int32 slot)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteFactory.GetCallSite(ServiceDescriptor serviceDescriptor, CallSiteChain callSiteChain)
+   at Microsoft.Extensions.DependencyInjection.ServiceProvider.ValidateService(ServiceDescriptor descriptor)
+   --- End of inner exception stack trace ---
+   at Microsoft.Extensions.DependencyInjection.ServiceProvider.ValidateService(ServiceDescriptor descriptor)
+   at Microsoft.Extensions.DependencyInjection.ServiceProvider..ctor(ICollection`1 serviceDescriptors, ServiceProviderOptions options)<---
+
+ ---> (Inner Exception #5) System.InvalidOperationException: Error while validating the service descriptor 'ServiceType: NrAcademyBL.Services.Abstract.ICourseService Lifetime: Scoped ImplementationType: NrAcademyBL.Services.Concrete.CourseService': Unable to resolve service for type 'Microsoft.Extensions.Caching.Memory.IMemoryCache' while attempting to activate 'NrAcademyBL.Extensions.Caching.MemoryCacheService'.
+ ---> System.InvalidOperationException: Unable to resolve service for type 'Microsoft.Extensions.Caching.Memory.IMemoryCache' while attempting to activate 'NrAcademyBL.Extensions.Caching.MemoryCacheService'.
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteFactory.CreateArgumentCallSites(ServiceIdentifier serviceIdentifier, Type implementationType, CallSiteChain callSiteChain, ParameterInfo[] parameters, Boolean throwIfCallSiteNotFound)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteFactory.CreateConstructorCallSite(ResultCache lifetime, ServiceIdentifier serviceIdentifier, Type implementationType, CallSiteChain callSiteChain)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteFactory.TryCreateExact(ServiceDescriptor descriptor, ServiceIdentifier serviceIdentifier, CallSiteChain callSiteChain, Int32 slot)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteFactory.TryCreateExact(ServiceIdentifier serviceIdentifier, CallSiteChain callSiteChain)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteFactory.CreateCallSite(ServiceIdentifier serviceIdentifier, CallSiteChain callSiteChain)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteFactory.CreateArgumentCallSites(ServiceIdentifier serviceIdentifier, Type implementationType, CallSiteChain callSiteChain, ParameterInfo[] parameters, Boolean throwIfCallSiteNotFound)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteFactory.CreateConstructorCallSite(ResultCache lifetime, ServiceIdentifier serviceIdentifier, Type implementationType, CallSiteChain callSiteChain)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteFactory.TryCreateExact(ServiceDescriptor descriptor, ServiceIdentifier serviceIdentifier, CallSiteChain callSiteChain, Int32 slot)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteFactory.GetCallSite(ServiceDescriptor serviceDescriptor, CallSiteChain callSiteChain)
+   at Microsoft.Extensions.DependencyInjection.ServiceProvider.ValidateService(ServiceDescriptor descriptor)
+   --- End of inner exception stack trace ---
+   at Microsoft.Extensions.DependencyInjection.ServiceProvider.ValidateService(ServiceDescriptor descriptor)
+   at Microsoft.Extensions.DependencyInjection.ServiceProvider..ctor(ICollection`1 serviceDescriptors, ServiceProviderOptions options)<---
+
+ ---> (Inner Exception #6) System.InvalidOperationException: Error while validating the service descriptor 'ServiceType: NrAcademyBL.Extensions.Caching.ICacheService Lifetime: Scoped ImplementationType: NrAcademyBL.Extensions.Caching.MemoryCacheService': Unable to resolve service for type 'Microsoft.Extensions.Caching.Memory.IMemoryCache' while attempting to activate 'NrAcademyBL.Extensions.Caching.MemoryCacheService'.
+ ---> System.InvalidOperationException: Unable to resolve service for type 'Microsoft.Extensions.Caching.Memory.IMemoryCache' while attempting to activate 'NrAcademyBL.Extensions.Caching.MemoryCacheService'.
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteFactory.CreateArgumentCallSites(ServiceIdentifier serviceIdentifier, Type implementationType, CallSiteChain callSiteChain, ParameterInfo[] parameters, Boolean throwIfCallSiteNotFound)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteFactory.CreateConstructorCallSite(ResultCache lifetime, ServiceIdentifier serviceIdentifier, Type implementationType, CallSiteChain callSiteChain)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteFactory.TryCreateExact(ServiceDescriptor descriptor, ServiceIdentifier serviceIdentifier, CallSiteChain callSiteChain, Int32 slot)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteFactory.GetCallSite(ServiceDescriptor serviceDescriptor, CallSiteChain callSiteChain)
+   at Microsoft.Extensions.DependencyInjection.ServiceProvider.ValidateService(ServiceDescriptor descriptor)
+   --- End of inner exception stack trace ---
+   at Microsoft.Extensions.DependencyInjection.ServiceProvider.ValidateService(ServiceDescriptor descriptor)
+   at Microsoft.Extensions.DependencyInjection.ServiceProvider..ctor(ICollection`1 serviceDescriptors, ServiceProviderOptions options)<---
+
+ ---> (Inner Exception #7) System.InvalidOperationException: Error while validating the service descriptor 'ServiceType: NrAcademyBL.Services.Abstract.IEnrollmentService Lifetime: Scoped ImplementationType: NrAcademyBL.Services.Concrete.EnrollmentService': Unable to resolve service for type 'Microsoft.Extensions.Caching.Memory.IMemoryCache' while attempting to activate 'NrAcademyBL.Extensions.Caching.MemoryCacheService'.
+ ---> System.InvalidOperationException: Unable to resolve service for type 'Microsoft.Extensions.Caching.Memory.IMemoryCache' while attempting to activate 'NrAcademyBL.Extensions.Caching.MemoryCacheService'.
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteFactory.CreateArgumentCallSites(ServiceIdentifier serviceIdentifier, Type implementationType, CallSiteChain callSiteChain, ParameterInfo[] parameters, Boolean throwIfCallSiteNotFound)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteFactory.CreateConstructorCallSite(ResultCache lifetime, ServiceIdentifier serviceIdentifier, Type implementationType, CallSiteChain callSiteChain)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteFactory.TryCreateExact(ServiceDescriptor descriptor, ServiceIdentifier serviceIdentifier, CallSiteChain callSiteChain, Int32 slot)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteFactory.TryCreateExact(ServiceIdentifier serviceIdentifier, CallSiteChain callSiteChain)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteFactory.CreateCallSite(ServiceIdentifier serviceIdentifier, CallSiteChain callSiteChain)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteFactory.CreateArgumentCallSites(ServiceIdentifier serviceIdentifier, Type implementationType, CallSiteChain callSiteChain, ParameterInfo[] parameters, Boolean throwIfCallSiteNotFound)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteFactory.CreateConstructorCallSite(ResultCache lifetime, ServiceIdentifier serviceIdentifier, Type implementationType, CallSiteChain callSiteChain)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteFactory.TryCreateExact(ServiceDescriptor descriptor, ServiceIdentifier serviceIdentifier, CallSiteChain callSiteChain, Int32 slot)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteFactory.GetCallSite(ServiceDescriptor serviceDescriptor, CallSiteChain callSiteChain)
+   at Microsoft.Extensions.DependencyInjection.ServiceProvider.ValidateService(ServiceDescriptor descriptor)
+   --- End of inner exception stack trace ---
+   at Microsoft.Extensions.DependencyInjection.ServiceProvider.ValidateService(ServiceDescriptor descriptor)
+   at Microsoft.Extensions.DependencyInjection.ServiceProvider..ctor(ICollection`1 serviceDescriptors, ServiceProviderOptions options)<---
+
+ ---> (Inner Exception #8) System.InvalidOperationException: Error while validating the service descriptor 'ServiceType: NrAcademyBL.Services.Abstract.ICertificateService Lifetime: Scoped ImplementationType: NrAcademyBL.Services.Concrete.CertificateService': Unable to resolve service for type 'Microsoft.Extensions.Caching.Memory.IMemoryCache' while attempting to activate 'NrAcademyBL.Extensions.Caching.MemoryCacheService'.
+ ---> System.InvalidOperationException: Unable to resolve service for type 'Microsoft.Extensions.Caching.Memory.IMemoryCache' while attempting to activate 'NrAcademyBL.Extensions.Caching.MemoryCacheService'.
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteFactory.CreateArgumentCallSites(ServiceIdentifier serviceIdentifier, Type implementationType, CallSiteChain callSiteChain, ParameterInfo[] parameters, Boolean throwIfCallSiteNotFound)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteFactory.CreateConstructorCallSite(ResultCache lifetime, ServiceIdentifier serviceIdentifier, Type implementationType, CallSiteChain callSiteChain)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteFactory.TryCreateExact(ServiceDescriptor descriptor, ServiceIdentifier serviceIdentifier, CallSiteChain callSiteChain, Int32 slot)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteFactory.TryCreateExact(ServiceIdentifier serviceIdentifier, CallSiteChain callSiteChain)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteFactory.CreateCallSite(ServiceIdentifier serviceIdentifier, CallSiteChain callSiteChain)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteFactory.CreateArgumentCallSites(ServiceIdentifier serviceIdentifier, Type implementationType, CallSiteChain callSiteChain, ParameterInfo[] parameters, Boolean throwIfCallSiteNotFound)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteFactory.CreateConstructorCallSite(ResultCache lifetime, ServiceIdentifier serviceIdentifier, Type implementationType, CallSiteChain callSiteChain)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteFactory.TryCreateExact(ServiceDescriptor descriptor, ServiceIdentifier serviceIdentifier, CallSiteChain callSiteChain, Int32 slot)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteFactory.GetCallSite(ServiceDescriptor serviceDescriptor, CallSiteChain callSiteChain)
+   at Microsoft.Extensions.DependencyInjection.ServiceProvider.ValidateService(ServiceDescriptor descriptor)
+   --- End of inner exception stack trace ---
+   at Microsoft.Extensions.DependencyInjection.ServiceProvider.ValidateService(ServiceDescriptor descriptor)
+   at Microsoft.Extensions.DependencyInjection.ServiceProvider..ctor(ICollection`1 serviceDescriptors, ServiceProviderOptions options)<---
+
+ ---> (Inner Exception #9) System.InvalidOperationException: Error while validating the service descriptor 'ServiceType: NrAcademyBL.Services.Abstract.IBlogCategoryService Lifetime: Scoped ImplementationType: NrAcademyBL.Services.Concrete.BlogCategoryService': Unable to resolve service for type 'Microsoft.Extensions.Caching.Memory.IMemoryCache' while attempting to activate 'NrAcademyBL.Extensions.Caching.MemoryCacheService'.
+ ---> System.InvalidOperationException: Unable to resolve service for type 'Microsoft.Extensions.Caching.Memory.IMemoryCache' while attempting to activate 'NrAcademyBL.Extensions.Caching.MemoryCacheService'.
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteFactory.CreateArgumentCallSites(ServiceIdentifier serviceIdentifier, Type implementationType, CallSiteChain callSiteChain, ParameterInfo[] parameters, Boolean throwIfCallSiteNotFound)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteFactory.CreateConstructorCallSite(ResultCache lifetime, ServiceIdentifier serviceIdentifier, Type implementationType, CallSiteChain callSiteChain)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteFactory.TryCreateExact(ServiceDescriptor descriptor, ServiceIdentifier serviceIdentifier, CallSiteChain callSiteChain, Int32 slot)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteFactory.TryCreateExact(ServiceIdentifier serviceIdentifier, CallSiteChain callSiteChain)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteFactory.CreateCallSite(ServiceIdentifier serviceIdentifier, CallSiteChain callSiteChain)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteFactory.CreateArgumentCallSites(ServiceIdentifier serviceIdentifier, Type implementationType, CallSiteChain callSiteChain, ParameterInfo[] parameters, Boolean throwIfCallSiteNotFound)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteFactory.CreateConstructorCallSite(ResultCache lifetime, ServiceIdentifier serviceIdentifier, Type implementationType, CallSiteChain callSiteChain)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteFactory.TryCreateExact(ServiceDescriptor descriptor, ServiceIdentifier serviceIdentifier, CallSiteChain callSiteChain, Int32 slot)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteFactory.GetCallSite(ServiceDescriptor serviceDescriptor, CallSiteChain callSiteChain)
+   at Microsoft.Extensions.DependencyInjection.ServiceProvider.ValidateService(ServiceDescriptor descriptor)
+   --- End of inner exception stack trace ---
+   at Microsoft.Extensions.DependencyInjection.ServiceProvider.ValidateService(ServiceDescriptor descriptor)
+   at Microsoft.Extensions.DependencyInjection.ServiceProvider..ctor(ICollection`1 serviceDescriptors, ServiceProviderOptions options)<---
+
+2026-05-07 15:10:34.559 +04:00 [INF] NrAcademy tətbiqi başladılır...
+2026-05-07 15:10:34.953 +04:00 [INF] User profile is available. Using 'C:\Users\ikinci.el.noutbuklar\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2026-05-07 15:10:36.184 +04:00 [INF] Now listening on: https://localhost:7036
+2026-05-07 15:10:36.186 +04:00 [INF] Now listening on: http://localhost:5287
+2026-05-07 15:10:36.242 +04:00 [INF] Application started. Press Ctrl+C to shut down.
+2026-05-07 15:10:36.248 +04:00 [INF] Hosting environment: Development
+2026-05-07 15:10:36.250 +04:00 [INF] Content root path: C:\NrAcademy\NrAcademyy\NrAcademyy
+2026-05-07 15:10:36.906 +04:00 [INF] Request starting HTTP/2 GET https://localhost:7036/swagger/index.html - null null
+2026-05-07 15:10:37.171 +04:00 [INF] HTTP GET /swagger/index.html responded 200 in 151.4837 ms
+2026-05-07 15:10:37.178 +04:00 [INF] Request starting HTTP/2 GET https://localhost:7036/_framework/aspnetcore-browser-refresh.js - null null
+2026-05-07 15:10:37.180 +04:00 [INF] Request starting HTTP/2 GET https://localhost:7036/_vs/browserLink - null null
+2026-05-07 15:10:37.196 +04:00 [INF] Request finished HTTP/2 GET https://localhost:7036/swagger/index.html - 200 null text/html;charset=utf-8 290.8683ms
+2026-05-07 15:10:37.204 +04:00 [INF] Request finished HTTP/2 GET https://localhost:7036/_framework/aspnetcore-browser-refresh.js - 200 14925 application/javascript; charset=utf-8 25.863ms
+2026-05-07 15:10:37.263 +04:00 [INF] Request finished HTTP/2 GET https://localhost:7036/_vs/browserLink - 200 null text/javascript; charset=UTF-8 82.2493ms
+2026-05-07 15:10:37.396 +04:00 [INF] Request starting HTTP/2 GET https://localhost:7036/swagger/v1/swagger.json - null null
+2026-05-07 15:10:37.515 +04:00 [INF] HTTP GET /swagger/v1/swagger.json responded 200 in 108.0866 ms
+2026-05-07 15:10:37.522 +04:00 [INF] Request finished HTTP/2 GET https://localhost:7036/swagger/v1/swagger.json - 200 null application/json;charset=utf-8 125.4932ms
+2026-05-07 15:10:37.611 +04:00 [INF] Executed DbCommand (103ms) [Parameters=[@__normalizedName_0='?' (Size = 256)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [a].[Id], [a].[ConcurrencyStamp], [a].[Name], [a].[NormalizedName]
+FROM [AspNetRoles] AS [a]
+WHERE [a].[NormalizedName] = @__normalizedName_0
+2026-05-07 15:10:37.801 +04:00 [INF] Executed DbCommand (6ms) [Parameters=[@__normalizedName_0='?' (Size = 256)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [a].[Id], [a].[ConcurrencyStamp], [a].[Name], [a].[NormalizedName]
+FROM [AspNetRoles] AS [a]
+WHERE [a].[NormalizedName] = @__normalizedName_0
+2026-05-07 15:10:37.814 +04:00 [INF] Executed DbCommand (1ms) [Parameters=[@__normalizedName_0='?' (Size = 256)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [a].[Id], [a].[ConcurrencyStamp], [a].[Name], [a].[NormalizedName]
+FROM [AspNetRoles] AS [a]
+WHERE [a].[NormalizedName] = @__normalizedName_0
+2026-05-07 15:10:37.825 +04:00 [INF] Executed DbCommand (1ms) [Parameters=[@__normalizedName_0='?' (Size = 256)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [a].[Id], [a].[ConcurrencyStamp], [a].[Name], [a].[NormalizedName]
+FROM [AspNetRoles] AS [a]
+WHERE [a].[NormalizedName] = @__normalizedName_0
+2026-05-07 15:10:37.874 +04:00 [INF] Executed DbCommand (10ms) [Parameters=[@__normalizedEmail_0='?' (Size = 256)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(2) [a].[Id], [a].[AccessFailedCount], [a].[ConcurrencyStamp], [a].[CreatedAt], [a].[Email], [a].[EmailConfirmed], [a].[EmailVerificationCode], [a].[EmailVerificationCodeExpiry], [a].[IsEmailVerified], [a].[LockoutEnabled], [a].[LockoutEnd], [a].[NormalizedEmail], [a].[NormalizedUserName], [a].[PasswordHash], [a].[PasswordResetCode], [a].[PasswordResetCodeExpiry], [a].[PhoneNumber], [a].[PhoneNumberConfirmed], [a].[ProfileImageUrl], [a].[SecurityStamp], [a].[TwoFactorEnabled], [a].[UpdatedAt], [a].[UserName]
+FROM [AspNetUsers] AS [a]
+WHERE [a].[NormalizedEmail] = @__normalizedEmail_0
+2026-05-07 15:11:14.513 +04:00 [INF] Request starting HTTP/2 POST https://localhost:7036/api/Auth/Register - application/json 189
+2026-05-07 15:11:14.576 +04:00 [INF] Executing endpoint 'NrAcademyy.Controllers.AuthController.Register (NrAcademyy)'
+2026-05-07 15:11:14.611 +04:00 [INF] Route matched with {action = "Register", controller = "Auth"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Register(NrAcademyBL.DTOs.AuthDTO.RegisterDTO) on controller NrAcademyy.Controllers.AuthController (NrAcademyy).
+2026-05-07 15:11:15.019 +04:00 [INF] Executed DbCommand (7ms) [Parameters=[@__ToLower_0='?' (Size = 256)], CommandType='"Text"', CommandTimeout='30']
+SELECT CASE
+    WHEN EXISTS (
+        SELECT 1
+        FROM [AspNetUsers] AS [a]
+        WHERE LOWER([a].[Email]) = @__ToLower_0) THEN CAST(1 AS bit)
+    ELSE CAST(0 AS bit)
+END
+2026-05-07 15:11:15.222 +04:00 [INF] Executed DbCommand (7ms) [Parameters=[@__normalizedUserName_0='?' (Size = 256)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [a].[Id], [a].[AccessFailedCount], [a].[ConcurrencyStamp], [a].[CreatedAt], [a].[Email], [a].[EmailConfirmed], [a].[EmailVerificationCode], [a].[EmailVerificationCodeExpiry], [a].[IsEmailVerified], [a].[LockoutEnabled], [a].[LockoutEnd], [a].[NormalizedEmail], [a].[NormalizedUserName], [a].[PasswordHash], [a].[PasswordResetCode], [a].[PasswordResetCodeExpiry], [a].[PhoneNumber], [a].[PhoneNumberConfirmed], [a].[ProfileImageUrl], [a].[SecurityStamp], [a].[TwoFactorEnabled], [a].[UpdatedAt], [a].[UserName]
+FROM [AspNetUsers] AS [a]
+WHERE [a].[NormalizedUserName] = @__normalizedUserName_0
+2026-05-07 15:11:15.453 +04:00 [INF] Executed DbCommand (12ms) [Parameters=[@p0='?' (DbType = Int32), @p1='?' (Size = 4000), @p2='?' (DbType = DateTime2), @p3='?' (Size = 256), @p4='?' (DbType = Boolean), @p5='?' (Size = 4000), @p6='?' (DbType = DateTime2), @p7='?' (DbType = Boolean), @p8='?' (DbType = Boolean), @p9='?' (DbType = DateTimeOffset), @p10='?' (Size = 256), @p11='?' (Size = 256), @p12='?' (Size = 4000), @p13='?' (Size = 4000), @p14='?' (DbType = DateTime2), @p15='?' (Size = 4000), @p16='?' (DbType = Boolean), @p17='?' (Size = 4000), @p18='?' (Size = 4000), @p19='?' (DbType = Boolean), @p20='?' (DbType = DateTime2), @p21='?' (Size = 256)], CommandType='"Text"', CommandTimeout='30']
+SET IMPLICIT_TRANSACTIONS OFF;
+SET NOCOUNT ON;
+INSERT INTO [AspNetUsers] ([AccessFailedCount], [ConcurrencyStamp], [CreatedAt], [Email], [EmailConfirmed], [EmailVerificationCode], [EmailVerificationCodeExpiry], [IsEmailVerified], [LockoutEnabled], [LockoutEnd], [NormalizedEmail], [NormalizedUserName], [PasswordHash], [PasswordResetCode], [PasswordResetCodeExpiry], [PhoneNumber], [PhoneNumberConfirmed], [ProfileImageUrl], [SecurityStamp], [TwoFactorEnabled], [UpdatedAt], [UserName])
+OUTPUT INSERTED.[Id]
+VALUES (@p0, @p1, @p2, @p3, @p4, @p5, @p6, @p7, @p8, @p9, @p10, @p11, @p12, @p13, @p14, @p15, @p16, @p17, @p18, @p19, @p20, @p21);
+2026-05-07 15:11:15.508 +04:00 [INF] Executed DbCommand (1ms) [Parameters=[@__normalizedEmail_0='?' (Size = 256)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(2) [a].[Id], [a].[AccessFailedCount], [a].[ConcurrencyStamp], [a].[CreatedAt], [a].[Email], [a].[EmailConfirmed], [a].[EmailVerificationCode], [a].[EmailVerificationCodeExpiry], [a].[IsEmailVerified], [a].[LockoutEnabled], [a].[LockoutEnd], [a].[NormalizedEmail], [a].[NormalizedUserName], [a].[PasswordHash], [a].[PasswordResetCode], [a].[PasswordResetCodeExpiry], [a].[PhoneNumber], [a].[PhoneNumberConfirmed], [a].[ProfileImageUrl], [a].[SecurityStamp], [a].[TwoFactorEnabled], [a].[UpdatedAt], [a].[UserName]
+FROM [AspNetUsers] AS [a]
+WHERE [a].[NormalizedEmail] = @__normalizedEmail_0
+2026-05-07 15:11:15.539 +04:00 [INF] Executed DbCommand (4ms) [Parameters=[@__normalizedRoleName_0='?' (Size = 256)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(2) [a].[Id], [a].[ConcurrencyStamp], [a].[Name], [a].[NormalizedName]
+FROM [AspNetRoles] AS [a]
+WHERE [a].[NormalizedName] = @__normalizedRoleName_0
+2026-05-07 15:11:15.606 +04:00 [INF] Executed DbCommand (7ms) [Parameters=[@__p_0='?' (DbType = Int32), @__p_1='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [a].[UserId], [a].[RoleId]
+FROM [AspNetUserRoles] AS [a]
+WHERE [a].[UserId] = @__p_0 AND [a].[RoleId] = @__p_1
+2026-05-07 15:11:15.627 +04:00 [INF] Executed DbCommand (1ms) [Parameters=[@__normalizedRoleName_0='?' (Size = 256)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(2) [a].[Id], [a].[ConcurrencyStamp], [a].[Name], [a].[NormalizedName]
+FROM [AspNetRoles] AS [a]
+WHERE [a].[NormalizedName] = @__normalizedRoleName_0
+2026-05-07 15:11:15.670 +04:00 [INF] Executed DbCommand (1ms) [Parameters=[@__normalizedUserName_0='?' (Size = 256)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [a].[Id], [a].[AccessFailedCount], [a].[ConcurrencyStamp], [a].[CreatedAt], [a].[Email], [a].[EmailConfirmed], [a].[EmailVerificationCode], [a].[EmailVerificationCodeExpiry], [a].[IsEmailVerified], [a].[LockoutEnabled], [a].[LockoutEnd], [a].[NormalizedEmail], [a].[NormalizedUserName], [a].[PasswordHash], [a].[PasswordResetCode], [a].[PasswordResetCodeExpiry], [a].[PhoneNumber], [a].[PhoneNumberConfirmed], [a].[ProfileImageUrl], [a].[SecurityStamp], [a].[TwoFactorEnabled], [a].[UpdatedAt], [a].[UserName]
+FROM [AspNetUsers] AS [a]
+WHERE [a].[NormalizedUserName] = @__normalizedUserName_0
+2026-05-07 15:11:15.773 +04:00 [INF] Executed DbCommand (20ms) [Parameters=[@p0='?' (DbType = Int32), @p1='?' (DbType = Int32), @p24='?' (DbType = Int32), @p2='?' (DbType = Int32), @p3='?' (Size = 4000), @p25='?' (Size = 4000), @p4='?' (DbType = DateTime2), @p5='?' (Size = 256), @p6='?' (DbType = Boolean), @p7='?' (Size = 4000), @p8='?' (DbType = DateTime2), @p9='?' (DbType = Boolean), @p10='?' (DbType = Boolean), @p11='?' (DbType = DateTimeOffset), @p12='?' (Size = 256), @p13='?' (Size = 256), @p14='?' (Size = 4000), @p15='?' (Size = 4000), @p16='?' (DbType = DateTime2), @p17='?' (Size = 4000), @p18='?' (DbType = Boolean), @p19='?' (Size = 4000), @p20='?' (Size = 4000), @p21='?' (DbType = Boolean), @p22='?' (DbType = DateTime2), @p23='?' (Size = 256)], CommandType='"Text"', CommandTimeout='30']
+SET NOCOUNT ON;
+INSERT INTO [AspNetUserRoles] ([RoleId], [UserId])
+VALUES (@p0, @p1);
+UPDATE [AspNetUsers] SET [AccessFailedCount] = @p2, [ConcurrencyStamp] = @p3, [CreatedAt] = @p4, [Email] = @p5, [EmailConfirmed] = @p6, [EmailVerificationCode] = @p7, [EmailVerificationCodeExpiry] = @p8, [IsEmailVerified] = @p9, [LockoutEnabled] = @p10, [LockoutEnd] = @p11, [NormalizedEmail] = @p12, [NormalizedUserName] = @p13, [PasswordHash] = @p14, [PasswordResetCode] = @p15, [PasswordResetCodeExpiry] = @p16, [PhoneNumber] = @p17, [PhoneNumberConfirmed] = @p18, [ProfileImageUrl] = @p19, [SecurityStamp] = @p20, [TwoFactorEnabled] = @p21, [UpdatedAt] = @p22, [UserName] = @p23
+OUTPUT 1
+WHERE [Id] = @p24 AND [ConcurrencyStamp] = @p25;
+2026-05-07 15:11:16.618 +04:00 [INF] Executed action NrAcademyy.Controllers.AuthController.Register (NrAcademyy) in 1989.5673ms
+2026-05-07 15:11:16.624 +04:00 [INF] Executed endpoint 'NrAcademyy.Controllers.AuthController.Register (NrAcademyy)'
+2026-05-07 15:11:17.336 +04:00 [ERR] HTTP POST /api/Auth/Register responded 502 in 2805.2506 ms
+2026-05-07 15:11:17.360 +04:00 [INF] Request finished HTTP/2 POST https://localhost:7036/api/Auth/Register - 502 null application/json 2846.6694ms
+2026-05-07 15:13:28.406 +04:00 [INF] Request starting HTTP/2 GET https://localhost:7036/swagger/index.html - null null
+2026-05-07 15:13:28.422 +04:00 [INF] HTTP GET /swagger/index.html responded 200 in 4.2858 ms
+2026-05-07 15:13:28.426 +04:00 [INF] Request finished HTTP/2 GET https://localhost:7036/swagger/index.html - 200 null text/html;charset=utf-8 20.4996ms
+2026-05-07 15:13:28.451 +04:00 [INF] Request starting HTTP/2 GET https://localhost:7036/_framework/aspnetcore-browser-refresh.js - null null
+2026-05-07 15:13:28.451 +04:00 [INF] Request starting HTTP/2 GET https://localhost:7036/_vs/browserLink - null null
+2026-05-07 15:13:28.464 +04:00 [INF] Request finished HTTP/2 GET https://localhost:7036/_framework/aspnetcore-browser-refresh.js - 200 14925 application/javascript; charset=utf-8 13.2542ms
+2026-05-07 15:13:28.492 +04:00 [INF] Request finished HTTP/2 GET https://localhost:7036/_vs/browserLink - 200 null text/javascript; charset=UTF-8 40.999ms
+2026-05-07 15:13:28.625 +04:00 [INF] Request starting HTTP/2 GET https://localhost:7036/swagger/v1/swagger.json - null null
+2026-05-07 15:13:28.667 +04:00 [INF] HTTP GET /swagger/v1/swagger.json responded 200 in 38.2505 ms
+2026-05-07 15:13:28.671 +04:00 [INF] Request finished HTTP/2 GET https://localhost:7036/swagger/v1/swagger.json - 200 null application/json;charset=utf-8 46.827ms
+2026-05-07 15:13:47.178 +04:00 [INF] Request starting HTTP/2 POST https://localhost:7036/api/Auth/Register - application/json 189
+2026-05-07 15:13:47.191 +04:00 [INF] Executing endpoint 'NrAcademyy.Controllers.AuthController.Register (NrAcademyy)'
+2026-05-07 15:13:47.195 +04:00 [INF] Route matched with {action = "Register", controller = "Auth"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Register(NrAcademyBL.DTOs.AuthDTO.RegisterDTO) on controller NrAcademyy.Controllers.AuthController (NrAcademyy).
+2026-05-07 15:13:47.246 +04:00 [INF] Executed DbCommand (1ms) [Parameters=[@__ToLower_0='?' (Size = 256)], CommandType='"Text"', CommandTimeout='30']
+SELECT CASE
+    WHEN EXISTS (
+        SELECT 1
+        FROM [AspNetUsers] AS [a]
+        WHERE LOWER([a].[Email]) = @__ToLower_0) THEN CAST(1 AS bit)
+    ELSE CAST(0 AS bit)
+END
+2026-05-07 15:13:47.257 +04:00 [INF] Executed action NrAcademyy.Controllers.AuthController.Register (NrAcademyy) in 55.6604ms
+2026-05-07 15:13:47.266 +04:00 [INF] Executed endpoint 'NrAcademyy.Controllers.AuthController.Register (NrAcademyy)'
+2026-05-07 15:13:47.273 +04:00 [ERR] HTTP POST /api/Auth/Register responded 500 in 84.6280 ms
+2026-05-07 15:13:47.286 +04:00 [INF] Request finished HTTP/2 POST https://localhost:7036/api/Auth/Register - 500 null application/json 107.455ms
+2026-05-07 15:13:58.245 +04:00 [INF] Request starting HTTP/2 POST https://localhost:7036/api/Auth/Register - application/json 190
+2026-05-07 15:13:58.281 +04:00 [INF] Executing endpoint 'NrAcademyy.Controllers.AuthController.Register (NrAcademyy)'
+2026-05-07 15:13:58.284 +04:00 [INF] Route matched with {action = "Register", controller = "Auth"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Register(NrAcademyBL.DTOs.AuthDTO.RegisterDTO) on controller NrAcademyy.Controllers.AuthController (NrAcademyy).
+2026-05-07 15:13:58.303 +04:00 [INF] Executed DbCommand (1ms) [Parameters=[@__ToLower_0='?' (Size = 256)], CommandType='"Text"', CommandTimeout='30']
+SELECT CASE
+    WHEN EXISTS (
+        SELECT 1
+        FROM [AspNetUsers] AS [a]
+        WHERE LOWER([a].[Email]) = @__ToLower_0) THEN CAST(1 AS bit)
+    ELSE CAST(0 AS bit)
+END
+2026-05-07 15:13:58.454 +04:00 [INF] Executed DbCommand (1ms) [Parameters=[@__normalizedUserName_0='?' (Size = 256)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [a].[Id], [a].[AccessFailedCount], [a].[ConcurrencyStamp], [a].[CreatedAt], [a].[Email], [a].[EmailConfirmed], [a].[EmailVerificationCode], [a].[EmailVerificationCodeExpiry], [a].[IsEmailVerified], [a].[LockoutEnabled], [a].[LockoutEnd], [a].[NormalizedEmail], [a].[NormalizedUserName], [a].[PasswordHash], [a].[PasswordResetCode], [a].[PasswordResetCodeExpiry], [a].[PhoneNumber], [a].[PhoneNumberConfirmed], [a].[ProfileImageUrl], [a].[SecurityStamp], [a].[TwoFactorEnabled], [a].[UpdatedAt], [a].[UserName]
+FROM [AspNetUsers] AS [a]
+WHERE [a].[NormalizedUserName] = @__normalizedUserName_0
+2026-05-07 15:13:58.469 +04:00 [INF] Executed DbCommand (3ms) [Parameters=[@p0='?' (DbType = Int32), @p1='?' (Size = 4000), @p2='?' (DbType = DateTime2), @p3='?' (Size = 256), @p4='?' (DbType = Boolean), @p5='?' (Size = 4000), @p6='?' (DbType = DateTime2), @p7='?' (DbType = Boolean), @p8='?' (DbType = Boolean), @p9='?' (DbType = DateTimeOffset), @p10='?' (Size = 256), @p11='?' (Size = 256), @p12='?' (Size = 4000), @p13='?' (Size = 4000), @p14='?' (DbType = DateTime2), @p15='?' (Size = 4000), @p16='?' (DbType = Boolean), @p17='?' (Size = 4000), @p18='?' (Size = 4000), @p19='?' (DbType = Boolean), @p20='?' (DbType = DateTime2), @p21='?' (Size = 256)], CommandType='"Text"', CommandTimeout='30']
+SET IMPLICIT_TRANSACTIONS OFF;
+SET NOCOUNT ON;
+INSERT INTO [AspNetUsers] ([AccessFailedCount], [ConcurrencyStamp], [CreatedAt], [Email], [EmailConfirmed], [EmailVerificationCode], [EmailVerificationCodeExpiry], [IsEmailVerified], [LockoutEnabled], [LockoutEnd], [NormalizedEmail], [NormalizedUserName], [PasswordHash], [PasswordResetCode], [PasswordResetCodeExpiry], [PhoneNumber], [PhoneNumberConfirmed], [ProfileImageUrl], [SecurityStamp], [TwoFactorEnabled], [UpdatedAt], [UserName])
+OUTPUT INSERTED.[Id]
+VALUES (@p0, @p1, @p2, @p3, @p4, @p5, @p6, @p7, @p8, @p9, @p10, @p11, @p12, @p13, @p14, @p15, @p16, @p17, @p18, @p19, @p20, @p21);
+2026-05-07 15:13:58.480 +04:00 [INF] Executed DbCommand (1ms) [Parameters=[@__normalizedEmail_0='?' (Size = 256)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(2) [a].[Id], [a].[AccessFailedCount], [a].[ConcurrencyStamp], [a].[CreatedAt], [a].[Email], [a].[EmailConfirmed], [a].[EmailVerificationCode], [a].[EmailVerificationCodeExpiry], [a].[IsEmailVerified], [a].[LockoutEnabled], [a].[LockoutEnd], [a].[NormalizedEmail], [a].[NormalizedUserName], [a].[PasswordHash], [a].[PasswordResetCode], [a].[PasswordResetCodeExpiry], [a].[PhoneNumber], [a].[PhoneNumberConfirmed], [a].[ProfileImageUrl], [a].[SecurityStamp], [a].[TwoFactorEnabled], [a].[UpdatedAt], [a].[UserName]
+FROM [AspNetUsers] AS [a]
+WHERE [a].[NormalizedEmail] = @__normalizedEmail_0
+2026-05-07 15:13:58.493 +04:00 [INF] Executed DbCommand (1ms) [Parameters=[@__normalizedRoleName_0='?' (Size = 256)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(2) [a].[Id], [a].[ConcurrencyStamp], [a].[Name], [a].[NormalizedName]
+FROM [AspNetRoles] AS [a]
+WHERE [a].[NormalizedName] = @__normalizedRoleName_0
+2026-05-07 15:13:58.505 +04:00 [INF] Executed DbCommand (1ms) [Parameters=[@__p_0='?' (DbType = Int32), @__p_1='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [a].[UserId], [a].[RoleId]
+FROM [AspNetUserRoles] AS [a]
+WHERE [a].[UserId] = @__p_0 AND [a].[RoleId] = @__p_1
+2026-05-07 15:13:58.518 +04:00 [INF] Executed DbCommand (1ms) [Parameters=[@__normalizedRoleName_0='?' (Size = 256)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(2) [a].[Id], [a].[ConcurrencyStamp], [a].[Name], [a].[NormalizedName]
+FROM [AspNetRoles] AS [a]
+WHERE [a].[NormalizedName] = @__normalizedRoleName_0
+2026-05-07 15:13:58.530 +04:00 [INF] Executed DbCommand (1ms) [Parameters=[@__normalizedUserName_0='?' (Size = 256)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [a].[Id], [a].[AccessFailedCount], [a].[ConcurrencyStamp], [a].[CreatedAt], [a].[Email], [a].[EmailConfirmed], [a].[EmailVerificationCode], [a].[EmailVerificationCodeExpiry], [a].[IsEmailVerified], [a].[LockoutEnabled], [a].[LockoutEnd], [a].[NormalizedEmail], [a].[NormalizedUserName], [a].[PasswordHash], [a].[PasswordResetCode], [a].[PasswordResetCodeExpiry], [a].[PhoneNumber], [a].[PhoneNumberConfirmed], [a].[ProfileImageUrl], [a].[SecurityStamp], [a].[TwoFactorEnabled], [a].[UpdatedAt], [a].[UserName]
+FROM [AspNetUsers] AS [a]
+WHERE [a].[NormalizedUserName] = @__normalizedUserName_0
+2026-05-07 15:13:58.544 +04:00 [INF] Executed DbCommand (1ms) [Parameters=[@p0='?' (DbType = Int32), @p1='?' (DbType = Int32), @p24='?' (DbType = Int32), @p2='?' (DbType = Int32), @p3='?' (Size = 4000), @p25='?' (Size = 4000), @p4='?' (DbType = DateTime2), @p5='?' (Size = 256), @p6='?' (DbType = Boolean), @p7='?' (Size = 4000), @p8='?' (DbType = DateTime2), @p9='?' (DbType = Boolean), @p10='?' (DbType = Boolean), @p11='?' (DbType = DateTimeOffset), @p12='?' (Size = 256), @p13='?' (Size = 256), @p14='?' (Size = 4000), @p15='?' (Size = 4000), @p16='?' (DbType = DateTime2), @p17='?' (Size = 4000), @p18='?' (DbType = Boolean), @p19='?' (Size = 4000), @p20='?' (Size = 4000), @p21='?' (DbType = Boolean), @p22='?' (DbType = DateTime2), @p23='?' (Size = 256)], CommandType='"Text"', CommandTimeout='30']
+SET NOCOUNT ON;
+INSERT INTO [AspNetUserRoles] ([RoleId], [UserId])
+VALUES (@p0, @p1);
+UPDATE [AspNetUsers] SET [AccessFailedCount] = @p2, [ConcurrencyStamp] = @p3, [CreatedAt] = @p4, [Email] = @p5, [EmailConfirmed] = @p6, [EmailVerificationCode] = @p7, [EmailVerificationCodeExpiry] = @p8, [IsEmailVerified] = @p9, [LockoutEnabled] = @p10, [LockoutEnd] = @p11, [NormalizedEmail] = @p12, [NormalizedUserName] = @p13, [PasswordHash] = @p14, [PasswordResetCode] = @p15, [PasswordResetCodeExpiry] = @p16, [PhoneNumber] = @p17, [PhoneNumberConfirmed] = @p18, [ProfileImageUrl] = @p19, [SecurityStamp] = @p20, [TwoFactorEnabled] = @p21, [UpdatedAt] = @p22, [UserName] = @p23
+OUTPUT 1
+WHERE [Id] = @p24 AND [ConcurrencyStamp] = @p25;
+2026-05-07 15:13:58.555 +04:00 [INF] Executed action NrAcademyy.Controllers.AuthController.Register (NrAcademyy) in 260.3941ms
+2026-05-07 15:13:58.559 +04:00 [INF] Executed endpoint 'NrAcademyy.Controllers.AuthController.Register (NrAcademyy)'
+2026-05-07 15:13:58.565 +04:00 [ERR] HTTP POST /api/Auth/Register responded 502 in 312.3860 ms
+2026-05-07 15:13:58.570 +04:00 [INF] Request finished HTTP/2 POST https://localhost:7036/api/Auth/Register - 502 null application/json 325.1541ms
+2026-05-07 15:16:22.507 +04:00 [INF] NrAcademy tətbiqi başladılır...
+2026-05-07 15:16:22.876 +04:00 [INF] User profile is available. Using 'C:\Users\ikinci.el.noutbuklar\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2026-05-07 15:16:24.037 +04:00 [INF] Now listening on: https://localhost:7036
+2026-05-07 15:16:24.039 +04:00 [INF] Now listening on: http://localhost:5287
+2026-05-07 15:16:24.076 +04:00 [INF] Executed DbCommand (51ms) [Parameters=[@__normalizedName_0='?' (Size = 256)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [a].[Id], [a].[ConcurrencyStamp], [a].[Name], [a].[NormalizedName]
+FROM [AspNetRoles] AS [a]
+WHERE [a].[NormalizedName] = @__normalizedName_0
+2026-05-07 15:16:24.089 +04:00 [INF] Application started. Press Ctrl+C to shut down.
+2026-05-07 15:16:24.091 +04:00 [INF] Hosting environment: Development
+2026-05-07 15:16:24.092 +04:00 [INF] Content root path: C:\NrAcademy\NrAcademyy\NrAcademyy
+2026-05-07 15:16:24.152 +04:00 [INF] Executed DbCommand (2ms) [Parameters=[@__normalizedName_0='?' (Size = 256)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [a].[Id], [a].[ConcurrencyStamp], [a].[Name], [a].[NormalizedName]
+FROM [AspNetRoles] AS [a]
+WHERE [a].[NormalizedName] = @__normalizedName_0
+2026-05-07 15:16:24.157 +04:00 [INF] Executed DbCommand (1ms) [Parameters=[@__normalizedName_0='?' (Size = 256)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [a].[Id], [a].[ConcurrencyStamp], [a].[Name], [a].[NormalizedName]
+FROM [AspNetRoles] AS [a]
+WHERE [a].[NormalizedName] = @__normalizedName_0
+2026-05-07 15:16:24.161 +04:00 [INF] Executed DbCommand (1ms) [Parameters=[@__normalizedName_0='?' (Size = 256)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [a].[Id], [a].[ConcurrencyStamp], [a].[Name], [a].[NormalizedName]
+FROM [AspNetRoles] AS [a]
+WHERE [a].[NormalizedName] = @__normalizedName_0
+2026-05-07 15:16:24.181 +04:00 [INF] Executed DbCommand (7ms) [Parameters=[@__normalizedEmail_0='?' (Size = 256)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(2) [a].[Id], [a].[AccessFailedCount], [a].[ConcurrencyStamp], [a].[CreatedAt], [a].[Email], [a].[EmailConfirmed], [a].[EmailVerificationCode], [a].[EmailVerificationCodeExpiry], [a].[IsEmailVerified], [a].[LockoutEnabled], [a].[LockoutEnd], [a].[NormalizedEmail], [a].[NormalizedUserName], [a].[PasswordHash], [a].[PasswordResetCode], [a].[PasswordResetCodeExpiry], [a].[PhoneNumber], [a].[PhoneNumberConfirmed], [a].[ProfileImageUrl], [a].[SecurityStamp], [a].[TwoFactorEnabled], [a].[UpdatedAt], [a].[UserName]
+FROM [AspNetUsers] AS [a]
+WHERE [a].[NormalizedEmail] = @__normalizedEmail_0
+2026-05-07 15:16:24.609 +04:00 [INF] Request starting HTTP/2 GET https://localhost:7036/swagger/index.html - null null
+2026-05-07 15:16:24.777 +04:00 [INF] HTTP GET /swagger/index.html responded 200 in 66.4185 ms
+2026-05-07 15:16:24.790 +04:00 [INF] Request finished HTTP/2 GET https://localhost:7036/swagger/index.html - 200 null text/html;charset=utf-8 181.2341ms
+2026-05-07 15:16:24.791 +04:00 [INF] Request starting HTTP/2 GET https://localhost:7036/_framework/aspnetcore-browser-refresh.js - null null
+2026-05-07 15:16:24.791 +04:00 [INF] Request starting HTTP/2 GET https://localhost:7036/_vs/browserLink - null null
+2026-05-07 15:16:24.807 +04:00 [INF] Request finished HTTP/2 GET https://localhost:7036/_framework/aspnetcore-browser-refresh.js - 200 14925 application/javascript; charset=utf-8 15.6397ms
+2026-05-07 15:16:24.842 +04:00 [INF] Request finished HTTP/2 GET https://localhost:7036/_vs/browserLink - 200 null text/javascript; charset=UTF-8 51.0229ms
+2026-05-07 15:16:24.942 +04:00 [INF] Request starting HTTP/2 GET https://localhost:7036/swagger/v1/swagger.json - null null
+2026-05-07 15:16:24.975 +04:00 [INF] HTTP GET /swagger/v1/swagger.json responded 200 in 28.8985 ms
+2026-05-07 15:16:24.979 +04:00 [INF] Request finished HTTP/2 GET https://localhost:7036/swagger/v1/swagger.json - 200 null application/json;charset=utf-8 36.4694ms
+2026-05-07 15:16:37.331 +04:00 [INF] Request starting HTTP/2 POST https://localhost:7036/api/Auth/Register - application/json 189
+2026-05-07 15:16:37.393 +04:00 [INF] Executing endpoint 'NrAcademyy.Controllers.AuthController.Register (NrAcademyy)'
+2026-05-07 15:16:37.435 +04:00 [INF] Route matched with {action = "Register", controller = "Auth"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Register(NrAcademyBL.DTOs.AuthDTO.RegisterDTO) on controller NrAcademyy.Controllers.AuthController (NrAcademyy).
+2026-05-07 15:16:37.884 +04:00 [INF] Executed DbCommand (5ms) [Parameters=[@__ToLower_0='?' (Size = 256)], CommandType='"Text"', CommandTimeout='30']
+SELECT CASE
+    WHEN EXISTS (
+        SELECT 1
+        FROM [AspNetUsers] AS [a]
+        WHERE LOWER([a].[Email]) = @__ToLower_0) THEN CAST(1 AS bit)
+    ELSE CAST(0 AS bit)
+END
+2026-05-07 15:16:37.907 +04:00 [INF] Executed action NrAcademyy.Controllers.AuthController.Register (NrAcademyy) in 451.985ms
+2026-05-07 15:16:37.915 +04:00 [INF] Executed endpoint 'NrAcademyy.Controllers.AuthController.Register (NrAcademyy)'
+2026-05-07 15:16:38.027 +04:00 [ERR] HTTP POST /api/Auth/Register responded 500 in 678.2066 ms
+2026-05-07 15:16:38.045 +04:00 [INF] Request finished HTTP/2 POST https://localhost:7036/api/Auth/Register - 500 null application/json 713.789ms
+2026-05-07 15:16:46.347 +04:00 [INF] Request starting HTTP/2 POST https://localhost:7036/api/Auth/Register - application/json 192
+2026-05-07 15:16:46.359 +04:00 [INF] Executing endpoint 'NrAcademyy.Controllers.AuthController.Register (NrAcademyy)'
+2026-05-07 15:16:46.363 +04:00 [INF] Route matched with {action = "Register", controller = "Auth"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Register(NrAcademyBL.DTOs.AuthDTO.RegisterDTO) on controller NrAcademyy.Controllers.AuthController (NrAcademyy).
+2026-05-07 15:16:46.418 +04:00 [INF] Executed DbCommand (1ms) [Parameters=[@__ToLower_0='?' (Size = 256)], CommandType='"Text"', CommandTimeout='30']
+SELECT CASE
+    WHEN EXISTS (
+        SELECT 1
+        FROM [AspNetUsers] AS [a]
+        WHERE LOWER([a].[Email]) = @__ToLower_0) THEN CAST(1 AS bit)
+    ELSE CAST(0 AS bit)
+END
+2026-05-07 15:16:46.611 +04:00 [INF] Executed DbCommand (6ms) [Parameters=[@__normalizedUserName_0='?' (Size = 256)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [a].[Id], [a].[AccessFailedCount], [a].[ConcurrencyStamp], [a].[CreatedAt], [a].[Email], [a].[EmailConfirmed], [a].[EmailVerificationCode], [a].[EmailVerificationCodeExpiry], [a].[IsEmailVerified], [a].[LockoutEnabled], [a].[LockoutEnd], [a].[NormalizedEmail], [a].[NormalizedUserName], [a].[PasswordHash], [a].[PasswordResetCode], [a].[PasswordResetCodeExpiry], [a].[PhoneNumber], [a].[PhoneNumberConfirmed], [a].[ProfileImageUrl], [a].[SecurityStamp], [a].[TwoFactorEnabled], [a].[UpdatedAt], [a].[UserName]
+FROM [AspNetUsers] AS [a]
+WHERE [a].[NormalizedUserName] = @__normalizedUserName_0
+2026-05-07 15:16:46.840 +04:00 [INF] Executed DbCommand (9ms) [Parameters=[@p0='?' (DbType = Int32), @p1='?' (Size = 4000), @p2='?' (DbType = DateTime2), @p3='?' (Size = 256), @p4='?' (DbType = Boolean), @p5='?' (Size = 4000), @p6='?' (DbType = DateTime2), @p7='?' (DbType = Boolean), @p8='?' (DbType = Boolean), @p9='?' (DbType = DateTimeOffset), @p10='?' (Size = 256), @p11='?' (Size = 256), @p12='?' (Size = 4000), @p13='?' (Size = 4000), @p14='?' (DbType = DateTime2), @p15='?' (Size = 4000), @p16='?' (DbType = Boolean), @p17='?' (Size = 4000), @p18='?' (Size = 4000), @p19='?' (DbType = Boolean), @p20='?' (DbType = DateTime2), @p21='?' (Size = 256)], CommandType='"Text"', CommandTimeout='30']
+SET IMPLICIT_TRANSACTIONS OFF;
+SET NOCOUNT ON;
+INSERT INTO [AspNetUsers] ([AccessFailedCount], [ConcurrencyStamp], [CreatedAt], [Email], [EmailConfirmed], [EmailVerificationCode], [EmailVerificationCodeExpiry], [IsEmailVerified], [LockoutEnabled], [LockoutEnd], [NormalizedEmail], [NormalizedUserName], [PasswordHash], [PasswordResetCode], [PasswordResetCodeExpiry], [PhoneNumber], [PhoneNumberConfirmed], [ProfileImageUrl], [SecurityStamp], [TwoFactorEnabled], [UpdatedAt], [UserName])
+OUTPUT INSERTED.[Id]
+VALUES (@p0, @p1, @p2, @p3, @p4, @p5, @p6, @p7, @p8, @p9, @p10, @p11, @p12, @p13, @p14, @p15, @p16, @p17, @p18, @p19, @p20, @p21);
+2026-05-07 15:16:46.892 +04:00 [INF] Executed DbCommand (1ms) [Parameters=[@__normalizedEmail_0='?' (Size = 256)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(2) [a].[Id], [a].[AccessFailedCount], [a].[ConcurrencyStamp], [a].[CreatedAt], [a].[Email], [a].[EmailConfirmed], [a].[EmailVerificationCode], [a].[EmailVerificationCodeExpiry], [a].[IsEmailVerified], [a].[LockoutEnabled], [a].[LockoutEnd], [a].[NormalizedEmail], [a].[NormalizedUserName], [a].[PasswordHash], [a].[PasswordResetCode], [a].[PasswordResetCodeExpiry], [a].[PhoneNumber], [a].[PhoneNumberConfirmed], [a].[ProfileImageUrl], [a].[SecurityStamp], [a].[TwoFactorEnabled], [a].[UpdatedAt], [a].[UserName]
+FROM [AspNetUsers] AS [a]
+WHERE [a].[NormalizedEmail] = @__normalizedEmail_0
+2026-05-07 15:16:46.919 +04:00 [INF] Executed DbCommand (5ms) [Parameters=[@__normalizedRoleName_0='?' (Size = 256)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(2) [a].[Id], [a].[ConcurrencyStamp], [a].[Name], [a].[NormalizedName]
+FROM [AspNetRoles] AS [a]
+WHERE [a].[NormalizedName] = @__normalizedRoleName_0
+2026-05-07 15:16:46.972 +04:00 [INF] Executed DbCommand (6ms) [Parameters=[@__p_0='?' (DbType = Int32), @__p_1='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [a].[UserId], [a].[RoleId]
+FROM [AspNetUserRoles] AS [a]
+WHERE [a].[UserId] = @__p_0 AND [a].[RoleId] = @__p_1
+2026-05-07 15:16:46.987 +04:00 [INF] Executed DbCommand (1ms) [Parameters=[@__normalizedRoleName_0='?' (Size = 256)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(2) [a].[Id], [a].[ConcurrencyStamp], [a].[Name], [a].[NormalizedName]
+FROM [AspNetRoles] AS [a]
+WHERE [a].[NormalizedName] = @__normalizedRoleName_0
+2026-05-07 15:16:47.017 +04:00 [INF] Executed DbCommand (1ms) [Parameters=[@__normalizedUserName_0='?' (Size = 256)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [a].[Id], [a].[AccessFailedCount], [a].[ConcurrencyStamp], [a].[CreatedAt], [a].[Email], [a].[EmailConfirmed], [a].[EmailVerificationCode], [a].[EmailVerificationCodeExpiry], [a].[IsEmailVerified], [a].[LockoutEnabled], [a].[LockoutEnd], [a].[NormalizedEmail], [a].[NormalizedUserName], [a].[PasswordHash], [a].[PasswordResetCode], [a].[PasswordResetCodeExpiry], [a].[PhoneNumber], [a].[PhoneNumberConfirmed], [a].[ProfileImageUrl], [a].[SecurityStamp], [a].[TwoFactorEnabled], [a].[UpdatedAt], [a].[UserName]
+FROM [AspNetUsers] AS [a]
+WHERE [a].[NormalizedUserName] = @__normalizedUserName_0
+2026-05-07 15:16:47.114 +04:00 [INF] Executed DbCommand (18ms) [Parameters=[@p0='?' (DbType = Int32), @p1='?' (DbType = Int32), @p24='?' (DbType = Int32), @p2='?' (DbType = Int32), @p3='?' (Size = 4000), @p25='?' (Size = 4000), @p4='?' (DbType = DateTime2), @p5='?' (Size = 256), @p6='?' (DbType = Boolean), @p7='?' (Size = 4000), @p8='?' (DbType = DateTime2), @p9='?' (DbType = Boolean), @p10='?' (DbType = Boolean), @p11='?' (DbType = DateTimeOffset), @p12='?' (Size = 256), @p13='?' (Size = 256), @p14='?' (Size = 4000), @p15='?' (Size = 4000), @p16='?' (DbType = DateTime2), @p17='?' (Size = 4000), @p18='?' (DbType = Boolean), @p19='?' (Size = 4000), @p20='?' (Size = 4000), @p21='?' (DbType = Boolean), @p22='?' (DbType = DateTime2), @p23='?' (Size = 256)], CommandType='"Text"', CommandTimeout='30']
+SET NOCOUNT ON;
+INSERT INTO [AspNetUserRoles] ([RoleId], [UserId])
+VALUES (@p0, @p1);
+UPDATE [AspNetUsers] SET [AccessFailedCount] = @p2, [ConcurrencyStamp] = @p3, [CreatedAt] = @p4, [Email] = @p5, [EmailConfirmed] = @p6, [EmailVerificationCode] = @p7, [EmailVerificationCodeExpiry] = @p8, [IsEmailVerified] = @p9, [LockoutEnabled] = @p10, [LockoutEnd] = @p11, [NormalizedEmail] = @p12, [NormalizedUserName] = @p13, [PasswordHash] = @p14, [PasswordResetCode] = @p15, [PasswordResetCodeExpiry] = @p16, [PhoneNumber] = @p17, [PhoneNumberConfirmed] = @p18, [ProfileImageUrl] = @p19, [SecurityStamp] = @p20, [TwoFactorEnabled] = @p21, [UpdatedAt] = @p22, [UserName] = @p23
+OUTPUT 1
+WHERE [Id] = @p24 AND [ConcurrencyStamp] = @p25;
+2026-05-07 15:16:48.662 +04:00 [INF] Executed action NrAcademyy.Controllers.AuthController.Register (NrAcademyy) in 2287.8412ms
+2026-05-07 15:16:48.669 +04:00 [INF] Executed endpoint 'NrAcademyy.Controllers.AuthController.Register (NrAcademyy)'
+2026-05-07 15:16:48.678 +04:00 [ERR] HTTP POST /api/Auth/Register responded 502 in 2321.3255 ms
+2026-05-07 15:16:48.693 +04:00 [INF] Request finished HTTP/2 POST https://localhost:7036/api/Auth/Register - 502 null application/json 2346.304ms
+2026-05-07 15:22:54.105 +04:00 [INF] Request starting HTTP/2 GET https://localhost:7036/swagger/index.html - null null
+2026-05-07 15:22:54.120 +04:00 [INF] HTTP GET /swagger/index.html responded 200 in 3.2784 ms
+2026-05-07 15:22:54.124 +04:00 [INF] Request finished HTTP/2 GET https://localhost:7036/swagger/index.html - 200 null text/html;charset=utf-8 19.3438ms
+2026-05-07 15:22:54.146 +04:00 [INF] Request starting HTTP/2 GET https://localhost:7036/_framework/aspnetcore-browser-refresh.js - null null
+2026-05-07 15:22:54.146 +04:00 [INF] Request starting HTTP/2 GET https://localhost:7036/_vs/browserLink - null null
+2026-05-07 15:22:54.157 +04:00 [INF] Request finished HTTP/2 GET https://localhost:7036/_framework/aspnetcore-browser-refresh.js - 200 14925 application/javascript; charset=utf-8 10.8211ms
+2026-05-07 15:22:54.177 +04:00 [INF] Request finished HTTP/2 GET https://localhost:7036/_vs/browserLink - 200 null text/javascript; charset=UTF-8 30.4466ms
+2026-05-07 15:22:54.304 +04:00 [INF] Request starting HTTP/2 GET https://localhost:7036/swagger/v1/swagger.json - null null
+2026-05-07 15:22:54.343 +04:00 [INF] HTTP GET /swagger/v1/swagger.json responded 200 in 34.5040 ms
+2026-05-07 15:22:54.348 +04:00 [INF] Request finished HTTP/2 GET https://localhost:7036/swagger/v1/swagger.json - 200 null application/json;charset=utf-8 43.3226ms
+2026-05-07 15:23:11.915 +04:00 [INF] Request starting HTTP/2 POST https://localhost:7036/api/Auth/Register - application/json 191
+2026-05-07 15:23:11.923 +04:00 [INF] Executing endpoint 'NrAcademyy.Controllers.AuthController.Register (NrAcademyy)'
+2026-05-07 15:23:11.925 +04:00 [INF] Route matched with {action = "Register", controller = "Auth"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Register(NrAcademyBL.DTOs.AuthDTO.RegisterDTO) on controller NrAcademyy.Controllers.AuthController (NrAcademyy).
+2026-05-07 15:23:12.038 +04:00 [INF] Executed DbCommand (32ms) [Parameters=[@__ToLower_0='?' (Size = 256)], CommandType='"Text"', CommandTimeout='30']
+SELECT CASE
+    WHEN EXISTS (
+        SELECT 1
+        FROM [AspNetUsers] AS [a]
+        WHERE LOWER([a].[Email]) = @__ToLower_0) THEN CAST(1 AS bit)
+    ELSE CAST(0 AS bit)
+END
+2026-05-07 15:23:12.191 +04:00 [INF] Executed DbCommand (5ms) [Parameters=[@__normalizedUserName_0='?' (Size = 256)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [a].[Id], [a].[AccessFailedCount], [a].[ConcurrencyStamp], [a].[CreatedAt], [a].[Email], [a].[EmailConfirmed], [a].[EmailVerificationCode], [a].[EmailVerificationCodeExpiry], [a].[IsEmailVerified], [a].[LockoutEnabled], [a].[LockoutEnd], [a].[NormalizedEmail], [a].[NormalizedUserName], [a].[PasswordHash], [a].[PasswordResetCode], [a].[PasswordResetCodeExpiry], [a].[PhoneNumber], [a].[PhoneNumberConfirmed], [a].[ProfileImageUrl], [a].[SecurityStamp], [a].[TwoFactorEnabled], [a].[UpdatedAt], [a].[UserName]
+FROM [AspNetUsers] AS [a]
+WHERE [a].[NormalizedUserName] = @__normalizedUserName_0
+2026-05-07 15:23:12.213 +04:00 [INF] Executed DbCommand (7ms) [Parameters=[@p0='?' (DbType = Int32), @p1='?' (Size = 4000), @p2='?' (DbType = DateTime2), @p3='?' (Size = 256), @p4='?' (DbType = Boolean), @p5='?' (Size = 4000), @p6='?' (DbType = DateTime2), @p7='?' (DbType = Boolean), @p8='?' (DbType = Boolean), @p9='?' (DbType = DateTimeOffset), @p10='?' (Size = 256), @p11='?' (Size = 256), @p12='?' (Size = 4000), @p13='?' (Size = 4000), @p14='?' (DbType = DateTime2), @p15='?' (Size = 4000), @p16='?' (DbType = Boolean), @p17='?' (Size = 4000), @p18='?' (Size = 4000), @p19='?' (DbType = Boolean), @p20='?' (DbType = DateTime2), @p21='?' (Size = 256)], CommandType='"Text"', CommandTimeout='30']
+SET IMPLICIT_TRANSACTIONS OFF;
+SET NOCOUNT ON;
+INSERT INTO [AspNetUsers] ([AccessFailedCount], [ConcurrencyStamp], [CreatedAt], [Email], [EmailConfirmed], [EmailVerificationCode], [EmailVerificationCodeExpiry], [IsEmailVerified], [LockoutEnabled], [LockoutEnd], [NormalizedEmail], [NormalizedUserName], [PasswordHash], [PasswordResetCode], [PasswordResetCodeExpiry], [PhoneNumber], [PhoneNumberConfirmed], [ProfileImageUrl], [SecurityStamp], [TwoFactorEnabled], [UpdatedAt], [UserName])
+OUTPUT INSERTED.[Id]
+VALUES (@p0, @p1, @p2, @p3, @p4, @p5, @p6, @p7, @p8, @p9, @p10, @p11, @p12, @p13, @p14, @p15, @p16, @p17, @p18, @p19, @p20, @p21);
+2026-05-07 15:23:12.230 +04:00 [INF] Executed DbCommand (5ms) [Parameters=[@__normalizedEmail_0='?' (Size = 256)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(2) [a].[Id], [a].[AccessFailedCount], [a].[ConcurrencyStamp], [a].[CreatedAt], [a].[Email], [a].[EmailConfirmed], [a].[EmailVerificationCode], [a].[EmailVerificationCodeExpiry], [a].[IsEmailVerified], [a].[LockoutEnabled], [a].[LockoutEnd], [a].[NormalizedEmail], [a].[NormalizedUserName], [a].[PasswordHash], [a].[PasswordResetCode], [a].[PasswordResetCodeExpiry], [a].[PhoneNumber], [a].[PhoneNumberConfirmed], [a].[ProfileImageUrl], [a].[SecurityStamp], [a].[TwoFactorEnabled], [a].[UpdatedAt], [a].[UserName]
+FROM [AspNetUsers] AS [a]
+WHERE [a].[NormalizedEmail] = @__normalizedEmail_0
+2026-05-07 15:23:12.251 +04:00 [INF] Executed DbCommand (8ms) [Parameters=[@__normalizedRoleName_0='?' (Size = 256)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(2) [a].[Id], [a].[ConcurrencyStamp], [a].[Name], [a].[NormalizedName]
+FROM [AspNetRoles] AS [a]
+WHERE [a].[NormalizedName] = @__normalizedRoleName_0
+2026-05-07 15:23:12.275 +04:00 [INF] Executed DbCommand (8ms) [Parameters=[@__p_0='?' (DbType = Int32), @__p_1='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [a].[UserId], [a].[RoleId]
+FROM [AspNetUserRoles] AS [a]
+WHERE [a].[UserId] = @__p_0 AND [a].[RoleId] = @__p_1
+2026-05-07 15:23:12.289 +04:00 [INF] Executed DbCommand (1ms) [Parameters=[@__normalizedRoleName_0='?' (Size = 256)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(2) [a].[Id], [a].[ConcurrencyStamp], [a].[Name], [a].[NormalizedName]
+FROM [AspNetRoles] AS [a]
+WHERE [a].[NormalizedName] = @__normalizedRoleName_0
+2026-05-07 15:23:12.305 +04:00 [INF] Executed DbCommand (1ms) [Parameters=[@__normalizedUserName_0='?' (Size = 256)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [a].[Id], [a].[AccessFailedCount], [a].[ConcurrencyStamp], [a].[CreatedAt], [a].[Email], [a].[EmailConfirmed], [a].[EmailVerificationCode], [a].[EmailVerificationCodeExpiry], [a].[IsEmailVerified], [a].[LockoutEnabled], [a].[LockoutEnd], [a].[NormalizedEmail], [a].[NormalizedUserName], [a].[PasswordHash], [a].[PasswordResetCode], [a].[PasswordResetCodeExpiry], [a].[PhoneNumber], [a].[PhoneNumberConfirmed], [a].[ProfileImageUrl], [a].[SecurityStamp], [a].[TwoFactorEnabled], [a].[UpdatedAt], [a].[UserName]
+FROM [AspNetUsers] AS [a]
+WHERE [a].[NormalizedUserName] = @__normalizedUserName_0
+2026-05-07 15:23:12.341 +04:00 [INF] Executed DbCommand (17ms) [Parameters=[@p0='?' (DbType = Int32), @p1='?' (DbType = Int32), @p24='?' (DbType = Int32), @p2='?' (DbType = Int32), @p3='?' (Size = 4000), @p25='?' (Size = 4000), @p4='?' (DbType = DateTime2), @p5='?' (Size = 256), @p6='?' (DbType = Boolean), @p7='?' (Size = 4000), @p8='?' (DbType = DateTime2), @p9='?' (DbType = Boolean), @p10='?' (DbType = Boolean), @p11='?' (DbType = DateTimeOffset), @p12='?' (Size = 256), @p13='?' (Size = 256), @p14='?' (Size = 4000), @p15='?' (Size = 4000), @p16='?' (DbType = DateTime2), @p17='?' (Size = 4000), @p18='?' (DbType = Boolean), @p19='?' (Size = 4000), @p20='?' (Size = 4000), @p21='?' (DbType = Boolean), @p22='?' (DbType = DateTime2), @p23='?' (Size = 256)], CommandType='"Text"', CommandTimeout='30']
+SET NOCOUNT ON;
+INSERT INTO [AspNetUserRoles] ([RoleId], [UserId])
+VALUES (@p0, @p1);
+UPDATE [AspNetUsers] SET [AccessFailedCount] = @p2, [ConcurrencyStamp] = @p3, [CreatedAt] = @p4, [Email] = @p5, [EmailConfirmed] = @p6, [EmailVerificationCode] = @p7, [EmailVerificationCodeExpiry] = @p8, [IsEmailVerified] = @p9, [LockoutEnabled] = @p10, [LockoutEnd] = @p11, [NormalizedEmail] = @p12, [NormalizedUserName] = @p13, [PasswordHash] = @p14, [PasswordResetCode] = @p15, [PasswordResetCodeExpiry] = @p16, [PhoneNumber] = @p17, [PhoneNumberConfirmed] = @p18, [ProfileImageUrl] = @p19, [SecurityStamp] = @p20, [TwoFactorEnabled] = @p21, [UpdatedAt] = @p22, [UserName] = @p23
+OUTPUT 1
+WHERE [Id] = @p24 AND [ConcurrencyStamp] = @p25;
+2026-05-07 15:23:13.995 +04:00 [INF] Executed action NrAcademyy.Controllers.AuthController.Register (NrAcademyy) in 2066.9003ms
+2026-05-07 15:23:14.004 +04:00 [INF] Executed endpoint 'NrAcademyy.Controllers.AuthController.Register (NrAcademyy)'
+2026-05-07 15:23:14.010 +04:00 [ERR] HTTP POST /api/Auth/Register responded 502 in 2090.7283 ms
+2026-05-07 15:23:14.021 +04:00 [INF] Request finished HTTP/2 POST https://localhost:7036/api/Auth/Register - 502 null application/json 2105.9269ms
+2026-05-07 15:24:16.963 +04:00 [INF] Request starting HTTP/2 GET https://localhost:7036/swagger/index.html - null null
+2026-05-07 15:24:16.975 +04:00 [INF] HTTP GET /swagger/index.html responded 200 in 1.0864 ms
+2026-05-07 15:24:16.978 +04:00 [INF] Request finished HTTP/2 GET https://localhost:7036/swagger/index.html - 200 null text/html;charset=utf-8 15.3726ms
+2026-05-07 15:24:17.007 +04:00 [INF] Request starting HTTP/2 GET https://localhost:7036/_framework/aspnetcore-browser-refresh.js - null null
+2026-05-07 15:24:17.008 +04:00 [INF] Request starting HTTP/2 GET https://localhost:7036/_vs/browserLink - null null
+2026-05-07 15:24:17.016 +04:00 [INF] Request finished HTTP/2 GET https://localhost:7036/_framework/aspnetcore-browser-refresh.js - 200 14925 application/javascript; charset=utf-8 9.1511ms
+2026-05-07 15:24:17.029 +04:00 [INF] Request finished HTTP/2 GET https://localhost:7036/_vs/browserLink - 200 null text/javascript; charset=UTF-8 21.9258ms
+2026-05-07 15:24:17.168 +04:00 [INF] Request starting HTTP/2 GET https://localhost:7036/swagger/v1/swagger.json - null null
+2026-05-07 15:24:17.191 +04:00 [INF] HTTP GET /swagger/v1/swagger.json responded 200 in 19.0677 ms
+2026-05-07 15:24:17.194 +04:00 [INF] Request finished HTTP/2 GET https://localhost:7036/swagger/v1/swagger.json - 200 null application/json;charset=utf-8 26.5754ms
+2026-05-07 15:24:36.049 +04:00 [INF] Request starting HTTP/2 POST https://localhost:7036/api/Auth/Register - application/json 191
+2026-05-07 15:24:36.080 +04:00 [INF] Executing endpoint 'NrAcademyy.Controllers.AuthController.Register (NrAcademyy)'
+2026-05-07 15:24:36.082 +04:00 [INF] Route matched with {action = "Register", controller = "Auth"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Register(NrAcademyBL.DTOs.AuthDTO.RegisterDTO) on controller NrAcademyy.Controllers.AuthController (NrAcademyy).
+2026-05-07 15:24:36.090 +04:00 [INF] Executed DbCommand (1ms) [Parameters=[@__ToLower_0='?' (Size = 256)], CommandType='"Text"', CommandTimeout='30']
+SELECT CASE
+    WHEN EXISTS (
+        SELECT 1
+        FROM [AspNetUsers] AS [a]
+        WHERE LOWER([a].[Email]) = @__ToLower_0) THEN CAST(1 AS bit)
+    ELSE CAST(0 AS bit)
+END
+2026-05-07 15:24:36.100 +04:00 [INF] Executed action NrAcademyy.Controllers.AuthController.Register (NrAcademyy) in 14.4436ms
+2026-05-07 15:24:36.107 +04:00 [INF] Executed endpoint 'NrAcademyy.Controllers.AuthController.Register (NrAcademyy)'
+2026-05-07 15:24:36.113 +04:00 [ERR] HTTP POST /api/Auth/Register responded 500 in 32.6787 ms
+2026-05-07 15:24:36.123 +04:00 [INF] Request finished HTTP/2 POST https://localhost:7036/api/Auth/Register - 500 null application/json 74.8708ms
+2026-05-07 15:24:42.908 +04:00 [INF] Request starting HTTP/2 POST https://localhost:7036/api/Auth/Register - application/json 192
+2026-05-07 15:24:42.916 +04:00 [INF] Executing endpoint 'NrAcademyy.Controllers.AuthController.Register (NrAcademyy)'
+2026-05-07 15:24:42.918 +04:00 [INF] Route matched with {action = "Register", controller = "Auth"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Register(NrAcademyBL.DTOs.AuthDTO.RegisterDTO) on controller NrAcademyy.Controllers.AuthController (NrAcademyy).
+2026-05-07 15:24:42.930 +04:00 [INF] Executed DbCommand (1ms) [Parameters=[@__ToLower_0='?' (Size = 256)], CommandType='"Text"', CommandTimeout='30']
+SELECT CASE
+    WHEN EXISTS (
+        SELECT 1
+        FROM [AspNetUsers] AS [a]
+        WHERE LOWER([a].[Email]) = @__ToLower_0) THEN CAST(1 AS bit)
+    ELSE CAST(0 AS bit)
+END
+2026-05-07 15:24:43.105 +04:00 [INF] Executed DbCommand (1ms) [Parameters=[@__normalizedUserName_0='?' (Size = 256)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [a].[Id], [a].[AccessFailedCount], [a].[ConcurrencyStamp], [a].[CreatedAt], [a].[Email], [a].[EmailConfirmed], [a].[EmailVerificationCode], [a].[EmailVerificationCodeExpiry], [a].[IsEmailVerified], [a].[LockoutEnabled], [a].[LockoutEnd], [a].[NormalizedEmail], [a].[NormalizedUserName], [a].[PasswordHash], [a].[PasswordResetCode], [a].[PasswordResetCodeExpiry], [a].[PhoneNumber], [a].[PhoneNumberConfirmed], [a].[ProfileImageUrl], [a].[SecurityStamp], [a].[TwoFactorEnabled], [a].[UpdatedAt], [a].[UserName]
+FROM [AspNetUsers] AS [a]
+WHERE [a].[NormalizedUserName] = @__normalizedUserName_0
+2026-05-07 15:24:43.113 +04:00 [INF] Executed DbCommand (2ms) [Parameters=[@p0='?' (DbType = Int32), @p1='?' (Size = 4000), @p2='?' (DbType = DateTime2), @p3='?' (Size = 256), @p4='?' (DbType = Boolean), @p5='?' (Size = 4000), @p6='?' (DbType = DateTime2), @p7='?' (DbType = Boolean), @p8='?' (DbType = Boolean), @p9='?' (DbType = DateTimeOffset), @p10='?' (Size = 256), @p11='?' (Size = 256), @p12='?' (Size = 4000), @p13='?' (Size = 4000), @p14='?' (DbType = DateTime2), @p15='?' (Size = 4000), @p16='?' (DbType = Boolean), @p17='?' (Size = 4000), @p18='?' (Size = 4000), @p19='?' (DbType = Boolean), @p20='?' (DbType = DateTime2), @p21='?' (Size = 256)], CommandType='"Text"', CommandTimeout='30']
+SET IMPLICIT_TRANSACTIONS OFF;
+SET NOCOUNT ON;
+INSERT INTO [AspNetUsers] ([AccessFailedCount], [ConcurrencyStamp], [CreatedAt], [Email], [EmailConfirmed], [EmailVerificationCode], [EmailVerificationCodeExpiry], [IsEmailVerified], [LockoutEnabled], [LockoutEnd], [NormalizedEmail], [NormalizedUserName], [PasswordHash], [PasswordResetCode], [PasswordResetCodeExpiry], [PhoneNumber], [PhoneNumberConfirmed], [ProfileImageUrl], [SecurityStamp], [TwoFactorEnabled], [UpdatedAt], [UserName])
+OUTPUT INSERTED.[Id]
+VALUES (@p0, @p1, @p2, @p3, @p4, @p5, @p6, @p7, @p8, @p9, @p10, @p11, @p12, @p13, @p14, @p15, @p16, @p17, @p18, @p19, @p20, @p21);
+2026-05-07 15:24:43.122 +04:00 [INF] Executed DbCommand (1ms) [Parameters=[@__normalizedEmail_0='?' (Size = 256)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(2) [a].[Id], [a].[AccessFailedCount], [a].[ConcurrencyStamp], [a].[CreatedAt], [a].[Email], [a].[EmailConfirmed], [a].[EmailVerificationCode], [a].[EmailVerificationCodeExpiry], [a].[IsEmailVerified], [a].[LockoutEnabled], [a].[LockoutEnd], [a].[NormalizedEmail], [a].[NormalizedUserName], [a].[PasswordHash], [a].[PasswordResetCode], [a].[PasswordResetCodeExpiry], [a].[PhoneNumber], [a].[PhoneNumberConfirmed], [a].[ProfileImageUrl], [a].[SecurityStamp], [a].[TwoFactorEnabled], [a].[UpdatedAt], [a].[UserName]
+FROM [AspNetUsers] AS [a]
+WHERE [a].[NormalizedEmail] = @__normalizedEmail_0
+2026-05-07 15:24:43.132 +04:00 [INF] Executed DbCommand (1ms) [Parameters=[@__normalizedRoleName_0='?' (Size = 256)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(2) [a].[Id], [a].[ConcurrencyStamp], [a].[Name], [a].[NormalizedName]
+FROM [AspNetRoles] AS [a]
+WHERE [a].[NormalizedName] = @__normalizedRoleName_0
+2026-05-07 15:24:43.142 +04:00 [INF] Executed DbCommand (1ms) [Parameters=[@__p_0='?' (DbType = Int32), @__p_1='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [a].[UserId], [a].[RoleId]
+FROM [AspNetUserRoles] AS [a]
+WHERE [a].[UserId] = @__p_0 AND [a].[RoleId] = @__p_1
+2026-05-07 15:24:43.149 +04:00 [INF] Executed DbCommand (1ms) [Parameters=[@__normalizedRoleName_0='?' (Size = 256)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(2) [a].[Id], [a].[ConcurrencyStamp], [a].[Name], [a].[NormalizedName]
+FROM [AspNetRoles] AS [a]
+WHERE [a].[NormalizedName] = @__normalizedRoleName_0
+2026-05-07 15:24:43.156 +04:00 [INF] Executed DbCommand (1ms) [Parameters=[@__normalizedUserName_0='?' (Size = 256)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [a].[Id], [a].[AccessFailedCount], [a].[ConcurrencyStamp], [a].[CreatedAt], [a].[Email], [a].[EmailConfirmed], [a].[EmailVerificationCode], [a].[EmailVerificationCodeExpiry], [a].[IsEmailVerified], [a].[LockoutEnabled], [a].[LockoutEnd], [a].[NormalizedEmail], [a].[NormalizedUserName], [a].[PasswordHash], [a].[PasswordResetCode], [a].[PasswordResetCodeExpiry], [a].[PhoneNumber], [a].[PhoneNumberConfirmed], [a].[ProfileImageUrl], [a].[SecurityStamp], [a].[TwoFactorEnabled], [a].[UpdatedAt], [a].[UserName]
+FROM [AspNetUsers] AS [a]
+WHERE [a].[NormalizedUserName] = @__normalizedUserName_0
+2026-05-07 15:24:43.168 +04:00 [INF] Executed DbCommand (1ms) [Parameters=[@p0='?' (DbType = Int32), @p1='?' (DbType = Int32), @p24='?' (DbType = Int32), @p2='?' (DbType = Int32), @p3='?' (Size = 4000), @p25='?' (Size = 4000), @p4='?' (DbType = DateTime2), @p5='?' (Size = 256), @p6='?' (DbType = Boolean), @p7='?' (Size = 4000), @p8='?' (DbType = DateTime2), @p9='?' (DbType = Boolean), @p10='?' (DbType = Boolean), @p11='?' (DbType = DateTimeOffset), @p12='?' (Size = 256), @p13='?' (Size = 256), @p14='?' (Size = 4000), @p15='?' (Size = 4000), @p16='?' (DbType = DateTime2), @p17='?' (Size = 4000), @p18='?' (DbType = Boolean), @p19='?' (Size = 4000), @p20='?' (Size = 4000), @p21='?' (DbType = Boolean), @p22='?' (DbType = DateTime2), @p23='?' (Size = 256)], CommandType='"Text"', CommandTimeout='30']
+SET NOCOUNT ON;
+INSERT INTO [AspNetUserRoles] ([RoleId], [UserId])
+VALUES (@p0, @p1);
+UPDATE [AspNetUsers] SET [AccessFailedCount] = @p2, [ConcurrencyStamp] = @p3, [CreatedAt] = @p4, [Email] = @p5, [EmailConfirmed] = @p6, [EmailVerificationCode] = @p7, [EmailVerificationCodeExpiry] = @p8, [IsEmailVerified] = @p9, [LockoutEnabled] = @p10, [LockoutEnd] = @p11, [NormalizedEmail] = @p12, [NormalizedUserName] = @p13, [PasswordHash] = @p14, [PasswordResetCode] = @p15, [PasswordResetCodeExpiry] = @p16, [PhoneNumber] = @p17, [PhoneNumberConfirmed] = @p18, [ProfileImageUrl] = @p19, [SecurityStamp] = @p20, [TwoFactorEnabled] = @p21, [UpdatedAt] = @p22, [UserName] = @p23
+OUTPUT 1
+WHERE [Id] = @p24 AND [ConcurrencyStamp] = @p25;
+2026-05-07 15:24:44.413 +04:00 [INF] Executed action NrAcademyy.Controllers.AuthController.Register (NrAcademyy) in 1486.7674ms
+2026-05-07 15:24:44.417 +04:00 [INF] Executed endpoint 'NrAcademyy.Controllers.AuthController.Register (NrAcademyy)'
+2026-05-07 15:24:44.423 +04:00 [ERR] HTTP POST /api/Auth/Register responded 502 in 1507.4767 ms
+2026-05-07 15:24:44.431 +04:00 [INF] Request finished HTTP/2 POST https://localhost:7036/api/Auth/Register - 502 null application/json 1523.2188ms
+2026-05-07 15:25:15.014 +04:00 [INF] Request starting HTTP/2 POST https://localhost:7036/api/Auth/Register - application/json 198
+2026-05-07 15:25:15.024 +04:00 [INF] Executing endpoint 'NrAcademyy.Controllers.AuthController.Register (NrAcademyy)'
+2026-05-07 15:25:15.027 +04:00 [INF] Route matched with {action = "Register", controller = "Auth"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Register(NrAcademyBL.DTOs.AuthDTO.RegisterDTO) on controller NrAcademyy.Controllers.AuthController (NrAcademyy).
+2026-05-07 15:25:15.038 +04:00 [INF] Executed DbCommand (1ms) [Parameters=[@__ToLower_0='?' (Size = 256)], CommandType='"Text"', CommandTimeout='30']
+SELECT CASE
+    WHEN EXISTS (
+        SELECT 1
+        FROM [AspNetUsers] AS [a]
+        WHERE LOWER([a].[Email]) = @__ToLower_0) THEN CAST(1 AS bit)
+    ELSE CAST(0 AS bit)
+END
+2026-05-07 15:25:15.189 +04:00 [INF] Executed DbCommand (1ms) [Parameters=[@__normalizedUserName_0='?' (Size = 256)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [a].[Id], [a].[AccessFailedCount], [a].[ConcurrencyStamp], [a].[CreatedAt], [a].[Email], [a].[EmailConfirmed], [a].[EmailVerificationCode], [a].[EmailVerificationCodeExpiry], [a].[IsEmailVerified], [a].[LockoutEnabled], [a].[LockoutEnd], [a].[NormalizedEmail], [a].[NormalizedUserName], [a].[PasswordHash], [a].[PasswordResetCode], [a].[PasswordResetCodeExpiry], [a].[PhoneNumber], [a].[PhoneNumberConfirmed], [a].[ProfileImageUrl], [a].[SecurityStamp], [a].[TwoFactorEnabled], [a].[UpdatedAt], [a].[UserName]
+FROM [AspNetUsers] AS [a]
+WHERE [a].[NormalizedUserName] = @__normalizedUserName_0
+2026-05-07 15:25:15.202 +04:00 [INF] Executed DbCommand (2ms) [Parameters=[@p0='?' (DbType = Int32), @p1='?' (Size = 4000), @p2='?' (DbType = DateTime2), @p3='?' (Size = 256), @p4='?' (DbType = Boolean), @p5='?' (Size = 4000), @p6='?' (DbType = DateTime2), @p7='?' (DbType = Boolean), @p8='?' (DbType = Boolean), @p9='?' (DbType = DateTimeOffset), @p10='?' (Size = 256), @p11='?' (Size = 256), @p12='?' (Size = 4000), @p13='?' (Size = 4000), @p14='?' (DbType = DateTime2), @p15='?' (Size = 4000), @p16='?' (DbType = Boolean), @p17='?' (Size = 4000), @p18='?' (Size = 4000), @p19='?' (DbType = Boolean), @p20='?' (DbType = DateTime2), @p21='?' (Size = 256)], CommandType='"Text"', CommandTimeout='30']
+SET IMPLICIT_TRANSACTIONS OFF;
+SET NOCOUNT ON;
+INSERT INTO [AspNetUsers] ([AccessFailedCount], [ConcurrencyStamp], [CreatedAt], [Email], [EmailConfirmed], [EmailVerificationCode], [EmailVerificationCodeExpiry], [IsEmailVerified], [LockoutEnabled], [LockoutEnd], [NormalizedEmail], [NormalizedUserName], [PasswordHash], [PasswordResetCode], [PasswordResetCodeExpiry], [PhoneNumber], [PhoneNumberConfirmed], [ProfileImageUrl], [SecurityStamp], [TwoFactorEnabled], [UpdatedAt], [UserName])
+OUTPUT INSERTED.[Id]
+VALUES (@p0, @p1, @p2, @p3, @p4, @p5, @p6, @p7, @p8, @p9, @p10, @p11, @p12, @p13, @p14, @p15, @p16, @p17, @p18, @p19, @p20, @p21);
+2026-05-07 15:25:15.218 +04:00 [INF] Executed DbCommand (1ms) [Parameters=[@__normalizedEmail_0='?' (Size = 256)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(2) [a].[Id], [a].[AccessFailedCount], [a].[ConcurrencyStamp], [a].[CreatedAt], [a].[Email], [a].[EmailConfirmed], [a].[EmailVerificationCode], [a].[EmailVerificationCodeExpiry], [a].[IsEmailVerified], [a].[LockoutEnabled], [a].[LockoutEnd], [a].[NormalizedEmail], [a].[NormalizedUserName], [a].[PasswordHash], [a].[PasswordResetCode], [a].[PasswordResetCodeExpiry], [a].[PhoneNumber], [a].[PhoneNumberConfirmed], [a].[ProfileImageUrl], [a].[SecurityStamp], [a].[TwoFactorEnabled], [a].[UpdatedAt], [a].[UserName]
+FROM [AspNetUsers] AS [a]
+WHERE [a].[NormalizedEmail] = @__normalizedEmail_0
+2026-05-07 15:25:15.234 +04:00 [INF] Executed DbCommand (1ms) [Parameters=[@__normalizedRoleName_0='?' (Size = 256)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(2) [a].[Id], [a].[ConcurrencyStamp], [a].[Name], [a].[NormalizedName]
+FROM [AspNetRoles] AS [a]
+WHERE [a].[NormalizedName] = @__normalizedRoleName_0
+2026-05-07 15:25:15.251 +04:00 [INF] Executed DbCommand (1ms) [Parameters=[@__p_0='?' (DbType = Int32), @__p_1='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [a].[UserId], [a].[RoleId]
+FROM [AspNetUserRoles] AS [a]
+WHERE [a].[UserId] = @__p_0 AND [a].[RoleId] = @__p_1
+2026-05-07 15:25:15.264 +04:00 [INF] Executed DbCommand (2ms) [Parameters=[@__normalizedRoleName_0='?' (Size = 256)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(2) [a].[Id], [a].[ConcurrencyStamp], [a].[Name], [a].[NormalizedName]
+FROM [AspNetRoles] AS [a]
+WHERE [a].[NormalizedName] = @__normalizedRoleName_0
+2026-05-07 15:25:15.275 +04:00 [INF] Executed DbCommand (1ms) [Parameters=[@__normalizedUserName_0='?' (Size = 256)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [a].[Id], [a].[AccessFailedCount], [a].[ConcurrencyStamp], [a].[CreatedAt], [a].[Email], [a].[EmailConfirmed], [a].[EmailVerificationCode], [a].[EmailVerificationCodeExpiry], [a].[IsEmailVerified], [a].[LockoutEnabled], [a].[LockoutEnd], [a].[NormalizedEmail], [a].[NormalizedUserName], [a].[PasswordHash], [a].[PasswordResetCode], [a].[PasswordResetCodeExpiry], [a].[PhoneNumber], [a].[PhoneNumberConfirmed], [a].[ProfileImageUrl], [a].[SecurityStamp], [a].[TwoFactorEnabled], [a].[UpdatedAt], [a].[UserName]
+FROM [AspNetUsers] AS [a]
+WHERE [a].[NormalizedUserName] = @__normalizedUserName_0
+2026-05-07 15:25:15.289 +04:00 [INF] Executed DbCommand (2ms) [Parameters=[@p0='?' (DbType = Int32), @p1='?' (DbType = Int32), @p24='?' (DbType = Int32), @p2='?' (DbType = Int32), @p3='?' (Size = 4000), @p25='?' (Size = 4000), @p4='?' (DbType = DateTime2), @p5='?' (Size = 256), @p6='?' (DbType = Boolean), @p7='?' (Size = 4000), @p8='?' (DbType = DateTime2), @p9='?' (DbType = Boolean), @p10='?' (DbType = Boolean), @p11='?' (DbType = DateTimeOffset), @p12='?' (Size = 256), @p13='?' (Size = 256), @p14='?' (Size = 4000), @p15='?' (Size = 4000), @p16='?' (DbType = DateTime2), @p17='?' (Size = 4000), @p18='?' (DbType = Boolean), @p19='?' (Size = 4000), @p20='?' (Size = 4000), @p21='?' (DbType = Boolean), @p22='?' (DbType = DateTime2), @p23='?' (Size = 256)], CommandType='"Text"', CommandTimeout='30']
+SET NOCOUNT ON;
+INSERT INTO [AspNetUserRoles] ([RoleId], [UserId])
+VALUES (@p0, @p1);
+UPDATE [AspNetUsers] SET [AccessFailedCount] = @p2, [ConcurrencyStamp] = @p3, [CreatedAt] = @p4, [Email] = @p5, [EmailConfirmed] = @p6, [EmailVerificationCode] = @p7, [EmailVerificationCodeExpiry] = @p8, [IsEmailVerified] = @p9, [LockoutEnabled] = @p10, [LockoutEnd] = @p11, [NormalizedEmail] = @p12, [NormalizedUserName] = @p13, [PasswordHash] = @p14, [PasswordResetCode] = @p15, [PasswordResetCodeExpiry] = @p16, [PhoneNumber] = @p17, [PhoneNumberConfirmed] = @p18, [ProfileImageUrl] = @p19, [SecurityStamp] = @p20, [TwoFactorEnabled] = @p21, [UpdatedAt] = @p22, [UserName] = @p23
+OUTPUT 1
+WHERE [Id] = @p24 AND [ConcurrencyStamp] = @p25;
+2026-05-07 15:25:16.567 +04:00 [INF] Executed action NrAcademyy.Controllers.AuthController.Register (NrAcademyy) in 1533.2062ms
+2026-05-07 15:25:16.576 +04:00 [INF] Executed endpoint 'NrAcademyy.Controllers.AuthController.Register (NrAcademyy)'
+2026-05-07 15:25:16.583 +04:00 [ERR] HTTP POST /api/Auth/Register responded 502 in 1559.7053 ms
+2026-05-07 15:25:16.600 +04:00 [INF] Request finished HTTP/2 POST https://localhost:7036/api/Auth/Register - 502 null application/json 1585.7981ms
+2026-05-07 15:28:55.647 +04:00 [INF] NrAcademy tətbiqi başladılır...
+2026-05-07 15:28:55.986 +04:00 [INF] User profile is available. Using 'C:\Users\ikinci.el.noutbuklar\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2026-05-07 15:28:57.124 +04:00 [INF] Now listening on: https://localhost:7036
+2026-05-07 15:28:57.126 +04:00 [INF] Now listening on: http://localhost:5287
+2026-05-07 15:28:57.140 +04:00 [INF] Executed DbCommand (47ms) [Parameters=[@__normalizedName_0='?' (Size = 256)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [a].[Id], [a].[ConcurrencyStamp], [a].[Name], [a].[NormalizedName]
+FROM [AspNetRoles] AS [a]
+WHERE [a].[NormalizedName] = @__normalizedName_0
+2026-05-07 15:28:57.175 +04:00 [INF] Application started. Press Ctrl+C to shut down.
+2026-05-07 15:28:57.177 +04:00 [INF] Hosting environment: Development
+2026-05-07 15:28:57.179 +04:00 [INF] Content root path: C:\NrAcademy\NrAcademyy\NrAcademyy
+2026-05-07 15:28:57.216 +04:00 [INF] Executed DbCommand (1ms) [Parameters=[@__normalizedName_0='?' (Size = 256)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [a].[Id], [a].[ConcurrencyStamp], [a].[Name], [a].[NormalizedName]
+FROM [AspNetRoles] AS [a]
+WHERE [a].[NormalizedName] = @__normalizedName_0
+2026-05-07 15:28:57.229 +04:00 [INF] Executed DbCommand (1ms) [Parameters=[@__normalizedName_0='?' (Size = 256)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [a].[Id], [a].[ConcurrencyStamp], [a].[Name], [a].[NormalizedName]
+FROM [AspNetRoles] AS [a]
+WHERE [a].[NormalizedName] = @__normalizedName_0
+2026-05-07 15:28:57.236 +04:00 [INF] Executed DbCommand (0ms) [Parameters=[@__normalizedName_0='?' (Size = 256)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [a].[Id], [a].[ConcurrencyStamp], [a].[Name], [a].[NormalizedName]
+FROM [AspNetRoles] AS [a]
+WHERE [a].[NormalizedName] = @__normalizedName_0
+2026-05-07 15:28:57.254 +04:00 [INF] Executed DbCommand (5ms) [Parameters=[@__normalizedEmail_0='?' (Size = 256)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(2) [a].[Id], [a].[AccessFailedCount], [a].[ConcurrencyStamp], [a].[CreatedAt], [a].[Email], [a].[EmailConfirmed], [a].[EmailVerificationCode], [a].[EmailVerificationCodeExpiry], [a].[IsEmailVerified], [a].[LockoutEnabled], [a].[LockoutEnd], [a].[NormalizedEmail], [a].[NormalizedUserName], [a].[PasswordHash], [a].[PasswordResetCode], [a].[PasswordResetCodeExpiry], [a].[PhoneNumber], [a].[PhoneNumberConfirmed], [a].[ProfileImageUrl], [a].[SecurityStamp], [a].[TwoFactorEnabled], [a].[UpdatedAt], [a].[UserName]
+FROM [AspNetUsers] AS [a]
+WHERE [a].[NormalizedEmail] = @__normalizedEmail_0
+2026-05-07 15:28:57.761 +04:00 [INF] Request starting HTTP/2 GET https://localhost:7036/swagger/index.html - null null
+2026-05-07 15:28:57.933 +04:00 [INF] HTTP GET /swagger/index.html responded 200 in 76.2486 ms
+2026-05-07 15:28:57.939 +04:00 [INF] Request starting HTTP/2 GET https://localhost:7036/_framework/aspnetcore-browser-refresh.js - null null
+2026-05-07 15:28:57.939 +04:00 [INF] Request starting HTTP/2 GET https://localhost:7036/_vs/browserLink - null null
+2026-05-07 15:28:57.945 +04:00 [INF] Request finished HTTP/2 GET https://localhost:7036/swagger/index.html - 200 null text/html;charset=utf-8 186.1754ms
+2026-05-07 15:28:57.950 +04:00 [INF] Request finished HTTP/2 GET https://localhost:7036/_framework/aspnetcore-browser-refresh.js - 200 14925 application/javascript; charset=utf-8 11.3522ms
+2026-05-07 15:28:57.998 +04:00 [INF] Request finished HTTP/2 GET https://localhost:7036/_vs/browserLink - 200 null text/javascript; charset=UTF-8 59.2604ms
+2026-05-07 15:28:58.112 +04:00 [INF] Request starting HTTP/2 GET https://localhost:7036/swagger/v1/swagger.json - null null
+2026-05-07 15:28:58.151 +04:00 [INF] HTTP GET /swagger/v1/swagger.json responded 200 in 34.1785 ms
+2026-05-07 15:28:58.155 +04:00 [INF] Request finished HTTP/2 GET https://localhost:7036/swagger/v1/swagger.json - 200 null application/json;charset=utf-8 43.609ms
+2026-05-07 15:29:17.003 +04:00 [INF] Request starting HTTP/2 POST https://localhost:7036/api/Auth/Register - application/json 198
+2026-05-07 15:29:17.084 +04:00 [INF] Executing endpoint 'NrAcademyy.Controllers.AuthController.Register (NrAcademyy)'
+2026-05-07 15:29:17.116 +04:00 [INF] Route matched with {action = "Register", controller = "Auth"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Register(NrAcademyBL.DTOs.AuthDTO.RegisterDTO) on controller NrAcademyy.Controllers.AuthController (NrAcademyy).
+2026-05-07 15:29:17.536 +04:00 [INF] Executed DbCommand (5ms) [Parameters=[@__ToLower_0='?' (Size = 256)], CommandType='"Text"', CommandTimeout='30']
+SELECT CASE
+    WHEN EXISTS (
+        SELECT 1
+        FROM [AspNetUsers] AS [a]
+        WHERE LOWER([a].[Email]) = @__ToLower_0) THEN CAST(1 AS bit)
+    ELSE CAST(0 AS bit)
+END
+2026-05-07 15:29:17.555 +04:00 [INF] Executed action NrAcademyy.Controllers.AuthController.Register (NrAcademyy) in 428.7445ms
+2026-05-07 15:29:17.564 +04:00 [INF] Executed endpoint 'NrAcademyy.Controllers.AuthController.Register (NrAcademyy)'
+2026-05-07 15:29:17.675 +04:00 [ERR] HTTP POST /api/Auth/Register responded 500 in 659.8155 ms
+2026-05-07 15:29:17.686 +04:00 [INF] Request finished HTTP/2 POST https://localhost:7036/api/Auth/Register - 500 null application/json 683.2943ms
+2026-05-07 15:29:25.892 +04:00 [INF] Request starting HTTP/2 POST https://localhost:7036/api/Auth/Register - application/json 198
+2026-05-07 15:29:25.910 +04:00 [INF] Executing endpoint 'NrAcademyy.Controllers.AuthController.Register (NrAcademyy)'
+2026-05-07 15:29:25.915 +04:00 [INF] Route matched with {action = "Register", controller = "Auth"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Register(NrAcademyBL.DTOs.AuthDTO.RegisterDTO) on controller NrAcademyy.Controllers.AuthController (NrAcademyy).
+2026-05-07 15:29:25.969 +04:00 [INF] Executed DbCommand (1ms) [Parameters=[@__ToLower_0='?' (Size = 256)], CommandType='"Text"', CommandTimeout='30']
+SELECT CASE
+    WHEN EXISTS (
+        SELECT 1
+        FROM [AspNetUsers] AS [a]
+        WHERE LOWER([a].[Email]) = @__ToLower_0) THEN CAST(1 AS bit)
+    ELSE CAST(0 AS bit)
+END
+2026-05-07 15:29:26.162 +04:00 [INF] Executed DbCommand (5ms) [Parameters=[@__normalizedUserName_0='?' (Size = 256)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [a].[Id], [a].[AccessFailedCount], [a].[ConcurrencyStamp], [a].[CreatedAt], [a].[Email], [a].[EmailConfirmed], [a].[EmailVerificationCode], [a].[EmailVerificationCodeExpiry], [a].[IsEmailVerified], [a].[LockoutEnabled], [a].[LockoutEnd], [a].[NormalizedEmail], [a].[NormalizedUserName], [a].[PasswordHash], [a].[PasswordResetCode], [a].[PasswordResetCodeExpiry], [a].[PhoneNumber], [a].[PhoneNumberConfirmed], [a].[ProfileImageUrl], [a].[SecurityStamp], [a].[TwoFactorEnabled], [a].[UpdatedAt], [a].[UserName]
+FROM [AspNetUsers] AS [a]
+WHERE [a].[NormalizedUserName] = @__normalizedUserName_0
+2026-05-07 15:29:26.393 +04:00 [INF] Executed DbCommand (10ms) [Parameters=[@p0='?' (DbType = Int32), @p1='?' (Size = 4000), @p2='?' (DbType = DateTime2), @p3='?' (Size = 256), @p4='?' (DbType = Boolean), @p5='?' (Size = 4000), @p6='?' (DbType = DateTime2), @p7='?' (DbType = Boolean), @p8='?' (DbType = Boolean), @p9='?' (DbType = DateTimeOffset), @p10='?' (Size = 256), @p11='?' (Size = 256), @p12='?' (Size = 4000), @p13='?' (Size = 4000), @p14='?' (DbType = DateTime2), @p15='?' (Size = 4000), @p16='?' (DbType = Boolean), @p17='?' (Size = 4000), @p18='?' (Size = 4000), @p19='?' (DbType = Boolean), @p20='?' (DbType = DateTime2), @p21='?' (Size = 256)], CommandType='"Text"', CommandTimeout='30']
+SET IMPLICIT_TRANSACTIONS OFF;
+SET NOCOUNT ON;
+INSERT INTO [AspNetUsers] ([AccessFailedCount], [ConcurrencyStamp], [CreatedAt], [Email], [EmailConfirmed], [EmailVerificationCode], [EmailVerificationCodeExpiry], [IsEmailVerified], [LockoutEnabled], [LockoutEnd], [NormalizedEmail], [NormalizedUserName], [PasswordHash], [PasswordResetCode], [PasswordResetCodeExpiry], [PhoneNumber], [PhoneNumberConfirmed], [ProfileImageUrl], [SecurityStamp], [TwoFactorEnabled], [UpdatedAt], [UserName])
+OUTPUT INSERTED.[Id]
+VALUES (@p0, @p1, @p2, @p3, @p4, @p5, @p6, @p7, @p8, @p9, @p10, @p11, @p12, @p13, @p14, @p15, @p16, @p17, @p18, @p19, @p20, @p21);
+2026-05-07 15:29:26.452 +04:00 [INF] Executed DbCommand (1ms) [Parameters=[@__normalizedEmail_0='?' (Size = 256)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(2) [a].[Id], [a].[AccessFailedCount], [a].[ConcurrencyStamp], [a].[CreatedAt], [a].[Email], [a].[EmailConfirmed], [a].[EmailVerificationCode], [a].[EmailVerificationCodeExpiry], [a].[IsEmailVerified], [a].[LockoutEnabled], [a].[LockoutEnd], [a].[NormalizedEmail], [a].[NormalizedUserName], [a].[PasswordHash], [a].[PasswordResetCode], [a].[PasswordResetCodeExpiry], [a].[PhoneNumber], [a].[PhoneNumberConfirmed], [a].[ProfileImageUrl], [a].[SecurityStamp], [a].[TwoFactorEnabled], [a].[UpdatedAt], [a].[UserName]
+FROM [AspNetUsers] AS [a]
+WHERE [a].[NormalizedEmail] = @__normalizedEmail_0
+2026-05-07 15:29:26.484 +04:00 [INF] Executed DbCommand (5ms) [Parameters=[@__normalizedRoleName_0='?' (Size = 256)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(2) [a].[Id], [a].[ConcurrencyStamp], [a].[Name], [a].[NormalizedName]
+FROM [AspNetRoles] AS [a]
+WHERE [a].[NormalizedName] = @__normalizedRoleName_0
+2026-05-07 15:29:26.548 +04:00 [INF] Executed DbCommand (5ms) [Parameters=[@__p_0='?' (DbType = Int32), @__p_1='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [a].[UserId], [a].[RoleId]
+FROM [AspNetUserRoles] AS [a]
+WHERE [a].[UserId] = @__p_0 AND [a].[RoleId] = @__p_1
+2026-05-07 15:29:26.571 +04:00 [INF] Executed DbCommand (2ms) [Parameters=[@__normalizedRoleName_0='?' (Size = 256)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(2) [a].[Id], [a].[ConcurrencyStamp], [a].[Name], [a].[NormalizedName]
+FROM [AspNetRoles] AS [a]
+WHERE [a].[NormalizedName] = @__normalizedRoleName_0
+2026-05-07 15:29:26.613 +04:00 [INF] Executed DbCommand (1ms) [Parameters=[@__normalizedUserName_0='?' (Size = 256)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [a].[Id], [a].[AccessFailedCount], [a].[ConcurrencyStamp], [a].[CreatedAt], [a].[Email], [a].[EmailConfirmed], [a].[EmailVerificationCode], [a].[EmailVerificationCodeExpiry], [a].[IsEmailVerified], [a].[LockoutEnabled], [a].[LockoutEnd], [a].[NormalizedEmail], [a].[NormalizedUserName], [a].[PasswordHash], [a].[PasswordResetCode], [a].[PasswordResetCodeExpiry], [a].[PhoneNumber], [a].[PhoneNumberConfirmed], [a].[ProfileImageUrl], [a].[SecurityStamp], [a].[TwoFactorEnabled], [a].[UpdatedAt], [a].[UserName]
+FROM [AspNetUsers] AS [a]
+WHERE [a].[NormalizedUserName] = @__normalizedUserName_0
+2026-05-07 15:29:26.695 +04:00 [INF] Executed DbCommand (15ms) [Parameters=[@p0='?' (DbType = Int32), @p1='?' (DbType = Int32), @p24='?' (DbType = Int32), @p2='?' (DbType = Int32), @p3='?' (Size = 4000), @p25='?' (Size = 4000), @p4='?' (DbType = DateTime2), @p5='?' (Size = 256), @p6='?' (DbType = Boolean), @p7='?' (Size = 4000), @p8='?' (DbType = DateTime2), @p9='?' (DbType = Boolean), @p10='?' (DbType = Boolean), @p11='?' (DbType = DateTimeOffset), @p12='?' (Size = 256), @p13='?' (Size = 256), @p14='?' (Size = 4000), @p15='?' (Size = 4000), @p16='?' (DbType = DateTime2), @p17='?' (Size = 4000), @p18='?' (DbType = Boolean), @p19='?' (Size = 4000), @p20='?' (Size = 4000), @p21='?' (DbType = Boolean), @p22='?' (DbType = DateTime2), @p23='?' (Size = 256)], CommandType='"Text"', CommandTimeout='30']
+SET NOCOUNT ON;
+INSERT INTO [AspNetUserRoles] ([RoleId], [UserId])
+VALUES (@p0, @p1);
+UPDATE [AspNetUsers] SET [AccessFailedCount] = @p2, [ConcurrencyStamp] = @p3, [CreatedAt] = @p4, [Email] = @p5, [EmailConfirmed] = @p6, [EmailVerificationCode] = @p7, [EmailVerificationCodeExpiry] = @p8, [IsEmailVerified] = @p9, [LockoutEnabled] = @p10, [LockoutEnd] = @p11, [NormalizedEmail] = @p12, [NormalizedUserName] = @p13, [PasswordHash] = @p14, [PasswordResetCode] = @p15, [PasswordResetCodeExpiry] = @p16, [PhoneNumber] = @p17, [PhoneNumberConfirmed] = @p18, [ProfileImageUrl] = @p19, [SecurityStamp] = @p20, [TwoFactorEnabled] = @p21, [UpdatedAt] = @p22, [UserName] = @p23
+OUTPUT 1
+WHERE [Id] = @p24 AND [ConcurrencyStamp] = @p25;
+2026-05-07 15:29:28.556 +04:00 [INF] Executing OkObjectResult, writing value of type 'NrAcademyBL.DTOs.AuthResponseDto'.
+2026-05-07 15:29:28.563 +04:00 [INF] Executed action NrAcademyy.Controllers.AuthController.Register (NrAcademyy) in 2640.297ms
+2026-05-07 15:29:28.570 +04:00 [INF] Executed endpoint 'NrAcademyy.Controllers.AuthController.Register (NrAcademyy)'
+2026-05-07 15:29:28.579 +04:00 [INF] HTTP POST /api/Auth/Register responded 200 in 2671.6727 ms
+2026-05-07 15:29:28.591 +04:00 [INF] Request finished HTTP/2 POST https://localhost:7036/api/Auth/Register - 200 null application/json; charset=utf-8 2698.4669ms
+2026-05-07 15:32:28.976 +04:00 [INF] NrAcademy tətbiqi başladılır...
+2026-05-07 15:32:29.341 +04:00 [INF] User profile is available. Using 'C:\Users\ikinci.el.noutbuklar\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2026-05-07 15:32:30.514 +04:00 [INF] Executed DbCommand (35ms) [Parameters=[@__normalizedName_0='?' (Size = 256)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [a].[Id], [a].[ConcurrencyStamp], [a].[Name], [a].[NormalizedName]
+FROM [AspNetRoles] AS [a]
+WHERE [a].[NormalizedName] = @__normalizedName_0
+2026-05-07 15:32:30.550 +04:00 [INF] Now listening on: https://localhost:7036
+2026-05-07 15:32:30.552 +04:00 [INF] Now listening on: http://localhost:5287
+2026-05-07 15:32:30.591 +04:00 [INF] Executed DbCommand (2ms) [Parameters=[@__normalizedName_0='?' (Size = 256)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [a].[Id], [a].[ConcurrencyStamp], [a].[Name], [a].[NormalizedName]
+FROM [AspNetRoles] AS [a]
+WHERE [a].[NormalizedName] = @__normalizedName_0
+2026-05-07 15:32:30.603 +04:00 [INF] Executed DbCommand (1ms) [Parameters=[@__normalizedName_0='?' (Size = 256)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [a].[Id], [a].[ConcurrencyStamp], [a].[Name], [a].[NormalizedName]
+FROM [AspNetRoles] AS [a]
+WHERE [a].[NormalizedName] = @__normalizedName_0
+2026-05-07 15:32:30.607 +04:00 [INF] Application started. Press Ctrl+C to shut down.
+2026-05-07 15:32:30.608 +04:00 [INF] Executed DbCommand (1ms) [Parameters=[@__normalizedName_0='?' (Size = 256)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [a].[Id], [a].[ConcurrencyStamp], [a].[Name], [a].[NormalizedName]
+FROM [AspNetRoles] AS [a]
+WHERE [a].[NormalizedName] = @__normalizedName_0
+2026-05-07 15:32:30.608 +04:00 [INF] Hosting environment: Development
+2026-05-07 15:32:30.613 +04:00 [INF] Content root path: C:\NrAcademy\NrAcademyy\NrAcademyy
+2026-05-07 15:32:30.630 +04:00 [INF] Executed DbCommand (6ms) [Parameters=[@__normalizedEmail_0='?' (Size = 256)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(2) [a].[Id], [a].[AccessFailedCount], [a].[ConcurrencyStamp], [a].[CreatedAt], [a].[Email], [a].[EmailConfirmed], [a].[EmailVerificationCode], [a].[EmailVerificationCodeExpiry], [a].[IsEmailVerified], [a].[LockoutEnabled], [a].[LockoutEnd], [a].[NormalizedEmail], [a].[NormalizedUserName], [a].[PasswordHash], [a].[PasswordResetCode], [a].[PasswordResetCodeExpiry], [a].[PhoneNumber], [a].[PhoneNumberConfirmed], [a].[ProfileImageUrl], [a].[SecurityStamp], [a].[TwoFactorEnabled], [a].[UpdatedAt], [a].[UserName]
+FROM [AspNetUsers] AS [a]
+WHERE [a].[NormalizedEmail] = @__normalizedEmail_0
+2026-05-07 15:32:31.057 +04:00 [INF] Request starting HTTP/2 GET https://localhost:7036/swagger/index.html - null null
+2026-05-07 15:32:31.215 +04:00 [INF] HTTP GET /swagger/index.html responded 200 in 67.5139 ms
+2026-05-07 15:32:31.225 +04:00 [INF] Request finished HTTP/2 GET https://localhost:7036/swagger/index.html - 200 null text/html;charset=utf-8 169.2548ms
+2026-05-07 15:32:31.228 +04:00 [INF] Request starting HTTP/2 GET https://localhost:7036/_framework/aspnetcore-browser-refresh.js - null null
+2026-05-07 15:32:31.228 +04:00 [INF] Request starting HTTP/2 GET https://localhost:7036/_vs/browserLink - null null
+2026-05-07 15:32:31.244 +04:00 [INF] Request finished HTTP/2 GET https://localhost:7036/_framework/aspnetcore-browser-refresh.js - 200 14925 application/javascript; charset=utf-8 15.526ms
+2026-05-07 15:32:31.278 +04:00 [INF] Request finished HTTP/2 GET https://localhost:7036/_vs/browserLink - 200 null text/javascript; charset=UTF-8 50.2659ms
+2026-05-07 15:32:31.396 +04:00 [INF] Request starting HTTP/2 GET https://localhost:7036/swagger/v1/swagger.json - null null
+2026-05-07 15:32:31.436 +04:00 [INF] HTTP GET /swagger/v1/swagger.json responded 200 in 33.9326 ms
+2026-05-07 15:32:31.439 +04:00 [INF] Request finished HTTP/2 GET https://localhost:7036/swagger/v1/swagger.json - 200 null application/json;charset=utf-8 43.5613ms
+2026-05-07 15:32:40.368 +04:00 [INF] Request starting HTTP/2 POST https://localhost:7036/api/Auth/Register - application/json 198
+2026-05-07 15:32:40.425 +04:00 [INF] Executing endpoint 'NrAcademyy.Controllers.AuthController.Register (NrAcademyy)'
+2026-05-07 15:32:40.462 +04:00 [INF] Route matched with {action = "Register", controller = "Auth"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Register(NrAcademyBL.DTOs.AuthDTO.RegisterDTO) on controller NrAcademyy.Controllers.AuthController (NrAcademyy).
+2026-05-07 15:32:40.928 +04:00 [INF] Executed DbCommand (7ms) [Parameters=[@__ToLower_0='?' (Size = 256)], CommandType='"Text"', CommandTimeout='30']
+SELECT CASE
+    WHEN EXISTS (
+        SELECT 1
+        FROM [AspNetUsers] AS [a]
+        WHERE LOWER([a].[Email]) = @__ToLower_0) THEN CAST(1 AS bit)
+    ELSE CAST(0 AS bit)
+END
+2026-05-07 15:32:40.951 +04:00 [INF] Executed action NrAcademyy.Controllers.AuthController.Register (NrAcademyy) in 474.8175ms
+2026-05-07 15:32:40.958 +04:00 [INF] Executed endpoint 'NrAcademyy.Controllers.AuthController.Register (NrAcademyy)'
+2026-05-07 15:32:41.078 +04:00 [ERR] HTTP POST /api/Auth/Register responded 500 in 696.9921 ms
+2026-05-07 15:32:41.091 +04:00 [INF] Request finished HTTP/2 POST https://localhost:7036/api/Auth/Register - 500 null application/json 722.867ms
+2026-05-07 15:33:51.341 +04:00 [INF] NrAcademy tətbiqi başladılır...
+2026-05-07 15:33:51.727 +04:00 [INF] User profile is available. Using 'C:\Users\ikinci.el.noutbuklar\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2026-05-07 15:33:52.962 +04:00 [INF] Now listening on: https://localhost:7036
+2026-05-07 15:33:52.964 +04:00 [INF] Now listening on: http://localhost:5287
+2026-05-07 15:33:53.002 +04:00 [INF] Executed DbCommand (46ms) [Parameters=[@__normalizedName_0='?' (Size = 256)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [a].[Id], [a].[ConcurrencyStamp], [a].[Name], [a].[NormalizedName]
+FROM [AspNetRoles] AS [a]
+WHERE [a].[NormalizedName] = @__normalizedName_0
+2026-05-07 15:33:53.010 +04:00 [INF] Application started. Press Ctrl+C to shut down.
+2026-05-07 15:33:53.013 +04:00 [INF] Hosting environment: Development
+2026-05-07 15:33:53.015 +04:00 [INF] Content root path: C:\NrAcademy\NrAcademyy\NrAcademyy
+2026-05-07 15:33:53.082 +04:00 [INF] Executed DbCommand (2ms) [Parameters=[@__normalizedName_0='?' (Size = 256)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [a].[Id], [a].[ConcurrencyStamp], [a].[Name], [a].[NormalizedName]
+FROM [AspNetRoles] AS [a]
+WHERE [a].[NormalizedName] = @__normalizedName_0
+2026-05-07 15:33:53.087 +04:00 [INF] Executed DbCommand (1ms) [Parameters=[@__normalizedName_0='?' (Size = 256)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [a].[Id], [a].[ConcurrencyStamp], [a].[Name], [a].[NormalizedName]
+FROM [AspNetRoles] AS [a]
+WHERE [a].[NormalizedName] = @__normalizedName_0
+2026-05-07 15:33:53.092 +04:00 [INF] Executed DbCommand (1ms) [Parameters=[@__normalizedName_0='?' (Size = 256)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [a].[Id], [a].[ConcurrencyStamp], [a].[Name], [a].[NormalizedName]
+FROM [AspNetRoles] AS [a]
+WHERE [a].[NormalizedName] = @__normalizedName_0
+2026-05-07 15:33:53.112 +04:00 [INF] Executed DbCommand (8ms) [Parameters=[@__normalizedEmail_0='?' (Size = 256)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(2) [a].[Id], [a].[AccessFailedCount], [a].[ConcurrencyStamp], [a].[CreatedAt], [a].[Email], [a].[EmailConfirmed], [a].[EmailVerificationCode], [a].[EmailVerificationCodeExpiry], [a].[IsEmailVerified], [a].[LockoutEnabled], [a].[LockoutEnd], [a].[NormalizedEmail], [a].[NormalizedUserName], [a].[PasswordHash], [a].[PasswordResetCode], [a].[PasswordResetCodeExpiry], [a].[PhoneNumber], [a].[PhoneNumberConfirmed], [a].[ProfileImageUrl], [a].[SecurityStamp], [a].[TwoFactorEnabled], [a].[UpdatedAt], [a].[UserName]
+FROM [AspNetUsers] AS [a]
+WHERE [a].[NormalizedEmail] = @__normalizedEmail_0
+2026-05-07 15:33:53.580 +04:00 [INF] Request starting HTTP/2 GET https://localhost:7036/swagger/index.html - null null
+2026-05-07 15:33:53.865 +04:00 [INF] HTTP GET /swagger/index.html responded 200 in 133.4996 ms
+2026-05-07 15:33:53.873 +04:00 [INF] Request starting HTTP/2 GET https://localhost:7036/_vs/browserLink - null null
+2026-05-07 15:33:53.873 +04:00 [INF] Request starting HTTP/2 GET https://localhost:7036/_framework/aspnetcore-browser-refresh.js - null null
+2026-05-07 15:33:53.876 +04:00 [INF] Request finished HTTP/2 GET https://localhost:7036/swagger/index.html - 200 null text/html;charset=utf-8 298.458ms
+2026-05-07 15:33:53.888 +04:00 [INF] Request finished HTTP/2 GET https://localhost:7036/_framework/aspnetcore-browser-refresh.js - 200 14925 application/javascript; charset=utf-8 14.9675ms
+2026-05-07 15:33:53.923 +04:00 [INF] Request finished HTTP/2 GET https://localhost:7036/_vs/browserLink - 200 null text/javascript; charset=UTF-8 49.7911ms
+2026-05-07 15:33:54.045 +04:00 [INF] Request starting HTTP/2 GET https://localhost:7036/swagger/v1/swagger.json - null null
+2026-05-07 15:33:54.101 +04:00 [INF] HTTP GET /swagger/v1/swagger.json responded 200 in 50.2062 ms
+2026-05-07 15:33:54.107 +04:00 [INF] Request finished HTTP/2 GET https://localhost:7036/swagger/v1/swagger.json - 200 null application/json;charset=utf-8 61.6442ms
+2026-05-07 15:34:05.620 +04:00 [INF] Request starting HTTP/2 POST https://localhost:7036/api/Auth/Register - application/json 198
+2026-05-07 15:34:05.683 +04:00 [INF] Executing endpoint 'NrAcademyy.Controllers.AuthController.Register (NrAcademyy)'
+2026-05-07 15:34:05.720 +04:00 [INF] Route matched with {action = "Register", controller = "Auth"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Register(NrAcademyBL.DTOs.AuthDTO.RegisterDTO) on controller NrAcademyy.Controllers.AuthController (NrAcademyy).
+2026-05-07 15:34:06.159 +04:00 [INF] Executed DbCommand (5ms) [Parameters=[@__ToLower_0='?' (Size = 256)], CommandType='"Text"', CommandTimeout='30']
+SELECT CASE
+    WHEN EXISTS (
+        SELECT 1
+        FROM [AspNetUsers] AS [a]
+        WHERE LOWER([a].[Email]) = @__ToLower_0) THEN CAST(1 AS bit)
+    ELSE CAST(0 AS bit)
+END
+2026-05-07 15:34:06.353 +04:00 [INF] Executed DbCommand (5ms) [Parameters=[@__normalizedUserName_0='?' (Size = 256)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [a].[Id], [a].[AccessFailedCount], [a].[ConcurrencyStamp], [a].[CreatedAt], [a].[Email], [a].[EmailConfirmed], [a].[EmailVerificationCode], [a].[EmailVerificationCodeExpiry], [a].[IsEmailVerified], [a].[LockoutEnabled], [a].[LockoutEnd], [a].[NormalizedEmail], [a].[NormalizedUserName], [a].[PasswordHash], [a].[PasswordResetCode], [a].[PasswordResetCodeExpiry], [a].[PhoneNumber], [a].[PhoneNumberConfirmed], [a].[ProfileImageUrl], [a].[SecurityStamp], [a].[TwoFactorEnabled], [a].[UpdatedAt], [a].[UserName]
+FROM [AspNetUsers] AS [a]
+WHERE [a].[NormalizedUserName] = @__normalizedUserName_0
+2026-05-07 15:34:06.582 +04:00 [INF] Executed DbCommand (8ms) [Parameters=[@p0='?' (DbType = Int32), @p1='?' (Size = 4000), @p2='?' (DbType = DateTime2), @p3='?' (Size = 256), @p4='?' (DbType = Boolean), @p5='?' (Size = 4000), @p6='?' (DbType = DateTime2), @p7='?' (DbType = Boolean), @p8='?' (DbType = Boolean), @p9='?' (DbType = DateTimeOffset), @p10='?' (Size = 256), @p11='?' (Size = 256), @p12='?' (Size = 4000), @p13='?' (Size = 4000), @p14='?' (DbType = DateTime2), @p15='?' (Size = 4000), @p16='?' (DbType = Boolean), @p17='?' (Size = 4000), @p18='?' (Size = 4000), @p19='?' (DbType = Boolean), @p20='?' (DbType = DateTime2), @p21='?' (Size = 256)], CommandType='"Text"', CommandTimeout='30']
+SET IMPLICIT_TRANSACTIONS OFF;
+SET NOCOUNT ON;
+INSERT INTO [AspNetUsers] ([AccessFailedCount], [ConcurrencyStamp], [CreatedAt], [Email], [EmailConfirmed], [EmailVerificationCode], [EmailVerificationCodeExpiry], [IsEmailVerified], [LockoutEnabled], [LockoutEnd], [NormalizedEmail], [NormalizedUserName], [PasswordHash], [PasswordResetCode], [PasswordResetCodeExpiry], [PhoneNumber], [PhoneNumberConfirmed], [ProfileImageUrl], [SecurityStamp], [TwoFactorEnabled], [UpdatedAt], [UserName])
+OUTPUT INSERTED.[Id]
+VALUES (@p0, @p1, @p2, @p3, @p4, @p5, @p6, @p7, @p8, @p9, @p10, @p11, @p12, @p13, @p14, @p15, @p16, @p17, @p18, @p19, @p20, @p21);
+2026-05-07 15:34:06.637 +04:00 [INF] Executed DbCommand (1ms) [Parameters=[@__normalizedEmail_0='?' (Size = 256)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(2) [a].[Id], [a].[AccessFailedCount], [a].[ConcurrencyStamp], [a].[CreatedAt], [a].[Email], [a].[EmailConfirmed], [a].[EmailVerificationCode], [a].[EmailVerificationCodeExpiry], [a].[IsEmailVerified], [a].[LockoutEnabled], [a].[LockoutEnd], [a].[NormalizedEmail], [a].[NormalizedUserName], [a].[PasswordHash], [a].[PasswordResetCode], [a].[PasswordResetCodeExpiry], [a].[PhoneNumber], [a].[PhoneNumberConfirmed], [a].[ProfileImageUrl], [a].[SecurityStamp], [a].[TwoFactorEnabled], [a].[UpdatedAt], [a].[UserName]
+FROM [AspNetUsers] AS [a]
+WHERE [a].[NormalizedEmail] = @__normalizedEmail_0
+2026-05-07 15:34:06.666 +04:00 [INF] Executed DbCommand (4ms) [Parameters=[@__normalizedRoleName_0='?' (Size = 256)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(2) [a].[Id], [a].[ConcurrencyStamp], [a].[Name], [a].[NormalizedName]
+FROM [AspNetRoles] AS [a]
+WHERE [a].[NormalizedName] = @__normalizedRoleName_0
+2026-05-07 15:34:06.726 +04:00 [INF] Executed DbCommand (6ms) [Parameters=[@__p_0='?' (DbType = Int32), @__p_1='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [a].[UserId], [a].[RoleId]
+FROM [AspNetUserRoles] AS [a]
+WHERE [a].[UserId] = @__p_0 AND [a].[RoleId] = @__p_1
+2026-05-07 15:34:06.744 +04:00 [INF] Executed DbCommand (1ms) [Parameters=[@__normalizedRoleName_0='?' (Size = 256)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(2) [a].[Id], [a].[ConcurrencyStamp], [a].[Name], [a].[NormalizedName]
+FROM [AspNetRoles] AS [a]
+WHERE [a].[NormalizedName] = @__normalizedRoleName_0
+2026-05-07 15:34:06.781 +04:00 [INF] Executed DbCommand (1ms) [Parameters=[@__normalizedUserName_0='?' (Size = 256)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [a].[Id], [a].[AccessFailedCount], [a].[ConcurrencyStamp], [a].[CreatedAt], [a].[Email], [a].[EmailConfirmed], [a].[EmailVerificationCode], [a].[EmailVerificationCodeExpiry], [a].[IsEmailVerified], [a].[LockoutEnabled], [a].[LockoutEnd], [a].[NormalizedEmail], [a].[NormalizedUserName], [a].[PasswordHash], [a].[PasswordResetCode], [a].[PasswordResetCodeExpiry], [a].[PhoneNumber], [a].[PhoneNumberConfirmed], [a].[ProfileImageUrl], [a].[SecurityStamp], [a].[TwoFactorEnabled], [a].[UpdatedAt], [a].[UserName]
+FROM [AspNetUsers] AS [a]
+WHERE [a].[NormalizedUserName] = @__normalizedUserName_0
+2026-05-07 15:34:06.859 +04:00 [INF] Executed DbCommand (15ms) [Parameters=[@p0='?' (DbType = Int32), @p1='?' (DbType = Int32), @p24='?' (DbType = Int32), @p2='?' (DbType = Int32), @p3='?' (Size = 4000), @p25='?' (Size = 4000), @p4='?' (DbType = DateTime2), @p5='?' (Size = 256), @p6='?' (DbType = Boolean), @p7='?' (Size = 4000), @p8='?' (DbType = DateTime2), @p9='?' (DbType = Boolean), @p10='?' (DbType = Boolean), @p11='?' (DbType = DateTimeOffset), @p12='?' (Size = 256), @p13='?' (Size = 256), @p14='?' (Size = 4000), @p15='?' (Size = 4000), @p16='?' (DbType = DateTime2), @p17='?' (Size = 4000), @p18='?' (DbType = Boolean), @p19='?' (Size = 4000), @p20='?' (Size = 4000), @p21='?' (DbType = Boolean), @p22='?' (DbType = DateTime2), @p23='?' (Size = 256)], CommandType='"Text"', CommandTimeout='30']
+SET NOCOUNT ON;
+INSERT INTO [AspNetUserRoles] ([RoleId], [UserId])
+VALUES (@p0, @p1);
+UPDATE [AspNetUsers] SET [AccessFailedCount] = @p2, [ConcurrencyStamp] = @p3, [CreatedAt] = @p4, [Email] = @p5, [EmailConfirmed] = @p6, [EmailVerificationCode] = @p7, [EmailVerificationCodeExpiry] = @p8, [IsEmailVerified] = @p9, [LockoutEnabled] = @p10, [LockoutEnd] = @p11, [NormalizedEmail] = @p12, [NormalizedUserName] = @p13, [PasswordHash] = @p14, [PasswordResetCode] = @p15, [PasswordResetCodeExpiry] = @p16, [PhoneNumber] = @p17, [PhoneNumberConfirmed] = @p18, [ProfileImageUrl] = @p19, [SecurityStamp] = @p20, [TwoFactorEnabled] = @p21, [UpdatedAt] = @p22, [UserName] = @p23
+OUTPUT 1
+WHERE [Id] = @p24 AND [ConcurrencyStamp] = @p25;
+2026-05-07 15:34:08.522 +04:00 [INF] Executing OkObjectResult, writing value of type 'NrAcademyBL.DTOs.AuthResponseDto'.
+2026-05-07 15:34:08.538 +04:00 [INF] Executed action NrAcademyy.Controllers.AuthController.Register (NrAcademyy) in 2799.7934ms
+2026-05-07 15:34:08.545 +04:00 [INF] Executed endpoint 'NrAcademyy.Controllers.AuthController.Register (NrAcademyy)'
+2026-05-07 15:34:08.549 +04:00 [INF] HTTP POST /api/Auth/Register responded 200 in 2913.3065 ms
+2026-05-07 15:34:08.563 +04:00 [INF] Request finished HTTP/2 POST https://localhost:7036/api/Auth/Register - 200 null application/json; charset=utf-8 2942.5391ms
+2026-05-07 17:25:33.276 +04:00 [INF] NrAcademy tətbiqi başladılır...
+2026-05-07 17:25:33.677 +04:00 [INF] User profile is available. Using 'C:\Users\ikinci.el.noutbuklar\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2026-05-07 17:25:34.900 +04:00 [INF] Now listening on: https://localhost:7036
+2026-05-07 17:25:34.902 +04:00 [INF] Now listening on: http://localhost:5287
+2026-05-07 17:25:34.950 +04:00 [INF] Application started. Press Ctrl+C to shut down.
+2026-05-07 17:25:34.957 +04:00 [INF] Hosting environment: Development
+2026-05-07 17:25:34.962 +04:00 [INF] Content root path: C:\NrAcademy\NrAcademyy\NrAcademyy
+2026-05-07 17:25:35.549 +04:00 [INF] Request starting HTTP/2 GET https://localhost:7036/swagger/index.html - null null
+2026-05-07 17:25:35.900 +04:00 [INF] HTTP GET /swagger/index.html responded 200 in 150.5429 ms
+2026-05-07 17:25:35.909 +04:00 [INF] Request starting HTTP/2 GET https://localhost:7036/_framework/aspnetcore-browser-refresh.js - null null
+2026-05-07 17:25:35.910 +04:00 [INF] Request starting HTTP/2 GET https://localhost:7036/_vs/browserLink - null null
+2026-05-07 17:25:35.932 +04:00 [INF] Request finished HTTP/2 GET https://localhost:7036/swagger/index.html - 200 null text/html;charset=utf-8 385.0315ms
+2026-05-07 17:25:35.944 +04:00 [INF] Request finished HTTP/2 GET https://localhost:7036/_framework/aspnetcore-browser-refresh.js - 200 14925 application/javascript; charset=utf-8 34.1917ms
+2026-05-07 17:25:36.003 +04:00 [INF] Request finished HTTP/2 GET https://localhost:7036/_vs/browserLink - 200 null text/javascript; charset=UTF-8 93.1855ms
+2026-05-07 17:25:36.093 +04:00 [INF] Executed DbCommand (81ms) [Parameters=[@__normalizedName_0='?' (Size = 256)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [a].[Id], [a].[ConcurrencyStamp], [a].[Name], [a].[NormalizedName]
+FROM [AspNetRoles] AS [a]
+WHERE [a].[NormalizedName] = @__normalizedName_0
+2026-05-07 17:25:36.104 +04:00 [INF] Request starting HTTP/2 GET https://localhost:7036/swagger/v1/swagger.json - null null
+2026-05-07 17:25:36.229 +04:00 [INF] HTTP GET /swagger/v1/swagger.json responded 200 in 113.0875 ms
+2026-05-07 17:25:36.236 +04:00 [INF] Request finished HTTP/2 GET https://localhost:7036/swagger/v1/swagger.json - 200 null application/json;charset=utf-8 131.6543ms
+2026-05-07 17:25:36.296 +04:00 [INF] Executed DbCommand (4ms) [Parameters=[@__normalizedName_0='?' (Size = 256)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [a].[Id], [a].[ConcurrencyStamp], [a].[Name], [a].[NormalizedName]
+FROM [AspNetRoles] AS [a]
+WHERE [a].[NormalizedName] = @__normalizedName_0
+2026-05-07 17:25:36.304 +04:00 [INF] Executed DbCommand (1ms) [Parameters=[@__normalizedName_0='?' (Size = 256)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [a].[Id], [a].[ConcurrencyStamp], [a].[Name], [a].[NormalizedName]
+FROM [AspNetRoles] AS [a]
+WHERE [a].[NormalizedName] = @__normalizedName_0
+2026-05-07 17:25:36.312 +04:00 [INF] Executed DbCommand (1ms) [Parameters=[@__normalizedName_0='?' (Size = 256)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [a].[Id], [a].[ConcurrencyStamp], [a].[Name], [a].[NormalizedName]
+FROM [AspNetRoles] AS [a]
+WHERE [a].[NormalizedName] = @__normalizedName_0
+2026-05-07 17:25:36.363 +04:00 [INF] Executed DbCommand (7ms) [Parameters=[@__normalizedEmail_0='?' (Size = 256)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(2) [a].[Id], [a].[AccessFailedCount], [a].[ConcurrencyStamp], [a].[CreatedAt], [a].[Email], [a].[EmailConfirmed], [a].[EmailVerificationCode], [a].[EmailVerificationCodeExpiry], [a].[IsEmailVerified], [a].[LockoutEnabled], [a].[LockoutEnd], [a].[NormalizedEmail], [a].[NormalizedUserName], [a].[PasswordHash], [a].[PasswordResetCode], [a].[PasswordResetCodeExpiry], [a].[PhoneNumber], [a].[PhoneNumberConfirmed], [a].[ProfileImageUrl], [a].[SecurityStamp], [a].[TwoFactorEnabled], [a].[UpdatedAt], [a].[UserName]
+FROM [AspNetUsers] AS [a]
+WHERE [a].[NormalizedEmail] = @__normalizedEmail_0

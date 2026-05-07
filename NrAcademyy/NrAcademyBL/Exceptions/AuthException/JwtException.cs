@@ -4,7 +4,7 @@ using NrAcademyBL.Exceptions.Base;
 
 namespace NrAcademyBL.Exceptions.Auth
 {
-    public class JwtException : NrAcademyException
+    public class JwtException : BaseException
     {
         public JwtException(string message, string errorCode = "JWT_ERROR", int statusCode = StatusCodes.Status401Unauthorized)
             : base(message, statusCode, errorCode)

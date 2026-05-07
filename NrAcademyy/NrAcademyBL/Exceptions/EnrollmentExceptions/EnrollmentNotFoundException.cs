@@ -1,15 +1,13 @@
-﻿using NrAcademyBL.Abstractions;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿using Microsoft.AspNetCore.Http; 
+using NrAcademyBL.Exceptions.Base;
 
 namespace NrAcademyBL.Exceptions.EnrollmentExceptions;
 
-public class EnrollmentNotFoundException:BaseException
+public class EnrollmentNotFoundException : BaseException
 {
-    public EnrollmentNotFoundException(string message = "Qeydiyyat tapılmadı!") : base(404, message)
+    // Ardıcıllıq: base(message, statusCode, errorCode)
+    public EnrollmentNotFoundException(string message = "Qeydiyyat tapılmadı!")
+        : base(message, StatusCodes.Status404NotFound, "ENROLLMENT_NOT_FOUND")
     {
     }
 }

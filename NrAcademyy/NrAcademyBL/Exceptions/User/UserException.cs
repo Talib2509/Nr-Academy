@@ -4,10 +4,10 @@ using NrAcademyBL.Exceptions.Base;
 
 namespace NrAcademyBL.Exceptions.User
 {
-    public class UserException : NrAcademyException
+    public class UserException :BaseException
     {
         public UserException(string message, string errorCode = "USER_ERROR", int statusCode = StatusCodes.Status400BadRequest)
-            : base(message, statusCode, errorCode)
+             : base(message, statusCode, errorCode)
         {
         }
 

@@ -3,7 +3,7 @@ using NrAcademyBL.Exceptions.Base;
 
 namespace NrAcademyBL.Exceptions.Question
 {
-    public class QuestionException : NrAcademyException
+    public class QuestionException : BaseException
     {
         public QuestionException(string message, string errorCode = "QUESTION_ERROR", int statusCode = StatusCodes.Status400BadRequest)
             : base(message, statusCode, errorCode)

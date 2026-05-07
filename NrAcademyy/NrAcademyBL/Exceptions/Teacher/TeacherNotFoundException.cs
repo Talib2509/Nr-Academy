@@ -1,19 +1,17 @@
-﻿using NrAcademyBL.Abstractions;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿using Microsoft.AspNetCore.Http; 
+using NrAcademyBL.Exceptions.Base;
 
 namespace NrAcademyBL.Exceptions.Teacher;
 
-public class TeacherNotFoundException:BaseException
+public class TeacherNotFoundException : BaseException
 {
-    public TeacherNotFoundException(string message = "Müəllim tapılmadı!") : base(404, message)
+    public TeacherNotFoundException(string message = "Müəllim tapılmadı!")
+        : base(message, StatusCodes.Status404NotFound, "TEACHER_NOT_FOUND")
     {
     }
 
-    public TeacherNotFoundException(int id) : base(404, $"ID-si {id} olan müəllim tapılmadı.")
+    public TeacherNotFoundException(int id)
+        : base($"ID-si {id} olan müəllim tapılmadı.", StatusCodes.Status404NotFound, "TEACHER_NOT_FOUND")
     {
     }
 }

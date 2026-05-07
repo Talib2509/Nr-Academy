@@ -1,11 +1,12 @@
-﻿
-using Microsoft.AspNetCore.Http;
-using NrAcademyBL.Exceptions.Base;
-
+﻿using Microsoft.AspNetCore.Http;
+using NrAcademyBL.Abstractions;
+using NrAcademyBL.Exceptions.Base; 
 namespace NrAcademyBL.Exceptions.TestResult
 {
-    public class TestResultException : NrAcademyException
+ 
+    public class TestResultException : BaseException
     {
+    
         public TestResultException(string message, string errorCode = "TESTRESULT_ERROR", int statusCode = StatusCodes.Status400BadRequest)
             : base(message, statusCode, errorCode)
         {
