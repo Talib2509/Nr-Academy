@@ -39,6 +39,7 @@ namespace NrAcademyBL
             services.AddScoped<IUserService, UserService>();
 
             services.AddScoped<IBlogCategoryService, BlogCategoryService>();
+            services.AddScoped<ITestimonialService, TestimonialService>();
 
             return services;
         }
