@@ -1,4 +1,5 @@
 ﻿using Microsoft.Extensions.DependencyInjection;
+using NrAcademyCORE.IRepositories;
 using NrAcademyCORE.Repositories;
 using NrAcademyDAL.Repositories;
 using System;
@@ -25,7 +26,7 @@ namespace NrAcademyDAL
             services.AddScoped<ITestRepository, TestRepository>();
             services.AddScoped<IEnrollmentRepository, EnrollmentRepository>();
             services.AddScoped<ITestResultRepository, TestResultRepository>();
-
+            services.AddScoped<ITestimonialRepository, TestimonialRepository>();
 
             return services;
         }

@@ -2,7 +2,7 @@
 using Microsoft.AspNetCore.Mvc;
 using NrAcademyBL.DTOs.CertificateDTO;
 using NrAcademyBL.Services.Abstract;
-using Microsoft.AspNetCore.Authorization; // Vacibdir
+using Microsoft.AspNetCore.Authorization; 
 
 namespace NrAcademyy.Controllers
 {
@@ -11,15 +11,15 @@ namespace NrAcademyy.Controllers
     public class CertificatesController(ICertificateService _service) : ControllerBase
     {
         [HttpGet]
-        [AllowAnonymous] // Sertifikatların doğruluğunu hər kəs yoxlaya bilsin
+        [AllowAnonymous] 
         public async Task<IActionResult> GetAll() => Ok(await _service.GetAllAsync());
 
         [HttpGet("{id}")]
-        [AllowAnonymous] // Sertifikatın detallarına baxış hər kəs üçün açıq olsun
+        [AllowAnonymous] 
         public async Task<IActionResult> GetById(int id) => Ok(await _service.GetByIdAsync(id));
 
         [HttpPost]
-        // Sertifikat vermək/yaratmaq - Admin və Moderator (Nəticələrin monitorinqi çərçivəsində)
+       
         [Authorize(Roles = "Admin, Moderator")]
         public async Task<IActionResult> Create(CertificateCreateDTO dto)
         {
@@ -28,7 +28,7 @@ namespace NrAcademyy.Controllers
         }
 
         [HttpPut]
-        // Sertifikat məlumatlarını redaktə etmək - Admin və Moderator
+      
         [Authorize(Roles = "Admin, Moderator")]
         public async Task<IActionResult> Update(CertificateUpdateDTO dto)
         {
@@ -37,7 +37,7 @@ namespace NrAcademyy.Controllers
         }
 
         [HttpDelete("{id}")]
-        // Bazadan sertifikatın silinməsi mühüm əməliyyatdır - YALNIZ Admin
+      
         [Authorize(Roles = "Admin")]
         public async Task<IActionResult> Delete(int id)
         {

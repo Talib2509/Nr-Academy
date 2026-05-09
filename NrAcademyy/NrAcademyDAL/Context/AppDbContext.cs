@@ -32,6 +32,9 @@ namespace NrAcademyDAL.Context
         public DbSet<Course> Courses { get; set; }
         public DbSet<TestResult> TestResults { get; set; }
         public DbSet<RefreshToken> RefreshTokens { get; set; }
+
+        public DbSet<Testimonial> Testimonials { get; set; }
+
         protected override void OnModelCreating(ModelBuilder builder)
         {
             builder.ApplyConfigurationsFromAssembly(Assembly.GetExecutingAssembly());
