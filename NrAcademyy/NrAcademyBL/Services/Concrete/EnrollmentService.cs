@@ -84,7 +84,7 @@ namespace NrAcademyBL.Services.Concrete
         {
             var existing = await _repo.GetByIdAsync(dto.Id);
             if (existing == null)
-                throw new Exception("Yenilənecek qeydiyyat tapılmadı");
+                throw new Exception("Yenilnecek qeydiyyat tapılmadı");
 
             _mapper.Map(dto, existing);
             _repo.UpdateAsync(existing);

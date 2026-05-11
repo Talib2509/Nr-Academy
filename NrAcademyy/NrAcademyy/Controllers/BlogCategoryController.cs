@@ -35,7 +35,7 @@ namespace NrAcademyy.Controllers
         }
 
         [HttpDelete("{id}")]
-        [Authorize(Roles = "Admin")] // Sənin qaydana görə silmək YALNIZ Adminə məxsusdur
+        [Authorize(Roles = "Admin")] 
         public async Task<IActionResult> Delete(int id)
         {
             await _service.DeleteAsync(id);

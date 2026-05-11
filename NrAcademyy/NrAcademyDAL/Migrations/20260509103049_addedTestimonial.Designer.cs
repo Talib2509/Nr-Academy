@@ -3,6 +3,7 @@ using System;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 using NrAcademyDAL.Context;
 
@@ -11,9 +12,11 @@ using NrAcademyDAL.Context;
 namespace NrAcademyDAL.Migrations
 {
     [DbContext(typeof(AppDbContext))]
-    partial class AppDbContextModelSnapshot : ModelSnapshot
+    [Migration("20260509103049_addedTestimonial")]
+    partial class addedTestimonial
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        /// <inheritdoc />
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
@@ -144,8 +147,6 @@ namespace NrAcademyDAL.Migrations
                         .HasColumnType("int");
 
                     b.HasKey("Id");
-
-                    b.HasIndex("QuestionId");
 
                     b.ToTable("Answers");
                 });
@@ -365,16 +366,8 @@ namespace NrAcademyDAL.Migrations
                     b.Property<DateTime?>("EmailVerificationCodeExpiry")
                         .HasColumnType("datetime2");
 
-                    b.Property<string>("FirstName")
-                        .IsRequired()
-                        .HasColumnType("nvarchar(max)");
-
                     b.Property<bool>("IsEmailVerified")
                         .HasColumnType("bit");
-
-                    b.Property<string>("LastName")
-                        .IsRequired()
-                        .HasColumnType("nvarchar(max)");
 
                     b.Property<bool>("LockoutEnabled")
                         .HasColumnType("bit");
@@ -534,21 +527,14 @@ namespace NrAcademyDAL.Migrations
 
                     SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"));
 
-                    b.Property<DateTime?>("ActiveDate")
-                        .HasColumnType("datetime2");
-
                     b.Property<int>("CourseId")
                         .HasColumnType("int");
 
-                    b.Property<int>("DurationInMinutes")
-                        .HasColumnType("int");
+                    b.Property<string>("Duration")
+                        .HasColumnType("nvarchar(max)");
 
                     b.Property<int>("PassingScore")
                         .HasColumnType("int");
-
-                    b.Property<string>("TestType")
-                        .IsRequired()
-                        .HasColumnType("nvarchar(max)");
 
                     b.Property<string>("Title")
                         .IsRequired()
@@ -567,17 +553,11 @@ namespace NrAcademyDAL.Migrations
 
                     SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"));
 
-                    b.Property<DateTime>("CompletedAt")
+                    b.Property<DateTime>("ComletedAt")
                         .HasColumnType("datetime2");
-
-                    b.Property<bool>("IsWinner")
-                        .HasColumnType("bit");
 
                     b.Property<int>("Score")
                         .HasColumnType("int");
-
-                    b.Property<DateTime>("StartedAt")
-                        .HasColumnType("datetime2");
 
                     b.Property<int>("TestId")
                         .HasColumnType("int");
@@ -586,8 +566,6 @@ namespace NrAcademyDAL.Migrations
                         .HasColumnType("int");
 
                     b.HasKey("Id");
-
-                    b.HasIndex("UserId");
 
                     b.ToTable("TestResults");
                 });
@@ -672,15 +650,6 @@ namespace NrAcademyDAL.Migrations
                         .IsRequired();
                 });
 
-            modelBuilder.Entity("NrAcademyCORE.Entities.Answer", b =>
-                {
-                    b.HasOne("NrAcademyCORE.Entities.Question", null)
-                        .WithMany("Answers")
-                        .HasForeignKey("QuestionId")
-                        .OnDelete(DeleteBehavior.Cascade)
-                        .IsRequired();
-                });
-
             modelBuilder.Entity("NrAcademyCORE.Entities.BlogPost", b =>
                 {
                     b.HasOne("NrAcademyCORE.Entities.BlogCategory", "Category")
@@ -712,22 +681,6 @@ namespace NrAcademyDAL.Migrations
                         .IsRequired();
 
                     b.Navigation("User");
-                });
-
-            modelBuilder.Entity("NrAcademyCORE.Entities.TestResult", b =>
-                {
-                    b.HasOne("NrAcademyCORE.Entities.Identity.AppUser", "User")
-                        .WithMany()
-                        .HasForeignKey("UserId")
-                        .OnDelete(DeleteBehavior.Cascade)
-                        .IsRequired();
-
-                    b.Navigation("User");
-                });
-
-            modelBuilder.Entity("NrAcademyCORE.Entities.Question", b =>
-                {
-                    b.Navigation("Answers");
                 });
 #pragma warning restore 612, 618
         }
