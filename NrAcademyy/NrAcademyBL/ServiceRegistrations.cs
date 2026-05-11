@@ -1,15 +1,9 @@
-﻿
-using AutoMapper;
-using Microsoft.Extensions.Configuration;
-
+﻿using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
-using NrAcademyBL.Configuration;
-using NrAcademyBL.Extensions.Caching;
 using NrAcademyBL.Services.Abstract;
 using NrAcademyBL.Services.Concrete;
-using NrAcademyCORE.Repositories;
-using NrAcademyDAL;
-using NrAcademyDAL.Repositories;
+using NrAcademyBL.Extensions.Caching;
+using NrAcademyBL.Configuration;
 
 namespace NrAcademyBL
 {
@@ -17,38 +11,37 @@ namespace NrAcademyBL
     {
         public static IServiceCollection AddService(this IServiceCollection services, IConfiguration configuration)
         {
-   
+            // Identity & Security
             services.AddScoped<IJwtService, JwtService>();
             services.AddScoped<IAuthService, AuthService>();
-
-            services.AddScoped<IAnswerService, AnswerService>();
-            services.AddScoped<IQuestionService, QuestionService>();
-            services.AddScoped<ITestService, TestService>();
-            services.AddScoped<ITestResultService, TestResultService>();
-            services.AddScoped<IEmailService, EmailService>();
-            services.AddScoped<ITeacherService, TeacherService>();
-            services.AddScoped<ICourseService, CourseService>();
-            services.AddScoped<ICacheService, MemoryCacheService>();
-         
-            services.AddScoped<IEnrollmentService, EnrollmentService>();
-
-        
-            services.AddScoped<ICertificateService, CertificateService>();
-
-
             services.AddScoped<IUserService, UserService>();
 
+            // Core Business Services
+            services.AddScoped<ICourseService, CourseService>();
+            services.AddScoped<ITeacherService, TeacherService>();
+            services.AddScoped<IEnrollmentService, EnrollmentService>();
+
+            // Test & Exam System
+            services.AddScoped<ITestService, TestService>();
+            services.AddScoped<IQuestionService, QuestionService>();
+            services.AddScoped<IAnswerService, AnswerService>();
+            services.AddScoped<ITestResultService, TestResultService>();
+            services.AddScoped<ICertificateService, CertificateService>();
+
+            // Infrastructure
+            services.AddScoped<IEmailService, EmailService>();
+            services.AddScoped<ICacheService, MemoryCacheService>();
             services.AddScoped<IBlogCategoryService, BlogCategoryService>();
             services.AddScoped<ITestimonialService, TestimonialService>();
 
             return services;
         }
+
         public static IServiceCollection AddAutoMapper(this IServiceCollection services)
         {
-            services.AddAutoMapper(typeof(ServiceRegistrations));
+            // Profil klasslarının olduğu assembly-ni avtomatik skan edir
+            services.AddAutoMapper(typeof(ServiceRegistrations).Assembly);
             return services;
         }
-
-
     }
 }

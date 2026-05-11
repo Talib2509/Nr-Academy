@@ -12,6 +12,8 @@ namespace NrAcademyCORE.Entities
         public string QuestionText { get; set; }
         public string QuestionType { get; set; }
         public int TestId { get; set; }
+      
+        public ICollection<Answer> Answers { get; set; } = new List<Answer>();
 
 
     }

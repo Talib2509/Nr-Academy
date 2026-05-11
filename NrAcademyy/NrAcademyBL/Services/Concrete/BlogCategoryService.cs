@@ -38,7 +38,7 @@ namespace NrAcademyBL.Services.Concrete
             if (category == null)
                 throw new Exception("Silinecek kateqoriya tapılmadı");
 
-            _repo.Delete(category);
+            _repo.DeleteAsync(category);
             await _repo.SaveAsync();
 
             await _cache.RemoveAsync("blogcategories_all");
@@ -86,7 +86,7 @@ namespace NrAcademyBL.Services.Concrete
                 throw new Exception("Yenilenecek kateqoriya tapılmadı");
 
             _mapper.Map(dto, category);
-            _repo.Update(category);
+            _repo.UpdateAsync(category);
             await _repo.SaveAsync();
 
             await _cache.RemoveAsync("blogcategories_all");

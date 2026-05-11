@@ -3,7 +3,7 @@ using Microsoft.Extensions.Options;
 using MimeKit;
 using NrAcademyBL.Configuration;
 using NrAcademyBL.DTOs;
-using NrAcademyBL.Exceptions.Email; // Exception-ları əlavə etdik
+using NrAcademyBL.Exceptions.Email; 
 using NrAcademyBL.Services.Abstract;
 
 namespace NrAcademyBL.Services.Concrete

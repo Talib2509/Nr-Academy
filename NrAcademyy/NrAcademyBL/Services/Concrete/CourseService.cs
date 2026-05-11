@@ -109,7 +109,7 @@ namespace NrAcademyBL.Services.Concrete
             }
 
             _mapper.Map(dto, course);
-            _repo.Update(course);
+            _repo.UpdateAsync(course);
 
             await _cache.RemoveAsync("courses_all");
             await _cache.RemoveAsync($"course_{id}");
@@ -127,7 +127,7 @@ namespace NrAcademyBL.Services.Concrete
                 FileExtensions.DeleteFile(Path.GetFileName(course.ImageUrl), rootPath, "uploads", "courses");
             }
 
-            _repo.Delete(course);
+            _repo.DeleteAsync(course);
             await _cache.RemoveAsync("courses_all");
             await _cache.RemoveAsync($"course_{id}");
         }

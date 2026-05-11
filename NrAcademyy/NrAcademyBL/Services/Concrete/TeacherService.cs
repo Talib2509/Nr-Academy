@@ -99,7 +99,7 @@ namespace NrAcademyBL.Services.Concrete
             }
 
             _mapper.Map(dto, teacher);
-            _repo.Update(teacher);
+            _repo.UpdateAsync(teacher);
 
             await _cache.RemoveAsync("teachers_all");
             await _cache.RemoveAsync($"teacher_{id}");
@@ -118,7 +118,7 @@ namespace NrAcademyBL.Services.Concrete
                 FileExtensions.DeleteFile(Path.GetFileName(teacher.ImageUrl), rootPath, "uploads", "teachers");
             }
 
-            _repo.Delete(teacher);
+            _repo.DeleteAsync(teacher);
             await _cache.RemoveAsync("teachers_all");
             await _cache.RemoveAsync($"teacher_{id}");
         }

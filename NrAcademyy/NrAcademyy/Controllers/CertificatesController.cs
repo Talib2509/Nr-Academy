@@ -1,16 +1,42 @@
-﻿using Microsoft.AspNetCore.Http;
-using Microsoft.AspNetCore.Mvc;
+﻿using Microsoft.AspNetCore.Mvc;
 using NrAcademyBL.DTOs.CertificateDTO;
 using NrAcademyBL.Services.Abstract;
+
+using Microsoft.AspNetCore.Authorization;
+using System.Threading.Tasks;
+
 using Microsoft.AspNetCore.Authorization; 
+
 
 namespace NrAcademyy.Controllers
 {
     [Route("api/[controller]")]
     [ApiController]
-    public class CertificatesController(ICertificateService _service) : ControllerBase
+    [Authorize]
+    public class CertificatesController : ControllerBase
     {
+        private readonly ICertificateService _service;
+
+        public CertificatesController(ICertificateService service)
+        {
+            _service = service;
+        }
+
         [HttpGet]
+
+        [AllowAnonymous]
+        public async Task<IActionResult> GetAll() => Ok(await _service.GetAllAsync());
+
+        [HttpPost]
+        [Authorize(Roles = "Admin, Moderator, Teacher")]
+        public async Task<IActionResult> Create(CertificateCreateDTO dto)
+        {
+            await _service.CreateAsync(dto);
+            return Ok(new { Message = "Sertifikat uğurla yaradıldı." });
+        }
+
+        [HttpDelete("{id}")]
+
         [AllowAnonymous] 
         public async Task<IActionResult> GetAll() => Ok(await _service.GetAllAsync());
 
@@ -37,12 +63,12 @@ namespace NrAcademyy.Controllers
         }
 
         [HttpDelete("{id}")]
-      
+
         [Authorize(Roles = "Admin")]
         public async Task<IActionResult> Delete(int id)
         {
             await _service.DeleteAsync(id);
-            return Ok("Sertifikat silindi.");
+            return Ok(new { Message = "Sertifikat silindi." });
         }
     }
 }

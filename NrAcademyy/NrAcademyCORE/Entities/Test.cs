@@ -12,7 +12,10 @@ namespace NrAcademyCORE.Entities
         public string Title { get; set; }
         public int CourseId { get; set; }
 
-        public string? Duration { get; set; }
+        public int DurationInMinutes { get; set; }
         public int PassingScore { get; set; }
+        public string TestType { get; set; } = "Daily"; 
+        public DateTime? ActiveDate { get; set; } 
     }
+
 }

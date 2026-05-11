@@ -38,7 +38,7 @@ namespace NrAcademyBL.Services.Concrete
             if (enrollment == null)
                 throw new Exception("Silinecek qeydiyyat tapılmadı");
 
-            _repo.Delete(enrollment);
+            _repo.DeleteAsync(enrollment);
             await _repo.SaveAsync();
 
             await _cacheService.RemoveAsync("enrollments_all");
@@ -87,7 +87,7 @@ namespace NrAcademyBL.Services.Concrete
                 throw new Exception("Yenilnecek qeydiyyat tapılmadı");
 
             _mapper.Map(dto, existing);
-            _repo.Update(existing);
+            _repo.UpdateAsync(existing);
             await _repo.SaveAsync();
 
             await _cacheService.RemoveAsync("enrollments_all");
