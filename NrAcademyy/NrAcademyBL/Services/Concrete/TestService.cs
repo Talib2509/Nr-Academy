@@ -84,7 +84,7 @@ public class TestService : ITestService
             throw TestException.NotFound(dto.Id);
 
         _mapper.Map(dto, entity);
-        _repository.Update(entity);
+        _repository.UpdateAsync(entity);
 
         await _cache.RemoveAsync("tests_all");
         await _cache.RemoveAsync($"test_{dto.Id}");
@@ -96,7 +96,7 @@ public class TestService : ITestService
         if (entity == null)
             throw TestException.NotFound(id);
 
-        _repository.Delete(entity);
+        _repository.DeleteAsync(entity);
 
         await _cache.RemoveAsync("tests_all");
         await _cache.RemoveAsync($"test_{id}");

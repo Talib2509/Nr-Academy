@@ -6,12 +6,10 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Linq.Expressions;
-using System.Text;
 using System.Threading.Tasks;
 
 namespace NrAcademyDAL.Repositories
 {
-
     public class GenericRepository<T> : IGenericRepository<T> where T : BaseEntity, new()
     {
         protected readonly AppDbContext _context;
@@ -22,34 +20,35 @@ namespace NrAcademyDAL.Repositories
         }
 
         public DbSet<T> Table { get => _context.Set<T>(); }
+
         public async Task AddAsync(T entity)
         {
             await Table.AddAsync(entity);
-            _context.SaveChanges();
+            await _context.SaveChangesAsync();
         }
-        public void Delete(T entity)
-        {
-            Table.Remove(entity);
-            _context.SaveChanges();
-        }
-        public void Update(T entity)
+
+        public async Task UpdateAsync(T entity)
         {
             Table.Update(entity);
-            _context.SaveChanges();
+            await _context.SaveChangesAsync();
+        }
+
+        public async Task DeleteAsync(T entity)
+        {
+            Table.Remove(entity);
+            await _context.SaveChangesAsync();
         }
 
         public async Task<T> GetByIdAsync(int id)
             => await Table.FindAsync(id);
+
         public async Task<int> SaveAsync()
             => await _context.SaveChangesAsync();
 
         public async Task<IEnumerable<T>> GetAllAsync(Expression<Func<T, bool>>? filter = null, string? includeProperties = null)
         {
             IQueryable<T> query = Table;
-            if (filter != null)
-            {
-                query = query.Where(filter);
-            }
+            if (filter != null) query = query.Where(filter);
 
             if (includeProperties != null)
             {
@@ -61,9 +60,6 @@ namespace NrAcademyDAL.Repositories
             return await query.ToListAsync();
         }
 
-        public IQueryable<T> GetAll()
-        {
-            return _context.Set<T>().AsQueryable();
-        }
+        public IQueryable<T> GetAll() => Table.AsQueryable();
     }
 }

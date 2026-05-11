@@ -1,4 +1,5 @@
 ﻿using NrAcademyCORE.Entities.Common;
+using NrAcademyCORE.Entities.Identity;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -12,6 +13,9 @@ namespace NrAcademyCORE.Entities
         public int UserId { get; set; }
         public int TestId { get; set; }
         public int Score { get; set; }
-        public DateTime ComletedAt { get; set; } = DateTime.Now;
+        public DateTime StartedAt { get; set; } 
+        public DateTime CompletedAt { get; set; } = DateTime.Now; 
+        public bool IsWinner { get; set; } = false;
+        public virtual AppUser User { get; set; }
     }
 }

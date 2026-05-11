@@ -82,7 +82,7 @@ namespace NrAcademyBL.Services.Concrete
                 throw QuestionException.NotFound(dto.Id);
 
             _mapper.Map(dto, entity);
-            _questionRepository.Update(entity);
+            _questionRepository.UpdateAsync(entity);
 
             await _cache.RemoveAsync("questions_all");
             await _cache.RemoveAsync($"question_{dto.Id}");
@@ -94,7 +94,7 @@ namespace NrAcademyBL.Services.Concrete
             if (entity == null)
                 throw QuestionException.NotFound(id);
 
-            _questionRepository.Delete(entity);
+            _questionRepository.DeleteAsync(entity);
 
             await _cache.RemoveAsync("questions_all");
             await _cache.RemoveAsync($"question_{id}");

@@ -11,11 +11,14 @@ public class CertificateCreateDTO
 {
     [Required]
     public int UserId { get; set; }
+
+    public string UserFullName { get; set; } = string.Empty;
+
     [Required]
     public int CourseId { get; set; }
-    [Required,Url]
+
     public string CertificateUrl { get; set; } = string.Empty;
-    public string CertificateType { get; set; }
+    public string CertificateType { get; set; } = string.Empty;
     public int Score { get; set; }
-    public string TestTitle { get; set; }
+    public string TestTitle { get; set; } = string.Empty;
 }

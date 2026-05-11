@@ -11,4 +11,6 @@ public class TestResultUpdateDto
     public int TestId { get; set; }
     [Required]
     public int AppUserId { get; set; }
+    public DateTime StartedAt { get; set; }
+    public DateTime CompletedAt { get; set; }
 }

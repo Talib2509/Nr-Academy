@@ -75,7 +75,7 @@ public class AnswerService : IAnswerService
             throw AnswerException.NotFound(dto.Id);
 
         _mapper.Map(dto, entity);
-        _context.Update(entity);
+        _context.UpdateAsync(entity);
 
         await _cache.RemoveAsync("answers_all");
         await _cache.RemoveAsync($"answer_{dto.Id}");
@@ -87,7 +87,7 @@ public class AnswerService : IAnswerService
         if (entity == null)
             throw AnswerException.NotFound(id);
 
-        _context.Delete(entity);
+        _context.DeleteAsync(entity);
 
         await _cache.RemoveAsync("answers_all");
         await _cache.RemoveAsync($"answer_{id}");

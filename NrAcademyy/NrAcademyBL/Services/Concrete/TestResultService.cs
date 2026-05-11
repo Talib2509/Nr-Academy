@@ -1,91 +1,164 @@
-
-﻿using AutoMapper;
-using NrAcademyBL.DTOs.TestResultDTO;
-﻿
 using AutoMapper;
-using NrAcademyBL.DTOs.AuthDTO;
+using NrAcademyBL.DTOs.CertificateDTO;
+using NrAcademyBL.DTOs.TestResultDTO;
 using NrAcademyBL.Exceptions.TestResult;
-
 using NrAcademyBL.Extensions.Caching;
 using NrAcademyBL.Services.Abstract;
 using NrAcademyCORE.Entities;
 using NrAcademyCORE.Repositories;
 using System;
 using System.Collections.Generic;
+using System.Linq;
 using System.Threading.Tasks;
 
-namespace NrAcademyBL.Services.Concrete;
-
-public class TestResultService : ITestResultService
+namespace NrAcademyBL.Services.Concrete
 {
-    private readonly ITestResultRepository _repository;
-    private readonly IMapper _mapper;
-    private readonly ICacheService _cache;
-
-    public TestResultService(
-        ITestResultRepository repository,
-        IMapper mapper,
-        ICacheService cache)
+    public class TestResultService : ITestResultService
     {
-        _repository = repository;
-        _mapper = mapper;
-        _cache = cache;
-    }
+        private readonly ITestResultRepository _repository;
+        private readonly ITestRepository _testRepository;
+        private readonly IQuestionRepository _questionRepository;
+        private readonly ICertificateService _certificateService;
+        private readonly IMapper _mapper;
+        private readonly ICacheService _cache;
 
-    public async Task<List<TestResultItemDto>> GetAllAsync()
-    {
-        var key = "testresults_all";
+        public TestResultService(
+            ITestResultRepository repository,
+            ITestRepository testRepository,
+            IQuestionRepository questionRepository,
+            ICertificateService certificateService,
+            IMapper mapper,
+            ICacheService cache)
+        {
+            _repository = repository;
+            _testRepository = testRepository;
+            _questionRepository = questionRepository;
+            _certificateService = certificateService;
+            _mapper = mapper;
+            _cache = cache;
+        }
 
-        var cached = await _cache.GetAsync<List<TestResultItemDto>>(key);
-        if (cached != null)
-            return cached;
+        public async Task<TestResultItemDto> SubmitTestAsync(int userId, TestSubmitDto dto)
+        {
+            
+            var test = await _testRepository.GetByIdAsync(dto.TestId);
+            if (test == null) throw new Exception("Test tapılmadı.");
 
-        var data = await _repository.GetAllAsync();
-        var mapped = _mapper.Map<List<TestResultItemDto>>(data);
+            
+            var timeTaken = (DateTime.Now - dto.StartedAt).TotalMinutes;
 
-        await _cache.SetAsync(key, mapped, TimeSpan.FromMinutes(30));
+            // Əgər müəllim testə vaxt qoyubsa (> 0) və şagird bu vaxtı keçibsə
+            // (+2 dəqiqə əlavə edirik ki, internet zəif olanda şagirdin haqqı getməsin)
+            if (test.DurationInMinutes > 0 && timeTaken > (test.DurationInMinutes + 2))
+            {
+                throw new Exception($"Diqqət: Bu test üçün ayrılmış vaxt ({test.DurationInMinutes} dəqiqə) bitmişdir. Təəssüf ki, nəticəniz qəbul edilmədi.");
+            }
 
-        return mapped;
-    }
+           
+            var questions = await _questionRepository.GetAllAsync(
+                filter: q => q.TestId == dto.TestId,
+                includeProperties: "Answers");
 
-    public async Task<TestResultItemDto> GetByIdAsync(int id)
-    {
-        var key = $"testresult_{id}";
+            var questionList = questions.ToList();
+            if (!questionList.Any()) throw new Exception("Testdə sual tapılmadı.");
 
-        var cached = await _cache.GetAsync<TestResultItemDto>(key);
-        if (cached != null)
-            return cached;
+            int correctCount = 0;
+            foreach (var userAnswer in dto.UserAnswers)
+            {
+                var question = questionList.FirstOrDefault(q => q.Id == userAnswer.QuestionId);
+                if (question != null && question.Answers != null)
+                {
+                    var correctAnswer = question.Answers.FirstOrDefault(a => a.IsCorrect);
+                    if (correctAnswer != null && correctAnswer.Id == userAnswer.SelectedAnswerId)
+                        correctCount++;
+                }
+            }
 
-        var data = await _repository.GetByIdAsync(id);
+            int score = (int)Math.Round((double)correctCount / questionList.Count * 100);
 
-        if (data == null)
-            throw TestResultException.NotFound(id);
+            
+            var result = new TestResult
+            {
+                UserId = userId,
+                TestId = dto.TestId,
+                Score = score,
+                StartedAt = dto.StartedAt,
+                CompletedAt = DateTime.Now,
+                IsWinner = false
+            };
 
-        var mapped = _mapper.Map<TestResultItemDto>(data);
+            await _repository.AddAsync(result);
+            await _cache.RemoveAsync("testresults_all");
 
-        await _cache.SetAsync(key, mapped, TimeSpan.FromMinutes(30));
+            // 5. 80% LİMİTİ VƏ SERTİFİKAT YARADILMASI
+            if (score >= 80)
+            {
+                await _certificateService.CreateAsync(new CertificateCreateDTO
+                {
+                    UserId = userId,
+                    CourseId = test.CourseId,
+                    TestTitle = test.Title,
+                    Score = score,
+                    CertificateType = "Kursu Bitirmə",
+                    CertificateUrl = $"https://nracademy.com/certs/view/{result.Id}" 
+                });
+            }
 
-        return mapped;
-    }
+            return _mapper.Map<TestResultItemDto>(result);
+        }
 
-    public async Task CreateAsync(TestResultCreateDto dto)
-    {
-        var entity = _mapper.Map<TestResult>(dto);
-        await _repository.AddAsync(entity);
+        public async Task<List<TestResultItemDto>> GetResultsByTestIdAsync(int testId)
+        {
+            var results = await _repository.GetResultsByTestIdWithUserAsync(testId);
+            return _mapper.Map<List<TestResultItemDto>>(results);
+        }
 
-        await _cache.RemoveAsync("testresults_all");
-    }
+        public async Task DetermineWinnerForTestAsync(int testId)
+        {
+            var winner = await _repository.GetWinnerForTestAsync(testId);
+            var test = await _testRepository.GetByIdAsync(testId);
 
-    public async Task DeleteAsync(int id)
-    {
-        var entity = await _repository.GetByIdAsync(id);
+            if (winner != null && test != null)
+            {
+                winner.IsWinner = true;
+                await _repository.UpdateAsync(winner);
 
-        if (entity == null)
-            throw TestResultException.NotFound(id);
+                await _certificateService.CreateAsync(new CertificateCreateDTO
+                {
+                    UserId = winner.UserId,
+                    CourseId = test.CourseId,
+                    TestTitle = test.Title,
+                    Score = winner.Score,
+                    CertificateType = "Günün Qalibi",
+                    CertificateUrl = $"https://nracademy.com/certs/verify/{winner.Id}"
+                });
 
-        _repository.Delete(entity);
+                await _cache.RemoveAsync("testresults_all");
+            }
+        }
 
-        await _cache.RemoveAsync("testresults_all");
-        await _cache.RemoveAsync($"testresult_{id}");
+        public async Task<List<TestResultItemDto>> GetUserResultsAsync(int userId)
+        {
+            var results = await _repository.GetAllAsync(filter: r => r.UserId == userId);
+            return _mapper.Map<List<TestResultItemDto>>(results);
+        }
+
+        public async Task<List<TestResultItemDto>> GetAllAsync() =>
+            _mapper.Map<List<TestResultItemDto>>(await _repository.GetAllAsync());
+
+        public async Task<TestResultItemDto> GetByIdAsync(int id)
+        {
+            var data = await _repository.GetByIdAsync(id);
+            if (data == null) throw TestResultException.NotFound(id);
+            return _mapper.Map<TestResultItemDto>(data);
+        }
+
+        public async Task DeleteAsync(int id)
+        {
+            var entity = await _repository.GetByIdAsync(id);
+            if (entity == null) throw TestResultException.NotFound(id);
+            await _repository.DeleteAsync(entity);
+            await _cache.RemoveAsync("testresults_all");
+        }
     }
 }

@@ -7,6 +7,7 @@ using NrAcademyBL.Extensions.Caching;
 using NrAcademyBL.Services.Concrete;
 using NrAcademyCORE.Entities;
 using NrAcademyCORE.Repositories;
+using NrAcademyDAL.Repositories;
 using Xunit;
 using static NrAcademyBL.DTOs.TestDTO.TestDTO;
 

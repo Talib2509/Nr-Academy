@@ -13,6 +13,8 @@ namespace NrAcademyBL.DTOs.TestDTO
             public string Description { get; set; } = string.Empty;
             [Required]
             public int CourseId { get; set; }
+            [Required]
+            public int DurationInMinutes { get; set; }
         }
     }
 }

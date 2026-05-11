@@ -59,7 +59,7 @@ public class BlogPostService : IBlogPostService
             FileExtensions.DeleteFile(Path.GetFileName(blogPost.ImageUrl), rootPath, "uploads", "blogposts");
         }
 
-        _repository.Delete(blogPost);
+        _repository.DeleteAsync(blogPost);
 
         await _cache.RemoveAsync("blogposts_all");
         await _cache.RemoveAsync($"blogpost_{id}");
@@ -129,7 +129,7 @@ public class BlogPostService : IBlogPostService
         }
 
         _mapper.Map(dto, existingPost);
-        _repository.Update(existingPost);
+        _repository.UpdateAsync(existingPost);
 
         await _cache.RemoveAsync("blogposts_all");
         await _cache.RemoveAsync($"blogpost_{dto.Id}");
