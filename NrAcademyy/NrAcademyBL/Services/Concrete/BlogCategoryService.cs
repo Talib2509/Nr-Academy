@@ -17,10 +17,10 @@ namespace NrAcademyBL.Services.Concrete
         private readonly IBlogCategoryRepository _repo;
         private readonly IMapper _mapper;
         private readonly ICacheService _cache;
-        public BlogCategoryService(IBlogCategoryRepository _repo, IMapper _mapper, ICacheService cache)
+        public BlogCategoryService(IBlogCategoryRepository repo, IMapper mapper, ICacheService cache)
         {
-            _repo = _repo;
-            _mapper = _mapper;
+            _repo = repo;
+            _mapper = mapper;
             _cache = cache;
         }
         public async Task CreateAsync(BlogCategoryCreateDTO dto)
