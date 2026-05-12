@@ -5,11 +5,7 @@ using NrAcademyBL.Extensions.Caching;
 using NrAcademyBL.Services.Abstract;
 using NrAcademyCORE.Entities;
 using NrAcademyCORE.IRepositories;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+
 
 namespace NrAcademyBL.Services.Concrete;
 
@@ -29,7 +25,7 @@ public class TestimonialService(ITestimonialRepository _repository, IMapper _map
         var entity = await _repository.GetByIdAsync(id);
         if (entity == null) throw TestimonialException.NotFound(id);
 
-        _repository.Delete(entity);
+        await _repository.DeleteAsync(entity);
         await _cache.RemoveAsync(AllCacheKey);
         await _cache.RemoveAsync(ItemCacheKey(id));
     }
@@ -68,7 +64,7 @@ public class TestimonialService(ITestimonialRepository _repository, IMapper _map
         entity.ReviewText = dto.ReviewText;
         entity.Rating = dto.Rating;
 
-        _repository.Update(entity);
+        await _repository.UpdateAsync(entity);
         await _cache.RemoveAsync(AllCacheKey);
         await _cache.RemoveAsync(ItemCacheKey(dto.Id));
     }

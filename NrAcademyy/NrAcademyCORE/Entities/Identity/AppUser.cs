@@ -19,5 +19,7 @@ namespace NrAcademyCORE.Entities.Identity
         public bool IsEmailVerified { get; set; } = false;
         public string? PasswordResetCode { get; set; }
         public DateTime? PasswordResetCodeExpiry { get; set; }
+        public string? Bio { get; set; }
+        public int? Experience { get; set; }
     }
 }

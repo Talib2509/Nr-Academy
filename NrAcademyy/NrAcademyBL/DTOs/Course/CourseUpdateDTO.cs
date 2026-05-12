@@ -17,8 +17,7 @@ namespace NrAcademyBL.DTOs.CourseDTOs
         [Required,Range(0,10000)]
         public int Price { get; set; }
 
-        [Required,Url]
-        public string ImageUrl { get; set; } = string.Empty;
+  
         [Required]
 
         public IFormFile? ImageFile { get; set; }

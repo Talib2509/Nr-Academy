@@ -13,9 +13,8 @@ using NrAcademyCORE.Entities.Identity;
 using NrAcademyDAL.Context;
 using Serilog;
 using System.Text;
-using NrAcademyDAL;
-
-
+using NrAcademyDAL; // Və ya metod hansı namespace daxilindədirsə o
+// 1. .env faylını yükləyirik
 Env.Load();
 
 Log.Logger = new LoggerConfiguration()
@@ -32,14 +31,14 @@ try
     builder.Host.UseSerilog();
     builder.Configuration.AddEnvironmentVariables();
     builder.Services.AddMemoryCache();
-
-    
+    // Add services to the container.
     builder.Services.AddControllers();
     builder.Services.AddRepositories();
     builder.Services.AddService(builder.Configuration);
 
     // Email Settings konfiqurasiyası
     builder.Services.Configure<EmailSettings>(options => {
+        // Əgər .env-dən oxuya bilməsə, appsettings-dəki stringi istifadə etməsin deyə default dəyərlər qoyuruq
         options.Host = builder.Configuration[builder.Configuration["EmailSettings:Host"] ?? ""] ?? "smtp.gmail.com";
         options.Port = int.Parse(builder.Configuration["EmailSettings:Port"] ?? "587");
         options.FromEmail = builder.Configuration[builder.Configuration["EmailSettings:FromEmail"] ?? ""] ?? "huseynovmirtalib28@gmail.com";
@@ -58,8 +57,6 @@ try
     });
 
     builder.Services.AddAutoMapper();
-
-    // CORS Konfiqurasiyası 
     builder.Services.AddCors(options =>
     {
         options.AddPolicy("AllowAll",
@@ -119,7 +116,7 @@ try
         opt.AddSecurityDefinition("Bearer", new OpenApiSecurityScheme
         {
             In = ParameterLocation.Header,
-            Description = "Tokeni daxil edin (Məsələn: Bearer {token})",
+            Description = "Tokeni daxil edin",
             Name = "Authorization",
             Type = SecuritySchemeType.ApiKey,
             BearerFormat = "JWT",
@@ -138,7 +135,7 @@ try
         });
     });
 
-    
+    // 2. Build əmri burada olmalıdır
     var app = builder.Build();
 
     // Configure the HTTP request pipeline.
@@ -149,13 +146,10 @@ try
         app.UseSwagger();
         app.UseSwaggerUI();
     }
-
-    // PDF və şəkillərin brauzerdə açılması üçün
     app.UseStaticFiles();
 
     app.UseHttpsRedirection();
 
-    // CORS-u aktivləşdiririk
     app.UseCors("AllowAll");
 
     app.UseMiddleware<GlobalExceptionHandlerMiddleware>();

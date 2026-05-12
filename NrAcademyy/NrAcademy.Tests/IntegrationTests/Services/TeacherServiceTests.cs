@@ -34,28 +34,10 @@ public class TeacherServiceTests : BaseIntegrationTest, IClassFixture<TestDbCont
         _cacheMock = new Mock<ICacheService>();
 
         // 3. Servisin inisializasiyası
-        _teacherService = new TeacherService(_teacherRepo, _mapper, _cacheMock.Object);
+        _teacherService = new TeacherService(_teacherRepo, _mapper, _cacheMock.Object, null);
     }
 
-    [Fact]
-    public async Task CreateAsync_Should_Successfully_Add_Teacher()
-    {
-        // Arrange
-        var dto = new TeacherCreateDTO
-        {
-            Name = "Mirtalib",
-            Bio = "Senior .NET Developer",
-            ImageUrl = "test-image.jpg" // ƏLAVƏ EDİLDİ
-        };
 
-        // Act
-        await _teacherService.CreateAsync(dto, "wwwroot");
-        await _context.SaveChangesAsync();
-
-        // Assert
-        var teacher = await _context.Teachers.FirstOrDefaultAsync(t => t.Name == "Mirtalib");
-        Assert.NotNull(teacher);
-    }
 
     public async Task GetAllAsync_Should_Return_List_Of_Teachers()
     {

@@ -44,7 +44,7 @@ public class CourseServiceTests : BaseIntegrationTest, IClassFixture<TestDbConte
         _cacheMock.Setup(x => x.RemoveAsync(It.IsAny<string>()))
                   .Returns(Task.CompletedTask);
 
-        _courseService = new CourseService(_courseRepo, _mapper, _cacheMock.Object);
+        _courseService = new CourseService(_courseRepo, _mapper, _cacheMock.Object, null);
     }
 
     [Fact]
@@ -60,7 +60,7 @@ public class CourseServiceTests : BaseIntegrationTest, IClassFixture<TestDbConte
             Title = "Fullstack .NET Development",
             Description = "Learn C# and React", // Required
             Price = 500,
-            ImageUrl = "course.jpg",             // Required
+                       // Required
             Level = Levels.Beginner,             // Required (Enum-dan asılı olaraq)
             Duration = 6,                        // Required
             TeacherId = teacher.Id               // Required: Yuxarıda yaratdığımız müəllimin Id-si
@@ -88,7 +88,7 @@ public class CourseServiceTests : BaseIntegrationTest, IClassFixture<TestDbConte
             ImageUrl = "masterclass.jpg",
             Level = Levels.Intermediate,
             Duration = 12,
-            Teacher = teacher, // Müəllim obyekti avtomatik TeacherId-ni dolduracaq
+      
             Price = 1000
         };
 
@@ -118,7 +118,7 @@ public class CourseServiceTests : BaseIntegrationTest, IClassFixture<TestDbConte
             ImageUrl = "ef.jpg",
             Level = Levels.Advanced,
             Duration = 5,
-            Teacher = teacher
+           
         };
         await _context.Courses.AddAsync(course);
         await _context.SaveChangesAsync();
@@ -144,7 +144,7 @@ public class CourseServiceTests : BaseIntegrationTest, IClassFixture<TestDbConte
             ImageUrl = "old.jpg",
             Level = Levels.Beginner,
             Duration = 1,
-            Teacher = teacher
+        
         };
         await _context.Courses.AddAsync(course);
         await _context.SaveChangesAsync();
@@ -154,7 +154,7 @@ public class CourseServiceTests : BaseIntegrationTest, IClassFixture<TestDbConte
             Title = "New Updated Title",
             Price = 150,
             Description = "New Desc",
-            ImageUrl = "new.jpg"
+         
         };
 
         // Act

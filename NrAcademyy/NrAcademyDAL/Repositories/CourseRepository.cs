@@ -18,10 +18,9 @@ namespace NrAcademyDAL.Repositories
         public async Task<List<Course>> GetAllWithTeacherAsync()
         {
             return await _context.Courses
-                .Include(x => x.Teacher)
+                .Include(x => x.Teacher) // Artıq bu birbaşa AppUser-i gətirir
                 .ToListAsync();
         }
-
         public async Task<Course> GetByIdWithTeacherAsync(int id)
         {
             return await _context.Courses
