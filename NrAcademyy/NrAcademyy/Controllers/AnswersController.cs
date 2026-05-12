@@ -8,7 +8,7 @@ namespace NrAcademyy.Controllers;
 [Route("api/[controller]")]
 [ApiController]
 // Ümumi olaraq həm Admin, həm də Moderator bura daxil ola bilsin
-[Authorize(Roles = "Admin, Moderator")]
+[Authorize(Roles = "Admin, Moderator,Teacher")]
 public class AnswersController : ControllerBase
 {
     private readonly IAnswerService _service;
@@ -43,7 +43,7 @@ public class AnswersController : ControllerBase
 
     [HttpDelete("{id}")]
 
-    [Authorize(Roles = "Admin")]
+    [Authorize(Roles = "Admin,Teacher")]
     public async Task<IActionResult> Delete(int id)
     {
         await _service.DeleteAsync(id);

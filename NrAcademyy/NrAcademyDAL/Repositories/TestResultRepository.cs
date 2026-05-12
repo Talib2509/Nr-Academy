@@ -24,7 +24,7 @@ namespace NrAcademyDAL.Repositories
         public async Task<List<TestResult>> GetResultsByTestIdWithUserAsync(int testId)
         {
             return await _context.TestResults
-                .Include(tr => tr.User) // Tələbə adını görmək üçün
+                .Include(tr => tr.User) 
                 .Where(tr => tr.TestId == testId)
                 .OrderByDescending(tr => tr.Score)
                 .ToListAsync();

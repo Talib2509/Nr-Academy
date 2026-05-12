@@ -1,14 +1,19 @@
-﻿namespace NrAcademyBL.DTOs.TestResultDTO;
+﻿using System;
 
-public class TestResultItemDto
+namespace NrAcademyBL.DTOs.TestResultDTO
 {
-    public int Id { get; set; }
-    public int Score { get; set; }
-    public int TestId { get; set; }
-    public int AppUserId { get; set; }
-    public string UserFullName { get; set; } 
-    public DateTime CreatedAt { get; set; }
-    public DateTime StartedAt { get; set; }
-    public DateTime CompletedAt { get; set; }
-    public bool IsWinner { get; set; }
+    public class TestResultItemDto
+    {
+        public int Id { get; set; }
+        public int Score { get; set; }
+        public int TestId { get; set; }
+        public int AppUserId { get; set; }
+        public string UserFullName { get; set; }
+        public int DurationInSeconds { get; set; } 
+        public int Rank { get; set; } 
+        public DateTime CreatedAt { get; set; }
+        public DateTime StartedAt { get; set; }
+        public DateTime CompletedAt { get; set; }
+        public bool IsWinner { get; set; }
+    }
 }

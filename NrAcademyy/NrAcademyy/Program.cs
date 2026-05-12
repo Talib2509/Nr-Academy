@@ -10,10 +10,12 @@ using NrAcademyBL.Exceptions;
 using NrAcademyBL.Exceptions.AuthException;
 using NrAcademyBL.Extensions;
 using NrAcademyCORE.Entities.Identity;
+using NrAcademyCORE.Repositories;
+using NrAcademyDAL; // Və ya metod hansı namespace daxilindədirsə o
 using NrAcademyDAL.Context;
+using NrAcademyDAL.Repositories;
 using Serilog;
 using System.Text;
-using NrAcademyDAL; // Və ya metod hansı namespace daxilindədirsə o
 // 1. .env faylını yükləyirik
 Env.Load();
 
@@ -74,6 +76,8 @@ try
         var realConnectionString = builder.Configuration[connectionKey] ?? connectionKey;
         options.UseSqlServer(realConnectionString);
     });
+
+    builder.Services.AddScoped<IUserAnswerRepository, UserAnswerRepository>();
 
     builder.Services.AddIdentity<AppUser, AppRole>()
         .AddEntityFrameworkStores<AppDbContext>()
