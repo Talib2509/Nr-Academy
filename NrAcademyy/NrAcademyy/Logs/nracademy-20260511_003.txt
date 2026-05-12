@@ -1,0 +1,124 @@
+2026-05-11 19:06:36.038 +04:00 [INF] NrAcademy tətbiqi başladılır...
+2026-05-11 19:06:36.305 +04:00 [INF] User profile is available. Using 'C:\Users\ikinci.el.noutbuklar\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2026-05-11 19:06:37.068 +04:00 [ERR] Failed executing DbCommand (24ms) [Parameters=[@__normalizedName_0='?' (Size = 256)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [a].[Id], [a].[ConcurrencyStamp], [a].[Name], [a].[NormalizedName]
+FROM [AspNetRoles] AS [a]
+WHERE [a].[NormalizedName] = @__normalizedName_0
+2026-05-11 19:06:37.094 +04:00 [ERR] An exception occurred while iterating over the results of a query for context type 'NrAcademyDAL.Context.AppDbContext'.
+Microsoft.Data.SqlClient.SqlException (0x80131904): Invalid object name 'AspNetRoles'.
+   at Microsoft.Data.SqlClient.SqlCommand.<>c.<ExecuteDbDataReaderAsync>b__211_0(Task`1 result)
+   at System.Threading.Tasks.ContinuationResultTaskFromResultTask`2.InnerInvoke()
+   at System.Threading.ExecutionContext.RunInternal(ExecutionContext executionContext, ContextCallback callback, Object state)
+--- End of stack trace from previous location ---
+   at System.Threading.ExecutionContext.RunInternal(ExecutionContext executionContext, ContextCallback callback, Object state)
+   at System.Threading.Tasks.Task.ExecuteWithThreadLocal(Task& currentTaskSlot, Thread threadPoolThread)
+--- End of stack trace from previous location ---
+   at Microsoft.EntityFrameworkCore.Storage.RelationalCommand.ExecuteReaderAsync(RelationalCommandParameterObject parameterObject, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalCommand.ExecuteReaderAsync(RelationalCommandParameterObject parameterObject, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Query.Internal.SingleQueryingEnumerable`1.AsyncEnumerator.InitializeReaderAsync(AsyncEnumerator enumerator, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.SqlServer.Storage.Internal.SqlServerExecutionStrategy.ExecuteAsync[TState,TResult](TState state, Func`4 operation, Func`4 verifySucceeded, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Query.Internal.SingleQueryingEnumerable`1.AsyncEnumerator.MoveNextAsync()
+ClientConnectionId:f836127f-94d0-4dd2-9205-7a611b78399a
+Error Number:208,State:1,Class:16
+Microsoft.Data.SqlClient.SqlException (0x80131904): Invalid object name 'AspNetRoles'.
+   at Microsoft.Data.SqlClient.SqlCommand.<>c.<ExecuteDbDataReaderAsync>b__211_0(Task`1 result)
+   at System.Threading.Tasks.ContinuationResultTaskFromResultTask`2.InnerInvoke()
+   at System.Threading.ExecutionContext.RunInternal(ExecutionContext executionContext, ContextCallback callback, Object state)
+--- End of stack trace from previous location ---
+   at System.Threading.ExecutionContext.RunInternal(ExecutionContext executionContext, ContextCallback callback, Object state)
+   at System.Threading.Tasks.Task.ExecuteWithThreadLocal(Task& currentTaskSlot, Thread threadPoolThread)
+--- End of stack trace from previous location ---
+   at Microsoft.EntityFrameworkCore.Storage.RelationalCommand.ExecuteReaderAsync(RelationalCommandParameterObject parameterObject, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalCommand.ExecuteReaderAsync(RelationalCommandParameterObject parameterObject, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Query.Internal.SingleQueryingEnumerable`1.AsyncEnumerator.InitializeReaderAsync(AsyncEnumerator enumerator, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.SqlServer.Storage.Internal.SqlServerExecutionStrategy.ExecuteAsync[TState,TResult](TState state, Func`4 operation, Func`4 verifySucceeded, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Query.Internal.SingleQueryingEnumerable`1.AsyncEnumerator.MoveNextAsync()
+ClientConnectionId:f836127f-94d0-4dd2-9205-7a611b78399a
+Error Number:208,State:1,Class:16
+2026-05-11 19:06:37.112 +04:00 [INF] Now listening on: https://localhost:7036
+2026-05-11 19:06:37.112 +04:00 [INF] Now listening on: http://localhost:5287
+2026-05-11 19:06:37.142 +04:00 [INF] Application started. Press Ctrl+C to shut down.
+2026-05-11 19:06:37.143 +04:00 [INF] Hosting environment: Development
+2026-05-11 19:06:37.145 +04:00 [INF] Content root path: C:\NrAcademy\NrAcademyy\NrAcademyy
+2026-05-11 19:06:37.247 +04:00 [INF] Request starting HTTP/2 GET https://localhost:7036/swagger/index.html - null null
+2026-05-11 19:06:37.334 +04:00 [INF] Request starting HTTP/2 GET https://localhost:7036/swagger/index.html - null null
+2026-05-11 19:06:37.348 +04:00 [INF] HTTP GET /swagger/index.html responded 200 in 3.3458 ms
+2026-05-11 19:06:37.351 +04:00 [INF] HTTP GET /swagger/index.html responded 200 in 47.6843 ms
+2026-05-11 19:06:37.357 +04:00 [INF] Request finished HTTP/2 GET https://localhost:7036/swagger/index.html - 200 null text/html;charset=utf-8 110.8685ms
+2026-05-11 19:06:37.357 +04:00 [INF] Request finished HTTP/2 GET https://localhost:7036/swagger/index.html - 200 null text/html;charset=utf-8 22.3067ms
+2026-05-11 19:06:37.363 +04:00 [INF] Request starting HTTP/2 GET https://localhost:7036/_vs/browserLink - null null
+2026-05-11 19:06:37.364 +04:00 [INF] Request starting HTTP/2 GET https://localhost:7036/_framework/aspnetcore-browser-refresh.js - null null
+2026-05-11 19:06:37.379 +04:00 [INF] Request finished HTTP/2 GET https://localhost:7036/_framework/aspnetcore-browser-refresh.js - 200 14925 application/javascript; charset=utf-8 15.2117ms
+2026-05-11 19:06:37.391 +04:00 [INF] Request starting HTTP/2 GET https://localhost:7036/_framework/aspnetcore-browser-refresh.js - null null
+2026-05-11 19:06:37.393 +04:00 [INF] Request starting HTTP/2 GET https://localhost:7036/_vs/browserLink - null null
+2026-05-11 19:06:37.395 +04:00 [INF] Request finished HTTP/2 GET https://localhost:7036/_vs/browserLink - 200 null text/javascript; charset=UTF-8 31.3249ms
+2026-05-11 19:06:37.395 +04:00 [INF] Request finished HTTP/2 GET https://localhost:7036/_framework/aspnetcore-browser-refresh.js - 200 14925 application/javascript; charset=utf-8 3.5395ms
+2026-05-11 19:06:37.405 +04:00 [INF] Request finished HTTP/2 GET https://localhost:7036/_vs/browserLink - 200 null text/javascript; charset=UTF-8 12.1228ms
+2026-05-11 19:06:37.465 +04:00 [INF] Request starting HTTP/2 GET https://localhost:7036/swagger/v1/swagger.json - null null
+2026-05-11 19:06:37.489 +04:00 [INF] HTTP GET /swagger/v1/swagger.json responded 200 in 20.6308 ms
+2026-05-11 19:06:37.489 +04:00 [INF] Request starting HTTP/2 GET https://localhost:7036/swagger/v1/swagger.json - null null
+2026-05-11 19:06:37.491 +04:00 [INF] Request finished HTTP/2 GET https://localhost:7036/swagger/v1/swagger.json - 200 null application/json;charset=utf-8 26.1658ms
+2026-05-11 19:06:37.504 +04:00 [INF] HTTP GET /swagger/v1/swagger.json responded 200 in 10.3528 ms
+2026-05-11 19:06:37.506 +04:00 [INF] Request finished HTTP/2 GET https://localhost:7036/swagger/v1/swagger.json - 200 null application/json;charset=utf-8 17.3577ms
+2026-05-11 19:07:08.272 +04:00 [INF] NrAcademy tətbiqi başladılır...
+2026-05-11 19:07:08.509 +04:00 [INF] User profile is available. Using 'C:\Users\ikinci.el.noutbuklar\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2026-05-11 19:07:09.304 +04:00 [ERR] Failed executing DbCommand (27ms) [Parameters=[@__normalizedName_0='?' (Size = 256)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [a].[Id], [a].[ConcurrencyStamp], [a].[Name], [a].[NormalizedName]
+FROM [AspNetRoles] AS [a]
+WHERE [a].[NormalizedName] = @__normalizedName_0
+2026-05-11 19:07:09.314 +04:00 [INF] Now listening on: https://localhost:7036
+2026-05-11 19:07:09.316 +04:00 [INF] Now listening on: http://localhost:5287
+2026-05-11 19:07:09.333 +04:00 [ERR] An exception occurred while iterating over the results of a query for context type 'NrAcademyDAL.Context.AppDbContext'.
+Microsoft.Data.SqlClient.SqlException (0x80131904): Invalid object name 'AspNetRoles'.
+   at Microsoft.Data.SqlClient.SqlCommand.<>c.<ExecuteDbDataReaderAsync>b__211_0(Task`1 result)
+   at System.Threading.Tasks.ContinuationResultTaskFromResultTask`2.InnerInvoke()
+   at System.Threading.ExecutionContext.RunInternal(ExecutionContext executionContext, ContextCallback callback, Object state)
+--- End of stack trace from previous location ---
+   at System.Threading.ExecutionContext.RunInternal(ExecutionContext executionContext, ContextCallback callback, Object state)
+   at System.Threading.Tasks.Task.ExecuteWithThreadLocal(Task& currentTaskSlot, Thread threadPoolThread)
+--- End of stack trace from previous location ---
+   at Microsoft.EntityFrameworkCore.Storage.RelationalCommand.ExecuteReaderAsync(RelationalCommandParameterObject parameterObject, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalCommand.ExecuteReaderAsync(RelationalCommandParameterObject parameterObject, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Query.Internal.SingleQueryingEnumerable`1.AsyncEnumerator.InitializeReaderAsync(AsyncEnumerator enumerator, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.SqlServer.Storage.Internal.SqlServerExecutionStrategy.ExecuteAsync[TState,TResult](TState state, Func`4 operation, Func`4 verifySucceeded, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Query.Internal.SingleQueryingEnumerable`1.AsyncEnumerator.MoveNextAsync()
+ClientConnectionId:b3794562-95c1-4ce0-b274-65bf901b20ff
+Error Number:208,State:1,Class:16
+Microsoft.Data.SqlClient.SqlException (0x80131904): Invalid object name 'AspNetRoles'.
+   at Microsoft.Data.SqlClient.SqlCommand.<>c.<ExecuteDbDataReaderAsync>b__211_0(Task`1 result)
+   at System.Threading.Tasks.ContinuationResultTaskFromResultTask`2.InnerInvoke()
+   at System.Threading.ExecutionContext.RunInternal(ExecutionContext executionContext, ContextCallback callback, Object state)
+--- End of stack trace from previous location ---
+   at System.Threading.ExecutionContext.RunInternal(ExecutionContext executionContext, ContextCallback callback, Object state)
+   at System.Threading.Tasks.Task.ExecuteWithThreadLocal(Task& currentTaskSlot, Thread threadPoolThread)
+--- End of stack trace from previous location ---
+   at Microsoft.EntityFrameworkCore.Storage.RelationalCommand.ExecuteReaderAsync(RelationalCommandParameterObject parameterObject, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalCommand.ExecuteReaderAsync(RelationalCommandParameterObject parameterObject, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Query.Internal.SingleQueryingEnumerable`1.AsyncEnumerator.InitializeReaderAsync(AsyncEnumerator enumerator, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.SqlServer.Storage.Internal.SqlServerExecutionStrategy.ExecuteAsync[TState,TResult](TState state, Func`4 operation, Func`4 verifySucceeded, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Query.Internal.SingleQueryingEnumerable`1.AsyncEnumerator.MoveNextAsync()
+ClientConnectionId:b3794562-95c1-4ce0-b274-65bf901b20ff
+Error Number:208,State:1,Class:16
+2026-05-11 19:07:09.358 +04:00 [INF] Application started. Press Ctrl+C to shut down.
+2026-05-11 19:07:09.359 +04:00 [INF] Hosting environment: Development
+2026-05-11 19:07:09.361 +04:00 [INF] Content root path: C:\NrAcademy\NrAcademyy\NrAcademyy
+2026-05-11 19:07:09.457 +04:00 [INF] Request starting HTTP/2 GET https://localhost:7036/swagger/index.html - null null
+2026-05-11 19:07:09.554 +04:00 [INF] Request starting HTTP/2 GET https://localhost:7036/swagger/index.html - null null
+2026-05-11 19:07:09.566 +04:00 [INF] HTTP GET /swagger/index.html responded 200 in 48.6800 ms
+2026-05-11 19:07:09.566 +04:00 [INF] HTTP GET /swagger/index.html responded 200 in 4.4603 ms
+2026-05-11 19:07:09.575 +04:00 [INF] Request finished HTTP/2 GET https://localhost:7036/swagger/index.html - 200 null text/html;charset=utf-8 118.4377ms
+2026-05-11 19:07:09.577 +04:00 [INF] Request finished HTTP/2 GET https://localhost:7036/swagger/index.html - 200 null text/html;charset=utf-8 23.4161ms
+2026-05-11 19:07:09.582 +04:00 [INF] Request starting HTTP/2 GET https://localhost:7036/_vs/browserLink - null null
+2026-05-11 19:07:09.583 +04:00 [INF] Request starting HTTP/2 GET https://localhost:7036/_framework/aspnetcore-browser-refresh.js - null null
+2026-05-11 19:07:09.594 +04:00 [INF] Request finished HTTP/2 GET https://localhost:7036/_framework/aspnetcore-browser-refresh.js - 200 14925 application/javascript; charset=utf-8 11.1502ms
+2026-05-11 19:07:09.611 +04:00 [INF] Request starting HTTP/2 GET https://localhost:7036/_framework/aspnetcore-browser-refresh.js - null null
+2026-05-11 19:07:09.615 +04:00 [INF] Request finished HTTP/2 GET https://localhost:7036/_framework/aspnetcore-browser-refresh.js - 200 14925 application/javascript; charset=utf-8 3.5546ms
+2026-05-11 19:07:09.621 +04:00 [INF] Request starting HTTP/2 GET https://localhost:7036/_vs/browserLink - null null
+2026-05-11 19:07:09.623 +04:00 [INF] Request finished HTTP/2 GET https://localhost:7036/_vs/browserLink - 200 null text/javascript; charset=UTF-8 41.0069ms
+2026-05-11 19:07:09.631 +04:00 [INF] Request finished HTTP/2 GET https://localhost:7036/_vs/browserLink - 200 null text/javascript; charset=UTF-8 9.8329ms
+2026-05-11 19:07:09.700 +04:00 [INF] Request starting HTTP/2 GET https://localhost:7036/swagger/v1/swagger.json - null null
+2026-05-11 19:07:09.722 +04:00 [INF] Request starting HTTP/2 GET https://localhost:7036/swagger/v1/swagger.json - null null
+2026-05-11 19:07:09.723 +04:00 [INF] HTTP GET /swagger/v1/swagger.json responded 200 in 19.8440 ms
+2026-05-11 19:07:09.728 +04:00 [INF] Request finished HTTP/2 GET https://localhost:7036/swagger/v1/swagger.json - 200 null application/json;charset=utf-8 28.036ms
+2026-05-11 19:07:09.739 +04:00 [INF] HTTP GET /swagger/v1/swagger.json responded 200 in 14.0362 ms
+2026-05-11 19:07:09.742 +04:00 [INF] Request finished HTTP/2 GET https://localhost:7036/swagger/v1/swagger.json - 200 null application/json;charset=utf-8 19.396ms

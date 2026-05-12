@@ -1,0 +1,67 @@
+2026-05-12 00:45:12.513 +04:00 [INF] NrAcademy tətbiqi başladılır...
+2026-05-12 00:45:12.779 +04:00 [INF] User profile is available. Using 'C:\Users\ikinci.el.noutbuklar\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2026-05-12 00:45:13.629 +04:00 [INF] Executed DbCommand (30ms) [Parameters=[@__normalizedName_0='?' (Size = 256)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [a].[Id], [a].[ConcurrencyStamp], [a].[Name], [a].[NormalizedName]
+FROM [AspNetRoles] AS [a]
+WHERE [a].[NormalizedName] = @__normalizedName_0
+2026-05-12 00:45:13.755 +04:00 [INF] Now listening on: https://localhost:7036
+2026-05-12 00:45:13.941 +04:00 [INF] Request starting HTTP/2 GET https://localhost:7036/swagger/index.html - null null
+2026-05-12 00:45:13.980 +04:00 [INF] Executed DbCommand (1ms) [Parameters=[@__normalizedName_0='?' (Size = 256)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [a].[Id], [a].[ConcurrencyStamp], [a].[Name], [a].[NormalizedName]
+FROM [AspNetRoles] AS [a]
+WHERE [a].[NormalizedName] = @__normalizedName_0
+2026-05-12 00:45:14.205 +04:00 [INF] Now listening on: http://localhost:5287
+2026-05-12 00:45:14.265 +04:00 [INF] Executed DbCommand (1ms) [Parameters=[@__normalizedName_0='?' (Size = 256)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [a].[Id], [a].[ConcurrencyStamp], [a].[Name], [a].[NormalizedName]
+FROM [AspNetRoles] AS [a]
+WHERE [a].[NormalizedName] = @__normalizedName_0
+2026-05-12 00:45:14.300 +04:00 [INF] Executed DbCommand (1ms) [Parameters=[@__normalizedName_0='?' (Size = 256)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [a].[Id], [a].[ConcurrencyStamp], [a].[Name], [a].[NormalizedName]
+FROM [AspNetRoles] AS [a]
+WHERE [a].[NormalizedName] = @__normalizedName_0
+2026-05-12 00:45:14.326 +04:00 [INF] Application started. Press Ctrl+C to shut down.
+2026-05-12 00:45:14.358 +04:00 [INF] Executed DbCommand (4ms) [Parameters=[@__normalizedEmail_0='?' (Size = 256)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(2) [a].[Id], [a].[AccessFailedCount], [a].[Bio], [a].[ConcurrencyStamp], [a].[CreatedAt], [a].[Email], [a].[EmailConfirmed], [a].[EmailVerificationCode], [a].[EmailVerificationCodeExpiry], [a].[Experience], [a].[FirstName], [a].[IsEmailVerified], [a].[LastName], [a].[LockoutEnabled], [a].[LockoutEnd], [a].[NormalizedEmail], [a].[NormalizedUserName], [a].[PasswordHash], [a].[PasswordResetCode], [a].[PasswordResetCodeExpiry], [a].[PhoneNumber], [a].[PhoneNumberConfirmed], [a].[ProfileImageUrl], [a].[SecurityStamp], [a].[TwoFactorEnabled], [a].[UpdatedAt], [a].[UserName]
+FROM [AspNetUsers] AS [a]
+WHERE [a].[NormalizedEmail] = @__normalizedEmail_0
+2026-05-12 00:45:14.364 +04:00 [INF] Hosting environment: Development
+2026-05-12 00:45:14.375 +04:00 [INF] Request starting HTTP/2 GET https://localhost:7036/swagger/index.html - null null
+2026-05-12 00:45:14.412 +04:00 [INF] HTTP GET /swagger/index.html responded 200 in 86.3503 ms
+2026-05-12 00:45:14.433 +04:00 [INF] Request starting HTTP/2 GET https://localhost:7036/_vs/browserLink - null null
+2026-05-12 00:45:14.433 +04:00 [INF] Request starting HTTP/2 GET https://localhost:7036/_framework/aspnetcore-browser-refresh.js - null null
+2026-05-12 00:45:14.489 +04:00 [INF] Content root path: C:\NrAcademy\NrAcademyy\NrAcademyy
+2026-05-12 00:45:14.508 +04:00 [INF] HTTP GET /swagger/index.html responded 200 in 0.9298 ms
+2026-05-12 00:45:14.509 +04:00 [INF] Request starting HTTP/2 GET https://localhost:7036/swagger/index.html - null null
+2026-05-12 00:45:14.648 +04:00 [INF] Request finished HTTP/2 GET https://localhost:7036/swagger/index.html - 200 null text/html;charset=utf-8 708.7153ms
+2026-05-12 00:45:14.780 +04:00 [INF] Request starting HTTP/2 GET https://localhost:7036/_framework/aspnetcore-browser-refresh.js - null null
+2026-05-12 00:45:14.785 +04:00 [INF] Request finished HTTP/2 GET https://localhost:7036/_framework/aspnetcore-browser-refresh.js - 200 14925 application/javascript; charset=utf-8 351.8561ms
+2026-05-12 00:45:14.878 +04:00 [INF] Request finished HTTP/2 GET https://localhost:7036/swagger/index.html - 200 null text/html;charset=utf-8 502.6927ms
+2026-05-12 00:45:14.900 +04:00 [INF] Request starting HTTP/2 GET https://localhost:7036/_vs/browserLink - null null
+2026-05-12 00:45:14.957 +04:00 [INF] Request finished HTTP/2 GET https://localhost:7036/_vs/browserLink - 200 null text/javascript; charset=UTF-8 523.7691ms
+2026-05-12 00:45:14.991 +04:00 [INF] HTTP GET /swagger/index.html responded 200 in 2.4704 ms
+2026-05-12 00:45:15.018 +04:00 [INF] Request finished HTTP/2 GET https://localhost:7036/_framework/aspnetcore-browser-refresh.js - 200 14925 application/javascript; charset=utf-8 237.6529ms
+2026-05-12 00:45:15.052 +04:00 [INF] Request starting HTTP/2 GET https://localhost:7036/_vs/browserLink - null null
+2026-05-12 00:45:15.053 +04:00 [INF] Request starting HTTP/2 GET https://localhost:7036/_framework/aspnetcore-browser-refresh.js - null null
+2026-05-12 00:45:15.121 +04:00 [INF] Request finished HTTP/2 GET https://localhost:7036/_vs/browserLink - 200 null text/javascript; charset=UTF-8 221.7845ms
+2026-05-12 00:45:15.128 +04:00 [INF] Request finished HTTP/2 GET https://localhost:7036/swagger/index.html - 200 null text/html;charset=utf-8 618.7523ms
+2026-05-12 00:45:15.154 +04:00 [INF] Request finished HTTP/2 GET https://localhost:7036/_framework/aspnetcore-browser-refresh.js - 200 14925 application/javascript; charset=utf-8 101.2376ms
+2026-05-12 00:45:15.165 +04:00 [INF] Request finished HTTP/2 GET https://localhost:7036/_vs/browserLink - 200 null text/javascript; charset=UTF-8 113.249ms
+2026-05-12 00:45:15.600 +04:00 [INF] Request starting HTTP/2 GET https://localhost:7036/swagger/v1/swagger.json - null null
+2026-05-12 00:45:15.727 +04:00 [INF] HTTP GET /swagger/v1/swagger.json responded 200 in 113.4932 ms
+2026-05-12 00:45:15.734 +04:00 [INF] Request finished HTTP/2 GET https://localhost:7036/swagger/v1/swagger.json - 200 null application/json;charset=utf-8 133.9158ms
+2026-05-12 00:45:15.819 +04:00 [INF] Request starting HTTP/2 GET https://localhost:7036/swagger/v1/swagger.json - null null
+2026-05-12 00:45:15.918 +04:00 [INF] HTTP GET /swagger/v1/swagger.json responded 200 in 87.5416 ms
+2026-05-12 00:45:15.921 +04:00 [INF] Request starting HTTP/2 GET https://localhost:7036/swagger/v1/swagger.json - null null
+2026-05-12 00:45:15.926 +04:00 [INF] Request finished HTTP/2 GET https://localhost:7036/swagger/v1/swagger.json - 200 null application/json;charset=utf-8 106.1419ms
+2026-05-12 00:45:16.013 +04:00 [INF] HTTP GET /swagger/v1/swagger.json responded 200 in 80.1900 ms
+2026-05-12 00:45:16.024 +04:00 [INF] Request finished HTTP/2 GET https://localhost:7036/swagger/v1/swagger.json - 200 null application/json;charset=utf-8 102.8637ms
+2026-05-12 00:45:22.487 +04:00 [INF] NrAcademy tətbiqi başladılır...
+2026-05-12 00:45:22.597 +04:00 [FTL] Tətbiq xəta verdi
+Microsoft.Extensions.Hosting.HostAbortedException: The host was aborted.
+   at Microsoft.Extensions.Hosting.HostFactoryResolver.HostingListener.ThrowHostAborted()
+   at Microsoft.Extensions.Hosting.HostFactoryResolver.HostingListener.OnNext(KeyValuePair`2 value)
+   at System.Diagnostics.DiagnosticListener.Write(String name, Object value)
+   at Microsoft.Extensions.Hosting.HostBuilder.ResolveHost(IServiceProvider serviceProvider, DiagnosticListener diagnosticListener)
+   at Microsoft.Extensions.Hosting.HostApplicationBuilder.Build()
+   at Microsoft.AspNetCore.Builder.WebApplicationBuilder.Build()
+   at Program.<Main>$(String[] args) in C:\NrAcademy\NrAcademyy\NrAcademyy\Program.cs:line 139

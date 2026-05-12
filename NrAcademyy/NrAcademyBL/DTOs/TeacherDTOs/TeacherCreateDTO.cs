@@ -13,8 +13,7 @@ namespace NrAcademyBL.DTOs.TeacherDTOs
         public string Name { get; set; }=string.Empty;
         [Required,MinLength(10),MaxLength(100)]
         public string Bio { get; set; } = string.Empty;
-        [Required,Url]
-        public string ImageUrl { get; set; } = string.Empty;
+ 
         [Required,Range(0,50)]
 
     

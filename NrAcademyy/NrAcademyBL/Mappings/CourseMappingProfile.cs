@@ -1,6 +1,6 @@
 ﻿using AutoMapper;
-using NrAcademyCORE.Entities;
 using NrAcademyBL.DTOs.CourseDTOs;
+using NrAcademyCORE.Entities;
 
 namespace NrAcademyBL.Mappings
 {
@@ -8,16 +8,17 @@ namespace NrAcademyBL.Mappings
     {
         public CourseMappingProfile()
         {
+            CreateMap<CourseCreateDTO, Course>()
+                .ForMember(dest => dest.Id, opt => opt.Ignore())
+                .ForMember(dest => dest.ImageUrl, opt => opt.Ignore())
+                .ForMember(dest => dest.Teacher, opt => opt.Ignore());
 
-            CreateMap<CourseCreateDTO, Course>();
+            CreateMap<CourseUpdateDTO, Course>()
+                .ForMember(dest => dest.Id, opt => opt.Ignore())
+                .ForMember(dest => dest.ImageUrl, opt => opt.Ignore())
+                .ForMember(dest => dest.Teacher, opt => opt.Ignore());
 
-            
-            CreateMap<CourseUpdateDTO, Course>();
-
-          
-            CreateMap<Course, CourseGetDTO>()
-                .ForMember(dest => dest.TeacherName,
-                    opt => opt.MapFrom(src => src.Teacher.Name));
+           
         }
     }
 }

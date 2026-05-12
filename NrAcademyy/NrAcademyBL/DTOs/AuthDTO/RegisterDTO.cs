@@ -1,4 +1,5 @@
-﻿using NrAcademyCORE.Enums;
+﻿using Microsoft.AspNetCore.Http;
+using NrAcademyCORE.Enums;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
@@ -26,5 +27,8 @@ namespace NrAcademyBL.DTOs.AuthDTO
         public string ConfirmPassword { get; set; } = string.Empty;
         [Required]
         public Roles Role { get; set; }   // Teacher ve ya Student
+        public string? Bio { get; set; }
+        public int? Experience { get; set; }
+        public IFormFile? ImageFile { get; set; }
     }
 }

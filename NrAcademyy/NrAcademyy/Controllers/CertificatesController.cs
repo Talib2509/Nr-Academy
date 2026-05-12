@@ -35,23 +35,11 @@ namespace NrAcademyy.Controllers
             return Ok(new { Message = "Sertifikat uğurla yaradıldı." });
         }
 
-        [HttpDelete("{id}")]
-
-        [AllowAnonymous] 
-        public async Task<IActionResult> GetAll() => Ok(await _service.GetAllAsync());
 
         [HttpGet("{id}")]
         [AllowAnonymous] 
         public async Task<IActionResult> GetById(int id) => Ok(await _service.GetByIdAsync(id));
 
-        [HttpPost]
-       
-        [Authorize(Roles = "Admin, Moderator")]
-        public async Task<IActionResult> Create(CertificateCreateDTO dto)
-        {
-            await _service.CreateAsync(dto);
-            return Ok("Sertifikat uğurla yaradıldı.");
-        }
 
         [HttpPut]
       

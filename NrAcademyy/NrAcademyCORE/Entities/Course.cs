@@ -1,4 +1,5 @@
 ﻿using NrAcademyCORE.Entities.Common;
+using NrAcademyCORE.Entities.Identity;
 using NrAcademyCORE.Enums;
 using System;
 using System.Collections.Generic;
@@ -16,8 +17,10 @@ namespace NrAcademyCORE.Entities
         public string ImageUrl { get; set; }
         public Levels Level { get; set; }
         public int Duration { get; set; }
-        public Teacher Teacher { get; set; }
-        public int TeacherId { get; set; }
+        public int TeacherId { get; set; } // Bu, AppUser cədvəlindəki ID olacaq
+        public AppUser Teacher { get; set; }
+       
+       
         public DateTime CreatedAt { get; set; } = DateTime.Now;
     }
 }

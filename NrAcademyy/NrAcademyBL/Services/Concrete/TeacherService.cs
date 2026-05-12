@@ -1,11 +1,13 @@
-﻿// NrAcademyBL/Services/Concrete/TeacherService.cs
+﻿
 using AutoMapper;
 using Microsoft.AspNetCore.Http;
+using Microsoft.AspNetCore.Identity;
 using NrAcademyBL.DTOs.TeacherDTOs;
 using NrAcademyBL.Extensions;
 using NrAcademyBL.Extensions.Caching;
 using NrAcademyBL.Services.Abstract;
 using NrAcademyCORE.Entities;
+using NrAcademyCORE.Entities.Identity;
 using NrAcademyCORE.Repositories;
 using System;
 using System.Collections.Generic;
@@ -19,27 +21,27 @@ namespace NrAcademyBL.Services.Concrete
         private readonly ITeacherRepository _repo;
         private readonly IMapper _mapper;
         private readonly ICacheService _cache;
+        private readonly UserManager<AppUser> _userManager;
 
-        public TeacherService(ITeacherRepository repo, IMapper mapper, ICacheService cache)
+        public TeacherService(ITeacherRepository repo, IMapper mapper, ICacheService cache, UserManager<AppUser> userManager)
         {
             _repo = repo;
             _mapper = mapper;
             _cache = cache;
+            _userManager = userManager;
         }
 
         public async Task<List<TeacherGetDTO>> GetAllAsync()
         {
             var key = "teachers_all";
-
             var cached = await _cache.GetAsync<List<TeacherGetDTO>>(key);
-            if (cached != null)
-                return cached;
+            if (cached != null) return cached;
 
-            var teachers = await _repo.GetAllAsync();
+            // Yalnız Teacher rolunda olan userləri gətiririk
+            var teachers = await _userManager.GetUsersInRoleAsync("Teacher");
+
             var mapped = _mapper.Map<List<TeacherGetDTO>>(teachers);
-
             await _cache.SetAsync(key, mapped, TimeSpan.FromMinutes(30));
-
             return mapped;
         }
 
@@ -63,20 +65,7 @@ namespace NrAcademyBL.Services.Concrete
             return mapped;
         }
 
-        public async Task CreateAsync(TeacherCreateDTO dto, string rootPath)
-        {
-            var teacher = _mapper.Map<Teacher>(dto);
-
-            if (dto.ImageFile != null)
-            {
-                // FileExtensions vasitəsilə faylı yükləyirik
-                string uploadsFolder = Path.Combine(rootPath, "uploads", "teachers");
-                teacher.ImageUrl = await dto.ImageFile.UploadAsync(uploadsFolder);
-            }
-
-            await _repo.AddAsync(teacher);
-            await _cache.RemoveAsync("teachers_all");
-        }
+    
 
         public async Task UpdateAsync(int id, TeacherUpdateDTO dto, string rootPath)
         {
