@@ -18,7 +18,9 @@ namespace NrAcademyBL.Mappings
                 .ForMember(dest => dest.ImageUrl, opt => opt.Ignore())
                 .ForMember(dest => dest.Teacher, opt => opt.Ignore());
 
-           
+            CreateMap<Course, CourseGetDTO>();
+
+
         }
     }
 }

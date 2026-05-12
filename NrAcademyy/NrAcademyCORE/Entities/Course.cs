@@ -17,7 +17,7 @@ namespace NrAcademyCORE.Entities
         public string ImageUrl { get; set; }
         public Levels Level { get; set; }
         public int Duration { get; set; }
-        public int TeacherId { get; set; } // Bu, AppUser cədvəlindəki ID olacaq
+        public int TeacherId { get; set; } 
         public AppUser Teacher { get; set; }
        
        

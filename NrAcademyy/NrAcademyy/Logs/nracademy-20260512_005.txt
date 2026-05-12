@@ -725,3 +725,94 @@ RolesAuthorizationRequirement:User.IsInRole must be true for one of the followin
 2026-05-12 15:22:45.249 +04:00 [INF] AuthenticationScheme: Bearer was challenged.
 2026-05-12 15:22:45.253 +04:00 [INF] HTTP POST /api/Course responded 401 in 26.7171 ms
 2026-05-12 15:22:45.257 +04:00 [INF] Request finished HTTP/2 POST https://localhost:7036/api/Course - 401 0 null 41.18ms
+2026-05-12 15:41:37.638 +04:00 [INF] NrAcademy tətbiqi başladılır...
+2026-05-12 15:41:38.135 +04:00 [INF] User profile is available. Using 'C:\Users\ikinci.el.noutbuklar\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2026-05-12 15:41:38.841 +04:00 [INF] Executed DbCommand (23ms) [Parameters=[@__normalizedName_0='?' (Size = 256)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [a].[Id], [a].[ConcurrencyStamp], [a].[Name], [a].[NormalizedName]
+FROM [AspNetRoles] AS [a]
+WHERE [a].[NormalizedName] = @__normalizedName_0
+2026-05-12 15:41:38.880 +04:00 [INF] Now listening on: https://localhost:7036
+2026-05-12 15:41:38.885 +04:00 [INF] Now listening on: http://localhost:5287
+2026-05-12 15:41:38.903 +04:00 [INF] Executed DbCommand (4ms) [Parameters=[@__normalizedName_0='?' (Size = 256)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [a].[Id], [a].[ConcurrencyStamp], [a].[Name], [a].[NormalizedName]
+FROM [AspNetRoles] AS [a]
+WHERE [a].[NormalizedName] = @__normalizedName_0
+2026-05-12 15:41:38.917 +04:00 [INF] Executed DbCommand (1ms) [Parameters=[@__normalizedName_0='?' (Size = 256)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [a].[Id], [a].[ConcurrencyStamp], [a].[Name], [a].[NormalizedName]
+FROM [AspNetRoles] AS [a]
+WHERE [a].[NormalizedName] = @__normalizedName_0
+2026-05-12 15:41:38.923 +04:00 [INF] Application started. Press Ctrl+C to shut down.
+2026-05-12 15:41:38.928 +04:00 [INF] Hosting environment: Development
+2026-05-12 15:41:38.927 +04:00 [INF] Executed DbCommand (1ms) [Parameters=[@__normalizedName_0='?' (Size = 256)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [a].[Id], [a].[ConcurrencyStamp], [a].[Name], [a].[NormalizedName]
+FROM [AspNetRoles] AS [a]
+WHERE [a].[NormalizedName] = @__normalizedName_0
+2026-05-12 15:41:38.931 +04:00 [INF] Content root path: C:\NrAcademy\NrAcademyy\NrAcademyy
+2026-05-12 15:41:38.944 +04:00 [INF] Executed DbCommand (1ms) [Parameters=[@__normalizedEmail_0='?' (Size = 256)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(2) [a].[Id], [a].[AccessFailedCount], [a].[Bio], [a].[ConcurrencyStamp], [a].[CreatedAt], [a].[Email], [a].[EmailConfirmed], [a].[EmailVerificationCode], [a].[EmailVerificationCodeExpiry], [a].[Experience], [a].[FirstName], [a].[IsEmailVerified], [a].[LastName], [a].[LockoutEnabled], [a].[LockoutEnd], [a].[NormalizedEmail], [a].[NormalizedUserName], [a].[PasswordHash], [a].[PasswordResetCode], [a].[PasswordResetCodeExpiry], [a].[PhoneNumber], [a].[PhoneNumberConfirmed], [a].[ProfileImageUrl], [a].[SecurityStamp], [a].[TwoFactorEnabled], [a].[UpdatedAt], [a].[UserName]
+FROM [AspNetUsers] AS [a]
+WHERE [a].[NormalizedEmail] = @__normalizedEmail_0
+2026-05-12 15:41:39.410 +04:00 [INF] Request starting HTTP/2 GET https://localhost:7036/swagger/index.html - null null
+2026-05-12 15:41:39.840 +04:00 [INF] HTTP GET /swagger/index.html responded 200 in 138.8159 ms
+2026-05-12 15:41:39.853 +04:00 [INF] Request starting HTTP/2 GET https://localhost:7036/_framework/aspnetcore-browser-refresh.js - null null
+2026-05-12 15:41:39.853 +04:00 [INF] Request starting HTTP/2 GET https://localhost:7036/_vs/browserLink - null null
+2026-05-12 15:41:39.866 +04:00 [INF] Request finished HTTP/2 GET https://localhost:7036/swagger/index.html - 200 null text/html;charset=utf-8 458.9673ms
+2026-05-12 15:41:39.880 +04:00 [INF] Request finished HTTP/2 GET https://localhost:7036/_framework/aspnetcore-browser-refresh.js - 200 14925 application/javascript; charset=utf-8 26.3678ms
+2026-05-12 15:41:39.967 +04:00 [INF] Request finished HTTP/2 GET https://localhost:7036/_vs/browserLink - 200 null text/javascript; charset=UTF-8 113.9437ms
+2026-05-12 15:41:40.049 +04:00 [INF] Request starting HTTP/2 GET https://localhost:7036/swagger/v1/swagger.json - null null
+2026-05-12 15:41:40.152 +04:00 [INF] HTTP GET /swagger/v1/swagger.json responded 200 in 88.9321 ms
+2026-05-12 15:41:40.166 +04:00 [INF] Request finished HTTP/2 GET https://localhost:7036/swagger/v1/swagger.json - 200 null application/json;charset=utf-8 117.6778ms
+2026-05-12 15:43:30.205 +04:00 [INF] Request starting HTTP/2 POST https://localhost:7036/api/Auth/login - application/json 61
+2026-05-12 15:43:30.215 +04:00 [INF] CORS policy execution successful.
+2026-05-12 15:43:30.260 +04:00 [INF] Executing endpoint 'NrAcademyy.Controllers.AuthController.Login (NrAcademyy)'
+2026-05-12 15:43:30.293 +04:00 [INF] Route matched with {action = "Login", controller = "Auth"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Login(NrAcademyBL.DTOs.AuthDTO.LoginDTO) on controller NrAcademyy.Controllers.AuthController (NrAcademyy).
+2026-05-12 15:43:30.637 +04:00 [INF] Executed DbCommand (1ms) [Parameters=[@__normalizedEmail_0='?' (Size = 256)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(2) [a].[Id], [a].[AccessFailedCount], [a].[Bio], [a].[ConcurrencyStamp], [a].[CreatedAt], [a].[Email], [a].[EmailConfirmed], [a].[EmailVerificationCode], [a].[EmailVerificationCodeExpiry], [a].[Experience], [a].[FirstName], [a].[IsEmailVerified], [a].[LastName], [a].[LockoutEnabled], [a].[LockoutEnd], [a].[NormalizedEmail], [a].[NormalizedUserName], [a].[PasswordHash], [a].[PasswordResetCode], [a].[PasswordResetCodeExpiry], [a].[PhoneNumber], [a].[PhoneNumberConfirmed], [a].[ProfileImageUrl], [a].[SecurityStamp], [a].[TwoFactorEnabled], [a].[UpdatedAt], [a].[UserName]
+FROM [AspNetUsers] AS [a]
+WHERE [a].[NormalizedEmail] = @__normalizedEmail_0
+2026-05-12 15:43:30.858 +04:00 [INF] Executed DbCommand (8ms) [Parameters=[@__userId_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT [a0].[Name]
+FROM [AspNetUserRoles] AS [a]
+INNER JOIN [AspNetRoles] AS [a0] ON [a].[RoleId] = [a0].[Id]
+WHERE [a].[UserId] = @__userId_0
+2026-05-12 15:43:30.879 +04:00 [INF] Executed DbCommand (1ms) [Parameters=[@__userId_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT [a0].[Name]
+FROM [AspNetUserRoles] AS [a]
+INNER JOIN [AspNetRoles] AS [a0] ON [a].[RoleId] = [a0].[Id]
+WHERE [a].[UserId] = @__userId_0
+2026-05-12 15:43:31.167 +04:00 [INF] Executed DbCommand (9ms) [Parameters=[@p0='?' (DbType = Int32), @p1='?' (Size = 4000), @p2='?' (DbType = DateTime2), @p3='?' (DbType = Boolean), @p4='?' (Size = 4000), @p5='?' (DbType = DateTime2), @p6='?' (Size = 4000)], CommandType='"Text"', CommandTimeout='30']
+SET IMPLICIT_TRANSACTIONS OFF;
+SET NOCOUNT ON;
+INSERT INTO [RefreshTokens] ([AppUserId], [CreatedByIp], [Expires], [IsRevoked], [ReplacedByToken], [RevokedAt], [Token])
+OUTPUT INSERTED.[Id]
+VALUES (@p0, @p1, @p2, @p3, @p4, @p5, @p6);
+2026-05-12 15:43:31.218 +04:00 [INF] Executing OkObjectResult, writing value of type '<>f__AnonymousType0`1[[NrAcademyBL.DTOs.AuthResponseDto, NrAcademyBL, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2026-05-12 15:43:31.235 +04:00 [INF] Executed action NrAcademyy.Controllers.AuthController.Login (NrAcademyy) in 927.5044ms
+2026-05-12 15:43:31.241 +04:00 [INF] Executed endpoint 'NrAcademyy.Controllers.AuthController.Login (NrAcademyy)'
+2026-05-12 15:43:31.248 +04:00 [INF] HTTP POST /api/Auth/login responded 200 in 1037.4053 ms
+2026-05-12 15:43:31.260 +04:00 [INF] Request finished HTTP/2 POST https://localhost:7036/api/Auth/login - 200 null application/json; charset=utf-8 1055.7574ms
+2026-05-12 15:44:25.207 +04:00 [INF] Request starting HTTP/2 POST https://localhost:7036/api/BlogCategory - application/json 42
+2026-05-12 15:44:25.216 +04:00 [INF] CORS policy execution successful.
+2026-05-12 15:44:25.281 +04:00 [INF] Executing endpoint 'NrAcademyy.Controllers.BlogCategoryController.Create (NrAcademyy)'
+2026-05-12 15:44:25.294 +04:00 [INF] Route matched with {action = "Create", controller = "BlogCategory"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Create(NrAcademyBL.DTOs.BlogCategoryDTO.BlogCategoryCreateDTO) on controller NrAcademyy.Controllers.BlogCategoryController (NrAcademyy).
+2026-05-12 15:44:25.313 +04:00 [INF] Executed action NrAcademyy.Controllers.BlogCategoryController.Create (NrAcademyy) in 11.4905ms
+2026-05-12 15:44:25.320 +04:00 [INF] Executed endpoint 'NrAcademyy.Controllers.BlogCategoryController.Create (NrAcademyy)'
+2026-05-12 15:44:25.643 +04:00 [ERR] HTTP POST /api/BlogCategory responded 500 in 427.5296 ms
+2026-05-12 15:44:25.652 +04:00 [INF] Request finished HTTP/2 POST https://localhost:7036/api/BlogCategory - 500 null application/json 445.334ms
+2026-05-12 15:45:57.944 +04:00 [INF] Request starting HTTP/2 GET https://localhost:7036/api/BlogCategory - null null
+2026-05-12 15:45:57.972 +04:00 [INF] Executing endpoint 'NrAcademyy.Controllers.BlogCategoryController.GetAll (NrAcademyy)'
+2026-05-12 15:45:57.984 +04:00 [INF] Route matched with {action = "GetAll", controller = "BlogCategory"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetAll() on controller NrAcademyy.Controllers.BlogCategoryController (NrAcademyy).
+2026-05-12 15:45:57.998 +04:00 [INF] Executed action NrAcademyy.Controllers.BlogCategoryController.GetAll (NrAcademyy) in 5.0112ms
+2026-05-12 15:45:58.005 +04:00 [INF] Executed endpoint 'NrAcademyy.Controllers.BlogCategoryController.GetAll (NrAcademyy)'
+2026-05-12 15:45:58.010 +04:00 [ERR] HTTP GET /api/BlogCategory responded 500 in 60.9173 ms
+2026-05-12 15:45:58.015 +04:00 [INF] Request finished HTTP/2 GET https://localhost:7036/api/BlogCategory - 500 null application/json 70.7849ms
+2026-05-12 15:46:44.996 +04:00 [INF] NrAcademy tətbiqi başladılır...
+2026-05-12 15:46:45.108 +04:00 [FTL] Tətbiq xəta verdi
+Microsoft.Extensions.Hosting.HostAbortedException: The host was aborted.
+   at Microsoft.Extensions.Hosting.HostFactoryResolver.HostingListener.ThrowHostAborted()
+   at Microsoft.Extensions.Hosting.HostFactoryResolver.HostingListener.OnNext(KeyValuePair`2 value)
+   at System.Diagnostics.DiagnosticListener.Write(String name, Object value)
+   at Microsoft.Extensions.Hosting.HostBuilder.ResolveHost(IServiceProvider serviceProvider, DiagnosticListener diagnosticListener)
+   at Microsoft.Extensions.Hosting.HostApplicationBuilder.Build()
+   at Microsoft.AspNetCore.Builder.WebApplicationBuilder.Build()
+   at Program.<Main>$(String[] args) in C:\NrAcademy\NrAcademyy\NrAcademyy\Program.cs:line 143
