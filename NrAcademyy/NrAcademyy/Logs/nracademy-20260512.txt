@@ -1,0 +1,37 @@
+2026-05-12 12:27:24.227 +04:00 [INF] NrAcademy tətbiqi başladılır...
+2026-05-12 12:27:25.068 +04:00 [INF] User profile is available. Using 'C:\Users\Acer\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2026-05-12 12:27:26.275 +04:00 [INF] Now listening on: https://localhost:7036
+2026-05-12 12:27:26.286 +04:00 [INF] Now listening on: http://localhost:5287
+2026-05-12 12:27:26.338 +04:00 [INF] Application started. Press Ctrl+C to shut down.
+2026-05-12 12:27:26.341 +04:00 [INF] Hosting environment: Development
+2026-05-12 12:27:26.346 +04:00 [INF] Content root path: C:\Users\Acer\Desktop\Nr-Academy\NrAcademyy\NrAcademyy
+2026-05-12 12:27:26.826 +04:00 [INF] Request starting HTTP/2 GET https://localhost:7036/swagger/index.html - null null
+2026-05-12 12:27:27.364 +04:00 [INF] HTTP GET /swagger/index.html responded 200 in 195.3068 ms
+2026-05-12 12:27:27.384 +04:00 [INF] Request starting HTTP/2 GET https://localhost:7036/_framework/aspnetcore-browser-refresh.js - null null
+2026-05-12 12:27:27.384 +04:00 [INF] Request starting HTTP/2 GET https://localhost:7036/_vs/browserLink - null null
+2026-05-12 12:27:27.385 +04:00 [INF] Request finished HTTP/2 GET https://localhost:7036/swagger/index.html - 200 null text/html;charset=utf-8 563.4361ms
+2026-05-12 12:27:27.405 +04:00 [INF] Request finished HTTP/2 GET https://localhost:7036/_framework/aspnetcore-browser-refresh.js - 200 13756 application/javascript; charset=utf-8 21.7382ms
+2026-05-12 12:27:27.518 +04:00 [INF] Request finished HTTP/2 GET https://localhost:7036/_vs/browserLink - 200 null text/javascript; charset=UTF-8 134.4413ms
+2026-05-12 12:27:27.595 +04:00 [INF] Request starting HTTP/2 GET https://localhost:7036/swagger/v1/swagger.json - null null
+2026-05-12 12:27:27.679 +04:00 [INF] Executed DbCommand (155ms) [Parameters=[@__normalizedName_0='?' (Size = 256)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [a].[Id], [a].[ConcurrencyStamp], [a].[Name], [a].[NormalizedName]
+FROM [AspNetRoles] AS [a]
+WHERE [a].[NormalizedName] = @__normalizedName_0
+2026-05-12 12:27:27.743 +04:00 [INF] HTTP GET /swagger/v1/swagger.json responded 200 in 131.9160 ms
+2026-05-12 12:27:27.759 +04:00 [INF] Request finished HTTP/2 GET https://localhost:7036/swagger/v1/swagger.json - 200 null application/json;charset=utf-8 164.2958ms
+2026-05-12 12:27:27.961 +04:00 [INF] Executed DbCommand (4ms) [Parameters=[@__normalizedName_0='?' (Size = 256)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [a].[Id], [a].[ConcurrencyStamp], [a].[Name], [a].[NormalizedName]
+FROM [AspNetRoles] AS [a]
+WHERE [a].[NormalizedName] = @__normalizedName_0
+2026-05-12 12:27:27.974 +04:00 [INF] Executed DbCommand (1ms) [Parameters=[@__normalizedName_0='?' (Size = 256)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [a].[Id], [a].[ConcurrencyStamp], [a].[Name], [a].[NormalizedName]
+FROM [AspNetRoles] AS [a]
+WHERE [a].[NormalizedName] = @__normalizedName_0
+2026-05-12 12:27:27.989 +04:00 [INF] Executed DbCommand (1ms) [Parameters=[@__normalizedName_0='?' (Size = 256)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [a].[Id], [a].[ConcurrencyStamp], [a].[Name], [a].[NormalizedName]
+FROM [AspNetRoles] AS [a]
+WHERE [a].[NormalizedName] = @__normalizedName_0
+2026-05-12 12:27:28.060 +04:00 [INF] Executed DbCommand (7ms) [Parameters=[@__normalizedEmail_0='?' (Size = 256)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(2) [a].[Id], [a].[AccessFailedCount], [a].[ConcurrencyStamp], [a].[CreatedAt], [a].[Email], [a].[EmailConfirmed], [a].[EmailVerificationCode], [a].[EmailVerificationCodeExpiry], [a].[FirstName], [a].[IsEmailVerified], [a].[LastName], [a].[LockoutEnabled], [a].[LockoutEnd], [a].[NormalizedEmail], [a].[NormalizedUserName], [a].[PasswordHash], [a].[PasswordResetCode], [a].[PasswordResetCodeExpiry], [a].[PhoneNumber], [a].[PhoneNumberConfirmed], [a].[ProfileImageUrl], [a].[SecurityStamp], [a].[TwoFactorEnabled], [a].[UpdatedAt], [a].[UserName]
+FROM [AspNetUsers] AS [a]
+WHERE [a].[NormalizedEmail] = @__normalizedEmail_0
