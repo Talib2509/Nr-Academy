@@ -1,4 +1,5 @@
 ﻿using NrAcademyCORE.Entities.Common;
+using NrAcademyCORE.Entities.Identity;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -9,6 +10,8 @@ namespace NrAcademyCORE.Entities
 {
     public class Teacher : BaseEntity
     {
+        public int UserId { get; set; }
+        public AppUser User { get; set; }
         public string Name { get; set; }
         public string Bio { get; set; }
         public string? ImageUrl { get; set; }

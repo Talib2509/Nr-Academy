@@ -41,17 +41,7 @@ namespace NrAcademyAPI.Controllers
             return Ok(result);
         }
 
-        [HttpPost]
-        [Authorize(Roles = "Admin")]
-        public async Task<IActionResult> Create([FromForm] TeacherCreateDTO dto)
-        {
-            if (!ModelState.IsValid)
-                return BadRequest(ModelState);
-
-            await _teacherService.CreateAsync(dto, _webHostEnvironment.WebRootPath);
-
-            return StatusCode(201, "Teacher created successfully");
-        }
+   
 
         [HttpPut("{id}")]
         [Authorize(Roles = "Admin, Moderator")]

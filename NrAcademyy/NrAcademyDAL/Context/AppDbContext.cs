@@ -32,10 +32,33 @@ namespace NrAcademyDAL.Context
         public DbSet<Course> Courses { get; set; }
         public DbSet<TestResult> TestResults { get; set; }
         public DbSet<RefreshToken> RefreshTokens { get; set; }
+
+        public DbSet<Testimonial> Testimonials { get; set; }
+        public DbSet<StudentCourse> StudentCourses { get; set; }
+
         protected override void OnModelCreating(ModelBuilder builder)
         {
-            builder.ApplyConfigurationsFromAssembly(Assembly.GetExecutingAssembly());
             base.OnModelCreating(builder);
+            builder.Entity<Teacher>()
+                    .HasOne(t => t.User)
+                    .WithOne()
+                    .HasForeignKey<Teacher>(t => t.UserId)
+                    .OnDelete(DeleteBehavior.NoAction);
+
+            // Course və Teacher arasındakı əlaqə (DÜZƏLİŞ BURADADIR)
+            builder.Entity<Course>()
+    .HasOne(c => c.Teacher)
+    .WithMany() // Bir istifadəçinin (müəllimin) çoxlu kursu ola bilər
+    .HasForeignKey(c => c.TeacherId)
+    .OnDelete(DeleteBehavior.NoAction);
+
+            builder.Entity<StudentCourse>()
+                .HasOne(sc => sc.Student)
+                .WithMany()
+                .HasForeignKey(sc => sc.UserId)
+                .OnDelete(DeleteBehavior.NoAction);
+
+            builder.ApplyConfigurationsFromAssembly(Assembly.GetExecutingAssembly());
         }
     }
 }

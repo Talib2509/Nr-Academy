@@ -44,8 +44,9 @@ namespace NrAcademyBL.Services.Concrete
             var test = await _testRepository.GetByIdAsync(dto.TestId);
             if (test == null) throw new Exception("Test tapılmadı.");
 
-            
-            var timeTaken = (DateTime.Now - dto.StartedAt).TotalMinutes;
+            var now = DateTime.UtcNow;
+            var timeTaken = (now - dto.StartedAt.ToUniversalTime()).TotalMinutes;
+       
 
             // Əgər müəllim testə vaxt qoyubsa (> 0) və şagird bu vaxtı keçibsə
             // (+2 dəqiqə əlavə edirik ki, internet zəif olanda şagirdin haqqı getməsin)

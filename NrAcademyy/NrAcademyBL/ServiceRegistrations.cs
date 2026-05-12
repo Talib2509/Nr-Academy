@@ -32,6 +32,7 @@ namespace NrAcademyBL
             services.AddScoped<IEmailService, EmailService>();
             services.AddScoped<ICacheService, MemoryCacheService>();
             services.AddScoped<IBlogCategoryService, BlogCategoryService>();
+            services.AddScoped<ITestimonialService, TestimonialService>();
 
             return services;
         }

@@ -33,8 +33,6 @@ namespace NrAcademyy.Controllers
             return Ok(result);
         }
 
-        // QEYD: Əgər xüsusi bir "Admin müəllim yaratsın" metodu olacaqsa, 
-        // ona [Authorize(Roles = "Admin")] əlavə edəcəyik.
 
         [HttpPost("login")]
         [AllowAnonymous] // Giriş hər kəs üçün açıq olmalıdır
