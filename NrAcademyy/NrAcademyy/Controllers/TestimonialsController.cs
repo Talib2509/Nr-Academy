@@ -27,7 +27,7 @@ public class TestimonialsController(ITestimonialService _service) : ControllerBa
     }
 
     [HttpPost]
-    //[Authorize]
+    
     public async Task<IActionResult> Create([FromBody] TestimonialCreateDto dto)
     {
         if (!ModelState.IsValid)

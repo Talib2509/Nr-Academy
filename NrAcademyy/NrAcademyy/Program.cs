@@ -11,12 +11,12 @@ using NrAcademyBL.Exceptions.AuthException;
 using NrAcademyBL.Extensions;
 using NrAcademyCORE.Entities.Identity;
 using NrAcademyCORE.Repositories;
-using NrAcademyDAL; // Və ya metod hansı namespace daxilindədirsə o
+using NrAcademyDAL; 
 using NrAcademyDAL.Context;
 using NrAcademyDAL.Repositories;
 using Serilog;
 using System.Text;
-// 1. .env faylını yükləyirik
+
 Env.Load();
 
 Log.Logger = new LoggerConfiguration()
@@ -38,9 +38,9 @@ try
     builder.Services.AddRepositories();
     builder.Services.AddService(builder.Configuration);
 
-    // Email Settings konfiqurasiyası
+    
     builder.Services.Configure<EmailSettings>(options => {
-        // Əgər .env-dən oxuya bilməsə, appsettings-dəki stringi istifadə etməsin deyə default dəyərlər qoyuruq
+        
         options.Host = builder.Configuration[builder.Configuration["EmailSettings:Host"] ?? ""] ?? "smtp.gmail.com";
         options.Port = int.Parse(builder.Configuration["EmailSettings:Port"] ?? "587");
         options.FromEmail = builder.Configuration[builder.Configuration["EmailSettings:FromEmail"] ?? ""] ?? "huseynovmirtalib28@gmail.com";
@@ -49,7 +49,7 @@ try
         options.Password = builder.Configuration[builder.Configuration["EmailSettings:Password"] ?? ""] ?? "";
     });
 
-    // JWT Settings konfiqurasiyası
+    
     builder.Services.Configure<JwtSettings>(options => {
         options.Secret = builder.Configuration[builder.Configuration["JwtSettings:Secret"]];
         options.Issuer = builder.Configuration[builder.Configuration["JwtSettings:Issuer"]];
@@ -139,10 +139,10 @@ try
         });
     });
 
-    // 2. Build əmri burada olmalıdır
+    
     var app = builder.Build();
 
-    // Configure the HTTP request pipeline.
+    
     app.UseSerilogRequestLogging();
 
     if (app.Environment.IsDevelopment())

@@ -1,4 +1,4 @@
-﻿// NrAcademyy/Controllers/BlogPostController.cs
+﻿
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.Http;
