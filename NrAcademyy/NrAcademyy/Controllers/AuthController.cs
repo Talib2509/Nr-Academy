@@ -5,7 +5,7 @@ using NrAcademyBL.DTOs.AuthDTO;
 using NrAcademyBL.DTOs.ForgotPassword;
 using NrAcademyBL.Services.Abstract;
 using NrAcademyCORE.Entities.Identity;
-using Microsoft.AspNetCore.Authorization; // Əlavə olundu
+using Microsoft.AspNetCore.Authorization; 
 
 namespace NrAcademyy.Controllers
 {
@@ -26,7 +26,7 @@ namespace NrAcademyy.Controllers
         }
 
         [HttpPost("Register")]
-        [AllowAnonymous] // Hər kəs qeydiyyatdan keçə bilsin (Tələbələr üçün)
+        [AllowAnonymous] 
         public async Task<IActionResult> Register(RegisterDTO dto)
         {
             var result = await _authService.RegisterAsync(dto);
@@ -35,7 +35,7 @@ namespace NrAcademyy.Controllers
 
 
         [HttpPost("login")]
-        [AllowAnonymous] // Giriş hər kəs üçün açıq olmalıdır
+        [AllowAnonymous] 
         public async Task<IActionResult> Login([FromBody] LoginDTO dto)
         {
             var token = await _authService.LoginAsync(dto);

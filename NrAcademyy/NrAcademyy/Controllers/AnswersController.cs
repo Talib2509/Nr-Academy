@@ -7,7 +7,7 @@ namespace NrAcademyy.Controllers;
 
 [Route("api/[controller]")]
 [ApiController]
-// Ümumi olaraq həm Admin, həm də Moderator bura daxil ola bilsin
+
 [Authorize(Roles = "Admin, Moderator,Teacher")]
 public class AnswersController : ControllerBase
 {
@@ -19,14 +19,14 @@ public class AnswersController : ControllerBase
     }
 
     [HttpGet]
-    // Cavab siyahısına baxmaq hər iki rola icazəlidir
+    
     public async Task<IActionResult> GetAll() => Ok(await _service.GetAllAsync());
 
     [HttpGet("{id}")]
     public async Task<IActionResult> GetById(int id) => Ok(await _service.GetByIdAsync(id));
 
     [HttpPost]
-    // Testləri hazırlamaq hər iki rola icazəlidir
+    
     public async Task<IActionResult> Create(AnswerCreateDto dto)
     {
         await _service.CreateAsync(dto);
@@ -34,7 +34,7 @@ public class AnswersController : ControllerBase
     }
 
     [HttpPut]
-    // Redaktə etmək hər iki rola icazəlidir
+    
     public async Task<IActionResult> Update(AnswerUpdateDto dto)
     {
         await _service.UpdateAsync(dto);
